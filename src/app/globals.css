@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #572D55; /* Berenjena Profundo */
+  --color-primary-foreground: #ffffff;
+  --color-accent: #971F57; /* Magenta Frambuesa / Vino */
+  --color-accent-foreground: #ffffff;
+  --color-background: #ffffff;
+  --color-foreground: #705662; /* Taupe / Gris Pizarra Cálido */
+  
+  --font-questrial: var(--font-questrial);
+  --font-great-vibes: var(--font-great-vibes);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #705662;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-questrial), ui-sans-serif, system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-questrial), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-signature {
+  font-family: var(--font-great-vibes), cursive;
+}
