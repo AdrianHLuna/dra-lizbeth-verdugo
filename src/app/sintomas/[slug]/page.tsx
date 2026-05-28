@@ -55,8 +55,12 @@ export default async function SymptomPage({ params }: { params: Promise<{ slug: 
           </div>
           
           <div className="lg:w-5/12 min-h-[300px] bg-slate-50 flex items-center justify-center relative overflow-hidden group rounded-full border-8 border-slate-100 shadow-lg">
-             <div className="absolute inset-0 bg-slate-100 group-hover:scale-105 transition-transform duration-700 flex items-center justify-center">
-               <span className="text-slate-400 font-bold uppercase tracking-widest text-[9px] group-hover:text-primary transition-colors">Imagen Principal</span>
+             <div className="absolute inset-0 bg-slate-105 transition-transform duration-700 flex items-center justify-center">
+                <img 
+                  src={symptom.image} 
+                  alt={symptom.name} 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
              </div>
           </div>
         </FadeUp>

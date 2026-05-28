@@ -31,9 +31,12 @@ export default function ServiciosPage() {
           {services.map((service, index) => (
             <StaggerItem key={service.id} className="w-full">
               <Link href={`/servicios/${service.slug}`} className="bg-white border border-slate-100 hover:border-primary/20 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row justify-between items-center p-8 rounded-[2rem_0.5rem_2rem_0.5rem] group relative overflow-hidden">
-                {/* Space for Image */}
-                <div className="w-full md:w-60 h-40 bg-slate-100 rounded-2xl relative overflow-hidden flex items-center justify-center text-slate-400 group-hover:bg-slate-200 transition-colors flex-shrink-0 mb-6 md:mb-0 md:mr-8">
-                  <span className="text-[10px] font-bold uppercase tracking-widest">Espacio para Imagen</span>
+                <div className="w-full md:w-60 h-40 bg-slate-100 rounded-2xl relative overflow-hidden flex items-center justify-center text-slate-400 transition-colors flex-shrink-0 mb-6 md:mb-0 md:mr-8">
+                  <img 
+                    src={service.image} 
+                    alt={service.name} 
+                    className="w-full h-full object-cover transition-transform duration-550 group-hover:scale-105"
+                  />
                 </div>
 
                 <div className="flex-1 md:pr-8 text-center md:text-left">

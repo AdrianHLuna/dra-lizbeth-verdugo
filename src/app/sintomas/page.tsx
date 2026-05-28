@@ -34,9 +34,12 @@ export default function SintomasPage() {
               className={`h-full ${index % 3 === 1 ? 'lg:mt-8' : index % 3 === 2 ? 'lg:mt-4' : ''}`}
             >
               <Link href={`/sintomas/${sym.slug}`} className="bg-white p-8 border border-slate-150 hover:border-slate-355 hover:bg-[#0f1e36] hover:text-white transition-all duration-300 flex flex-col h-full rounded-[2.5rem_0.5rem_2.5rem_0.5rem] shadow-sm hover:shadow-xl hover:scale-[1.03] group">
-                {/* Space for Image */}
-                <div className="w-full h-44 bg-slate-100 rounded-[2rem_0.5rem_2rem_0.5rem] mb-6 relative overflow-hidden flex items-center justify-center text-slate-400 group-hover:bg-[#1a2d4a] group-hover:text-white/80 transition-colors duration-300">
-                  <span className="text-[10px] font-bold uppercase tracking-widest">Espacio para Imagen</span>
+                <div className="w-full h-44 bg-slate-100 rounded-[2rem_0.5rem_2rem_0.5rem] mb-6 relative overflow-hidden flex items-center justify-center text-slate-400 group-hover:bg-[#1a2d4a] transition-colors duration-300">
+                  <img 
+                    src={sym.image} 
+                    alt={sym.name} 
+                    className="w-full h-full object-cover transition-transform duration-550 group-hover:scale-105"
+                  />
                 </div>
 
                 <div className="flex flex-col flex-grow justify-between">

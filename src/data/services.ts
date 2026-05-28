@@ -27,7 +27,7 @@ export const services: MedicalService[] = [
       "Equipo requerido": "Agujas especializadas de aspiración pediátrica",
       "Procesamiento": "Mielograma y citometría de flujo"
     },
-    image: "/images/services/aspirado.webp",
+    image: "/servicios/Aspirado_Medula_Osea.png",
     seo: {
       title: "Aspirado de Médula Ósea Pediátrica | Dra. Lizbeth",
       description: "Estudio especializado de aspirado de médula ósea para el diagnóstico preciso de enfermedades de la sangre en niños.",
@@ -60,7 +60,7 @@ export const services: MedicalService[] = [
       "Sitio de punción": "Cresta ilíaca posterior",
       "Estudios adicionales": "Histopatología de fragmento óseo"
     },
-    image: "/images/services/biopsia.webp",
+    image: "/servicios/Biopsia_Medula_Osea.png",
     seo: {
       title: "Biopsia de Médula Ósea en Niños | Hematología CDMX",
       description: "Procedimiento de biopsia de médula ósea en pacientes pediátricos realizado por la Dra. Lizbeth Hernandez, experta certificada.",
@@ -90,7 +90,7 @@ export const services: MedicalService[] = [
       "Método": "Microscopía óptica de alta resolución",
       "Muestra": "Gota de sangre capilar o venosa"
     },
-    image: "/images/services/frotis.webp",
+    image: "/servicios/Lectura_Frotis_Sangre_Periferica.png",
     seo: {
       title: "Lectura de Frotis de Sangre Periférica | Dra. Lizbeth",
       description: "Análisis morfológico de células sanguíneas bajo microscopio para el diagnóstico rápido de anemias y leucemias.",
@@ -123,41 +123,11 @@ export const services: MedicalService[] = [
       "Ubicación": "Espacio intervertebral L3-L4 o L4-L5",
       "Medicamentos": "Quimioterapia intratecal (según protocolo)"
     },
-    image: "/images/services/puncion.webp",
+    image: "/servicios/Puncion_Lumbar.png",
     seo: {
       title: "Punción Lumbar Pediátrica | Hematóloga Pediatra CDMX",
       description: "Procedimiento de punción lumbar y administración de medicamentos intratecales en niños con leucemia o afecciones hematológicas.",
       keywords: ["Punción lumbar en niños CDMX", "Líquido cefalorraquídeo estudio", "Quimioterapia intratecal infantil"],
-    }
-  },
-  {
-    id: "ser-005",
-    slug: "aferesis-medicina-transfusional",
-    name: "Medicina Transfusional y Aféresis Terapéutica",
-    description: "Supervisión experta de transfusiones sanguíneas y procedimientos de aféresis para separar componentes específicos de la sangre.",
-    longDescription: "Dada la alta especialidad de la Dra. Lizbeth en Medicina Transfusional, este servicio asegura que las transfusiones de sangre, plaquetas y plasma se realicen de forma segura, bajo compatibilidad estricta y control de reacciones transfusionales. Asimismo, supervisa terapias de aféresis donde se extraen o intercambian componentes dañados o excedentes de la sangre del niño.",
-    type: "hospitalario",
-    isPainful: false,
-    duration: "Variable (1 a 3 horas)",
-    recoveryTime: "Inmediato",
-    benefits: [
-      "Garantía de máxima seguridad en transfusiones de sangre en niños",
-      "Tratamiento eficaz de crisis de hiperleucocitosis o recambio plasmático",
-      "Prevención y manejo experto de reacciones adversas a la transfusión"
-    ],
-    postOpRecommendations: [
-      "Vigilar la aparición de ronchas, fiebre o dificultad para respirar en las horas posteriores a la transfusión"
-    ],
-    priceRange: "Según protocolo hospitalario",
-    technicalSpecs: {
-      "Componentes": "Concentrado eritrocitario, plaquetas, plasma, aféresis",
-      "Seguridad": "Hemovigilancia activa"
-    },
-    image: "/images/services/aferesis.webp",
-    seo: {
-      title: "Medicina Transfusional y Aféresis Infantil | Dra. Lizbeth",
-      description: "Servicio experto en transfusiones seguras y aféresis terapéutica en niños en la Ciudad de México.",
-      keywords: ["Medicina transfusional infantil CDMX", "Transfusión de sangre niños", "Aféresis terapéutica pediatría"],
     }
   }
 ];

@@ -88,15 +88,15 @@ export default function Home() {
 
                 {/* Main Doctor Image Circle - Con fondo degradado de acuarela */}
                 <motion.div 
-                  className="w-full h-full bg-gradient-to-br from-primary via-[#971F57] to-[#F8B0E4] shadow-2xl relative overflow-hidden rounded-full border-[10px] border-white z-10"
+                  className="w-full h-full bg-gradient-to-br from-primary via-[#971F57] to-[#F8B0E4] shadow-2xl relative overflow-hidden rounded-full border-[10px] border-white z-10 flex items-center justify-center"
                   animate={{ y: [0, -12, 0] }}
                   transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
                 >
-                   <div className="absolute inset-0 bg-[#572D55]/85 flex flex-col items-center justify-center transition-transform duration-1000 hover:scale-105">
-                      <p className="text-white/80 font-extrabold text-base lg:text-lg xl:text-xl uppercase tracking-widest text-center px-8 leading-snug">
-                        Dra. Lizbeth <br/> Hernandez
-                      </p>
-                   </div>
+                  <img 
+                    src={doctor.photo} 
+                    alt={`Dra. ${doctor.name}`} 
+                    className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
+                  />
                 </motion.div>
 
                 {/* Float Experience Badge */}
@@ -139,8 +139,12 @@ export default function Home() {
             {/* Col Right: Foto About Me + Bento Box (Spans 7 cols) */}
             <motion.div variants={softBlurIn} className="lg:col-span-7 space-y-8">
               {/* Foto About Me */}
-              <div className="w-full h-72 lg:h-80 bg-slate-100 rounded-[2rem_0.5rem_2rem_0.5rem] relative overflow-hidden flex items-center justify-center text-slate-400 border border-slate-150 shadow-sm">
-                <span className="text-[10px] font-bold uppercase tracking-widest">Foto About Me — Dra. Lizbeth</span>
+              <div className="w-full h-72 lg:h-80 bg-slate-100 rounded-[2rem_0.5rem_2rem_0.5rem] relative overflow-hidden flex items-center justify-center border border-slate-150 shadow-sm">
+                <img 
+                  src={doctor.photo} 
+                  alt={`Dra. ${doctor.name}`} 
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Mini Bento Grid of Credentials */}
@@ -197,9 +201,12 @@ export default function Home() {
                 className={`h-full ${index % 3 === 1 ? 'lg:mt-8' : index % 3 === 2 ? 'lg:mt-4' : ''}`}
               >
                 <Link href={`/sintomas/${sym.slug}`} className="bg-white p-8 border border-slate-150 hover:border-slate-355 hover:bg-[#0f1e36] hover:text-white transition-all duration-300 flex flex-col h-full rounded-[2.5rem_0.5rem_2.5rem_0.5rem] shadow-sm hover:shadow-xl hover:scale-[1.03] group">
-                  {/* Space for Image */}
-                  <div className="w-full h-44 bg-slate-100 rounded-[2rem_0.5rem_2rem_0.5rem] mb-6 relative overflow-hidden flex items-center justify-center text-slate-400 group-hover:bg-[#1a2d4a] group-hover:text-white/80 transition-colors duration-300">
-                    <span className="text-[10px] font-bold uppercase tracking-widest">Espacio para Imagen</span>
+                  <div className="w-full h-44 bg-slate-100 rounded-[2rem_0.5rem_2rem_0.5rem] mb-6 relative overflow-hidden flex items-center justify-center text-slate-400 group-hover:bg-[#1a2d4a] transition-colors duration-300">
+                    <img 
+                      src={sym.image} 
+                      alt={sym.name} 
+                      className="w-full h-full object-cover transition-transform duration-550 group-hover:scale-105"
+                    />
                   </div>
                   <h3 className="text-base font-extrabold text-slate-900 mb-4 tracking-tight group-hover:text-accent transition-colors uppercase">{sym.name}</h3>
                   <p className="text-slate-500 text-xs mb-8 flex-grow leading-relaxed group-hover:text-slate-300">{sym.description}</p>
@@ -246,9 +253,12 @@ export default function Home() {
             {services.slice(0, 3).map((service, index) => (
               <motion.div key={service.id} variants={softBlurIn} className="w-full">
                 <Link href={`/servicios/${service.slug}`} className="bg-white border border-slate-100 hover:border-primary/20 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row justify-between items-center p-8 rounded-[2rem_0.5rem_2rem_0.5rem] group relative overflow-hidden">
-                  {/* Space for Image */}
-                  <div className="w-full md:w-60 h-40 bg-slate-100 rounded-2xl relative overflow-hidden flex items-center justify-center text-slate-400 group-hover:bg-slate-200 transition-colors flex-shrink-0 mb-6 md:mb-0 md:mr-8">
-                    <span className="text-[10px] font-bold uppercase tracking-widest">Espacio para Imagen</span>
+                  <div className="w-full md:w-60 h-40 bg-slate-100 rounded-2xl relative overflow-hidden flex items-center justify-center text-slate-400 transition-colors flex-shrink-0 mb-6 md:mb-0 md:mr-8">
+                    <img 
+                      src={service.image} 
+                      alt={service.name} 
+                      className="w-full h-full object-cover transition-transform duration-550 group-hover:scale-105"
+                    />
                   </div>
                   
                   <div className="flex-1 md:pr-8 text-center md:text-left">
