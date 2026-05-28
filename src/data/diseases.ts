@@ -16,7 +16,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿La leche de vaca puede causar anemia?", answer: "Sí, el consumo excesivo de leche de vaca (más de 500 mililitros al día) interfiere con la absorción del hierro en el intestino de los niños pequeños." },
       { question: "¿Cómo se diagnostica de forma certera?", answer: "Se diagnostica mediante una biometría hemática completa, perfil de hierro y la interpretación experta de un hematólogo pediatra." }
     ],
-    image: "/images/diseases/anemia-ferropenica.webp",
+    image: "/enfermedades/anemia_ferropenica.png",
     relatedServices: ["ser-003"],
     relatedSymptoms: ["sym-001", "sym-002", "sym-005"],
     seo: {
@@ -41,7 +41,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Esta enfermedad se vuelve crónica?", answer: "En la mayoría de los niños, la trombocitopenia inmune se resuelve por completo en menos de seis meses. Solo una minoría desarrolla la forma crónica." },
       { question: "¿Requiere transfusión de plaquetas?", answer: "Generalmente no, ya que el sistema inmune destruiría rápidamente las plaquetas transfundidas. Se reserva solo para emergencias extremas." }
     ],
-    image: "/images/diseases/trombocitopenia.webp",
+    image: "/enfermedades/Trombocitopenia_Inmune.png",
     relatedServices: ["ser-001", "ser-003", "ser-005"],
     relatedSymptoms: ["sym-003", "sym-005", "sym-010"],
     seo: {
@@ -65,7 +65,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Se puede curar con trasplante de médula ósea?", answer: "Sí, el trasplante de médula ósea de un donante compatible (generalmente un hermano) es el tratamiento curativo de elección para niños con esta enfermedad." },
       { question: "¿Cuánto dura el tratamiento inmunosupresor?", answer: "La respuesta al tratamiento inmunosupresor puede tardar varios meses, y el seguimiento médico se prolonga durante años." }
     ],
-    image: "/images/diseases/anemia-aplasica.webp",
+    image: "/enfermedades/Anemia_Aplasica.png",
     relatedServices: ["ser-001", "ser-002", "ser-005"],
     relatedSymptoms: ["sym-001", "sym-002", "sym-003", "sym-005", "sym-006", "sym-013"],
     seo: {
@@ -89,7 +89,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Es una enfermedad hereditaria?", answer: "Puede ser tanto hereditaria (debido a defectos genéticos en el glóbulo rojo) como adquirida (cuando el sistema inmune los ataca tras una infección o por medicamentos)." },
       { question: "¿Cómo se diagnostica de forma precisa?", answer: "Se realiza a través de pruebas de laboratorio que incluyen la prueba de Coombs (para causas inmunes), frotis de sangre periférica, niveles de bilirrubinas y reticulocitos." }
     ],
-    image: "/images/diseases/anemia-hemolitica.webp",
+    image: "/enfermedades/Anemia_Hemolitica.png",
     relatedServices: ["ser-003", "ser-005"],
     relatedSymptoms: ["sym-001", "sym-002", "sym-005", "sym-008", "sym-011"],
     seo: {
@@ -114,7 +114,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Se puede curar definitivamente la drepanocitosis?", answer: "El único tratamiento curativo actual es el trasplante de médula ósea (células madre), el cual se valora de forma individual según el caso clínico del paciente." },
       { question: "¿Cómo se detecta esta enfermedad en bebés?", answer: "Se puede detectar mediante el tamiz neonatal metabólico ampliado y se confirma con una electroforesis de hemoglobina." }
     ],
-    image: "/images/diseases/drepanocitosis.webp",
+    image: "/enfermedades/Drepanocitosis.png",
     relatedServices: ["ser-003", "ser-005"],
     relatedSymptoms: ["sym-001", "sym-002", "sym-007", "sym-012"],
     seo: {
@@ -138,7 +138,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Qué es la terapia de quelación?", answer: "Es un tratamiento con medicamentos que ayudan a eliminar el exceso de hierro del cuerpo del niño, acumulado principalmente a causa de las transfusiones frecuentes." },
       { question: "¿Un niño con talasemia menor necesita tomar hierro?", answer: "No, la talasemia menor suele confundirse con anemia por falta de hierro, pero darles hierro es un error grave ya que no les hace falta y puede provocar sobrecarga tóxica de este mineral." }
     ],
-    image: "/images/diseases/talasemia.webp",
+    image: "/enfermedades/Talasemia.png",
     relatedServices: ["ser-003", "ser-005"],
     relatedSymptoms: ["sym-001", "sym-002", "sym-008", "sym-012"],
     seo: {
@@ -162,7 +162,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Siempre se debe retirar el bazo en estos niños?", answer: "No, la cirugía se reserva para casos moderados a graves con crisis anémicas frecuentes o retraso en el crecimiento. En casos leves, solo se mantiene vigilancia médica estrecha." },
       { question: "¿Cómo se confirma esta condición?", answer: "Se diagnostica observando los esferocitos en el frotis de sangre periférica, y mediante pruebas especializadas como la de fragilidad osmótica o la prueba de EMA por citometría." }
     ],
-    image: "/images/diseases/esferocitosis.webp",
+    image: "/enfermedades/Esferocitosis_Hereditaria.png",
     relatedServices: ["ser-003", "ser-005"],
     relatedSymptoms: ["sym-001", "sym-002", "sym-008", "sym-011"],
     seo: {
@@ -186,7 +186,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Se puede diagnosticar desde el nacimiento?", answer: "Sí, mediante pruebas especiales de coagulación que miden la actividad de los factores en sangre de cordón umbilical o periférica." },
       { question: "¿Qué tipo de ejercicio puede hacer un niño con hemofilia?", answer: "Se recomiendan deportes de bajo impacto como la natación, y se desaconsejan totalmente los deportes de colisión o contacto." }
     ],
-    image: "/images/diseases/hemofilia.webp",
+    image: "/enfermedades/Hemofilia_Infantil.png",
     relatedServices: ["ser-005"],
     relatedSymptoms: ["sym-003", "sym-005", "sym-010"],
     seo: {
@@ -211,7 +211,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Qué medicamentos no debe tomar mi hijo?", answer: "Debe evitar las sulfonamidas, ciertos antipalúdicos, algunos analgésicos y sustancias como la naftalina. Se le entregará a la familia una lista detallada y actualizada de medicamentos seguros y prohibidos." },
       { question: "¿Esta enfermedad dura toda la vida?", answer: "Sí, es una condición genética que acompaña al paciente toda su vida. Sin embargo, con evitar los factores desencadenantes, el niño tendrá una expectativa y calidad de vida completamente normales." }
     ],
-    image: "/images/diseases/deficiencia-g6pd.webp",
+    image: "/enfermedades/Deficiencia_G6PD.png",
     relatedServices: ["ser-003", "ser-005"],
     relatedSymptoms: ["sym-001", "sym-002", "sym-005", "sym-011"],
     seo: {
@@ -235,7 +235,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Cómo se diagnostica de manera certera?", answer: "Requiere pruebas específicas como la medición del antígeno del factor Von Willebrand, su actividad (cofactor de ristocetina) y niveles del factor VIII en sangre." },
       { question: "¿Una niña con esta condición puede llevar una vida normal al crecer?", answer: "Sí, aunque requiere un manejo especial y preventivo durante su periodo menstrual y en caso de intervenciones quirúrgicas o dentales." }
     ],
-    image: "/images/diseases/von-willebrand.webp",
+    image: "/enfermedades/Enfermedad_Von_Willebrand.png",
     relatedServices: ["ser-005"],
     relatedSymptoms: ["sym-003", "sym-005", "sym-010"],
     seo: {
@@ -259,7 +259,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Un ganglio inflamado siempre es signo de linfoma?", answer: "No, la gran mayoría de los ganglios inflamados en niños son benignos y se deben a infecciones comunes. Solo deben alarmar si son duros, no móviles, no duelen y siguen creciendo después de varias semanas." },
       { question: "¿Cómo se confirma el diagnóstico?", answer: "Se requiere realizar una biopsia del ganglio inflamado completo para su análisis histopatológico e inmunohistoquímica por un patólogo experto." }
     ],
-    image: "/images/diseases/linfoma.webp",
+    image: "/enfermedades/Linfoma_Infantil.png",
     relatedServices: ["ser-001", "ser-002", "ser-004"],
     relatedSymptoms: ["sym-001", "sym-004", "sym-006", "sym-009"],
     seo: {
@@ -284,7 +284,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Por qué se inflaman los ganglios tan seguido en niños?", answer: "El sistema inmunitario de los niños está activo y en constante aprendizaje. Los ganglios son estaciones de defensa que se activan ante cualquier virus o bacteria común." },
       { question: "¿Se deben dar antibióticos de inmediato?", answer: "No, la mayoría son reactivas a infecciones virales que no requieren antibióticos. El uso indiscriminado de antibióticos automedicados puede ocultar infecciones bacterianas o retrasar diagnósticos." }
     ],
-    image: "/images/diseases/adenopatias.webp",
+    image: "/enfermedades/Adenopatias_Pediatricas.png",
     relatedServices: ["ser-003"],
     relatedSymptoms: ["sym-004", "sym-006"],
     seo: {
@@ -308,7 +308,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Las petequias son una urgencia médica?", answer: "Sí, la aparición súbita de petequias en un niño sin golpe previo debe ser evaluada de inmediato por un especialista en hematología pediátrica para realizar una biometría hemática de urgencia." },
       { question: "¿Tiene que ver con la alimentación del niño?", answer: "Generalmente no se debe a la alimentación, sino a trastornos inmunitarios, plaquetarios o infecciosos que deben ser estudiados clínicamente." }
     ],
-    image: "/images/diseases/petequias.webp",
+    image: "/enfermedades/Petequias_Purpura.png",
     relatedServices: ["ser-003", "ser-005"],
     relatedSymptoms: ["sym-003", "sym-005", "sym-010"],
     seo: {
@@ -332,7 +332,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Cómo se confirma el diagnóstico?", answer: "Se confirma de forma definitiva mediante un aspirado de médula ósea y estudios especializados como inmunofenotipo y genética celular." },
       { question: "¿El tratamiento requiere hospitalización?", answer: "Sí, requiere periodos de hospitalización para la administración de quimioterapia y el manejo de los efectos secundarios." }
     ],
-    image: "/images/diseases/leucemia.webp",
+    image: "/enfermedades/Leucemia_Linfoblastica_Aguda.png",
     relatedServices: ["ser-001", "ser-002", "ser-004", "ser-005"],
     relatedSymptoms: ["sym-001", "sym-002", "sym-003", "sym-004", "sym-005", "sym-006", "sym-007"],
     seo: {
@@ -357,7 +357,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Los anticoagulantes ponen en riesgo al niño?", answer: "Tienen un riesgo de causar sangrado, por lo que requieren una dosificación muy precisa, monitoreo constante de laboratorio e indicación rigurosa por un hematólogo pediatra." },
       { question: "¿Qué es una trombofilia?", answer: "Es una condición hereditaria o adquirida en la que la sangre tiene una mayor tendencia natural a formar coágulos de forma inapropiada." }
     ],
-    image: "/images/diseases/trombosis-infantil.webp",
+    image: "/enfermedades/Trombosis_Niños.png",
     relatedServices: ["ser-005"],
     relatedSymptoms: ["sym-005", "sym-007"],
     seo: {

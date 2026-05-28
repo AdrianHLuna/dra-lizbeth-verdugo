@@ -302,9 +302,12 @@ export default function Home() {
             {diseases.slice(0, 3).map((disease) => (
               <motion.div key={disease.id} variants={softBlurIn} className="h-full">
                 <Link href={`/enfermedades/${disease.slug}`} className="bg-white/5 border border-white/10 hover:border-accent/40 shadow-sm hover:shadow-accent/5 hover:bg-white/10 transition-all duration-300 flex flex-col h-full p-8 rounded-[100px_0px_100px_0px] overflow-hidden group">
-                  {/* Space for Image */}
-                  <div className="w-full h-40 bg-white/5 rounded-[80px_0px_80px_0px] mb-6 relative overflow-hidden flex items-center justify-center text-white/30 group-hover:bg-white/10 group-hover:text-white/60 transition-colors">
-                    <span className="text-[10px] font-bold uppercase tracking-widest">Espacio para Imagen</span>
+                  <div className="w-full h-40 bg-white/5 rounded-[80px_0px_80px_0px] mb-6 relative overflow-hidden flex items-center justify-center text-white/30 group-hover:bg-white/10 transition-colors">
+                    <img 
+                      src={disease.image} 
+                      alt={disease.name} 
+                      className="w-full h-full object-cover transition-transform duration-550 group-hover:scale-105"
+                    />
                   </div>
                   <h3 className="text-base font-extrabold text-white mb-4 tracking-tight group-hover:text-accent transition-colors uppercase">{disease.name}</h3>
                   <p className="text-slate-400 text-xs mb-8 flex-grow leading-relaxed line-clamp-3">{disease.description}</p>

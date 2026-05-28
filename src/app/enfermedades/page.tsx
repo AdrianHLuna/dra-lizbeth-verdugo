@@ -31,9 +31,12 @@ export default function EnfermedadesPage() {
           {diseases.map(disease => (
             <StaggerItem key={disease.id} className="h-full">
               <Link href={`/enfermedades/${disease.slug}`} className="bg-white border border-slate-100 hover:border-accent/40 shadow-sm hover:shadow-accent/5 hover:bg-slate-50 transition-all duration-300 flex flex-col h-full p-8 rounded-[100px_0px_100px_0px] overflow-hidden group">
-                {/* Space for Image */}
                 <div className="w-full h-40 bg-slate-100 rounded-[80px_0px_80px_0px] mb-6 relative overflow-hidden flex items-center justify-center text-slate-400 group-hover:bg-slate-200 transition-colors">
-                  <span className="text-[10px] font-bold uppercase tracking-widest">Espacio para Imagen</span>
+                  <img 
+                    src={disease.image} 
+                    alt={disease.name} 
+                    className="w-full h-full object-cover transition-transform duration-550 group-hover:scale-105"
+                  />
                 </div>
 
                 <div className="p-2 flex flex-col flex-grow justify-between">
