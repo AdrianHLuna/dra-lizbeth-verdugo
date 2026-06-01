@@ -5,7 +5,7 @@ import { FadeUp, StaggerContainer, StaggerItem } from "@/components/Animations";
 
 export const metadata = {
   title: "Contacto y Ubicación | Hematología Pediátrica CDMX",
-  description: "Encuentra la ubicación del consultorio de la Dra. Lizbeth Yamileth Hernandez Verdugo en la Roma Norte, CDMX.",
+  description: "Encuentra la ubicación del consultorio de la Dra. Lizbeth Yamilet Hernandez Verdugo en la Roma Norte, CDMX.",
 };
 
 export default function ContactoPage() {

@@ -168,7 +168,7 @@ export default function Home() {
                 <div className="col-span-1 sm:col-span-2 bg-slate-900 text-white p-6 rounded-2xl flex items-center gap-5">
                   <FaCertificate className="text-accent text-3xl flex-shrink-0 animate-pulse" />
                   <div>
-                    <h4 className="font-bold text-xs uppercase text-slate-400">Subespecialidad e Inmunología</h4>
+                    <h4 className="font-bold text-xs uppercase text-slate-400">Subespecialidad</h4>
                     <p className="text-xs text-slate-300 mt-1 font-semibold">Hematología Pediátrica | ced. subesp. 15486256 (UNAM)</p>
                   </div>
                 </div>

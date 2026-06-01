@@ -17,7 +17,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Cómo se diagnostica de forma certera?", answer: "Se diagnostica mediante una biometría hemática completa, perfil de hierro y la interpretación experta de un hematólogo pediatra." }
     ],
     image: "/enfermedades/anemia_ferropenica.png",
-    relatedServices: ["ser-003"],
+    relatedServices: ["ser-003", "ser-006"],
     relatedSymptoms: ["sym-001", "sym-002", "sym-005"],
     seo: {
       title: "Anemia Ferropénica en Niños | Hematóloga Pediatra CDMX",
@@ -32,7 +32,7 @@ export const diseases: MedicalCondition[] = [
     technicalName: "Púrpura Trombocitopénica Inmune",
     description: "La trombocitopenia inmune es un trastorno sanguíneo caracterizado por una disminución anormal del número de plaquetas en la sangre debido a que el sistema inmunitario del propio niño las destruye.",
     symptoms: ["Aparición de moretones fáciles sin causa", "Petequias que son pequeños puntos rojos en la piel", "Sangrados nasales frecuentes", "Sangrado de encías"],
-    causes: ["Reacción inmunitaria desencadenada por una infección viral previa", "Desregulación del sistema inmunitario del niño"],
+    causes: ["Reacción inmunitaria desencadenada por una infección viral previa", "Desregulación del sistema inmunitario del niño", "Administración de vacunas"],
     riskFactors: ["Infecciones virales recientes como gripe o varicela", "Predisposición genética a trastornos autoinmunes"],
     complications: ["Hemorragias graves espontáneas en órganos internos (poco frecuentes pero de alto riesgo)", "Ansiedad familiar por riesgo de sangrado"],
     treatments: ["Vigilancia clínica estrecha en casos leves", "Inmunoglobulina intravenosa", "Medicamentos corticoesteroides bajo estricto control médico"],
@@ -42,7 +42,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Requiere transfusión de plaquetas?", answer: "Generalmente no, ya que el sistema inmune destruiría rápidamente las plaquetas transfundidas. Se reserva solo para emergencias extremas." }
     ],
     image: "/enfermedades/Trombocitopenia_Inmune.png",
-    relatedServices: ["ser-001", "ser-003"],
+    relatedServices: ["ser-001", "ser-003", "ser-006"],
     relatedSymptoms: ["sym-003", "sym-005", "sym-010"],
     seo: {
       title: "Trombocitopenia Inmune en Niños | Púrpura Infantil CDMX",
@@ -66,7 +66,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Cuánto dura el tratamiento inmunosupresor?", answer: "La respuesta al tratamiento inmunosupresor puede tardar varios meses, y el seguimiento médico se prolonga durante años." }
     ],
     image: "/enfermedades/Anemia_Aplasica.png",
-    relatedServices: ["ser-001", "ser-002"],
+    relatedServices: ["ser-001", "ser-002", "ser-006", "ser-007"],
     relatedSymptoms: ["sym-001", "sym-002", "sym-003", "sym-005", "sym-006", "sym-013"],
     seo: {
       title: "Anemia Aplásica Infantil | Falla Medular CDMX",
@@ -90,7 +90,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Cómo se diagnostica de forma precisa?", answer: "Se realiza a través de pruebas de laboratorio que incluyen la prueba de Coombs (para causas inmunes), frotis de sangre periférica, niveles de bilirrubinas y reticulocitos." }
     ],
     image: "/enfermedades/Anemia_Hemolitica.png",
-    relatedServices: ["ser-003"],
+    relatedServices: ["ser-003", "ser-006"],
     relatedSymptoms: ["sym-001", "sym-002", "sym-005", "sym-008", "sym-011"],
     seo: {
       title: "Anemia Hemolítica en Niños | Hematóloga Pediatra CDMX",
@@ -115,7 +115,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Cómo se detecta esta enfermedad en bebés?", answer: "Se puede detectar mediante el tamiz neonatal metabólico ampliado y se confirma con una electroforesis de hemoglobina." }
     ],
     image: "/enfermedades/Drepanocitosis.png",
-    relatedServices: ["ser-003"],
+    relatedServices: ["ser-003", "ser-006", "ser-007"],
     relatedSymptoms: ["sym-001", "sym-002", "sym-007", "sym-012"],
     seo: {
       title: "Drepanocitosis (Anemia Falciforme) en Niños | CDMX",
@@ -139,7 +139,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Un niño con talasemia menor necesita tomar hierro?", answer: "No, la talasemia menor suele confundirse con anemia por falta de hierro, pero darles hierro es un error grave ya que no les hace falta y puede provocar sobrecarga tóxica de este mineral." }
     ],
     image: "/enfermedades/Talasemia.png",
-    relatedServices: ["ser-003"],
+    relatedServices: ["ser-003", "ser-006", "ser-007"],
     relatedSymptoms: ["sym-001", "sym-002", "sym-008", "sym-012"],
     seo: {
       title: "Talasemia Infantil y Tratamiento de Sobrecarga de Hierro | CDMX",
@@ -163,7 +163,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Cómo se confirma esta condición?", answer: "Se diagnostica observando los esferocitos en el frotis de sangre periférica, y mediante pruebas especializadas como la de fragilidad osmótica o la prueba de EMA por citometría." }
     ],
     image: "/enfermedades/Esferocitosis_Hereditaria.png",
-    relatedServices: ["ser-003"],
+    relatedServices: ["ser-003", "ser-006", "ser-007"],
     relatedSymptoms: ["sym-001", "sym-002", "sym-008", "sym-011"],
     seo: {
       title: "Esferocitosis Hereditaria en Niños | Hematología CDMX",
@@ -187,7 +187,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Qué tipo de ejercicio puede hacer un niño con hemofilia?", answer: "Se recomiendan deportes de bajo impacto como la natación, y se desaconsejan totalmente los deportes de colisión o contacto." }
     ],
     image: "/enfermedades/Hemofilia_Infantil.png",
-    relatedServices: [],
+    relatedServices: ["ser-005"],
     relatedSymptoms: ["sym-003", "sym-005", "sym-010"],
     seo: {
       title: "Tratamiento de Hemofilia en Niños | Hematología CDMX",
@@ -212,7 +212,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Esta enfermedad dura toda la vida?", answer: "Sí, es una condición genética que acompaña al paciente toda su vida. Sin embargo, con evitar los factores desencadenantes, el niño tendrá una expectativa y calidad de vida completamente normales." }
     ],
     image: "/enfermedades/Deficiencia_G6PD.png",
-    relatedServices: ["ser-003"],
+    relatedServices: ["ser-003", "ser-006", "ser-007"],
     relatedSymptoms: ["sym-001", "sym-002", "sym-005", "sym-011"],
     seo: {
       title: "Deficiencia de G6PD en Niños | Favismo CDMX",
@@ -236,7 +236,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Una niña con esta condición puede llevar una vida normal al crecer?", answer: "Sí, aunque requiere un manejo especial y preventivo durante su periodo menstrual y en caso de intervenciones quirúrgicas o dentales." }
     ],
     image: "/enfermedades/Enfermedad_Von_Willebrand.png",
-    relatedServices: [],
+    relatedServices: ["ser-005"],
     relatedSymptoms: ["sym-003", "sym-005", "sym-010"],
     seo: {
       title: "Enfermedad de Von Willebrand Infantil | Hematología CDMX",
@@ -260,7 +260,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Cómo se confirma el diagnóstico?", answer: "Se requiere realizar una biopsia del ganglio inflamado completo para su análisis histopatológico e inmunohistoquímica por un patólogo experto." }
     ],
     image: "/enfermedades/Linfoma_Infantil.png",
-    relatedServices: ["ser-001", "ser-002", "ser-004"],
+    relatedServices: ["ser-001", "ser-002", "ser-004", "ser-007"],
     relatedSymptoms: ["sym-001", "sym-004", "sym-006", "sym-009"],
     seo: {
       title: "Linfoma en Niños | Linfoma de Hodgkin Pediátrico CDMX",
@@ -309,7 +309,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Tiene que ver con la alimentación del niño?", answer: "Generalmente no se debe a la alimentación, sino a trastornos inmunitarios, plaquetarios o infecciosos que deben ser estudiados clínicamente." }
     ],
     image: "/enfermedades/Petequias_Purpura.png",
-    relatedServices: ["ser-003"],
+    relatedServices: ["ser-003", "ser-006"],
     relatedSymptoms: ["sym-003", "sym-005", "sym-010"],
     seo: {
       title: "Petequias y Púrpura en Niños | Hematóloga CDMX",
@@ -333,7 +333,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿El tratamiento requiere hospitalización?", answer: "Sí, requiere periodos de hospitalización para la administración de quimioterapia y el manejo de los efectos secundarios." }
     ],
     image: "/enfermedades/Leucemia_Linfoblastica_Aguda.png",
-    relatedServices: ["ser-001", "ser-002", "ser-004"],
+    relatedServices: ["ser-001", "ser-002", "ser-004", "ser-006", "ser-007"],
     relatedSymptoms: ["sym-001", "sym-002", "sym-003", "sym-004", "sym-005", "sym-006", "sym-007"],
     seo: {
       title: "Leucemia Linfoblástica Aguda Infantil | Hematóloga CDMX",
@@ -358,7 +358,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Qué es una trombofilia?", answer: "Es una condición hereditaria o adquirida en la que la sangre tiene una mayor tendencia natural a formar coágulos de forma inapropiada." }
     ],
     image: "/enfermedades/Trombosis_Niños.png",
-    relatedServices: [],
+    relatedServices: ["ser-005", "ser-007"],
     relatedSymptoms: ["sym-005", "sym-007"],
     seo: {
       title: "Trombosis en Niños y Trombofilias | Hematóloga CDMX",
