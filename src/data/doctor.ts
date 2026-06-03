@@ -1,7 +1,7 @@
 import { DoctorProfile } from "@/types/schema";
 
 export const doctor: DoctorProfile = {
-  name: "Lizbeth Yamilet Hernandez Verdugo",
+  name: "Lizbeth Yamilet Hernández Verdugo",
   title: "Dra.",
   specialty: "Pediatría, Hematología Pediátrica y Medicina Transfusional",
   specialistTitle: "Hematóloga Pediatra",
@@ -22,7 +22,7 @@ export const doctor: DoctorProfile = {
   insurances: [],
   schedule: "Lunes a viernes de 10:00 a 19:00. Sábados de 9:00 a 14:00",
   photo: "/doctor.png",
-  bio: "Soy la Dra. Lizbeth Yamilet Hernandez Verdugo, médico especialista en Pediatría con subespecialidad en Hematología Pediátrica y alta especialidad en Medicina Transfusional. Mi práctica profesional se enfoca en el diagnóstico, tratamiento y seguimiento integral de niños y adolescentes que padecen trastornos de la sangre y el sistema inmune, tales como anemias, leucemias, trastornos de coagulación, hemofilia, trombocitopenia y alteraciones de las plaquetas. Mi compromiso es ofrecer una atención médica de excelencia, calidez y alta especialización científica para el bienestar de mis pequeños pacientes y la tranquilidad de sus familias en la Ciudad de México.",
+  bio: "Soy la Dra. Lizbeth Yamilet Hernández Verdugo, médico especialista en Pediatría con subespecialidad en Hematología Pediátrica y alta especialidad en Medicina Transfusional. Mi práctica profesional se enfoca en el diagnóstico, tratamiento y seguimiento integral de niños y adolescentes que padecen trastornos de la sangre y el sistema inmune, tales como anemias, leucemias, trastornos de coagulación, hemofilia, trombocitopenia y alteraciones de las plaquetas. Mi compromiso es ofrecer una atención médica de excelencia, calidez y alta especialización científica para el bienestar de mis pequeños pacientes y la tranquilidad de sus familias en la Ciudad de México.",
   philosophy: "Atención médica pediátrica especializada y humana, con enfoque científico para el diagnóstico y tratamiento integral de los trastornos de la sangre.",
   experience: [
     {

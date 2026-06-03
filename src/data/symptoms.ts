@@ -12,7 +12,7 @@ export const symptoms: Symptom[] = [
     image: "/sintomas/Fatiga_o_Cansancio_Excesivo.png",
     seo: {
       title: "Fatiga y Cansancio Excesivo en Niños | Hematóloga Pediatra",
-      description: "¿Tu hijo se nota cansado o sin energía para jugar? Podría ser anemia o un problema hematológico. Agenda consulta con la Dra. Lizbeth Hernandez.",
+      description: "¿Tu hijo se nota cansado o sin energía para jugar? Podría ser anemia o un problema hematológico. Agenda consulta con la Dra. Lizbeth Hernández.",
       keywords: ["Cansancio extremo en niños CDMX", "Anemia infantil fatiga", "Hematología pediátrica fatiga"],
     }
   },
@@ -26,7 +26,7 @@ export const symptoms: Symptom[] = [
     relatedConditions: ["enf-001", "enf-003", "enf-004", "enf-005", "enf-006", "enf-007", "enf-009", "enf-014"],
     image: "/sintomas/Palidez_Intensa_Persistente.png",
     seo: {
-      title: "Palidez Intensa en Niños y Lactantes | Dra. Lizbeth Hernandez",
+      title: "Palidez Intensa en Niños y Lactantes | Dra. Lizbeth Hernández",
       description: "¿Notas a tu hijo muy pálido, desganado o con taquicardia? Descubre las causas con una especialista en hematología pediátrica.",
       keywords: ["Palidez en niños causas CDMX", "Tratamiento de anemia infantil", "Hematólogo pediatra Roma Norte"],
     }
@@ -56,7 +56,7 @@ export const symptoms: Symptom[] = [
     relatedConditions: ["enf-011", "enf-012", "enf-014"],
     image: "/sintomas/Ganglios_Inflamados.png",
     seo: {
-      title: "Ganglios Inflamados en Niños | Dra. Lizbeth Hernandez",
+      title: "Ganglios Inflamados en Niños | Dra. Lizbeth Hernández",
       description: "Valoración especializada de adenopatías o ganglios inflamados persistentes en el cuello, axilas e ingle en la Ciudad de México.",
       keywords: ["Ganglios inflamados niños CDMX", "Adenopatías infantiles causas", "Linfoma infantil síntomas"],
     }
@@ -117,7 +117,7 @@ export const symptoms: Symptom[] = [
     image: "/sintomas/Crecimiento_Hígado_Bazo.png",
     seo: {
       title: "Bazo o Hígado Crecido en Niños | Esplenomegalia CDMX",
-      description: "¿El pediatra detectó que tu hijo tiene el bazo o hígado inflamado? Consulta con la Dra. Lizbeth Hernandez, Hematóloga Pediatra.",
+      description: "¿El pediatra detectó que tu hijo tiene el bazo o hígado inflamado? Consulta con la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
       keywords: ["Esplenomegalia en niños causas", "Bazo inflamado en niños", "Hepatomegalia infantil hematología"],
     }
   },
@@ -132,7 +132,7 @@ export const symptoms: Symptom[] = [
     image: "/sintomas/Perdida_Peso_Sudoraciones_Nocturnas.png",
     seo: {
       title: "Sudoración Nocturna y Pérdida de Peso en Niños | CDMX",
-      description: "Valoración de sudoraciones abundantes en la noche y pérdida de peso sin justificación en pacientes pediátricos. Dra. Lizbeth Hernandez.",
+      description: "Valoración de sudoraciones abundantes en la noche y pérdida de peso sin justificación en pacientes pediátricos. Dra. Lizbeth Hernández.",
       keywords: ["Sudores nocturnos niños causas", "Pérdida de peso infantil cáncer", "Síntomas B hematología pediatría"],
     }
   },
@@ -162,7 +162,7 @@ export const symptoms: Symptom[] = [
     image: "/sintomas/ictericia.png",
     seo: {
       title: "Ojos y Piel Amarilla en Bebés | Ictericia Neonatal CDMX",
-      description: "Diagnóstico de ictericia prolongada en recién nacidos y lactantes. Evita complicaciones con la Dra. Lizbeth Hernandez, Hematóloga Pediatra.",
+      description: "Diagnóstico de ictericia prolongada en recién nacidos y lactantes. Evita complicaciones con la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
       keywords: ["Ictericia prolongada lactantes", "Bebé amarillo causas hematológicas", "Incompatibilidad Rh recién nacido"],
     }
   },
@@ -192,8 +192,53 @@ export const symptoms: Symptom[] = [
     image: "/sintomas/pancitopenia.png",
     seo: {
       title: "Pancitopenia en Niños (Defensas, Plaquetas y Sangre Bajas)",
-      description: "Interpretación experta y diagnóstico de la pancitopenia en niños. Agenda consulta urgente con la Dra. Lizbeth Hernandez.",
+      description: "Interpretación experta y diagnóstico de la pancitopenia en niños. Agenda consulta urgente con la Dra. Lizbeth Hernández.",
       keywords: ["Pancitopenia infantil causas CDMX", "Falla de médula ósea niños", "Estudio de tres líneas celulares bajas"],
+    }
+  },
+  {
+    id: "sym-014",
+    slug: "epistaxis-repeticion",
+    name: "Epistaxis de Repetición",
+    description: "Episodios frecuentes y recurrentes de sangrado por la nariz en niños y adolescentes, que pueden presentarse de forma espontánea o ante mínimos estímulos.",
+    causes: ["Fragilidad vascular nasal", "Trombocitopenia (plaquetas bajas)", "Enfermedad de Von Willebrand", "Hemofilia", "Leucemias agudas"],
+    whyConsult: "El sangrado nasal frecuente puede ser señal de una alteración en la coagulación o de plaquetas bajas en la sangre. Es crucial una evaluación hematológica experta para identificar la causa subyacente y prevenir complicaciones.",
+    relatedConditions: ["enf-002", "enf-003", "enf-008", "enf-010", "enf-014"],
+    image: "/sintomas/epistaxis_repeticion.png",
+    seo: {
+      title: "Epistaxis de Repetición en Niños (Sangrado Nasal) | CDMX",
+      description: "¿Tu hijo presenta sangrado de nariz de forma frecuente? Conoce las causas y cuándo consultar a la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
+      keywords: ["Epistaxis de repetición en niños", "Sangrado nasal frecuente niños CDMX", "Hematólogo pediatra sangrado nariz"],
+    }
+  },
+  {
+    id: "sym-015",
+    slug: "sangrado-encias",
+    name: "Sangrado en Encías",
+    description: "Pérdida de sangre en las encías del niño de forma espontánea, durante el cepillado dental o al comer alimentos blandos, a menudo sin inflamación previa.",
+    causes: ["Trombocitopenia inmune (PTI)", "Deficiencia de factores de coagulación (Hemofilia)", "Enfermedad de Von Willebrand", "Leucemias agudas o aplasia medular"],
+    whyConsult: "El sangrado gingival espontáneo es un signo común de recuento bajo de plaquetas (trombocitopenia) o de fallas en la cascada de coagulación. Requiere una revisión clínica detallada para descartar trastornos hematológicos graves.",
+    relatedConditions: ["enf-002", "enf-003", "enf-008", "enf-010", "enf-014"],
+    image: "/sintomas/sangrado_encias.png",
+    seo: {
+      title: "Sangrado de Encías en Niños y Lactantes | Dra. Lizbeth",
+      description: "El sangrado de encías en niños puede indicar alteraciones plaquetarias o problemas de coagulación. Consulta a una experta en hematología pediátrica.",
+      keywords: ["Sangrado de encías en niños causas", "Gingivorragia infantil CDMX", "Trastornos plaquetarios niños encías"],
+    }
+  },
+  {
+    id: "sym-016",
+    slug: "menstruacion-abundante-ninas",
+    name: "Menstruación Abundante en Niñas",
+    description: "Flujo menstrual excesivamente abundante o prolongado (menorragia) en niñas y adolescentes que inician sus periodos menstruales, a menudo requiriendo cambiar toallas sanitarias con gran frecuencia.",
+    causes: ["Enfermedad de Von Willebrand", "Disfunción plaquetaria", "Trombocitopenia inmune (PTI)", "Alteraciones hormonales de la adolescencia"],
+    whyConsult: "Hasta un veinte por ciento de las adolescentes con sangrado menstrual abundante presentan un trastorno hemorrágico subyacente, como la enfermedad de Von Willebrand. La evaluación a tiempo evita anemia severa y mejora su calidad de vida.",
+    relatedConditions: ["enf-002", "enf-010"],
+    image: "/sintomas/menstruacion_abundante.png",
+    seo: {
+      title: "Menstruación Abundante en Niñas (Menorragia) | CDMX",
+      description: "¿Tu hija tiene periodos menstruales muy abundantes? Podría tratarse de un trastorno hemorrágico. Agenda valoración con la Dra. Lizbeth Hernández.",
+      keywords: ["Menstruación abundante en adolescentes", "Enfermedad de Von Willebrand menorragia", "Hematóloga pediatra menstruación CDMX"],
     }
   }
 ];

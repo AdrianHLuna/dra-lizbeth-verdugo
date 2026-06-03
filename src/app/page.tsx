@@ -126,7 +126,7 @@ export default function Home() {
             <motion.div variants={softBlurIn} className="lg:col-span-5 bg-white p-10 border border-slate-150 rounded-[3rem_1rem_3rem_1rem] shadow-sm relative group overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full blur-xl pointer-events-none" />
               <span className="text-accent font-extrabold text-xs uppercase tracking-widest block mb-4">Hematóloga Pediatra</span>
-              <h2 className="text-3xl font-extrabold text-slate-900 mb-6 uppercase tracking-tight">Dra. Lizbeth Hernandez</h2>
+              <h2 className="text-3xl font-extrabold text-slate-900 mb-6 uppercase tracking-tight">Dra. Lizbeth Hernández</h2>
               <div className="w-10 h-1 bg-accent mb-6 rounded-full" />
               <p className="text-base lg:text-lg leading-relaxed text-slate-600 mb-6 font-medium italic">
                 "{doctor.bio}"

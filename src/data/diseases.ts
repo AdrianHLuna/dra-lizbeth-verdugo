@@ -21,7 +21,7 @@ export const diseases: MedicalCondition[] = [
     relatedSymptoms: ["sym-001", "sym-002", "sym-005"],
     seo: {
       title: "Anemia Ferropénica en Niños | Hematóloga Pediatra CDMX",
-      description: "Diagnóstico y tratamiento de la anemia ferropénica por falta de hierro en bebés y niños. Consulta con la Dra. Lizbeth Hernandez.",
+      description: "Diagnóstico y tratamiento de la anemia ferropénica por falta de hierro en bebés y niños. Consulta con la Dra. Lizbeth Hernández.",
       keywords: ["Anemia ferropénica infantil CDMX", "Falta de hierro en niños", "Tratamiento de anemia en lactantes"],
     }
   },
@@ -31,22 +31,23 @@ export const diseases: MedicalCondition[] = [
     name: "Trombocitopenia Inmune",
     technicalName: "Púrpura Trombocitopénica Inmune",
     description: "La trombocitopenia inmune es un trastorno sanguíneo caracterizado por una disminución anormal del número de plaquetas en la sangre debido a que el sistema inmunitario del propio niño las destruye.",
-    symptoms: ["Aparición de moretones fáciles sin causa", "Petequias que son pequeños puntos rojos en la piel", "Sangrados nasales frecuentes", "Sangrado de encías"],
-    causes: ["Reacción inmunitaria desencadenada por una infección viral previa", "Desregulación del sistema inmunitario del niño", "Administración de vacunas"],
-    riskFactors: ["Infecciones virales recientes como gripe o varicela", "Predisposición genética a trastornos autoinmunes"],
+    symptoms: ["Aparición de moretones fáciles sin causa", "Petequias que son pequeños puntos rojos en la piel", "Epistaxis de repetición", "Sangrado en encías", "Menstruación abundante en niñas"],
+    causes: ["Reacción inmunitaria desencadenada por una infección viral o gastrointestinal previa", "Desregulación del sistema inmunitario del niño", "Administración de vacunas"],
+    riskFactors: ["Infecciones virales o gastrointestinales recientes como gripe, varicela o gastroenteritis", "Predisposición genética a trastornos autoinmunes"],
     complications: ["Hemorragias graves espontáneas en órganos internos (poco frecuentes pero de alto riesgo)", "Ansiedad familiar por riesgo de sangrado"],
     treatments: ["Vigilancia clínica estrecha en casos leves", "Inmunoglobulina intravenosa", "Medicamentos corticoesteroides bajo estricto control médico"],
     faqs: [
       { question: "¿El niño puede realizar actividades físicas normales?", answer: "Se deben evitar los deportes de contacto o actividades con alto riesgo de caídas y golpes mientras las plaquetas estén bajas, para prevenir hemorragias." },
       { question: "¿Esta enfermedad se vuelve crónica?", answer: "En la mayoría de los niños, la trombocitopenia inmune se resuelve por completo en menos de seis meses. Solo una minoría desarrolla la forma crónica." },
-      { question: "¿Requiere transfusión de plaquetas?", answer: "Generalmente no, ya que el sistema inmune destruiría rápidamente las plaquetas transfundidas. Se reserva solo para emergencias extremas." }
+      { question: "¿Requiere transfusión de plaquetas?", answer: "Generalmente no, ya que el sistema inmune destruiría rápidamente las plaquetas transfundidas. Se reserva solo para emergencias extremas." },
+      { question: "¿Cuánto tarda en resolverse con tratamiento?", answer: "Con el inicio del tratamiento médico adecuado, la resolución de los síntomas y la elevación de las plaquetas se observa típicamente a los 7 días." }
     ],
     image: "/enfermedades/Trombocitopenia_Inmune.png",
     relatedServices: ["ser-001", "ser-003", "ser-006"],
-    relatedSymptoms: ["sym-003", "sym-005", "sym-010"],
+    relatedSymptoms: ["sym-003", "sym-005", "sym-010", "sym-014", "sym-015", "sym-016"],
     seo: {
       title: "Trombocitopenia Inmune en Niños | Púrpura Infantil CDMX",
-      description: "Información y tratamiento especializado para la Púrpura Trombocitopénica Inmune (PTI) en niños con la Dra. Lizbeth Hernandez.",
+      description: "Información y tratamiento especializado para la Púrpura Trombocitopénica Inmune (PTI) en niños con la Dra. Lizbeth Hernández.",
       keywords: ["Trombocitopenia inmune niños", "Plaquetas bajas en niños causas", "Púrpura infantil tratamiento CDMX"],
     }
   },
@@ -67,10 +68,10 @@ export const diseases: MedicalCondition[] = [
     ],
     image: "/enfermedades/Anemia_Aplasica.png",
     relatedServices: ["ser-001", "ser-002", "ser-006", "ser-007"],
-    relatedSymptoms: ["sym-001", "sym-002", "sym-003", "sym-005", "sym-006", "sym-013"],
+    relatedSymptoms: ["sym-001", "sym-002", "sym-003", "sym-005", "sym-006", "sym-013", "sym-014", "sym-015"],
     seo: {
       title: "Anemia Aplásica Infantil | Falla Medular CDMX",
-      description: "Diagnóstico y alternativas de tratamiento para la anemia aplásica en niños con la Dra. Lizbeth Hernandez, Hematóloga Pediatra.",
+      description: "Diagnóstico y alternativas de tratamiento para la anemia aplásica en niños con la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
       keywords: ["Anemia aplásica en niños CDMX", "Falla de médula ósea infantil", "Hematólogo pediatra experto"],
     }
   },
@@ -94,7 +95,7 @@ export const diseases: MedicalCondition[] = [
     relatedSymptoms: ["sym-001", "sym-002", "sym-005", "sym-008", "sym-011"],
     seo: {
       title: "Anemia Hemolítica en Niños | Hematóloga Pediatra CDMX",
-      description: "Diagnóstico especializado y tratamiento de la anemia hemolítica e ictericia en niños y bebés. Dra. Lizbeth Hernandez.",
+      description: "Diagnóstico especializado y tratamiento de la anemia hemolítica e ictericia en niños y bebés. Dra. Lizbeth Hernández.",
       keywords: ["Anemia hemolítica infantil", "Niño con ojos amarillos causas", "Destrucción de glóbulos rojos niños"],
     }
   },
@@ -105,7 +106,7 @@ export const diseases: MedicalCondition[] = [
     technicalName: "Anemia Falciforme",
     description: "La drepanocitosis o anemia falciforme es un trastorno genético hereditario de los glóbulos rojos. Causa que la hemoglobina sea anormal, deformando los glóbulos rojos en forma de hoz o media luna, lo que obstruye los vasos sanguíneos pequeños.",
     symptoms: ["Crisis de dolor severo (huesos, abdomen y pecho)", "Fatiga y palidez constante", "Hinchazón dolorosa de manos y pies (dactilitis)", "Infecciones bacterianas recurrentes", "Retraso en el crecimiento"],
-    causes: ["Mutación genética heredada de ambos padres que afecta la producción de las cadenas de beta-hemoglobina"],
+    causes: ["Mutación puntual que produce una hemoglobina anormal, heredada de ambos padres y que afecta la producción de las cadenas de beta-hemoglobina"],
     riskFactors: ["Ambos padres portadores del rasgo falciforme", "Ascendencia de regiones de África, el Mediterráneo, el Caribe o Centroamérica"],
     complications: ["Accidente cerebrovascular a temprana edad", "Síndrome torácico agudo (infiltrado pulmonar grave)", "Daño orgánico crónico en riñones, bazo y articulaciones"],
     treatments: ["Medicamentos para prevenir las crisis de dolor", "Vacunación completa y antibióticos profilácticos", "Transfusiones de sangre y trasplante de médula ósea"],
@@ -119,7 +120,7 @@ export const diseases: MedicalCondition[] = [
     relatedSymptoms: ["sym-001", "sym-002", "sym-007", "sym-012"],
     seo: {
       title: "Drepanocitosis (Anemia Falciforme) en Niños | CDMX",
-      description: "Manejo experto de la anemia falciforme y crisis de dolor en niños. Consulta con la Dra. Lizbeth Hernandez, Hematóloga Pediatra.",
+      description: "Manejo experto de la anemia falciforme y crisis de dolor en niños. Consulta con la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
       keywords: ["Anemia falciforme niños CDMX", "Drepanocitosis infantil tratamiento", "Crisis de dolor hematológicas"],
     }
   },
@@ -143,7 +144,7 @@ export const diseases: MedicalCondition[] = [
     relatedSymptoms: ["sym-001", "sym-002", "sym-008", "sym-012"],
     seo: {
       title: "Talasemia Infantil y Tratamiento de Sobrecarga de Hierro | CDMX",
-      description: "Diagnóstico diferencial y control integral de la talasemia en niños. Dra. Lizbeth Hernandez, Especialista en Hematología Pediátrica.",
+      description: "Diagnóstico diferencial y control integral de la talasemia en niños. Dra. Lizbeth Hernández, Especialista en Hematología Pediátrica.",
       keywords: ["Talasemia en niños CDMX", "Terapia de quelación de hierro", "Electroforesis de hemoglobina niños"],
     }
   },
@@ -167,7 +168,7 @@ export const diseases: MedicalCondition[] = [
     relatedSymptoms: ["sym-001", "sym-002", "sym-008", "sym-011"],
     seo: {
       title: "Esferocitosis Hereditaria en Niños | Hematología CDMX",
-      description: "Diagnóstico y control de la esferocitosis hereditaria y esplenectomía en pacientes pediátricos. Dra. Lizbeth Hernandez.",
+      description: "Diagnóstico y control de la esferocitosis hereditaria y esplenectomía en pacientes pediátricos. Dra. Lizbeth Hernández.",
       keywords: ["Esferocitosis hereditaria niños", "Fragilidad osmótica estudio", "Esplenectomía pediátrica CDMX"],
     }
   },
@@ -176,7 +177,7 @@ export const diseases: MedicalCondition[] = [
     slug: "hemofilia-infantil",
     name: "Hemofilia Infantil",
     description: "La hemofilia es un trastorno hemorrágico hereditario en el cual la sangre del niño no coagula de manera adecuada debido a la deficiencia de una proteína de la coagulación (factor ocho o factor nueve).",
-    symptoms: ["Sangrados prolongados ante cortes pequeños", "Hematomas grandes en brazos o piernas", "Sangrado o inflamación dolorosa en articulaciones", "Sangrado espontáneo de nariz"],
+    symptoms: ["Sangrados prolongados ante cortes pequeños", "Hematomas grandes en brazos o piernas", "Sangrado o inflamación dolorosa en articulaciones", "Epistaxis de repetición", "Sangrado en encías"],
     causes: ["Alteración o mutación genética en los cromosomas sexuales ligada al cromosoma X, transmitida de padres a hijos"],
     riskFactors: ["Antecedentes familiares de hemofilia", "Sexo masculino (afecta casi exclusivamente a varones)"],
     complications: ["Daño articular crónico por sangrados repetitivos (artropatía hemofílica)", "Hemorragias internas espontáneas de difícil control"],
@@ -188,10 +189,10 @@ export const diseases: MedicalCondition[] = [
     ],
     image: "/enfermedades/Hemofilia_Infantil.png",
     relatedServices: ["ser-005"],
-    relatedSymptoms: ["sym-003", "sym-005", "sym-010"],
+    relatedSymptoms: ["sym-003", "sym-005", "sym-010", "sym-014", "sym-015"],
     seo: {
       title: "Tratamiento de Hemofilia en Niños | Hematología CDMX",
-      description: "Control experto y profilaxis para niños con hemofilia A o B. Especialista en coagulación Dra. Lizbeth Hernandez.",
+      description: "Control experto y profilaxis para niños con hemofilia A o B. Especialista en coagulación Dra. Lizbeth Hernández.",
       keywords: ["Hemofilia infantil tratamiento CDMX", "Sangrado en articulaciones niños", "Factores de coagulación pediatría"],
     }
   },
@@ -216,7 +217,7 @@ export const diseases: MedicalCondition[] = [
     relatedSymptoms: ["sym-001", "sym-002", "sym-005", "sym-011"],
     seo: {
       title: "Deficiencia de G6PD en Niños | Favismo CDMX",
-      description: "Diagnóstico y guía de prevención de crisis hemolíticas por deficiencia de G6PD. Consulta con la Dra. Lizbeth Hernandez.",
+      description: "Diagnóstico y guía de prevención de crisis hemolíticas por deficiencia de G6PD. Consulta con la Dra. Lizbeth Hernández.",
       keywords: ["Deficiencia de G6PD infantil", "Favismo en niños síntomas", "Medicamentos prohibidos G6PD"],
     }
   },
@@ -225,7 +226,7 @@ export const diseases: MedicalCondition[] = [
     slug: "enfermedad-von-willebrand",
     name: "Enfermedad de Von Willebrand",
     description: "La enfermedad de Von Willebrand es el trastorno hemorrágico hereditario más común en la población general. Se debe a la disminución o funcionamiento anormal del factor de Von Willebrand, una proteína necesaria para que las plaquetas se adhieran a los vasos y formen coágulos.",
-    symptoms: ["Sangrados nasales frecuentes y difíciles de detener", "Moretones fáciles de gran tamaño", "Sangrado de encías abundante", "Flujo menstrual muy abundante en adolescentes (menorragia)", "Sangrado excesivo tras cirugías dentales"],
+    symptoms: ["Epistaxis de repetición", "Moretones fáciles de gran tamaño", "Sangrado en encías", "Menstruación abundante en niñas", "Sangrado excesivo tras cirugías dentales"],
     causes: ["Alteraciones genéticas hereditarias (autosómicas, pueden afectar a hombres y mujeres por igual) en el gen del factor de Von Willebrand"],
     riskFactors: ["Padres con diagnóstico de la enfermedad o síntomas de sangrado anormal inexplicado"],
     complications: ["Anemia crónica por pérdidas de sangre recurrentes", "Hemorragias graves tras procedimientos menores", "Dolor e inflamación articular (en tipos graves)"],
@@ -237,10 +238,10 @@ export const diseases: MedicalCondition[] = [
     ],
     image: "/enfermedades/Enfermedad_Von_Willebrand.png",
     relatedServices: ["ser-005"],
-    relatedSymptoms: ["sym-003", "sym-005", "sym-010"],
+    relatedSymptoms: ["sym-003", "sym-005", "sym-010", "sym-014", "sym-015", "sym-016"],
     seo: {
       title: "Enfermedad de Von Willebrand Infantil | Hematología CDMX",
-      description: "Diagnóstico y manejo de sangrados frecuentes y enfermedad de Von Willebrand en niños y adolescentes. Dra. Lizbeth Hernandez.",
+      description: "Diagnóstico y manejo de sangrados frecuentes y enfermedad de Von Willebrand en niños y adolescentes. Dra. Lizbeth Hernández.",
       keywords: ["Enfermedad de Von Willebrand niños", "Sangrado de nariz frecuente niños", "Hematólogo pediatra experto CDMX"],
     }
   },
@@ -264,7 +265,7 @@ export const diseases: MedicalCondition[] = [
     relatedSymptoms: ["sym-001", "sym-004", "sym-006", "sym-009"],
     seo: {
       title: "Linfoma en Niños | Linfoma de Hodgkin Pediátrico CDMX",
-      description: "Diagnóstico y tratamiento oportuno de linfomas infantiles (Hodgkin y No Hodgkin). Dra. Lizbeth Hernandez, Hematóloga Pediatra.",
+      description: "Diagnóstico y tratamiento oportuno de linfomas infantiles (Hodgkin y No Hodgkin). Dra. Lizbeth Hernández, Hematóloga Pediatra.",
       keywords: ["Linfoma infantil síntomas", "Ganglios inflamados duros niños", "Cáncer linfático en niños CDMX"],
     }
   },
@@ -289,7 +290,7 @@ export const diseases: MedicalCondition[] = [
     relatedSymptoms: ["sym-004", "sym-006"],
     seo: {
       title: "Adenopatías en Niños (Ganglios Inflamados) | CDMX",
-      description: "Evaluación diagnóstica y tratamiento de ganglios inflamados en bebés y niños. Consulta con la Dra. Lizbeth Hernandez.",
+      description: "Evaluación diagnóstica y tratamiento de ganglios inflamados en bebés y niños. Consulta con la Dra. Lizbeth Hernández.",
       keywords: ["Adenopatías infantiles CDMX", "Ganglios inflamados en el cuello niños", "Cuándo preocuparse por un ganglio"],
     }
   },
@@ -313,7 +314,7 @@ export const diseases: MedicalCondition[] = [
     relatedSymptoms: ["sym-003", "sym-005", "sym-010"],
     seo: {
       title: "Petequias y Púrpura en Niños | Hematóloga CDMX",
-      description: "Diagnóstico urgente y tratamiento de manchas moradas y puntos rojos en la piel de niños. Dra. Lizbeth Hernandez.",
+      description: "Diagnóstico urgente y tratamiento de manchas moradas y puntos rojos en la piel de niños. Dra. Lizbeth Hernández.",
       keywords: ["Petequias en niños causas", "Púrpura de Henoch-Schönlein CDMX", "Puntos rojos en la piel niños urgencia"],
     }
   },
@@ -334,10 +335,10 @@ export const diseases: MedicalCondition[] = [
     ],
     image: "/enfermedades/Leucemia_Linfoblastica_Aguda.png",
     relatedServices: ["ser-001", "ser-002", "ser-004", "ser-006", "ser-007"],
-    relatedSymptoms: ["sym-001", "sym-002", "sym-003", "sym-004", "sym-005", "sym-006", "sym-007"],
+    relatedSymptoms: ["sym-001", "sym-002", "sym-003", "sym-004", "sym-005", "sym-006", "sym-007", "sym-014", "sym-015"],
     seo: {
       title: "Leucemia Linfoblástica Aguda Infantil | Hematóloga CDMX",
-      description: "Diagnóstico oportuno y manejo integral de la leucemia infantil. Consulta experta con la Dra. Lizbeth Hernandez, Hematóloga Pediatra.",
+      description: "Diagnóstico oportuno y manejo integral de la leucemia infantil. Consulta experta con la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
       keywords: ["Leucemia infantil síntomas CDMX", "Aspirado de médula ósea leucemia", "Cáncer en la sangre niños"],
     }
   },
@@ -362,7 +363,7 @@ export const diseases: MedicalCondition[] = [
     relatedSymptoms: ["sym-005", "sym-007"],
     seo: {
       title: "Trombosis en Niños y Trombofilias | Hematóloga CDMX",
-      description: "Diagnóstico y tratamiento especializado de trombosis venosa y estudios de trombofilia en niños. Dra. Lizbeth Hernandez.",
+      description: "Diagnóstico y tratamiento especializado de trombosis venosa y estudios de trombofilia en niños. Dra. Lizbeth Hernández.",
       keywords: ["Trombosis en niños causas", "Catéter venoso central complicaciones", "Trombofilia pediátrica CDMX"],
     }
   }

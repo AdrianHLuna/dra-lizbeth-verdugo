@@ -5,7 +5,7 @@ import { FadeUp, StaggerContainer, StaggerItem } from "@/components/Animations";
 
 export const metadata = {
   title: "Contacto y Ubicación | Hematología Pediátrica CDMX",
-  description: "Encuentra la ubicación del consultorio de la Dra. Lizbeth Yamilet Hernandez Verdugo en la Roma Norte, CDMX.",
+  description: "Encuentra la ubicación del consultorio de la Dra. Lizbeth Yamilet Hernández Verdugo en la Roma Norte, CDMX.",
 };
 
 export default function ContactoPage() {
@@ -16,7 +16,7 @@ export default function ContactoPage() {
 
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
         <Breadcrumbs items={[{ label: "Inicio", href: "/" }, { label: "Contacto" }]} />
-        
+
         <FadeUp className="text-center mb-16 mt-8">
           <span className="text-primary font-bold text-xs uppercase tracking-widest bg-white border border-primary/20 px-4 py-1.5 rounded-full">
             Atención Inmediata
@@ -29,16 +29,16 @@ export default function ContactoPage() {
 
         {/* 3-Column Avant-Garde Contact Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto">
-          
+
           {/* Column 1: Urgencias & WhatsApp (Berenjena Profundo & Curves) */}
           <FadeUp delay={0.1} className="h-full flex">
             <div className="bg-gradient-to-br from-primary to-[#3b1c39] text-white p-8 rounded-[4rem_1rem_4rem_1rem] shadow-xl flex flex-col justify-between w-full group relative overflow-hidden border-t-8 border-accent">
               <div className="absolute top-[-10%] right-[-10%] w-24 h-24 bg-white/5 rounded-full blur-xl pointer-events-none" />
-              
+
               <div>
                 <h3 className="text-xl font-extrabold mb-6 uppercase tracking-tight">Atención y Urgencias</h3>
                 <div className="w-10 h-1 bg-accent mb-8 rounded-full" />
-                
+
                 <div className="space-y-6">
                   {/* WhatsApp */}
                   <div className="flex gap-4 items-start">
@@ -78,10 +78,10 @@ export default function ContactoPage() {
               </div>
 
               {/* Botón Acción Rápida */}
-              <a 
-                href={`https://wa.me/${doctor.whatsapp.replace(/\D/g, "")}`} 
-                target="_blank" 
-                rel="noreferrer" 
+              <a
+                href={`https://wa.me/${doctor.whatsapp.replace(/\D/g, "")}`}
+                target="_blank"
+                rel="noreferrer"
                 className="w-full bg-accent text-white font-bold py-4 rounded-full text-center hover:bg-[#a6225f] transition-colors uppercase tracking-wider text-[10px] mt-10 block"
               >
                 Enviar WhatsApp Inmediato
@@ -92,13 +92,13 @@ export default function ContactoPage() {
           {/* Column 2: Large Elliptic Google Map */}
           <FadeUp delay={0.2} className="h-full flex">
             <div className="w-full bg-slate-100 min-h-[380px] lg:min-h-auto rounded-[150px_40px_150px_40px] overflow-hidden shadow-lg border border-slate-200 relative group">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.661706785868!2d-99.16536642385157!3d19.415061981858547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff394142f1cf%3A0x6b4c1fcbcf54b1f4!2sSan%20Luis%20Potos%C3%AD%20143%2C%20Roma%20Nte.%2C%20Cuauht%C3%A9moc%2C%2006700%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1716100000000!5m2!1ses-419!2smx" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0, position: 'absolute', top: 0, left: 0 }} 
-                allowFullScreen={true} 
-                loading="lazy" 
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.661706785868!2d-99.16536642385157!3d19.415061981858547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff394142f1cf%3A0x6b4c1fcbcf54b1f4!2sSan%20Luis%20Potos%C3%AD%20143%2C%20Roma%20Nte.%2C%20Cuauht%C3%A9moc%2C%2006700%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1716100000000!5m2!1ses-419!2smx"
+                width="100%"
+                height="100%"
+                style={{ border: 0, position: 'absolute', top: 0, left: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="grayscale group-hover:grayscale-0 transition-all duration-700 w-full h-full"
               />
@@ -111,7 +111,7 @@ export default function ContactoPage() {
               <div>
                 <h3 className="text-xl font-extrabold text-slate-900 mb-6 uppercase tracking-tight">Consultorio Roma Norte</h3>
                 <div className="w-10 h-1 bg-primary mb-8 rounded-full" />
-                
+
                 <div className="space-y-6">
                   {/* Dirección */}
                   <div className="flex gap-4 items-start">
@@ -152,10 +152,10 @@ export default function ContactoPage() {
                 </div>
               </div>
 
-              <a 
-                href={doctor.googleMapsUrl} 
-                target="_blank" 
-                rel="noreferrer" 
+              <a
+                href={doctor.googleMapsUrl}
+                target="_blank"
+                rel="noreferrer"
                 className="w-full bg-primary text-white font-bold py-4 rounded-full text-center hover:bg-[#a6225f] transition-colors uppercase tracking-wider text-[10px] mt-10 block shadow-md"
               >
                 Abrir en Google Maps

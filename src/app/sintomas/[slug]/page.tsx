@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const resolvedParams = await params;
   const symptom = symptoms.find((s) => s.slug === resolvedParams.slug);
   if (!symptom) return {};
-  
+
   return {
     title: symptom.seo.title,
     description: symptom.seo.description,
@@ -38,14 +38,14 @@ export default async function SymptomPage({ params }: { params: Promise<{ slug: 
   return (
     <div className="min-h-screen bg-[#fcfdfd] py-12 text-[#705662] relative overflow-hidden">
       <StructuredData data={schema} />
-      
+
       {/* Background watercolor blotches (Sinergia con el logo) */}
       <div className="absolute top-[10%] right-[-10%] w-[450px] h-[450px] rounded-full bg-[radial-gradient(circle,rgba(151,31,87,0.06)_0%,transparent_70%)] pointer-events-none -z-10 animate-pulse" />
       <div className="absolute bottom-[20%] left-[-10%] w-[380px] h-[380px] rounded-full bg-[radial-gradient(circle,rgba(87,45,85,0.05)_0%,transparent_70%)] pointer-events-none -z-10" />
 
       <div className="container mx-auto px-6 max-w-7xl">
         <Breadcrumbs items={[{ label: "Inicio", href: "/" }, { label: "Síntomas", href: "/sintomas" }, { label: symptom.name }]} />
-        
+
         {/* Hero Síntoma (Avant-Garde Circular Layout) */}
         <FadeUp className="flex flex-col lg:flex-row gap-12 mb-16 mt-8 bg-white border border-slate-100 shadow-sm p-8 sm:p-12 rounded-[4rem_1rem_4rem_1rem] overflow-hidden relative">
           <div className="lg:w-7/12 flex flex-col justify-center relative z-10">
@@ -53,22 +53,22 @@ export default async function SymptomPage({ params }: { params: Promise<{ slug: 
             <h1 className="text-3xl lg:text-4xl font-extrabold mb-6 tracking-tight leading-tight uppercase">{symptom.name}</h1>
             <p className="text-xs lg:text-sm text-slate-500 leading-relaxed font-semibold">{symptom.description}</p>
           </div>
-          
+
           <div className="lg:w-5/12 min-h-[300px] bg-slate-50 flex items-center justify-center relative overflow-hidden group rounded-full border-8 border-slate-100 shadow-lg">
-             <div className="absolute inset-0 bg-slate-105 transition-transform duration-700 flex items-center justify-center">
-                <img 
-                  src={symptom.image} 
-                  alt={symptom.name} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-             </div>
+            <div className="absolute inset-0 bg-slate-105 transition-transform duration-700 flex items-center justify-center">
+              <img
+                src={symptom.image}
+                alt={symptom.name}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
           </div>
         </FadeUp>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Contenido Principal */}
           <StaggerContainer className="lg:col-span-2 space-y-12">
-            
+
             {/* Por qué no debes ignorarlo */}
             <StaggerItem>
               <div className="bg-amber-50/50 border border-amber-200 p-8 rounded-[2rem_0.5rem_2rem_0.5rem] hover:shadow-md transition-shadow group">
@@ -99,7 +99,7 @@ export default async function SymptomPage({ params }: { params: Promise<{ slug: 
           <FadeUp delay={0.2} className="lg:col-span-1">
             <div className="sticky top-32 bg-gradient-to-br from-primary to-[#3b1c39] p-8 text-white shadow-xl rounded-[2.5rem_0.5rem_2.5rem_0.5rem] group border-t-8 border-accent relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full blur-xl pointer-events-none" />
-              <h3 className="text-lg font-extrabold mb-4 tracking-tight uppercase">La Dra. Lizbeth Hernandez evalúa este síntoma</h3>
+              <h3 className="text-lg font-extrabold mb-4 tracking-tight uppercase">La Dra. Lizbeth Hernández evalúa este síntoma</h3>
               <div className="w-10 h-1 bg-accent mb-6 rounded-full" />
               <p className="text-slate-300 text-xs mb-8 leading-relaxed">
                 La detección oportuna de anomalías sanguíneas previene complicaciones severas. Estamos listos para atender a tu hijo con el mayor cuidado y profesionalismo.

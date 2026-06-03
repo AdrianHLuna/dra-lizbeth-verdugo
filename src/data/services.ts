@@ -63,7 +63,7 @@ export const services: MedicalService[] = [
     image: "/servicios/Biopsia_Medula_Osea.png",
     seo: {
       title: "Biopsia de Médula Ósea en Niños | Hematología CDMX",
-      description: "Procedimiento de biopsia de médula ósea en pacientes pediátricos realizado por la Dra. Lizbeth Hernandez, experta certificada.",
+      description: "Procedimiento de biopsia de médula ósea en pacientes pediátricos realizado por la Dra. Lizbeth Hernández, experta certificada.",
       keywords: ["Biopsia de médula ósea infantil", "Estudio histopatológico de médula", "Hematólogo pediatra Roma Norte"],
     }
   },
@@ -135,7 +135,7 @@ export const services: MedicalService[] = [
     slug: "interpretacion-resultados-laboratorio",
     name: "Interpretación de Resultados de Laboratorio",
     description: "Evaluación y análisis especializado de estudios clínicos y de laboratorio general para identificar indicios de trastornos sanguíneos o inmunológicos en niños.",
-    longDescription: "La interpretación de resultados de laboratorio consiste en el análisis crítico, integrativo y experto de diversos estudios de laboratorio clínico (perfil de hierro, pruebas de función hepática, frotis, etc.). La Dra. Lizbeth Hernandez correlaciona estos valores con el cuadro clínico del paciente pediátrico para confirmar diagnósticos hematológicos oportunos o guiar estudios moleculares adicionales.",
+    longDescription: "La interpretación de resultados de laboratorio consiste en el análisis crítico, integrativo y experto de diversos estudios de laboratorio clínico (perfil de hierro, pruebas de función hepática, frotis, etc.). La Dra. Lizbeth Hernández correlaciona estos valores con el cuadro clínico del paciente pediátrico para confirmar diagnósticos hematológicos oportunos o guiar estudios moleculares adicionales.",
     type: "consultorio",
     isPainful: false,
     duration: "30 a 45 minutos",
@@ -158,7 +158,7 @@ export const services: MedicalService[] = [
     image: "/servicios/Interpretacion_Resultados_Laboratorio.png",
     seo: {
       title: "Interpretación de Análisis de Laboratorio Pediátrico | CDMX",
-      description: "Consulta especializada para la interpretación y diagnóstico a partir de resultados de análisis clínicos en niños con la Dra. Lizbeth Hernandez.",
+      description: "Consulta especializada para la interpretación y diagnóstico a partir de resultados de análisis clínicos en niños con la Dra. Lizbeth Hernández.",
       keywords: ["Interpretación de estudios de laboratorio CDMX", "Análisis clínicos niños", "Hematóloga Pediatra Roma Norte"]
     }
   },
@@ -167,7 +167,7 @@ export const services: MedicalService[] = [
     slug: "interpretacion-biometria-hematica",
     name: "Interpretación de Biometría Hemática",
     description: "Análisis detallado de las tres líneas celulares (glóbulos rojos, glóbulos blancos y plaquetas) para detectar anemias, infecciones y fallas medulares.",
-    longDescription: "La biometría hemática es el estudio de laboratorio más importante en hematología. La interpretación médica experta por parte de la Dra. Lizbeth Hernandez va más allá de los valores de referencia del laboratorio general, evaluando índices eritrocitarios, niveles de hemoglobina y recuentos absolutos de leucocitos y plaquetas adaptados a la edad pediátrica del paciente para detectar anemias, leucemias y otras anomalías graves.",
+    longDescription: "La biometría hemática es el estudio de laboratorio más importante en hematología. La interpretación médica experta por parte de la Dra. Lizbeth Hernández va más allá de los valores de referencia del laboratorio general, evaluando índices eritrocitarios, niveles de hemoglobina y recuentos absolutos de leucocitos y plaquetas adaptados a la edad pediátrica del paciente para detectar anemias, leucemias y otras anomalías graves.",
     type: "consultorio",
     isPainful: false,
     duration: "30 a 40 minutos",
@@ -190,7 +190,7 @@ export const services: MedicalService[] = [
     image: "/servicios/Interpretacion_Biometria_Hematica.png",
     seo: {
       title: "Interpretación de Biometría Hemática Infantil | CDMX",
-      description: "Análisis experto de plaquetas, leucocitos y hemoglobina en niños. Agenda consulta con la Dra. Lizbeth Hernandez, Hematóloga Pediatra.",
+      description: "Análisis experto de plaquetas, leucocitos y hemoglobina en niños. Agenda consulta con la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
       keywords: ["Biometría hemática completa niños", "Plaquetas bajas pediatra CDMX", "Análisis de sangre infantil interpretación"]
     }
   },
@@ -199,7 +199,7 @@ export const services: MedicalService[] = [
     slug: "interpretacion-estudios-geneticos-moleculares",
     name: "Interpretación de Estudios Genéticos y Moleculares",
     description: "Análisis avanzado de pruebas moleculares, citogenética y secuenciación para identificar mutaciones específicas y causas hereditarias en enfermedades de la sangre.",
-    longDescription: "Los estudios genéticos y moleculares son fundamentales en la hematología pediátrica moderna para precisar diagnósticos y pronósticos. La Dra. Lizbeth Hernandez realiza el análisis e interpretación experta de estudios de cariotipo, PCR cuantitativa, hibridación in situ fluorescente (FISH) y secuenciación genética de nueva generación (NGS) para detectar mutaciones causantes de anemias congénitas, leucemias, talasemias o predisposiciones hereditarias.",
+    longDescription: "Los estudios genéticos y moleculares son fundamentales en la hematología pediátrica moderna para precisar diagnósticos y pronósticos. La Dra. Lizbeth Hernández realiza el análisis e interpretación experta de estudios de cariotipo, PCR cuantitativa, hibridación in situ fluorescente (FISH) y secuenciación genética de nueva generación (NGS) para detectar mutaciones causantes de anemias congénitas, leucemias, talasemias o predisposiciones hereditarias.",
     type: "consultorio",
     isPainful: false,
     duration: "40 a 50 minutos",
@@ -222,7 +222,7 @@ export const services: MedicalService[] = [
     image: "/servicios/Interpretacion_Estudios_Geneticos_Moleculares.png",
     seo: {
       title: "Interpretación de Pruebas Genéticas y Moleculares CDMX | Dra. Lizbeth",
-      description: "Análisis experto de estudios de cariotipo, FISH y PCR en hematología pediátrica. Dra. Lizbeth Hernandez, Hematóloga Pediatra.",
+      description: "Análisis experto de estudios de cariotipo, FISH y PCR en hematología pediátrica. Dra. Lizbeth Hernández, Hematóloga Pediatra.",
       keywords: ["Estudios genéticos hematología niños", "Prueba de cariotipo CDMX pediatría", "PCR molecular leucemia infantil"]
     }
   }
