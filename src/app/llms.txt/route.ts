@@ -34,7 +34,7 @@ ${diseases
         `### ${d.name}${d.technicalName ? ` (${d.technicalName})` : ""}
 ${d.description.substring(0, 200)}...
 - Síntomas: ${d.symptoms.join(", ")}
-- Factores de riesgo: ${d.riskFactors.join(", ")}
+- Factores asociados: ${d.riskFactors.join(", ")}
 ${d.mexicoStats ? `- Estadísticas en México: ${d.mexicoStats}` : ""}`
     )
     .join("\n\n")}

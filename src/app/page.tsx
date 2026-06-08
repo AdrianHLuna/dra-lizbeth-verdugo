@@ -62,9 +62,9 @@ export default function Home() {
               </motion.div>
               
               <motion.h1 variants={softBlurIn} className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem] font-extrabold text-slate-900 leading-[1.05] mb-8 tracking-tight uppercase">
-                Cuidando la <br className="hidden xl:inline" />
-                salud de <br />
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">la sangre de tu hijo</span>
+                Expertos en la <br className="hidden xl:inline" />
+                salud de la sangre <br />
+                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">y el sistema inmune de tus hijos</span>
               </motion.h1>
               
               <motion.div variants={softBlurIn} className="flex justify-center lg:justify-start">

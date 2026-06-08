@@ -94,11 +94,30 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
                   </li>
                 ))}
               </ul>
+
+              {/* Dato de alarma específico para Talasemia */}
+              {disease.slug === "talasemia" && (
+                <div className="mt-6 bg-[#fff5f5] border border-red-200 p-6 sm:p-8 rounded-[2rem_0.5rem_2rem_0.5rem] relative overflow-hidden group shadow-sm flex flex-col sm:flex-row gap-5 items-start">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-red-500/5 rounded-full blur-xl pointer-events-none" />
+                  <div className="p-3 bg-red-100 text-red-650 rounded-full flex-shrink-0">
+                    <FaExclamationTriangle size={20} className="animate-pulse" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-black text-red-650 uppercase tracking-wider mb-2">¡Dato de alarma crítico!</h4>
+                    <p className="text-red-950 font-bold text-sm leading-relaxed mb-1.5">
+                      Anemia que no mejora con la administración de hierro.
+                    </p>
+                    <p className="text-slate-650 text-xs font-semibold leading-relaxed">
+                      Es vital recordar que <span className="underline decoration-red-300 font-bold text-red-950">no toda anemia microcítica es ferropenia</span> (deficiencia de hierro). Suministrar hierro sin confirmación médica puede provocar una sobrecarga férrica perjudicial.
+                    </p>
+                  </div>
+                </div>
+              )}
             </StaggerItem>
 
             {/* Causas y Riesgos */}
             <StaggerItem>
-              <h2 className="text-2xl font-black text-slate-900 mb-6 tracking-tight flex items-center gap-3 border-l-4 border-primary pl-4 uppercase"><FaStethoscope className="text-primary" /> Causas y Factores de Riesgo</h2>
+              <h2 className="text-2xl font-black text-slate-900 mb-6 tracking-tight flex items-center gap-3 border-l-4 border-primary pl-4 uppercase"><FaStethoscope className="text-primary" /> Causas y Factores asociados</h2>
               <div className="bg-slate-50 p-8 rounded-[2rem_0.5rem_2rem_0.5rem] border border-slate-150 grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-sm font-extrabold mb-4 text-slate-800 border-b border-slate-200 pb-2 uppercase">Causas Principales</h3>
@@ -107,7 +126,7 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-sm font-extrabold mb-4 text-slate-800 border-b border-slate-200 pb-2 uppercase">Factores de Riesgo</h3>
+                  <h3 className="text-sm font-extrabold mb-4 text-slate-800 border-b border-slate-200 pb-2 uppercase">Factores asociados</h3>
                   <ul className="list-disc list-inside text-slate-500 text-[11px] space-y-2.5 leading-relaxed">
                     {disease.riskFactors.map(factor => <li key={factor} className="hover:text-slate-900 transition-colors leading-relaxed">{factor}</li>)}
                   </ul>
@@ -134,7 +153,7 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
                 {disease.faqs.map((faq, index) => (
                   <div key={index} className="bg-white p-6 border border-slate-100 rounded-[2rem_0.5rem_2rem_0.5rem] shadow-sm hover:border-slate-250 transition-all">
                     <h3 className="font-extrabold text-xs lg:text-sm text-slate-900 mb-2 uppercase">{faq.question}</h3>
-                    <p className="text-slate-500 text-xs leading-relaxed">{faq.answer}</p>
+                    <p className="text-slate-500 text-xs leading-relaxed whitespace-pre-line">{faq.answer}</p>
                   </div>
                 ))}
               </div>
@@ -145,10 +164,18 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
           <FadeUp delay={0.2} className="lg:col-span-1">
             <div className="sticky top-32 bg-gradient-to-br from-primary to-[#3b1c39] p-8 text-white shadow-xl rounded-[2.5rem_0.5rem_2.5rem_0.5rem] group border-t-8 border-accent relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full blur-xl pointer-events-none" />
-              <h3 className="text-lg font-extrabold mb-4 tracking-tight uppercase">¿Tu hijo presenta síntomas de {disease.name}?</h3>
+              <h3 className="text-lg font-extrabold mb-4 tracking-tight uppercase">
+                {disease.slug === "talasemia"
+                  ? "¿Tu hijo tiene anemia persistente, microcitosis o antecedentes familiares de talasemia?"
+                  : `¿Tu hijo presenta síntomas de ${disease.name}?`}
+              </h3>
               <div className="w-10 h-1 bg-accent mb-6 rounded-full" />
               <p className="text-slate-300 text-xs mb-8 leading-relaxed">
-                El diagnóstico temprano y correcto cambia el pronóstico. La {doctor.title} {doctor.name} es subespecialista en Hematología Pediátrica y puede ayudar a tu familia.
+                {disease.slug === "talasemia"
+                  ? "Una valoración temprana por hematología pediátrica permite establecer un diagnóstico preciso y definir el tratamiento más adecuado para cada caso."
+                  : disease.slug === "anemia-ferropenica"
+                  ? "La anemia ferropénica puede afectar el crecimiento, el aprendizaje y la calidad de vida de los niños. Un diagnóstico oportuno permite iniciar el tratamiento adecuado y prevenir complicaciones."
+                  : `El diagnóstico temprano y correcto cambia el pronóstico. La ${doctor.title} ${doctor.name} es subespecialista en Hematología Pediátrica y puede ayudar a tu familia.`}
               </p>
               <a href={`https://wa.me/${doctor.whatsapp.replace(/\D/g, "")}`} target="_blank" rel="noreferrer" className="block w-full text-center bg-white text-primary font-bold py-4 rounded-full hover:bg-[#FEE5FD] hover:text-[#971F57] transition-all shadow-lg text-[9px] uppercase tracking-widest">
                 Agendar Consulta de Especialidad

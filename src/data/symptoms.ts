@@ -61,21 +61,7 @@ export const symptoms: Symptom[] = [
       keywords: ["Ganglios inflamados niños CDMX", "Adenopatías infantiles causas", "Linfoma infantil síntomas"],
     }
   },
-  {
-    id: "sym-005",
-    slug: "alteraciones-biometria-hematica",
-    name: "Alteraciones en la Biometría Hemática",
-    description: "Hallazgos anormales en análisis de laboratorio, tales como hemoglobina baja, plaquetas bajas o altas, y leucocitos fuera de rango.",
-    causes: ["Pancitopenia", "Neutropenia", "Infecciones", "Leucemias o síndromes de falla medular"],
-    whyConsult: "Una biometría hemática alterada es una señal de alerta que requiere una interpretación hematológica experta para identificar el origen exacto del trastorno sanguíneo.",
-    relatedConditions: ["enf-001", "enf-002", "enf-003", "enf-004", "enf-007", "enf-008", "enf-009", "enf-010", "enf-013", "enf-014", "enf-015"],
-    image: "/sintomas/Alteraciones_Biometria_Hematica.png",
-    seo: {
-      title: "Plaquetas y Leucocitos Alterados en Niños | Hematología",
-      description: "¿El estudio de tu hijo salió con plaquetas bajas, anemia o leucocitos alterados? Interpreta los resultados con un experto.",
-      keywords: ["Plaquetas bajas en niños CDMX", "Leucocitos altos pediatría", "Biometría hemática infantil"],
-    }
-  },
+
   {
     id: "sym-006",
     slug: "fiebre-prolongada-infecciones",

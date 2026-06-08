@@ -6,19 +6,54 @@ export const diseases: MedicalCondition[] = [
     slug: "anemia-ferropenica",
     name: "Anemia Ferropénica",
     description: "La anemia ferropénica es la disminución de los niveles de hemoglobina y glóbulos rojos en la sangre debido a la falta de hierro, el mineral necesario para producir hemoglobina en el cuerpo del niño.",
-    symptoms: ["Fatiga y cansancio excesivo", "Palidez en piel y encías", "Irritabilidad", "Falta de apetito", "Uñas quebradizas"],
-    causes: ["Bajo consumo de alimentos ricos en hierro", "Pérdidas de sangre crónicas", "Crecimiento rápido en lactantes y adolescentes"],
+    symptoms: [
+      "Fatiga y cansancio excesivo",
+      "Palidez en piel y encías",
+      "Irritabilidad",
+      "Falta de apetito",
+      "Uñas quebradizas",
+      "Mareo o dolor de cabeza",
+      "Disminución del rendimiento escolar o dificultad para concentrarse",
+      "Taquicardia o palpitaciones",
+      "Antojos inusuales (comer hielo, tierra o almidón)",
+      "Retraso del crecimiento o del desarrollo en casos prolongados"
+    ],
+    causes: [
+      "Dieta pobre en hierro",
+      "Consumo excesivo de leche de vaca",
+      "Sangrado gastrointestinal",
+      "Menstruaciones abundantes en adolescentes",
+      "Problemas de absorción intestinal (por ejemplo, enfermedad celíaca)"
+    ],
     riskFactors: ["Nacimiento prematuro o bajo peso al nacer", "Introducción tardía de alimentos sólidos", "Consumo excesivo de leche de vaca en menores de un año"],
     complications: ["Retraso en el desarrollo psicomotor", "Problemas de aprendizaje y concentración", "Debilidad del sistema inmunitario con propensión a infecciones"],
-    treatments: ["Suplementación de hierro por vía oral", "Modificaciones dietéticas con alimentos ricos en hierro y vitamina C", "Identificación y tratamiento de la causa de pérdida de hierro"],
+    treatments: [
+      "Suplementación con hierro por vía oral.",
+      "Ajustes en la alimentación para aumentar el consumo de hierro y vitamina C.",
+      "Identificación y tratamiento de la causa que originó la deficiencia de hierro.",
+      "Seguimiento con estudios de laboratorio para evaluar la respuesta al tratamiento."
+    ],
     faqs: [
-      { question: "¿Cuánto tiempo dura el tratamiento con hierro?", answer: "Suele durar entre 3 y 6 meses. Es fundamental continuarlo incluso si el niño ya no se ve pálido, para rellenar las reservas de hierro del cuerpo." },
-      { question: "¿La leche de vaca puede causar anemia?", answer: "Sí, el consumo excesivo de leche de vaca (más de 500 mililitros al día) interfiere con la absorción del hierro en el intestino de los niños pequeños." },
-      { question: "¿Cómo se diagnostica de forma certera?", answer: "Se diagnostica mediante una biometría hemática completa, perfil de hierro y la interpretación experta de un hematólogo pediatra." }
+      {
+        question: "¿Cuánto tiempo dura el tratamiento con hierro?",
+        answer: "Generalmente dura entre 3 y 6 meses, aunque puede variar según la gravedad de la anemia y la respuesta al tratamiento. Es importante continuar el hierro incluso después de que la hemoglobina se normalice para reponer las reservas de hierro del organismo."
+      },
+      {
+        question: "¿La leche de vaca puede causar anemia?",
+        answer: "Sí. El consumo excesivo de leche de vaca puede favorecer la anemia ferropénica, especialmente en niños pequeños. Además de disminuir la absorción de hierro, puede desplazar otros alimentos ricos en hierro de la dieta."
+      },
+      {
+        question: "¿Cómo se diagnostica la anemia ferropénica?",
+        answer: "El diagnóstico se realiza mediante una valoración médica y estudios de laboratorio, que incluyen biometría hemática, perfil de hierro y ferritina sérica. En algunos casos pueden requerirse estudios adicionales para identificar la causa de la deficiencia de hierro."
+      },
+      {
+        question: "¿Qué alimentos ayudan a aumentar el hierro?",
+        answer: "Los alimentos ricos en hierro incluyen carnes rojas, pollo, pescado, lentejas, frijoles, garbanzos y cereales fortificados. Consumirlos junto con alimentos ricos en vitamina C ayuda a mejorar la absorción del hierro."
+      }
     ],
     image: "/enfermedades/anemia_ferropenica.png",
     relatedServices: ["ser-003", "ser-006"],
-    relatedSymptoms: ["sym-001", "sym-002", "sym-005"],
+    relatedSymptoms: ["sym-001", "sym-002"],
     seo: {
       title: "Anemia Ferropénica en Niños | Hematóloga Pediatra CDMX",
       description: "Diagnóstico y tratamiento de la anemia ferropénica por falta de hierro en bebés y niños. Consulta con la Dra. Lizbeth Hernández.",
@@ -31,20 +66,35 @@ export const diseases: MedicalCondition[] = [
     name: "Trombocitopenia Inmune",
     technicalName: "Púrpura Trombocitopénica Inmune",
     description: "La trombocitopenia inmune es un trastorno sanguíneo caracterizado por una disminución anormal del número de plaquetas en la sangre debido a que el sistema inmunitario del propio niño las destruye.",
-    symptoms: ["Aparición de moretones fáciles sin causa", "Petequias que son pequeños puntos rojos en la piel", "Epistaxis de repetición", "Sangrado en encías", "Menstruación abundante en niñas"],
-    causes: ["Reacción inmunitaria desencadenada por una infección viral o gastrointestinal previa", "Desregulación del sistema inmunitario del niño", "Administración de vacunas"],
+    symptoms: [
+      "Aparición de moretones fáciles sin causa",
+      "Petequias que son pequeños puntos rojos en la piel",
+      "Epistaxis de repetición",
+      "Sangrado en encías",
+      "Sangrado prolongado después de golpes o heridas menores.",
+      "Sangrado menstrual abundante"
+    ],
+    causes: [
+      "Reacción inmunitaria desencadenada por una infección viral o gastrointestinal previa",
+      "Desregulación del sistema inmunitario del niño",
+      "En raras ocasiones, puede presentarse después de administrarse algunas vacunas, aunque el beneficio de la vacunación supera ampliamente este riesgo."
+    ],
     riskFactors: ["Infecciones virales o gastrointestinales recientes como gripe, varicela o gastroenteritis", "Predisposición genética a trastornos autoinmunes"],
     complications: ["Hemorragias graves espontáneas en órganos internos (poco frecuentes pero de alto riesgo)", "Ansiedad familiar por riesgo de sangrado"],
-    treatments: ["Vigilancia clínica estrecha en casos leves", "Inmunoglobulina intravenosa", "Medicamentos corticoesteroides bajo estricto control médico"],
+    treatments: [
+      "Vigilancia clínica y seguimiento hematológico en casos leves.",
+      "Inmunoglobulina intravenosa (IVIG).",
+      "Corticosteroides para disminuir la destrucción de plaquetas y aumentar temporalmente su número."
+    ],
     faqs: [
-      { question: "¿El niño puede realizar actividades físicas normales?", answer: "Se deben evitar los deportes de contacto o actividades con alto riesgo de caídas y golpes mientras las plaquetas estén bajas, para prevenir hemorragias." },
-      { question: "¿Esta enfermedad se vuelve crónica?", answer: "En la mayoría de los niños, la trombocitopenia inmune se resuelve por completo en menos de seis meses. Solo una minoría desarrolla la forma crónica." },
-      { question: "¿Requiere transfusión de plaquetas?", answer: "Generalmente no, ya que el sistema inmune destruiría rápidamente las plaquetas transfundidas. Se reserva solo para emergencias extremas." },
-      { question: "¿Cuánto tarda en resolverse con tratamiento?", answer: "Con el inicio del tratamiento médico adecuado, la resolución de los síntomas y la elevación de las plaquetas se observa típicamente a los 7 días." }
+      { question: "¿El niño puede realizar actividades físicas normales?", answer: "La mayoría de los niños puede realizar actividades cotidianas. Sin embargo, cuando las plaquetas están muy bajas, se recomienda evitar deportes de contacto o actividades con alto riesgo de golpes hasta que el hematólogo indique que es seguro retomarlas." },
+      { question: "¿Esta enfermedad se vuelve crónica?", answer: "La mayoría de los niños se recupera completamente en los primeros 6 a 12 meses. Aproximadamente entre 20 y 30% pueden desarrollar PTI persistente o crónica." },
+      { question: "¿Requiere transfusión de plaquetas?", answer: "Generalmente no. Las transfusiones de plaquetas suelen reservarse para casos de sangrado grave o situaciones especiales, ya que las plaquetas transfundidas pueden ser destruidas rápidamente por el sistema inmunitario." },
+      { question: "¿Cuánto tarda en resolverse con tratamiento?", answer: "La respuesta al tratamiento es variable. Algunos niños presentan aumento de plaquetas en los primeros 7 días, mientras que otros pueden tardar varias semanas. El objetivo principal del tratamiento es disminuir el riesgo de sangrado y permitir una vida segura mientras ocurre la recuperación." }
     ],
     image: "/enfermedades/Trombocitopenia_Inmune.png",
     relatedServices: ["ser-001", "ser-003", "ser-006"],
-    relatedSymptoms: ["sym-003", "sym-005", "sym-010", "sym-014", "sym-015", "sym-016"],
+    relatedSymptoms: ["sym-003", "sym-010", "sym-014", "sym-015", "sym-016"],
     seo: {
       title: "Trombocitopenia Inmune en Niños | Púrpura Infantil CDMX",
       description: "Información y tratamiento especializado para la Púrpura Trombocitopénica Inmune (PTI) en niños con la Dra. Lizbeth Hernández.",
@@ -68,7 +118,7 @@ export const diseases: MedicalCondition[] = [
     ],
     image: "/enfermedades/Anemia_Aplasica.png",
     relatedServices: ["ser-001", "ser-002", "ser-006", "ser-007"],
-    relatedSymptoms: ["sym-001", "sym-002", "sym-003", "sym-005", "sym-006", "sym-013", "sym-014", "sym-015"],
+    relatedSymptoms: ["sym-001", "sym-002", "sym-003", "sym-006", "sym-013", "sym-014", "sym-015"],
     seo: {
       title: "Anemia Aplásica Infantil | Falla Medular CDMX",
       description: "Diagnóstico y alternativas de tratamiento para la anemia aplásica en niños con la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
@@ -92,7 +142,7 @@ export const diseases: MedicalCondition[] = [
     ],
     image: "/enfermedades/Anemia_Hemolitica.png",
     relatedServices: ["ser-003", "ser-006"],
-    relatedSymptoms: ["sym-001", "sym-002", "sym-005", "sym-008", "sym-011"],
+    relatedSymptoms: ["sym-001", "sym-002", "sym-008", "sym-011"],
     seo: {
       title: "Anemia Hemolítica en Niños | Hematóloga Pediatra CDMX",
       description: "Diagnóstico especializado y tratamiento de la anemia hemolítica e ictericia en niños y bebés. Dra. Lizbeth Hernández.",
@@ -104,10 +154,13 @@ export const diseases: MedicalCondition[] = [
     slug: "drepanocitosis",
     name: "Drepanocitosis",
     technicalName: "Anemia Falciforme",
-    description: "La drepanocitosis o anemia falciforme es un trastorno genético hereditario de los glóbulos rojos. Causa que la hemoglobina sea anormal, deformando los glóbulos rojos en forma de hoz o media luna, lo que obstruye los vasos sanguíneos pequeños.",
+    description: "La drepanocitosis o anemia falciforme es un trastorno hereditario autosómico recesivo causado por una mutación puntual en el gen de la β-globina (HBB), que produce hemoglobina S (HbS), una hemoglobina anormal que altera la forma y función de los glóbulos rojos.",
     symptoms: ["Crisis de dolor severo (huesos, abdomen y pecho)", "Fatiga y palidez constante", "Hinchazón dolorosa de manos y pies (dactilitis)", "Infecciones bacterianas recurrentes", "Retraso en el crecimiento"],
     causes: ["Mutación puntual que produce una hemoglobina anormal, heredada de ambos padres y que afecta la producción de las cadenas de beta-hemoglobina"],
-    riskFactors: ["Ambos padres portadores del rasgo falciforme", "Ascendencia de regiones de África, el Mediterráneo, el Caribe o Centroamérica"],
+    riskFactors: [
+      "Antecedentes familiares de rasgo falciforme o drepanocitosis.",
+      "Ascendencia africana, caribeña, mediterránea, de Medio Oriente o de algunas regiones de América Latina."
+    ],
     complications: ["Accidente cerebrovascular a temprana edad", "Síndrome torácico agudo (infiltrado pulmonar grave)", "Daño orgánico crónico en riñones, bazo y articulaciones"],
     treatments: ["Medicamentos para prevenir las crisis de dolor", "Vacunación completa y antibióticos profilácticos", "Transfusiones de sangre y trasplante de médula ósea"],
     faqs: [
@@ -129,15 +182,34 @@ export const diseases: MedicalCondition[] = [
     slug: "talasemia",
     name: "Talasemia",
     description: "Las talasemias son un grupo de trastornos sanguíneos hereditarios caracterizados por una producción deficiente o nula de una o más cadenas de globina de la hemoglobina, lo que causa anemia de intensidad variable.",
-    symptoms: ["Palidez marcada y fatiga crónica", "Crecimiento del hígado y el bazo (visceromegalia)", "Deformidades óseas en el rostro", "Retraso en el crecimiento y desarrollo", "Orina oscura"],
+    symptoms: [
+      "Palidez.",
+      "Cansancio o fatiga fácil.",
+      "Irritabilidad.",
+      "Falta de apetito.",
+      "Retraso en el crecimiento y desarrollo.",
+      "Coloración amarillenta de la piel o los ojos (ictericia).",
+      "Orina oscura.",
+      "Aumento del tamaño del hígado y/o del bazo (hepatoesplenomegalia).",
+      "Deformidades óseas faciales en casos graves y no tratados.",
+      "Necesidad de transfusiones sanguíneas recurrentes."
+    ],
     causes: ["Mutaciones o deleciones genéticas en los genes responsables de la síntesis de cadenas alfa o beta de globina"],
     riskFactors: ["Antecedentes familiares de talasemia", "Ascendencia mediterránea, asiática o del Medio Oriente"],
     complications: ["Sobrecarga de hierro en el cuerpo (hemocromatosis) por transfusiones repetidas", "Problemas cardíacos y óseos", "Mayor riesgo de infecciones severas"],
-    treatments: ["Transfusiones de sangre programadas (en formas mayores)", "Terapia de quelación de hierro para evitar toxicidad", "Suplementación con ácido fólico"],
+    treatments: [
+      "Transfusiones sanguíneas programadas en pacientes con formas graves.",
+      "Terapia de quelación de hierro para prevenir la sobrecarga férrica secundaria a las transfusiones.",
+      "Suplementación con ácido fólico cuando esté indicada.",
+      "Monitoreo especializado de crecimiento, función cardíaca y niveles de hierro.",
+      "Trasplante de progenitores hematopoyéticos en casos seleccionados"
+    ],
     faqs: [
-      { question: "¿Cuál es la diferencia entre talasemia menor y mayor?", answer: "La talasemia menor es un rasgo portador generalmente asintomático. La talasemia mayor es la forma grave que requiere transfusiones periódicas de por vida para que el niño pueda sobrevivir." },
-      { question: "¿Qué es la terapia de quelación?", answer: "Es un tratamiento con medicamentos que ayudan a eliminar el exceso de hierro del cuerpo del niño, acumulado principalmente a causa de las transfusiones frecuentes." },
-      { question: "¿Un niño con talasemia menor necesita tomar hierro?", answer: "No, la talasemia menor suele confundirse con anemia por falta de hierro, pero darles hierro es un error grave ya que no les hace falta y puede provocar sobrecarga tóxica de este mineral." }
+      { question: "¿Cuál es la diferencia entre talasemia menor y mayor?", answer: "La talasemia menor (rasgo talasémico) suele producir una anemia leve o incluso no causar síntomas. Las personas con esta condición generalmente llevan una vida normal y muchas veces desconocen que son portadoras.\n\nLa talasemia mayor es una forma grave de la enfermedad que provoca anemia severa desde los primeros años de vida y suele requerir transfusiones sanguíneas periódicas y seguimiento especializado por hematología.\n\nLa diferencia principal radica en la gravedad de la anemia, los síntomas y la necesidad de tratamiento." },
+      { question: "¿Qué es la terapia de quelación de hierro y por qué puede ser necesaria?", answer: "La terapia de quelación es un tratamiento que ayuda a eliminar el exceso de hierro acumulado en el organismo. Los pacientes con talasemia que reciben transfusiones sanguíneas frecuentes pueden desarrollar sobrecarga de hierro, ya que el cuerpo no cuenta con un mecanismo natural eficaz para eliminarlo.\n\nSi no se trata, el exceso de hierro puede afectar órganos como el corazón, el hígado y las glándulas endocrinas. Por ello, algunos pacientes requieren medicamentos quelantes para mantener niveles seguros de hierro y prevenir complicaciones a largo plazo.\n\nEl hematólogo determinará cuándo iniciar este tratamiento y qué medicamento es el más adecuado para cada paciente." },
+      { question: "¿Un niño con talasemia menor necesita tomar hierro?", answer: "No necesariamente. Antes de administrar hierro es indispensable confirmar que exista deficiencia de hierro mediante estudios de laboratorio. Muchos pacientes con talasemia menor no presentan déficit de hierro y recibir suplementos sin indicación médica puede favorecer la sobrecarga férrica." },
+      { question: "¿Cómo se diagnostica la talasemia?", answer: "El diagnóstico definitivo se establece mediante los siguientes estudios y valoraciones: biometría hemática, frotis de sangre periférica, electroforesis de hemoglobina, estudios moleculares o genéticos en casos seleccionados, y la valoración especializada por un hematólogo pediatra." },
+      { question: "¿La talasemia puede heredarse?", answer: "Sí. La talasemia se transmite de padres a hijos mediante genes alterados que afectan la producción de hemoglobina. Por ello, en algunas familias puede recomendarse el estudio de otros familiares y la asesoría genética." }
     ],
     image: "/enfermedades/Talasemia.png",
     relatedServices: ["ser-003", "ser-006", "ser-007"],
@@ -176,12 +248,30 @@ export const diseases: MedicalCondition[] = [
     id: "enf-008",
     slug: "hemofilia-infantil",
     name: "Hemofilia Infantil",
-    description: "La hemofilia es un trastorno hemorrágico hereditario en el cual la sangre del niño no coagula de manera adecuada debido a la deficiencia de una proteína de la coagulación (factor ocho o factor nueve).",
-    symptoms: ["Sangrados prolongados ante cortes pequeños", "Hematomas grandes en brazos o piernas", "Sangrado o inflamación dolorosa en articulaciones", "Epistaxis de repetición", "Sangrado en encías"],
-    causes: ["Alteración o mutación genética en los cromosomas sexuales ligada al cromosoma X, transmitida de padres a hijos"],
-    riskFactors: ["Antecedentes familiares de hemofilia", "Sexo masculino (afecta casi exclusivamente a varones)"],
+    description: "Es un trastorno hereditario de la coagulación causado por la deficiencia de un factor de coagulación: la Hemofilia A se debe al déficit de factor VIII y la Hemofilia B al déficit de factor IX.",
+    symptoms: [
+      "Moretones fáciles o grandes.",
+      "Sangrado prolongado después de heridas, procedimientos o extracciones dentales.",
+      "Sangrado nasal frecuente.",
+      "Hemorragias en articulaciones (hemartrosis) con dolor, inflamación y limitación del movimiento.",
+      "Hemorragias musculares."
+    ],
+    causes: [
+      "Cambios genéticos que provocan niveles bajos de ciertos factores de coagulación (deficiencia de factor VIII en Hemofilia A, y deficiencia de factor IX en Hemofilia B).",
+      "Herencia de genes alterados de uno o ambos padres, generalmente de forma ligada al cromosoma X.",
+      "Aparición por una mutación genética nueva (de novo) sin antecedentes familiares previos."
+    ],
+    riskFactors: [
+      "Antecedentes familiares de hemofilia u otros trastornos hemorrágicos hereditarios.",
+      "Tener familiares portadores de la enfermedad.",
+      "Sexo masculino (la hemofilia clásica afecta principalmente a los niños debido a su herencia ligada al cromosoma X)."
+    ],
     complications: ["Daño articular crónico por sangrados repetitivos (artropatía hemofílica)", "Hemorragias internas espontáneas de difícil control"],
-    treatments: ["Reemplazo intravenoso del factor de coagulación faltante", "Fisioterapia para proteger las articulaciones", "Cuidados odontológicos especializados"],
+    treatments: [
+      "Tratamiento a demanda: se administra el factor cuando ocurre un sangrado.",
+      "Profilaxis: administración regular de factor VIII o IX para prevenir hemorragias.",
+      "La profilaxis es el estándar de cuidado en muchos niños con hemofilia grave porque disminuye sangrados y daño articular."
+    ],
     faqs: [
       { question: "¿La hemofilia se cura?", answer: "No tiene cura definitiva actualmente, pero los tratamientos de reemplazo profiláctico permiten que los niños lleven una vida normal y activa." },
       { question: "¿Se puede diagnosticar desde el nacimiento?", answer: "Sí, mediante pruebas especiales de coagulación que miden la actividad de los factores en sangre de cordón umbilical o periférica." },
@@ -189,7 +279,7 @@ export const diseases: MedicalCondition[] = [
     ],
     image: "/enfermedades/Hemofilia_Infantil.png",
     relatedServices: ["ser-005"],
-    relatedSymptoms: ["sym-003", "sym-005", "sym-010", "sym-014", "sym-015"],
+    relatedSymptoms: ["sym-003", "sym-010", "sym-014", "sym-015"],
     seo: {
       title: "Tratamiento de Hemofilia en Niños | Hematología CDMX",
       description: "Control experto y profilaxis para niños con hemofilia A o B. Especialista en coagulación Dra. Lizbeth Hernández.",
@@ -214,7 +304,7 @@ export const diseases: MedicalCondition[] = [
     ],
     image: "/enfermedades/Deficiencia_G6PD.png",
     relatedServices: ["ser-003", "ser-006", "ser-007"],
-    relatedSymptoms: ["sym-001", "sym-002", "sym-005", "sym-011"],
+    relatedSymptoms: ["sym-001", "sym-002", "sym-011"],
     seo: {
       title: "Deficiencia de G6PD en Niños | Favismo CDMX",
       description: "Diagnóstico y guía de prevención de crisis hemolíticas por deficiencia de G6PD. Consulta con la Dra. Lizbeth Hernández.",
@@ -238,7 +328,7 @@ export const diseases: MedicalCondition[] = [
     ],
     image: "/enfermedades/Enfermedad_Von_Willebrand.png",
     relatedServices: ["ser-005"],
-    relatedSymptoms: ["sym-003", "sym-005", "sym-010", "sym-014", "sym-015", "sym-016"],
+    relatedSymptoms: ["sym-003", "sym-010", "sym-014", "sym-015", "sym-016"],
     seo: {
       title: "Enfermedad de Von Willebrand Infantil | Hematología CDMX",
       description: "Diagnóstico y manejo de sangrados frecuentes y enfermedad de Von Willebrand en niños y adolescentes. Dra. Lizbeth Hernández.",
@@ -311,7 +401,7 @@ export const diseases: MedicalCondition[] = [
     ],
     image: "/enfermedades/Petequias_Purpura.png",
     relatedServices: ["ser-003", "ser-006"],
-    relatedSymptoms: ["sym-003", "sym-005", "sym-010"],
+    relatedSymptoms: ["sym-003", "sym-010"],
     seo: {
       title: "Petequias y Púrpura en Niños | Hematóloga CDMX",
       description: "Diagnóstico urgente y tratamiento de manchas moradas y puntos rojos en la piel de niños. Dra. Lizbeth Hernández.",
@@ -335,7 +425,7 @@ export const diseases: MedicalCondition[] = [
     ],
     image: "/enfermedades/Leucemia_Linfoblastica_Aguda.png",
     relatedServices: ["ser-001", "ser-002", "ser-004", "ser-006", "ser-007"],
-    relatedSymptoms: ["sym-001", "sym-002", "sym-003", "sym-004", "sym-005", "sym-006", "sym-007", "sym-014", "sym-015"],
+    relatedSymptoms: ["sym-001", "sym-002", "sym-003", "sym-004", "sym-006", "sym-007", "sym-014", "sym-015"],
     seo: {
       title: "Leucemia Linfoblástica Aguda Infantil | Hematóloga CDMX",
       description: "Diagnóstico oportuno y manejo integral de la leucemia infantil. Consulta experta con la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
@@ -360,11 +450,67 @@ export const diseases: MedicalCondition[] = [
     ],
     image: "/enfermedades/Trombosis_Niños.png",
     relatedServices: ["ser-005", "ser-007"],
-    relatedSymptoms: ["sym-005", "sym-007"],
+    relatedSymptoms: ["sym-007"],
     seo: {
       title: "Trombosis en Niños y Trombofilias | Hematóloga CDMX",
       description: "Diagnóstico y tratamiento especializado de trombosis venosa y estudios de trombofilia en niños. Dra. Lizbeth Hernández.",
       keywords: ["Trombosis en niños causas", "Catéter venoso central complicaciones", "Trombofilia pediátrica CDMX"],
+    }
+  },
+  {
+    id: "enf-016",
+    slug: "alteraciones-biometria-hematica",
+    name: "Alteraciones en la Biometría Hemática",
+    description: "Las alteraciones en la biometría hemática son hallazgos anormales en los análisis de laboratorio de sangre completa que indican desequilibrios en los glóbulos rojos, glóbulos blancos o plaquetas, requiriendo una evaluación hematológica para diagnosticar su causa origen.",
+    symptoms: [
+      "Puntos rojos en la piel (petequias) o moretones sin explicación",
+      "Palidez extrema o cansancio inusual",
+      "Fiebre persistente o infecciones frecuentes",
+      "Sangrados de nariz o encías recurrentes"
+    ],
+    causes: [
+      "Infecciones virales o bacterianas",
+      "Deficiencias nutricionales (falta de hierro, vitamina B12 o ácido fólico)",
+      "Enfermedades autoinmunes o destrucción celular acelerada",
+      "Trastornos de la médula ósea (aplasia medular, leucemias o síndromes de falla medular)"
+    ],
+    riskFactors: [
+      "Antecedentes familiares de anemias o trastornos hemorrágicos",
+      "Uso reciente de ciertos medicamentos o tratamientos médicos",
+      "Infecciones recientes o exposición a toxinas ambientales"
+    ],
+    complications: [
+      "Retraso en la detección y tratamiento de enfermedades hematológicas graves",
+      "Riesgo de hemorragias severas por recuentos plaquetarios muy bajos",
+      "Mayor susceptibilidad a infecciones graves por neutropenia"
+    ],
+    treatments: [
+      "Evaluación clínica completa por un hematólogo pediatra",
+      "Frotis de sangre periférica para análisis morfológico de las células",
+      "Estudios confirmatorios específicos de laboratorio o genéticos",
+      "Aspirado o biopsia de médula ósea en caso de sospecha de falla medular"
+    ],
+    faqs: [
+      {
+        question: "¿Qué significa tener los leucocitos (glóbulos blancos) alterados?",
+        answer: "Los leucocitos pueden estar altos (leucocitosis) o bajos (leucopenia). Frecuentemente indican una respuesta a infecciones, pero niveles muy fuera de rango o con presencia de células anormales (blastos) requieren descartar problemas en la médula ósea."
+      },
+      {
+        question: "¿Una biometría hemática alterada siempre significa algo grave?",
+        answer: "No necesariamente. Muchas alteraciones son temporales y secundarias a infecciones virales comunes o deficiencias nutricionales como la falta de hierro. Sin embargo, siempre deben ser interpretadas por un especialista."
+      },
+      {
+        question: "¿Cuándo es urgente consultar al hematólogo por una biometría alterada?",
+        answer: "Es prioritario acudir a valoración si hay alteraciones en más de una línea celular (por ejemplo, anemia y plaquetas bajas simultáneamente), sospecha de células anormales (blastos) o si se acompaña de fiebre prolongada, pérdida de peso o sangrados."
+      }
+    ],
+    image: "/enfermedades/Alteraciones_Biometria_Hematica.png",
+    relatedServices: ["ser-003", "ser-005", "ser-006"],
+    relatedSymptoms: ["sym-001", "sym-002", "sym-003", "sym-004", "sym-006", "sym-013"],
+    seo: {
+      title: "Alteraciones en la Biometría Hemática Pediátrica | CDMX",
+      description: "Diagnóstico y análisis experto de alteraciones en plaquetas, leucocitos o hemoglobina en niños. Consulta con la Dra. Lizbeth Hernández.",
+      keywords: ["Biometría hemática alterada niños", "Plaquetas bajas pediatra CDMX", "Leucocitos altos infantil"]
     }
   }
 ];
