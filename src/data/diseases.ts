@@ -105,16 +105,45 @@ export const diseases: MedicalCondition[] = [
     id: "enf-003",
     slug: "anemia-aplasica",
     name: "Anemia Aplásica",
-    description: "La anemia aplásica es un trastorno grave de la médula ósea en el cual esta deja de producir una cantidad suficiente de las tres clases de células sanguíneas: glóbulos rojos, glóbulos blancos y plaquetas.",
-    symptoms: ["Fatiga extrema y palidez", "Moretones fáciles y sangrados espontáneos", "Infecciones frecuentes y fiebre", "Mareos y dificultad para respirar con esfuerzo"],
-    causes: ["Destrucción autoinmune de las células madre de la médula ósea", "Exposición a toxinas químicas o ciertos medicamentos", "Infecciones virales graves"],
-    riskFactors: ["Tratamientos previos con radiación o quimioterapia", "Predisposición genética", "Exposición a pesticidas o benceno"],
+    description: "La anemia aplásica es una enfermedad poco frecuente en la que la médula ósea deja de producir suficientes células sanguíneas: glóbulos rojos, glóbulos blancos y plaquetas. Esto provoca anemia, infecciones frecuentes y tendencia al sangrado.",
+    symptoms: [
+      "Cansancio excesivo o debilidad",
+      "Palidez",
+      "Falta de aire al esfuerzo",
+      "Infecciones frecuentes o difíciles de controlar",
+      "Fiebre",
+      "Aparición fácil de moretones",
+      "Sangrado de nariz o encías",
+      "Petequias (puntitos rojos o morados en la piel)"
+    ],
+    causes: [
+      "En muchos niños no se identifica una causa específica",
+      "Algunas enfermedades autoinmunes",
+      "Infecciones virales",
+      "Exposición a ciertos medicamentos o sustancias químicas",
+      "Algunas enfermedades hereditarias, como la Anemia de Fanconi"
+    ],
+    riskFactors: [
+      "Exposición a sustancias químicas nocivas (como benceno o pesticidas)",
+      "Tratamientos previos con radiación o quimioterapia",
+      "Antecedentes de infecciones virales graves",
+      "Predisposición genética (enfermedades hereditarias)"
+    ],
     complications: ["Hemorragias graves", "Infecciones severas generalizadas (septicemia)", "Insuficiencia cardíaca por anemia crónica"],
-    treatments: ["Transfusiones de soporte de glóbulos rojos y plaquetas", "Terapia inmunosupresora", "Trasplante de médula ósea (trasplante de células progenitoras)"],
+    treatments: [
+      "Transfusiones de glóbulos rojos o plaquetas cuando son necesarias",
+      "Medicamentos inmunosupresores para disminuir el ataque del sistema inmune a la médula ósea",
+      "Medicamentos que estimulan la producción de células sanguíneas",
+      "Antibióticos cuando existen infecciones",
+      "Trasplante de médula ósea o de células madre hematopoyéticas, que puede ser el tratamiento curativo en muchos niños"
+    ],
     faqs: [
-      { question: "¿Es lo mismo que leucemia?", answer: "No, la leucemia es la producción descontrolada de células cancerosas anormales. La anemia aplásica es la falta de producción de todo tipo de células debido a una médula ósea vacía." },
-      { question: "¿Se puede curar con trasplante de médula ósea?", answer: "Sí, el trasplante de médula ósea de un donante compatible (generalmente un hermano) es el tratamiento curativo de elección para niños con esta enfermedad." },
-      { question: "¿Cuánto dura el tratamiento inmunosupresor?", answer: "La respuesta al tratamiento inmunosupresor puede tardar varios meses, y el seguimiento médico se prolonga durante años." }
+      { question: "¿Es lo mismo que leucemia?", answer: "No. La leucemia es un cáncer de la sangre en el que se producen células anormales de manera descontrolada. En la anemia aplásica, la médula ósea deja de producir suficientes glóbulos rojos, glóbulos blancos y plaquetas." },
+      { question: "¿Cómo se diagnostica la anemia aplásica?", answer: "Para que sea más claro para los padres, el diagnóstico se realiza mediante:\n\n• Biometría hemática completa.\n• Recuento de reticulocitos.\n• Aspirado y biopsia de médula ósea (estudio fundamental para confirmar el diagnóstico).\n• Estudios para investigar la causa." },
+      { question: "¿Se puede curar con trasplante de médula ósea?", answer: "Sí. El trasplante de células madre hematopoyéticas (trasplante de médula ósea) puede curar la enfermedad en muchos pacientes, especialmente cuando existe un donante compatible." },
+      { question: "¿La anemia aplásica es cáncer?", answer: "No. La anemia aplásica no es un cáncer. Es una enfermedad en la que la médula ósea produce muy pocas células sanguíneas. Sin embargo, requiere atención especializada porque puede ser grave." },
+      { question: "¿La anemia aplásica es hereditaria?", answer: "En la mayoría de los casos no es hereditaria. Sin embargo, existen algunas enfermedades genéticas poco frecuentes, como la anemia de Fanconi, que pueden causar anemia aplásica y requieren estudios especializados." },
+      { question: "¿Cuánto dura el tratamiento inmunosupresor?", answer: "La respuesta al tratamiento inmunosupresor suele observarse después de varios meses. El seguimiento médico es prolongado y puede continuar durante varios años para vigilar recaídas o complicaciones." }
     ],
     image: "/enfermedades/Anemia_Aplasica.png",
     relatedServices: ["ser-001", "ser-002", "ser-006", "ser-007"],
@@ -129,16 +158,33 @@ export const diseases: MedicalCondition[] = [
     id: "enf-004",
     slug: "anemia-hemolitica",
     name: "Anemia Hemolítica",
-    description: "La anemia hemolítica es un grupo de trastornos sanguíneos en los cuales los glóbulos rojos se destruyen prematuramente (antes de cumplir su vida útil de 120 días), superando la capacidad de la médula ósea para reemplazarlos.",
-    symptoms: ["Ictericia (color amarillo en piel y ojos)", "Orina de color oscuro (como té o refresco de cola)", "Fatiga y palidez intensa", "Esplenomegalia (crecimiento del bazo)", "Dificultad respiratoria con el esfuerzo"],
-    causes: ["Destrucción inmunitaria por anticuerpos que atacan los glóbulos rojos", "Defectos en la membrana o enzimas celulares", "Infecciones, toxinas o medicamentos desencadenantes"],
+    description: "La anemia hemolítica ocurre cuando los glóbulos rojos se destruyen más rápido de lo que la médula ósea puede producirlos. Esto provoca que disminuya la cantidad de glóbulos rojos en la sangre y aparezcan síntomas como palidez, cansancio e ictericia (color amarillo en piel y ojos).",
+    symptoms: [
+      "Palidez",
+      "Cansancio o debilidad",
+      "Color amarillo en piel y ojos (ictericia)",
+      "Orina oscura",
+      "Latidos rápidos del corazón",
+      "Dificultad para realizar actividades físicas",
+      "Crecimiento del bazo (esplenomegalia)"
+    ],
+    causes: [
+      "Causas hereditarias: Esferocitosis hereditaria, Drepanocitosis (anemia falciforme), Talasemias, Deficiencia de glucosa-6-fosfato deshidrogenasa (G6PD) y Deficiencia de piruvato quinasa",
+      "Causas adquiridas: Anemia hemolítica autoinmune, Infecciones, Algunos medicamentos, Reacciones transfusionales y Enfermedades autoinmunes"
+    ],
     riskFactors: ["Antecedentes familiares de anemias hereditarias", "Enfermedades autoinmunes", "Infecciones virales recientes"],
     complications: ["Cálculos biliares a temprana edad", "Crisis aplásicas por infecciones virales", "Anemia grave que requiere transfusiones de urgencia"],
-    treatments: ["Medicamentos inmunosupresores (en casos autoinmunes)", "Transfusión segura de glóbulos rojos", "Esplenectomía en casos específicos"],
+    treatments: [
+      "Observación y vigilancia médica según la causa",
+      "Suplementos de ácido fólico",
+      "Medicamentos para controlar el sistema inmunológico",
+      "Transfusiones sanguíneas",
+      "Cirugía para retirar el bazo (en algunos casos seleccionados)"
+    ],
     faqs: [
-      { question: "¿Por qué se ponen amarillos los ojos del niño?", answer: "Al destruirse rápidamente los glóbulos rojos, se libera una gran cantidad de bilirrubina (un pigmento amarillo) en la sangre, acumulándose en los ojos y la piel." },
-      { question: "¿Es una enfermedad hereditaria?", answer: "Puede ser tanto hereditaria (debido a defectos genéticos en el glóbulo rojo) como adquirida (cuando el sistema inmune los ataca tras una infección o por medicamentos)." },
-      { question: "¿Cómo se diagnostica de forma precisa?", answer: "Se realiza a través de pruebas de laboratorio que incluyen la prueba de Coombs (para causas inmunes), frotis de sangre periférica, niveles de bilirrubinas y reticulocitos." }
+      { question: "¿Por qué se ponen amarillos los ojos del niño?", answer: "Cuando los glóbulos rojos se destruyen más rápido de lo normal, aumenta la cantidad de bilirrubina en la sangre. Esto puede hacer que los ojos y la piel se vean amarillos, una condición llamada ictericia." },
+      { question: "¿Es una enfermedad hereditaria?", answer: "Algunas formas de anemia hemolítica son hereditarias y se transmiten de padres a hijos. Otras son adquiridas y pueden aparecer por enfermedades autoinmunes, infecciones o algunos medicamentos." },
+      { question: "¿Cómo se realiza el diagnóstico?", answer: "El diagnóstico se realiza mediante estudios de sangre que permiten identificar la causa de la destrucción de los glóbulos rojos. Estos incluyen biometría hemática, recuento de reticulocitos, bilirrubinas, deshidrogenasa láctica (DHL), haptoglobina, frotis de sangre periférica y, en algunos casos, la prueba de Coombs. Dependiendo de la sospecha clínica, pueden requerirse estudios especializados adicionales." }
     ],
     image: "/enfermedades/Anemia_Hemolitica.png",
     relatedServices: ["ser-003", "ser-006"],
@@ -224,16 +270,36 @@ export const diseases: MedicalCondition[] = [
     id: "enf-007",
     slug: "esferocitosis-hereditaria",
     name: "Esferocitosis Hereditaria",
-    description: "La esferocitosis hereditaria es una anemia hemolítica congénita causada por un defecto genético en las proteínas de la membrana de los glóbulos rojos, haciendo que adopten una forma de esfera rígida (esferocito) y sean destruidos por el bazo.",
-    symptoms: ["Palidez en piel y mucosas", "Ictericia intermitente", "Crecimiento del bazo (esplenomegalia)", "Cansancio recurrente", "Desarrollo de piedras en la vesícula (colelitiasis)"],
+    description: "La esferocitosis hereditaria es una anemia hemolítica congénita causada por alteraciones genéticas en las proteínas de la membrana de los glóbulos rojos. Estas células adquieren una forma esférica, son menos flexibles y se destruyen principalmente en el bazo. La mayoría de los casos se heredan de forma autosómica dominante, aunque existen formas recesivas menos frecuentes.",
+    symptoms: [
+      "Palidez en piel y mucosas",
+      "Ictericia intermitente",
+      "Crecimiento del bazo (esplenomegalia)",
+      "Cansancio recurrente",
+      "Desarrollo de piedras en la vesícula (colelitiasis)",
+      "Orina oscura ocasional",
+      "Ictericia neonatal prolongada o intensa",
+      "Retraso en el crecimiento (en casos moderados o graves)"
+    ],
     causes: ["Mutación genética hereditaria (generalmente autosómica dominante) que altera las proteínas estructurales espectrina, anquirina o banda 3 del glóbulo rojo"],
-    riskFactors: ["Padre o madre diagnosticados con esferocitosis hereditaria o con historia de extirpación del bazo"],
+    riskFactors: [
+      "Antecedentes familiares de esferocitosis hereditaria",
+      "Familiar con anemia hemolítica crónica",
+      "Familiar sometido a esplenectomía por anemia hemolítica"
+    ],
     complications: ["Crisis aplásicas causadas por infecciones virales (ej. parvovirus B19)", "Piedras en la vesícula biliar a edades muy tempranas", "Anemia severa"],
-    treatments: ["Suplementación diaria con ácido fólico", "Transfusiones de glóbulos rojos en crisis anémicas", "Esplenectomía (extirpación del bazo) preferiblemente después de los 5 o 6 años"],
+    treatments: [
+      "Suplementación con ácido fólico",
+      "Transfusiones de glóbulos rojos cuando existe anemia grave o crisis hemolítica",
+      "Esplenectomía en pacientes seleccionados con enfermedad moderada o grave, generalmente después de los 5–6 años",
+      "Colecistectomía cuando existen cálculos biliares sintomáticos"
+    ],
     faqs: [
-      { question: "¿Por qué el bazo destruye estos glóbulos rojos?", answer: "El bazo actúa como un filtro. Los glóbulos rojos normales son flexibles y pueden pasar por conductos estrechos; los esferocitos son rígidos y esféricos, por lo que quedan atrapados en el bazo y son destruidos." },
-      { question: "¿Siempre se debe retirar el bazo en estos niños?", answer: "No, la cirugía se reserva para casos moderados a graves con crisis anémicas frecuentes o retraso en el crecimiento. En casos leves, solo se mantiene vigilancia médica estrecha." },
-      { question: "¿Cómo se confirma esta condición?", answer: "Se diagnostica observando los esferocitos en el frotis de sangre periférica, y mediante pruebas especializadas como la de fragilidad osmótica o la prueba de EMA por citometría." }
+      { question: "¿Por qué el bazo destruye estos glóbulos rojos?", answer: "El bazo funciona como un filtro natural de la sangre. Los glóbulos rojos normales son flexibles y pueden atravesar espacios muy estrechos. En la esferocitosis hereditaria, los glóbulos rojos tienen forma esférica y son menos flexibles, por lo que quedan atrapados en el bazo y son destruidos antes de tiempo." },
+      { question: "¿Siempre se debe retirar el bazo en estos niños?", answer: "No. La esplenectomía se reserva para algunos pacientes con enfermedad moderada o grave que presentan anemia significativa, necesidad frecuente de transfusiones, crecimiento afectado o síntomas importantes. Muchos niños con formas leves pueden manejarse únicamente con vigilancia médica y ácido fólico." },
+      { question: "¿Cómo se realiza el diagnóstico?", answer: "El diagnóstico se realiza mediante biometría hemática, frotis de sangre periférica y pruebas especializadas como la citometría con eosina-5-maleimida (EMA), considerada actualmente una de las pruebas más sensibles para confirmar la enfermedad." },
+      { question: "¿La esferocitosis hereditaria tiene cura?", answer: "Es una enfermedad genética que acompaña al paciente toda su vida. Sin embargo, con seguimiento adecuado, suplementación con ácido fólico y, en algunos casos, esplenectomía, la mayoría de los niños pueden llevar una vida normal." },
+      { question: "¿Puede llevar una vida normal un niño con esferocitosis hereditaria?", answer: "En la mayoría de los casos sí. Con seguimiento médico adecuado, suplementación con ácido fólico y tratamiento oportuno de las complicaciones, la mayoría de los niños pueden realizar sus actividades habituales y tener una buena calidad de vida." }
     ],
     image: "/enfermedades/Esferocitosis_Hereditaria.png",
     relatedServices: ["ser-003", "ser-006", "ser-007"],
@@ -292,15 +358,37 @@ export const diseases: MedicalCondition[] = [
     name: "Deficiencia de G6PD",
     technicalName: "Deficiencia de Glucosa-6-Fosfato Deshidrogenasa",
     description: "La deficiencia de G6PD es un trastorno genético caracterizado por la escasez de la enzima glucosa-6-fosfato deshidrogenasa en los glóbulos rojos, lo que los hace vulnerables a romperse ante el estrés oxidativo provocado por ciertos medicamentos, infecciones o alimentos.",
-    symptoms: ["Palidez súbita e ictericia", "Orina oscura de color rojizo o marrón", "Fiebre y cansancio rápido", "Ritmo cardíaco acelerado (taquicardia)", "Dificultad para respirar"],
+    symptoms: [
+      "Palidez repentina",
+      "Color amarillo en piel y ojos (ictericia)",
+      "Orina oscura (color té o coca-cola)",
+      "Cansancio o debilidad",
+      "Taquicardia",
+      "Dificultad para respirar en casos graves",
+      "Dolor abdominal o dolor de espalda durante una crisis hemolítica"
+    ],
     causes: ["Mutación genética hereditaria ligada al cromosoma X, que reduce la actividad o estabilidad de la enzima protectora G6PD"],
-    riskFactors: ["Antecedentes familiares de la deficiencia", "Sexo masculino", "Consumo de habas (favismo) o ciertos fármacos oxidantes"],
+    riskFactors: [
+      "Antecedentes familiares de deficiencia de G6PD",
+      "Sexo masculino (más frecuente)",
+      "Ascendencia africana, mediterránea, asiática o de Medio Oriente",
+      "Exposición a medicamentos oxidantes",
+      "Infecciones virales o bacterianas",
+      "Consumo de habas (favismo)"
+    ],
     complications: ["Anemia hemolítica aguda grave con riesgo de daño renal", "Necesidad de transfusiones de emergencia en crisis oxidativas"],
-    treatments: ["Evitar estrictamente alimentos (habas, colorantes azules) y fármacos que causen estrés oxidativo", "Tratamiento rápido de infecciones desencadenantes", "Transfusión de sangre en caso de crisis graves"],
+    treatments: [
+      "Evitar medicamentos y alimentos que desencadenen hemólisis",
+      "Tratar oportunamente las infecciones",
+      "Mantener una adecuada hidratación durante las crisis",
+      "Vigilancia médica y estudios de laboratorio cuando aparezcan síntomas",
+      "Transfusión de sangre en casos graves de anemia hemolítica"
+    ],
     faqs: [
       { question: "¿Qué es el favismo?", answer: "Es la reacción hemolítica grave que sufren las personas con deficiencia de G6PD tras ingerir habas (o incluso inhalar el polen de la planta de habas), debido a sustancias químicas en ellas que oxidan la sangre." },
       { question: "¿Qué medicamentos no debe tomar mi hijo?", answer: "Debe evitar las sulfonamidas, ciertos antipalúdicos, algunos analgésicos y sustancias como la naftalina. Se le entregará a la familia una lista detallada y actualizada de medicamentos seguros y prohibidos." },
-      { question: "¿Esta enfermedad dura toda la vida?", answer: "Sí, es una condición genética que acompaña al paciente toda su vida. Sin embargo, con evitar los factores desencadenantes, el niño tendrá una expectativa y calidad de vida completamente normales." }
+      { question: "¿Esta enfermedad dura toda la vida?", answer: "Sí, es una condición genética que acompaña al paciente toda su vida. Sin embargo, con evitar los factores desencadenantes, el niño tendrá una expectativa y calidad de vida completamente normales." },
+      { question: "¿Puede mi hijo llevar una vida normal?", answer: "Sí. La mayoría de los niños con deficiencia de G6PD tienen una vida completamente normal si evitan los factores que desencadenan la hemólisis y reciben atención médica cuando presentan síntomas" }
     ],
     image: "/enfermedades/Deficiencia_G6PD.png",
     relatedServices: ["ser-003", "ser-006", "ser-007"],

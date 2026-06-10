@@ -167,6 +167,8 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
               <h3 className="text-lg font-extrabold mb-4 tracking-tight uppercase">
                 {disease.slug === "talasemia"
                   ? "¿Tu hijo tiene anemia persistente, microcitosis o antecedentes familiares de talasemia?"
+                  : disease.slug === "anemia-hemolitica"
+                  ? "¿Tu hijo presenta palidez, cansancio o coloración amarilla en ojos y piel?"
                   : `¿Tu hijo presenta síntomas de ${disease.name}?`}
               </h3>
               <div className="w-10 h-1 bg-accent mb-6 rounded-full" />
@@ -175,6 +177,8 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
                   ? "Una valoración temprana por hematología pediátrica permite establecer un diagnóstico preciso y definir el tratamiento más adecuado para cada caso."
                   : disease.slug === "anemia-ferropenica"
                   ? "La anemia ferropénica puede afectar el crecimiento, el aprendizaje y la calidad de vida de los niños. Un diagnóstico oportuno permite iniciar el tratamiento adecuado y prevenir complicaciones."
+                  : disease.slug === "anemia-hemolitica"
+                  ? "La palidez, el cansancio, la ictericia (color amarillo en ojos y piel) o la orina oscura pueden ser señales de anemia hemolítica. Una valoración especializada ayuda a establecer un diagnóstico preciso y un tratamiento oportuno."
                   : `El diagnóstico temprano y correcto cambia el pronóstico. La ${doctor.title} ${doctor.name} es subespecialista en Hematología Pediátrica y puede ayudar a tu familia.`}
               </p>
               <a href={`https://wa.me/${doctor.whatsapp.replace(/\D/g, "")}`} target="_blank" rel="noreferrer" className="block w-full text-center bg-white text-primary font-bold py-4 rounded-full hover:bg-[#FEE5FD] hover:text-[#971F57] transition-all shadow-lg text-[9px] uppercase tracking-widest">
