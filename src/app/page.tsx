@@ -7,10 +7,25 @@ import { diseases } from "@/data/diseases";
 import { FaCalendarCheck, FaAward, FaUniversity, FaCertificate, FaHospitalSymbol, FaMoneyBillWave, FaExchangeAlt, FaCreditCard, FaMapMarkerAlt, FaClock } from "react-icons/fa";
 import StructuredData from "@/components/StructuredData";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Home() {
   const whatsappUrl = `https://wa.me/${doctor.whatsapp.replace(/\D/g, "")}`;
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const heroSlides = [
+    { src: "/doctor_hero.jpeg", align: "object-[center_35%]" },
+    { src: "/doctor_1.jpeg", align: "object-[center_35%]" },
+    { src: "/doctor_3.jpeg", align: "object-[center_35%]" }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
 
   const homeSchema = {
     "@context": "https://schema.org",
@@ -80,23 +95,30 @@ export default function Home() {
               initial="hidden" animate="visible" variants={softBlurIn}
             >
               {/* Inner Relative Container representing the exact photo box */}
-              <div className="relative w-72 h-72 sm:w-[420px] sm:h-[420px] lg:w-[480px] lg:h-[480px] xl:w-[540px] xl:h-[540px] flex items-center justify-center">
+              <div className="relative w-80 h-80 sm:w-[460px] sm:h-[460px] lg:w-[520px] lg:h-[520px] xl:w-[600px] xl:h-[600px] flex items-center justify-center">
                 
                 {/* Concentric rings behind the image (Using scale for perfect alignment) */}
                 <div className="absolute inset-0 w-full h-full rounded-full border border-primary/10 scale-[1.12] animate-spin-slow pointer-events-none" />
                 <div className="absolute inset-0 w-full h-full rounded-full border border-accent/10 scale-[1.06] pointer-events-none" />
 
-                {/* Main Doctor Image Circle - Con fondo degradado de acuarela */}
+                {/* Main Doctor Image Circle - Con fondo degradado de acuarela y Slider */}
                 <motion.div 
                   className="w-full h-full bg-gradient-to-br from-primary via-[#971F57] to-[#F8B0E4] shadow-2xl relative overflow-hidden rounded-full border-[10px] border-white z-10 flex items-center justify-center"
                   animate={{ y: [0, -12, 0] }}
                   transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
                 >
-                  <img 
-                    src={doctor.photo} 
-                    alt={`Dra. ${doctor.name}`} 
-                    className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
-                  />
+                  <AnimatePresence mode="wait">
+                    <motion.img 
+                      key={currentSlide}
+                      src={heroSlides[currentSlide].src} 
+                      alt={`Dra. ${doctor.name}`} 
+                      className={`absolute w-full h-full object-cover ${heroSlides[currentSlide].align}`}
+                      initial={{ opacity: 0, scale: 1.05 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.8, ease: "easeInOut" }}
+                    />
+                  </AnimatePresence>
                 </motion.div>
 
                 {/* Float Experience Badge */}
@@ -139,11 +161,11 @@ export default function Home() {
             {/* Col Right: Foto About Me + Bento Box (Spans 7 cols) */}
             <motion.div variants={softBlurIn} className="lg:col-span-7 space-y-8">
               {/* Foto About Me */}
-              <div className="w-full h-72 lg:h-80 bg-slate-100 rounded-[2rem_0.5rem_2rem_0.5rem] relative overflow-hidden flex items-center justify-center border border-slate-150 shadow-sm">
+              <div className="w-full h-[450px] lg:h-[500px] bg-slate-100 rounded-[2rem_0.5rem_2rem_0.5rem] relative overflow-hidden flex items-center justify-center border border-slate-150 shadow-sm">
                 <img 
-                  src={doctor.photo} 
+                  src="/doctor_aboutme.jpeg" 
                   alt={`Dra. ${doctor.name}`} 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-[center_43%] transition-transform duration-700 hover:scale-[1.02]"
                 />
               </div>
 
@@ -175,6 +197,55 @@ export default function Home() {
               </div>
             </motion.div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* PEDIATRIC CARE COMMITMENT BLOCK WITH PHOTO 4 */}
+      <section className="py-24 bg-white relative">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left Column: doctor_4.jpeg */}
+            <motion.div 
+              className="lg:col-span-5 h-[350px] lg:h-[450px] rounded-[1rem_3rem_1rem_3rem] overflow-hidden border border-slate-150 shadow-sm relative group"
+              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={softBlurIn}
+            >
+              <img 
+                src="/doctor_4.jpeg" 
+                alt="Compromiso Hematología Pediátrica" 
+                className="w-full h-full object-cover object-[center_30%] transition-transform duration-700 hover:scale-[1.02]"
+              />
+            </motion.div>
+
+            {/* Right Column: Text content */}
+            <motion.div 
+              className="lg:col-span-7 space-y-6"
+              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={softBlurIn}
+            >
+              <span className="text-primary font-extrabold text-xs uppercase tracking-widest bg-primary/5 px-4 py-1.5 rounded-full border border-primary/10">
+                Atención Infantil con Amor y Juego
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight uppercase">
+                Un diagnóstico hematológico a tiempo transforma vidas
+              </h2>
+              <p className="text-slate-650 text-xs sm:text-sm leading-relaxed font-semibold">
+                La Dra. Lizbeth Hernández comprende que tratar a un niño requiere no solo de la mayor precisión médica, sino también de empatía y calidez. Las enfermedades de la sangre en la infancia, desde anemias hasta leucemias, se abordan con un acompañamiento cercano para disminuir el estrés en el niño y su familia.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-bold text-slate-700">
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-accent" /> Explicaciones sencillas para los padres.
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-accent" /> Procedimientos con mínimo dolor.
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-accent" /> Seguimiento continuo 24/7.
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-accent" /> Consulta adaptada al ritmo de tu hijo.
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -292,6 +363,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* NEW CALL TO ACTION SECTION WITH DOCTOR PHOTO 2 */}
+      <section className="py-24 bg-slate-900 text-white relative overflow-hidden rounded-[0px_5rem_0px_5rem]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(151,31,87,0.15),transparent)] pointer-events-none" />
+        <div className="container mx-auto px-6 max-w-7xl relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Col Left: Text content */}
+            <motion.div 
+              className="lg:col-span-7 space-y-6 text-center lg:text-left"
+              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={softBlurIn}
+            >
+              <span className="text-accent font-extrabold text-xs uppercase tracking-widest bg-white/5 border border-white/10 px-4 py-1.5 rounded-full">
+                Atención Humana y Científica
+              </span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase leading-tight">
+                ¿Tu hijo tiene algún estudio sanguíneo alterado?
+              </h2>
+              <p className="text-slate-300 text-xs sm:text-sm leading-relaxed font-semibold max-w-xl">
+                La Dra. Lizbeth Hernández realiza una interpretación experta de biometrías hemáticas y estudios especializados para ofrecer un diagnóstico certero y oportuno.
+              </p>
+              <div className="flex justify-center lg:justify-start pt-4">
+                <a href={whatsappUrl} target="_blank" rel="noreferrer" className="px-10 py-4.5 bg-primary hover:bg-[#971F57] text-white font-bold rounded-full transition-all duration-300 text-[10px] uppercase tracking-widest shadow-lg">
+                  Agendar Consulta de Especialidad &rarr;
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Col Right: Doctor photo 2 */}
+            <motion.div 
+              className="lg:col-span-5 h-[320px] sm:h-[400px] rounded-[3rem_1rem_3rem_1rem] overflow-hidden border border-white/10 relative group"
+              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={softBlurIn}
+            >
+              <img 
+                src="/doctor_2.jpeg" 
+                alt="Consulta Médica Especializada" 
+                className="w-full h-full object-cover object-[center_35%] transition-transform duration-700 hover:scale-[1.02]"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* 5. DISEASES LIST (SECCIÓN 5 - ORGANIC DARK CIRCULAR ONCO-HEMATOLOGY - TEMÁTICA BERENJENA) */}
       <section className="py-24 bg-[#3b1c39] text-white border-t border-b border-white/5 relative overflow-hidden rounded-[5rem_0px_5rem_0px] shadow-2xl">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(151,31,87,0.3),transparent)] pointer-events-none" />
@@ -345,6 +457,8 @@ export default function Home() {
         </div>
       </section>
 
+
+
       {/* 6. COSTOS DE VALORACIÓN (SECCIÓN 6 - ORGANIC CARD) */}
       <section className="py-24 bg-slate-50/50 border-t border-slate-100 relative">
         <div className="container mx-auto px-6 max-w-5xl">
@@ -353,12 +467,12 @@ export default function Home() {
             className="text-center mb-12"
           >
             <span className="text-[9px] font-bold text-accent uppercase tracking-widest block mb-2">Transparencia en Consulta</span>
-            <h2 className="text-2xl font-black text-slate-900 uppercase tracking-tight">Cobro</h2>
+            <h2 className="text-2xl font-black text-slate-900 uppercase tracking-tight">Costos de Valoración</h2>
           </motion.div>
 
           <motion.div
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={softBlurIn}
-            className="bg-white border border-slate-150 shadow-sm rounded-[3rem_1rem_3rem_1rem] overflow-hidden"
+            className="bg-white border border-slate-150 shadow-sm rounded-[3rem_1rem_3rem_1rem] overflow-hidden flex flex-col justify-between"
           >
             {/* Descripción */}
             <div className="px-8 lg:px-12 py-8 border-b border-slate-100">
@@ -367,28 +481,21 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Grid de 4 columnas */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-slate-100">
-
+            {/* Grid de 3 columnas */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-slate-100 border-b border-slate-100">
               {/* Precio de Consulta */}
-              <div className="px-8 py-8">
-                <h3 className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-5">Precio de Consulta</h3>
-                <div className="space-y-4">
-                  <div className="flex flex-col items-center">
-                    <span className="text-2xl font-black text-primary mt-1">
-                      {doctor.consultationPrice ? `$${doctor.consultationPrice}` : 'Sin datos'}
-                    </span>
-                    {doctor.consultationPrice && (
-                      <span className="text-[9px] text-slate-400 font-bold uppercase tracking-widest">Pesos Mexicanos</span>
-                    )}
-                  </div>
-                </div>
+              <div className="px-8 py-8 text-center sm:text-left">
+                <h3 className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-5">Precio</h3>
+                <span className="text-2xl font-black text-primary block">
+                  {doctor.consultationPrice ? `$${doctor.consultationPrice}` : 'Sin datos'}
+                </span>
+                <span className="text-[9px] text-slate-400 font-bold uppercase tracking-widest">Pesos Mexicanos</span>
               </div>
 
               {/* Métodos de Pago */}
               <div className="px-8 py-8">
                 <h3 className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-5">Métodos de Pago</h3>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
                   {doctor.paymentMethods.map(method => (
                     <span key={method} className="px-3 py-1.5 bg-primary/5 border border-primary/15 text-primary text-[10px] font-bold rounded-full uppercase tracking-wide">
                       {method}
@@ -400,26 +507,17 @@ export default function Home() {
               {/* Seguros */}
               <div className="px-8 py-8">
                 <h3 className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-5">Seguros</h3>
-                <div className="space-y-4">
-                  <div className="flex flex-col">
-                    <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Acepta seguros</span>
-                    <span className="text-sm font-extrabold text-slate-700 mt-1">
-                      {doctor.insurances && doctor.insurances.length > 0 ? doctor.insurances.join(', ') : 'No'}
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Método de cobro del seguro</span>
-                    <span className="text-sm font-extrabold text-slate-700 mt-1">No</span>
-                  </div>
-                </div>
+                <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">Reembolso</span>
+                <span className="text-sm font-extrabold text-slate-700 mt-1 block">
+                  Acepta todos para reembolso
+                </span>
               </div>
-
             </div>
 
             {/* CTA inferior */}
-            <div className="px-8 lg:px-12 py-6 bg-primary/3 border-t border-slate-100 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="px-8 lg:px-12 py-6 bg-primary/3 flex flex-col sm:flex-row items-center justify-between gap-4">
               <p className="text-xs text-slate-500 font-semibold">
-                Agenda tu consulta por WhatsApp o llámanos directamente para más información.
+                Agenda tu consulta por WhatsApp.
               </p>
               <a
                 href={`https://wa.me/${doctor.whatsapp.replace(/\D/g, "")}`}
@@ -430,6 +528,52 @@ export default function Home() {
               </a>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* FINAL APPOINTMENT CTA BANNER WITH DOCTOR PHOTO 5 */}
+      <section className="py-24 bg-[#3b1c39] text-white relative overflow-hidden rounded-[5rem_5rem_0px_0px] shadow-2xl">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(151,31,87,0.2),transparent)] pointer-events-none" />
+        <div className="container mx-auto px-6 max-w-7xl relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Text details */}
+            <motion.div 
+              className="lg:col-span-7 space-y-6 text-center lg:text-left"
+              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={softBlurIn}
+            >
+              <span className="text-accent font-extrabold text-xs uppercase tracking-widest bg-white/5 border border-white/10 px-4 py-1.5 rounded-full">
+                Consulta en la Roma Norte
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight uppercase">
+                Bríndale a tu hijo la atención médica que merece
+              </h2>
+              <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Agenda hoy mismo una valoración de hematología pediátrica. Consultorio equipado para el confort infantil y la tranquilidad familiar.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start text-xs text-slate-300 font-semibold">
+                <div>📍 Roma Norte, CDMX</div>
+                <div>📞 55 9686 8266</div>
+                <div>💬 WhatsApp: 52 56 1123 2970</div>
+              </div>
+              <div className="flex justify-center lg:justify-start pt-4">
+                <a href={whatsappUrl} target="_blank" rel="noreferrer" className="px-10 py-4.5 bg-white text-primary hover:bg-[#FEE5FD] hover:text-[#971F57] font-bold rounded-full transition-all duration-300 text-[10px] uppercase tracking-widest shadow-lg">
+                  Agendar por WhatsApp &rarr;
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Doctor photo 5 */}
+            <motion.div 
+              className="lg:col-span-5 h-[350px] lg:h-[400px] rounded-[3rem_1rem_3rem_1rem] overflow-hidden border border-white/10 relative group"
+              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={softBlurIn}
+            >
+              <img 
+                src="/doctor_5.jpeg" 
+                alt="Hematóloga Pediatra Dra. Lizbeth" 
+                className="w-full h-full object-cover object-[center_28%] transition-transform duration-700 hover:scale-[1.02]"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 

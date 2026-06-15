@@ -14,16 +14,12 @@ export default function Footer() {
           
           {/* Col 1: Contacto y Métodos de pago */}
           <div className="flex flex-col gap-6">
-            <Link href="/" className="flex flex-col group">
-              <span className="font-signature text-3xl text-white leading-none transition-colors group-hover:text-[#F8B0E4]">
-                Dra. Lizbeth Yamilet
-              </span>
-              <span className="text-xs font-bold uppercase tracking-widest text-white/80 mt-0.5 leading-none">
-                Hernández Verdugo
-              </span>
-              <span className="text-[8px] font-black text-[#F8B0E4] uppercase tracking-[0.2em] mt-1 leading-none">
-                Hematología Pediátrica
-              </span>
+            <Link href="/" className="relative flex items-center overflow-hidden h-24 w-24 group">
+              <img 
+                src="/LOGO DRA LIZBETH-10.png" 
+                alt="Dra. Lizbeth Hernández - Hematología Pediátrica" 
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-none w-[170%] h-[170%] object-contain"
+              />
             </Link>
 
             <div className="flex flex-col gap-4">

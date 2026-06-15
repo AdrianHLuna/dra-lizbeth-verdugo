@@ -403,16 +403,32 @@ export const diseases: MedicalCondition[] = [
     id: "enf-010",
     slug: "enfermedad-von-willebrand",
     name: "Enfermedad de Von Willebrand",
-    description: "La enfermedad de Von Willebrand es el trastorno hemorrágico hereditario más común en la población general. Se debe a la disminución o funcionamiento anormal del factor de Von Willebrand, una proteína necesaria para que las plaquetas se adhieran a los vasos y formen coágulos.",
-    symptoms: ["Epistaxis de repetición", "Moretones fáciles de gran tamaño", "Sangrado en encías", "Menstruación abundante en niñas", "Sangrado excesivo tras cirugías dentales"],
-    causes: ["Alteraciones genéticas hereditarias (autosómicas, pueden afectar a hombres y mujeres por igual) en el gen del factor de Von Willebrand"],
+    description: "La enfermedad de von Willebrand es el trastorno hereditario de la coagulación más frecuente. Ocurre cuando el factor von Willebrand está disminuido o no funciona correctamente, lo que dificulta que las plaquetas formen un coágulo adecuado y puede provocar sangrados más prolongados de lo normal",
+    symptoms: [
+      "Moretones frecuentes o excesivos",
+      "Sangrados nasales repetidos o difíciles de detener",
+      "Sangrado prolongado después de extracciones dentales o cirugías",
+      "Sangrado de encías",
+      "Menstruaciones abundantes en adolescentes",
+      "En casos más graves, sangrado gastrointestinal o articular"
+    ],
+    causes: ["La mayoría de los casos son hereditarios y se transmiten de padres a hijos. En raras ocasiones puede aparecer sin antecedentes familiares o adquirirse posteriormente por otras enfermedades"],
     riskFactors: ["Padres con diagnóstico de la enfermedad o síntomas de sangrado anormal inexplicado"],
     complications: ["Anemia crónica por pérdidas de sangre recurrentes", "Hemorragias graves tras procedimientos menores", "Dolor e inflamación articular (en tipos graves)"],
     treatments: ["Medicamentos para elevar temporalmente los niveles del factor de coagulación", "Antifibrinolíticos para controlar sangrados locales en boca o nariz", "Concentrados purificados de factor Von Willebrand en casos severos o cirugías"],
     faqs: [
-      { question: "¿Es una enfermedad parecida a la hemofilia?", answer: "Tienen similitudes porque ambas afectan la coagulación, pero la enfermedad de Von Willebrand suele ser más leve, afecta tanto a niños como a niñas, y se debe a un defecto en la adhesión de las plaquetas." },
-      { question: "¿Cómo se diagnostica de manera certera?", answer: "Requiere pruebas específicas como la medición del antígeno del factor Von Willebrand, su actividad (cofactor de ristocetina) y niveles del factor VIII en sangre." },
-      { question: "¿Una niña con esta condición puede llevar una vida normal al crecer?", answer: "Sí, aunque requiere un manejo especial y preventivo durante su periodo menstrual y en caso de intervenciones quirúrgicas o dentales." }
+      {
+        question: "¿Es una enfermedad parecida a la hemofilia?",
+        answer: "Tienen similitudes porque ambas son enfermedades que afectan la coagulación y pueden causar sangrados prolongados. Sin embargo, la enfermedad de von Willebrand suele ser más leve, afecta tanto a niños como a niñas y se debe a una alteración del factor von Willebrand, una proteína que ayuda a que las plaquetas se adhieran y formen el coágulo."
+      },
+      {
+        question: "¿Una niña con esta condición puede llevar una vida normal al crecer?",
+        answer: "Sí. La mayoría de las niñas con enfermedad de von Willebrand pueden llevar una vida completamente normal. Es importante informar a sus médicos sobre el diagnóstico y recibir orientación especial antes de cirugías, procedimientos dentales o si presenta menstruaciones abundantes."
+      },
+      {
+        question: "¿La enfermedad de von Willebrand tiene cura?",
+        answer: "Actualmente no tiene cura definitiva, pero existen tratamientos muy efectivos para prevenir y controlar los episodios de sangrado, permitiendo que la mayoría de los pacientes lleven una vida normal."
+      }
     ],
     image: "/enfermedades/Enfermedad_Von_Willebrand.png",
     relatedServices: ["ser-005"],
@@ -425,26 +441,47 @@ export const diseases: MedicalCondition[] = [
   },
   {
     id: "enf-011",
-    slug: "linfoma-infantil",
-    name: "Linfoma Infantil",
-    description: "El linfoma infantil es un tipo de cáncer que afecta el sistema linfático, encargado de defender al cuerpo de infecciones. Se clasifica principalmente en Linfoma de Hodgkin y Linfoma no Hodgkin, y se caracteriza por el crecimiento descontrolado de linfocitos anormales.",
-    symptoms: ["Aumento de tamaño de ganglios linfáticos (cuello, axilas o ingle) que no duele", "Fiebre prolongada sin causa de infección", "Pérdida de peso inexplicable", "Sudoración nocturna abundante", "Tos persistente o dificultad para respirar"],
-    causes: ["Mutaciones de ADN adquiridas en los linfocitos (no asociadas a causas hereditarias en su gran mayoría)"],
-    riskFactors: ["Estados de inmunodeficiencia heredada o adquirida", "Exposición previa a ciertos virus como el de Epstein-Barr"],
-    complications: ["Compresión de órganos vitales por el crecimiento del tumor", "Invasión a médula ósea y sistema nervioso central", "Infecciones graves recurrentes"],
-    treatments: ["Quimioterapia combinada", "Inmunoterapia con anticuerpos monoclonales", "Radioterapia en casos seleccionados"],
-    faqs: [
-      { question: "¿Qué diferencia hay entre Linfoma de Hodgkin y No Hodgkin?", answer: "Se diferencian en el tipo de células cancerosas vistas bajo el microscopio. El de Hodgkin presenta unas células características llamadas de Reed-Sternberg y suele ser más curable. El No Hodgkin se disemina de forma más rápida." },
-      { question: "¿Un ganglio inflamado siempre es signo de linfoma?", answer: "No, la gran mayoría de los ganglios inflamados en niños son benignos y se deben a infecciones comunes. Solo deben alarmar si son duros, no móviles, no duelen y siguen creciendo después de varias semanas." },
-      { question: "¿Cómo se confirma el diagnóstico?", answer: "Se requiere realizar una biopsia del ganglio inflamado completo para su análisis histopatológico e inmunohistoquímica por un patólogo experto." }
+    slug: "leucemia-infantil",
+    name: "Leucemia Infantil",
+    description: "La leucemia infantil es el cáncer más común en la infancia. Se origina en la médula ósea, donde se producen glóbulos blancos anormales de manera descontrolada, afectando la producción de células sanas como glóbulos rojos y plaquetas.",
+    symptoms: [
+      "Fiebre prolongada o recurrente sin causa aparente",
+      "Dolor constante en huesos o articulaciones",
+      "Palidez extrema, cansancio y debilidad",
+      "Aparición fácil de moretones o puntitos rojos en la piel (petequias)",
+      "Sangrados frecuentes por la nariz o encías",
+      "Ganglios inflamados en el cuello, axilas o ingle que no causan dolor"
     ],
-    image: "/enfermedades/Linfoma_Infantil.png",
+    causes: ["Mutaciones o alteraciones en el ADN de las células de la médula ósea (no asociadas a causas hereditarias en su gran mayoría)"],
+    riskFactors: ["Trastornos genéticos específicos (como el Síndrome de Down)", "Exposición previa a quimioterapia o radiaciones de alta intensidad"],
+    complications: ["Infecciones graves por deficiencia de glóbulos blancos sanos", "Hemorragias severas por falta de plaquetas", "Anemia grave que limita las actividades cotidianas"],
+    treatments: [
+      "Quimioterapia combinada (intravenosa, oral e intratecal)",
+      "Soporte transfusional con glóbulos rojos o plaquetas",
+      "Antibióticos y antimicóticos para el control y prevención de infecciones",
+      "Trasplante de médula ósea en casos de alto riesgo o recaída"
+    ],
+    faqs: [
+      {
+        question: "¿Qué es la leucemia infantil y cómo afecta al cuerpo?",
+        answer: "Es un cáncer de la sangre que se origina en la médula ósea. Al producirse glóbulos blancos anormales (blastos) de manera descontrolada, estos desplazan a las células sanguíneas sanas. Esto causa anemia (por falta de glóbulos rojos), infecciones (por falta de defensas) y sangrados (por falta de plaquetas)."
+      },
+      {
+        question: "¿Cuáles son los principales síntomas de alarma?",
+        answer: "Los síntomas clave son fiebre inexplicable y prolongada, palidez persistente, dolor óseo o articular que puede despertar al niño por las noches, moretones espontáneos, petequias y sangrados de nariz o encías. Ante la presencia de estos síntomas, se requiere una biometría hemática inmediata."
+      },
+      {
+        question: "¿La leucemia en niños se puede curar?",
+        answer: "Sí. Actualmente, las tasas de curación de la leucemia infantil son muy elevadas, superando el 85-90% en el tipo más común (leucemia linfoblástica aguda). El diagnóstico oportuno y el inicio rápido del tratamiento son fundamentales para el éxito terapéutico."
+      }
+    ],
+    image: "/enfermedades/Leucemia_Linfoblastica_Aguda.png",
     relatedServices: ["ser-001", "ser-002", "ser-004", "ser-007"],
-    relatedSymptoms: ["sym-001", "sym-004", "sym-006", "sym-009"],
+    relatedSymptoms: ["sym-001", "sym-002", "sym-003", "sym-004", "sym-006", "sym-007", "sym-014", "sym-015"],
     seo: {
-      title: "Linfoma en Niños | Linfoma de Hodgkin Pediátrico CDMX",
-      description: "Diagnóstico y tratamiento oportuno de linfomas infantiles (Hodgkin y No Hodgkin). Dra. Lizbeth Hernández, Hematóloga Pediatra.",
-      keywords: ["Linfoma infantil síntomas", "Ganglios inflamados duros niños", "Cáncer linfático en niños CDMX"],
+      title: "Leucemia Infantil | Hematóloga Pediatra CDMX",
+      description: "Diagnóstico oportuno y tratamiento especializado para la leucemia infantil. Consulta experta con la Dra. Lizbeth Hernández.",
+      keywords: ["Leucemia infantil síntomas", "Tipos de leucemia en niños", "Cáncer en la sangre infantil CDMX"],
     }
   },
   {
@@ -599,6 +636,65 @@ export const diseases: MedicalCondition[] = [
       title: "Alteraciones en la Biometría Hemática Pediátrica | CDMX",
       description: "Diagnóstico y análisis experto de alteraciones en plaquetas, leucocitos o hemoglobina en niños. Consulta con la Dra. Lizbeth Hernández.",
       keywords: ["Biometría hemática alterada niños", "Plaquetas bajas pediatra CDMX", "Leucocitos altos infantil"]
+    }
+  },
+  {
+    id: "enf-017",
+    slug: "neutropenia-infantil",
+    name: "Neutropenia en Niños",
+    description: "La neutropenia es la disminución anormal en la cantidad de neutrófilos, un tipo de glóbulo blanco esencial para combatir infecciones bacterianas y fúngicas. En los niños, esto aumenta el riesgo de contraer infecciones que pueden ser recurrentes o graves.",
+    symptoms: [
+      "Fiebre persistente o inexplicable",
+      "Infecciones de oído, garganta o piel recurrentes",
+      "Úlceras o llagas dolorosas en la boca (aftas)",
+      "Inflamación o sangrado de encías (gingivitis)",
+      "Retraso en la cicatrización de heridas o infecciones cutáneas frecuentes"
+    ],
+    causes: [
+      "Infecciones virales previas o activas (causa más común y temporal)",
+      "Neutropenia autoinmune (destrucción de neutrófilos por anticuerpos)",
+      "Efectos secundarios de medicamentos (incluida la quimioterapia)",
+      "Problemas en la médula ósea (como aplasia medular o leucemias)",
+      "Trastornos genéticos o congénitos raros (como la neutropenia congénita severa)"
+    ],
+    riskFactors: [
+      "Infecciones virales recientes (gripe, varicela, etc.)",
+      "Tratamientos médicos activos como quimioterapia o ciertos anticonvulsivos",
+      "Antecedentes de enfermedades autoinmunes",
+      "Predisposición genética"
+    ],
+    complications: [
+      "Infecciones bacterianas graves o generalizadas (septicemia)",
+      "Fiebre neutropénica (considerada una urgencia médica)",
+      "Hospitalizaciones frecuentes por infecciones de difícil control"
+    ],
+    treatments: [
+      "Tratamiento antibiótico o antimicótico inmediato ante sospecha de infección",
+      "Factores estimulantes de colonias de granulocitos (G-CSF) para elevar los neutrófilos",
+      "Suspensión o cambio de medicamentos causantes",
+      "Seguimiento estrecho con biometrías hemáticas periódicas"
+    ],
+    faqs: [
+      {
+        question: "¿Qué es la fiebre neutropénica y por qué es una urgencia?",
+        answer: "La fiebre neutropénica ocurre cuando un niño con neutropenia presenta fiebre (generalmente 38°C o más). Debido a la falta de defensas, una infección bacteriana puede diseminarse muy rápido por el cuerpo. Se considera una emergencia médica y requiere atención hospitalaria inmediata para iniciar antibióticos intravenosos."
+      },
+      {
+        question: "¿La neutropenia en niños es permanente?",
+        answer: "En la gran mayoría de los niños es de origen infeccioso o autoinmune y suele resolverse por completo de forma espontánea en unas semanas o meses. Solo en casos muy raros, asociados a fallas congénitas o de la médula ósea, puede ser una condición a largo plazo que requiere tratamiento continuo."
+      },
+      {
+        question: "¿Qué precauciones especiales se deben tomar en casa?",
+        answer: "Es fundamental mantener una higiene estricta (lavado de manos frecuente), evitar el contacto con personas enfermas, mantener las vacunas al día, cuidar la higiene dental y tener un termómetro en casa para vigilar la temperatura de forma precisa."
+      }
+    ],
+    image: "/enfermedades/Neutropenia_Niños.png",
+    relatedServices: ["ser-003", "ser-006", "ser-007"],
+    relatedSymptoms: ["sym-006", "sym-013"],
+    seo: {
+      title: "Neutropenia en Niños | Defensas Bajas CDMX",
+      description: "Diagnóstico y tratamiento de la neutropenia y fiebre neutropénica en niños con la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
+      keywords: ["Neutropenia infantil CDMX", "Glóbulos blancos bajos niños", "Fiebre neutropénica urgencia"]
     }
   }
 ];

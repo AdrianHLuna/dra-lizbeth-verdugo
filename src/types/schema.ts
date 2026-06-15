@@ -140,6 +140,10 @@ export const SymptomSchema = z.object({
  relatedConditions: z.array(z.string()),
  image: z.string(),
  seo: SEOSchema,
+ manifestaciones: z.array(z.string()).optional(),
+ preguntaPrincipal: z.string().optional(),
+ signosAlarma: z.array(z.string()).optional(),
+ signosAlarmaTitle: z.string().optional(),
 });
 
 // ─── Clinical Case (Antes y Después) ─────────────────────────

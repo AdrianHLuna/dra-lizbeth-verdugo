@@ -2,27 +2,29 @@ import { Symptom } from "@/types/schema";
 
 export const symptoms: Symptom[] = [
   {
-    id: "sym-001",
-    slug: "fatiga-cansancio-excesivo",
-    name: "Fatiga o Cansancio Excesivo",
-    description: "Falta de energía persistente en el niño, desinterés por el juego y somnolencia inusual, que no mejora con el descanso.",
-    causes: ["Anemia ferropénica", "Anemia aplásica", "Anemia hemolítica", "Leucemias agudas"],
-    whyConsult: "La fatiga crónica en niños suele ser el primer síntoma de un déficit de glóbulos rojos (anemia) o de fallas más graves en la médula ósea. Es vital una valoración integral.",
-    relatedConditions: ["enf-001", "enf-003", "enf-004", "enf-005", "enf-006", "enf-007", "enf-009", "enf-014"],
-    image: "/sintomas/Fatiga_o_Cansancio_Excesivo.png",
-    seo: {
-      title: "Fatiga y Cansancio Excesivo en Niños | Hematóloga Pediatra",
-      description: "¿Tu hijo se nota cansado o sin energía para jugar? Podría ser anemia o un problema hematológico. Agenda consulta con la Dra. Lizbeth Hernández.",
-      keywords: ["Cansancio extremo en niños CDMX", "Anemia infantil fatiga", "Hematología pediátrica fatiga"],
-    }
-  },
-  {
     id: "sym-002",
     slug: "palidez-intensa",
     name: "Palidez Intensa o Persistente",
-    description: "Pérdida del tono rosado saludable en la piel, labios, encías o palmas de las manos del niño, a menudo acompañada de taquicardia o debilidad.",
-    causes: ["Anemia ferropénica", "Anemia hemolítica", "Anemia aplásica", "Leucemias y linfomas"],
-    whyConsult: "La palidez refleja una reducción severa de la hemoglobina. Si es de inicio rápido o se acompaña de latidos rápidos del corazón, requiere atención médica inmediata.",
+    description: "La palidez intensa es una disminución notable del color normal de la piel y las mucosas (labios, encías o interior de los párpados). Puede ser un signo de anemia u otras enfermedades que requieren valoración médica.",
+    causes: [
+      "Anemia por deficiencia de hierro.",
+      "Anemias hemolíticas.",
+      "Pérdida de sangre.",
+      "Infecciones o enfermedades crónicas.",
+      "Trastornos de la médula ósea.",
+      "Algunas enfermedades hereditarias de la sangre"
+    ],
+    whyConsult: "Busca atención médica inmediata si la palidez aparece de forma repentina o se acompaña de dificultad para respirar, desmayo, sangrado importante, somnolencia excesiva o debilidad.",
+    manifestaciones: [
+      "Piel, labios o encías más pálidos de lo habitual.",
+      "Cansancio o falta de energía.",
+      "Mareos o dolor de cabeza.",
+      "Falta de aire al jugar o hacer ejercicio.",
+      "Palpitaciones.",
+      "Somnolencia o irritabilidad.",
+      "Manos y pies fríos."
+    ],
+    preguntaPrincipal: "¿Has notado que tu hijo se ve más pálido de lo habitual, especialmente en labios, encías o alrededor de los ojos?",
     relatedConditions: ["enf-001", "enf-003", "enf-004", "enf-005", "enf-006", "enf-007", "enf-009", "enf-014"],
     image: "/sintomas/Palidez_Intensa_Persistente.png",
     seo: {
@@ -32,12 +34,77 @@ export const symptoms: Symptom[] = [
     }
   },
   {
+    id: "sym-001",
+    slug: "fatiga-cansancio-excesivo",
+    name: "Fatiga o Cansancio Excesivo",
+    description: "Es una sensación de falta de energía o agotamiento que no mejora completamente con el descanso y que puede dificultar las actividades habituales de tu hijo, como jugar, hacer ejercicio, asistir a la escuela o concentrarse",
+    causes: ["Anemia ferropénica", "Anemia aplásica", "Anemia hemolítica", "Leucemias agudas"],
+    whyConsult: "El cansancio persistente no siempre es normal. Puede relacionarse con anemia, deficiencias nutricionales, infecciones, problemas del sueño, enfermedades endocrinas o trastornos hematológicos. Una valoración médica puede ayudar a identificar la causa y determinar si se requieren estudios adicionales.",
+    relatedConditions: ["enf-001", "enf-003", "enf-004", "enf-005", "enf-006", "enf-007", "enf-009", "enf-014"],
+    image: "/sintomas/Fatiga_o_Cansancio_Excesivo.png",
+    manifestaciones: [
+      "Se cansa más rápido que otros niños.",
+      "Disminución del rendimiento escolar.",
+      "Necesita dormir más de lo habitual.",
+      "Falta de energía para jugar o hacer deporte.",
+      "Mareos o dolor de cabeza.",
+      "Palidez.",
+      "Falta de aire al esfuerzo.",
+      "Irritabilidad o dificultad para concentrarse.",
+      "Taquicardia o sensación de que el corazón late más rápido.",
+      "Debilidad generalizada."
+    ],
+    preguntaPrincipal: "¿Tu hijo se cansa fácilmente o tiene menos energía de lo habitual para jugar, hacer ejercicio o realizar sus actividades diarias?",
+    signosAlarma: [
+      "Palidez marcada.",
+      "Falta de aire.",
+      "Mareos frecuentes.",
+      "Pérdida de peso.",
+      "Fiebre prolongada.",
+      "Moretones o sangrado inusual.",
+      "Ganglios aumentados de tamaño"
+    ],
+    seo: {
+      title: "Fatiga y Cansancio Excesivo en Niños | Hematóloga Pediatra",
+      description: "¿Tu hijo se nota cansado o sin energía para jugar? Podría ser anemia o un problema hematológico. Agenda consulta con la Dra. Lizbeth Hernández.",
+      keywords: ["Cansancio extremo en niños CDMX", "Anemia infantil fatiga", "Hematología pediátrica fatiga"],
+    }
+  },
+  {
     id: "sym-003",
     slug: "moretones-faciles-sangrados",
     name: "Moretones Fáciles y Sangrado Frecuente",
-    description: "Aparición de hematomas (moretones) sin traumatismo previo o ante golpes muy leves, así como sangrado frecuente de encías o nariz.",
-    causes: ["Trombocitopenia inmune (PTI)", "Hemofilia", "Enfermedad de Von Willebrand", "Alteraciones plaquetarias"],
-    whyConsult: "Los sangrados repetitivos y los moretones espontáneos indican un problema en las plaquetas o en los factores de coagulación del niño. Deben evaluarse de inmediato para evitar complicaciones severas.",
+    description: "Aparición de moretones frecuentes o excesivos ante golpes leves, así como sangrados repetitivos de nariz, encías o después de pequeñas heridas.",
+    causes: [
+      "Trombocitopenia inmune (PTI)",
+      "Hemofilia",
+      "Enfermedad de Von Willebrand",
+      "Alteraciones plaquetarias",
+      "Algunos medicamentos",
+      "Deficiencias nutricionales",
+      "Otras alteraciones de la coagulación"
+    ],
+    whyConsult: "Los moretones frecuentes o los sangrados repetitivos pueden ser una señal de alteraciones en las plaquetas, la coagulación o, en algunos casos, otras enfermedades. Una valoración médica oportuna permite identificar la causa y ofrecer el tratamiento adecuado.",
+    manifestaciones: [
+      "Moretones frecuentes o muy grandes",
+      "Aparición de moretones sin golpes importantes",
+      "Sangrado nasal frecuente",
+      "Sangrado de encías al cepillarse los dientes",
+      "Puntitos rojos en la piel (petequias)",
+      "Sangrado prolongado despues de una herida o procedimiento dentale",
+      "Menstruaciones muy abundantes en adolescentes",
+      "Antecedentes familiares de problemas de sangrado"
+    ],
+    preguntaPrincipal: "¿Cuándo buscar atención médica?",
+    signosAlarmaTitle: "Síntoma de alarma hematológico:",
+    signosAlarma: [
+      "Moretones grandes sin golpes importantes",
+      "Sangrado nasal frecuente o difícil de detener",
+      "Sangrado de encías sin causa aparente",
+      "Aparición de petequias",
+      "Sangre en orina o heces oscuras",
+      "Moretones y/o petequias acompañados de palidez, cansancio o fiebre"
+    ],
     relatedConditions: ["enf-002", "enf-003", "enf-008", "enf-010", "enf-013", "enf-014"],
     image: "/sintomas/Moretones_Faciles_Sangrado_Frecuente.png",
     seo: {
@@ -47,9 +114,84 @@ export const symptoms: Symptom[] = [
     }
   },
   {
+    id: "sym-010",
+    slug: "petequias-purpura-sintoma",
+    name: "Petequias y Púrpura",
+    description: "Puntos rojos del tamaño de una cabeza de alfiler (petequias) o manchas moradas (púrpura) que brotan en la piel de forma repentina.",
+    causes: ["Trombocitopenia inmune (PTI)", "Deficiencia de factores de coagulación", "Vasculitis", "Leucemias agudas"],
+    whyConsult: "Estas lesiones representan hemorragias pequeñas bajo la piel. Si aparecen súbitamente, indican plaquetas bajas o fragilidad vascular grave y deben revisarse de urgencia.",
+    relatedConditions: ["enf-002", "enf-008", "enf-010", "enf-013", "enf-014"],
+    image: "/sintomas/petequias.png",
+    seo: {
+      title: "Puntos Rojos y Manchas Moradas en Niños | Hematóloga CDMX",
+      description: "¿Tu hijo presenta puntos rojos pequeños o moretones en la piel sin haberse golpeado? Agenda cita de valoración inmediata.",
+      keywords: ["Petequias en niños", "Puntos rojos en la piel niños causas", "Plaquetas bajas manchas moradas"],
+    }
+  },
+  {
+    id: "sym-014",
+    slug: "epistaxis-repeticion",
+    name: "Epistaxis de Repetición",
+    description: "Episodios frecuentes y recurrentes de sangrado por la nariz en niños y adolescentes, que pueden presentarse de forma espontánea o ante mínimos estímulos.",
+    causes: ["Fragilidad vascular nasal", "Trombocitopenia (plaquetas bajas)", "Enfermedad de Von Willebrand", "Hemofilia", "Leucemias agudas"],
+    whyConsult: "El sangrado nasal frecuente puede ser señal de una alteración en la coagulación o de plaquetas bajas en la sangre. Es crucial una evaluación hematológica experta para identificar la causa subyacente y prevenir complicaciones.",
+    relatedConditions: ["enf-002", "enf-003", "enf-008", "enf-010", "enf-014"],
+    image: "/sintomas/epistaxis_repeticion.png",
+    seo: {
+      title: "Epistaxis de Repetición en Niños (Sangrado Nasal) | CDMX",
+      description: "¿Tu hijo presenta sangrado de nariz de forma frecuente? Conoce las causas y cuándo consultar a la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
+      keywords: ["Epistaxis de repetición en niños", "Sangrado nasal frecuente niños CDMX", "Hematólogo pediatra sangrado nariz"],
+    }
+  },
+  {
+    id: "sym-015",
+    slug: "sangrado-encias",
+    name: "Sangrado en Encías",
+    description: "Pérdida de sangre en las encías del niño de forma espontánea, durante el cepillado dental o al comer alimentos blandos, a menudo sin inflamación previa.",
+    causes: ["Trombocitopenia inmune (PTI)", "Deficiencia de factores de coagulación (Hemofilia)", "Enfermedad de Von Willebrand", "Leucemias agudas o aplasia medular"],
+    whyConsult: "El sangrado gingival espontáneo es un signo común de recuento bajo de plaquetas (trombocitopenia) o de fallas en la cascada de coagulación. Requiere una revisión clínica detallada para descartar trastornos hematológicos graves.",
+    relatedConditions: ["enf-002", "enf-003", "enf-008", "enf-010", "enf-014"],
+    image: "/sintomas/sangrado_encias.png",
+    seo: {
+      title: "Sangrado de Encías en Niños y Lactantes | Dra. Lizbeth",
+      description: "El sangrado de encías en niños puede indicar alteraciones plaquetarias o problemas de coagulación. Consulta a una experta en hematología pediátrica.",
+      keywords: ["Sangrado de encías en niños causas", "Gingivorragia infantil CDMX", "Trastornos plaquetarios niños encías"],
+    }
+  },
+  {
+    id: "sym-016",
+    slug: "menstruacion-abundante-ninas",
+    name: "Menstruación Abundante",
+    description: "Flujo menstrual excesivamente abundante o prolongado (menorragia) en niñas y adolescentes que inician sus periodos menstruales, a menudo requiriendo cambiar toallas sanitarias con gran frecuencia.",
+    causes: ["Enfermedad de Von Willebrand", "Disfunción plaquetaria", "Trombocitopenia inmune (PTI)", "Alteraciones hormonales de la adolescencia"],
+    whyConsult: "Hasta un veinte por ciento de las adolescentes con sangrado menstrual abundante presentan un trastorno hemorrágico subyacente, como la enfermedad de Von Willebrand. La evaluación a tiempo evita anemia severa y mejora su calidad de vida.",
+    relatedConditions: ["enf-002", "enf-010"],
+    image: "/sintomas/menstruacion_abundante.png",
+    seo: {
+      title: "Menstruación Abundante en Niñas (Menorragia) | CDMX",
+      description: "¿Tu hija tiene periodos menstruales muy abundantes? Podría tratarse de un trastorno hemorrágico. Agenda valoración con la Dra. Lizbeth Hernández.",
+      keywords: ["Menstruación abundante en adolescentes", "Enfermedad de Von Willebrand menorragia", "Hematóloga pediatra menstruación CDMX"],
+    }
+  },
+  {
+    id: "sym-006",
+    slug: "fiebre-prolongada-infecciones",
+    name: "Fiebre Prolongada e Infecciones Recurrentes",
+    description: "Episodios de fiebre que duran más de una semana sin foco infeccioso claro, o infecciones frecuentes que no responden al tratamiento usual.",
+    causes: ["Neutropenia", "Inmunodeficiencias secundarias", "Leucemias agudas", "Falla medular"],
+    whyConsult: "La fiebre persistente y las infecciones constantes indican debilidad en el sistema inmune o en la producción de glóbulos blancos. Requieren estudio inmediato.",
+    relatedConditions: ["enf-003", "enf-011", "enf-012", "enf-014", "enf-017"],
+    image: "/sintomas/Fiebre_Prolongada_Infecciones_Recurrentes.png",
+    seo: {
+      title: "Fiebre Prolongada e Infecciones en Niños | Dra. Lizbeth",
+      description: "¿Tu hijo presenta fiebre de muchos días o se enferma muy seguido? Podría ser neutropenia o un problema hematológico. Consulta experta.",
+      keywords: ["Fiebre prolongada en niños CDMX", "Neutropenia infantil", "Infecciones recurrentes pediatría"],
+    }
+  },
+  {
     id: "sym-004",
     slug: "ganglios-inflamados-adenopatias",
-    name: "Ganglios Inflamados (Adenopatías)",
+    name: "Ganglios Inflamados",
     description: "Presencia de bultos palpables o visibles en el cuello, axilas o ingle, que pueden ser dolorosos o asintomáticos.",
     causes: ["Infecciones virales o bacterianas", "Linfomas", "Leucemias", "Histiocitosis"],
     whyConsult: "Aunque la mayoría de los ganglios inflamados responden a infecciones comunes, los nódulos que crecen de forma persistente, que no duelen o que son duros deben ser evaluados por un hematólogo pediatra.",
@@ -59,22 +201,6 @@ export const symptoms: Symptom[] = [
       title: "Ganglios Inflamados en Niños | Dra. Lizbeth Hernández",
       description: "Valoración especializada de adenopatías o ganglios inflamados persistentes en el cuello, axilas e ingle en la Ciudad de México.",
       keywords: ["Ganglios inflamados niños CDMX", "Adenopatías infantiles causas", "Linfoma infantil síntomas"],
-    }
-  },
-
-  {
-    id: "sym-006",
-    slug: "fiebre-prolongada-infecciones",
-    name: "Fiebre Prolongada e Infecciones Recurrentes",
-    description: "Episodios de fiebre que duran más de una semana sin foco infeccioso claro, o infecciones frecuentes que no responden al tratamiento usual.",
-    causes: ["Neutropenia", "Inmunodeficiencias secundarias", "Leucemias agudas", "Falla medular"],
-    whyConsult: "La fiebre persistente y las infecciones constantes indican debilidad en el sistema inmune o en la producción de glóbulos blancos. Requieren estudio inmediato.",
-    relatedConditions: ["enf-003", "enf-011", "enf-012", "enf-014"],
-    image: "/sintomas/Fiebre_Prolongada_Infecciones_Recurrentes.png",
-    seo: {
-      title: "Fiebre Prolongada e Infecciones en Niños | Dra. Lizbeth",
-      description: "¿Tu hijo presenta fiebre de muchos días o se enferma muy seguido? Podría ser neutropenia o un problema hematológico. Consulta experta.",
-      keywords: ["Fiebre prolongada en niños CDMX", "Neutropenia infantil", "Infecciones recurrentes pediatría"],
     }
   },
   {
@@ -123,21 +249,6 @@ export const symptoms: Symptom[] = [
     }
   },
   {
-    id: "sym-010",
-    slug: "petequias-purpura-sintoma",
-    name: "Petequias y Púrpura en la Piel",
-    description: "Puntos rojos del tamaño de una cabeza de alfiler (petequias) o manchas moradas (púrpura) que brotan en la piel de forma repentina.",
-    causes: ["Trombocitopenia inmune (PTI)", "Deficiencia de factores de coagulación", "Vasculitis", "Leucemias agudas"],
-    whyConsult: "Estas lesiones representan hemorragias pequeñas bajo la piel. Si aparecen súbitamente, indican plaquetas bajas o fragilidad vascular grave y deben revisarse de urgencia.",
-    relatedConditions: ["enf-002", "enf-008", "enf-010", "enf-013", "enf-014"],
-    image: "/sintomas/petequias.png",
-    seo: {
-      title: "Puntos Rojos y Manchas Moradas en Niños | Hematóloga CDMX",
-      description: "¿Tu hijo presenta puntos rojos pequeños o moretones en la piel sin haberse golpeado? Agenda cita de valoración inmediata.",
-      keywords: ["Petequias en niños", "Puntos rojos en la piel niños causas", "Plaquetas bajas manchas moradas"],
-    }
-  },
-  {
     id: "sym-011",
     slug: "ictericia-prolongada",
     name: "Ictericia Prolongada",
@@ -169,62 +280,17 @@ export const symptoms: Symptom[] = [
   },
   {
     id: "sym-013",
-    slug: "pancitopenia-laboratorio",
-    name: "Pancitopenia en Estudios de Laboratorio",
-    description: "Disminución simultánea por debajo de los límites normales de las tres líneas de células sanguíneas: glóbulos rojos, glóbulos blancos y plaquetas.",
-    causes: ["Anemia aplásica", "Leucemias agudas", "Síndromes de falla medular", "Infecciones virales severas"],
-    whyConsult: "La pancitopenia no es una enfermedad en sí misma, sino un hallazgo de laboratorio de alta alarma que indica que la médula ósea no está funcionando. Requiere un aspirado de médula ósea urgente.",
-    relatedConditions: ["enf-003", "enf-014"],
-    image: "/sintomas/pancitopenia.png",
+    slug: "alteraciones-biometria-hematica",
+    name: "Alteraciones Importantes en la Biometría Hemática",
+    description: "Hallazgos anormales en los estudios de biometría hemática completa (como anemia, plaquetas bajas o glóbulos blancos alterados) que indican un desequilibrio en la sangre y requieren valoración por un hematólogo pediatra.",
+    causes: ["Anemia aplásica o ferropénica", "Trombocitopenia (plaquetas bajas)", "Neutropenia o leucocitosis (defensas alteradas)", "Leucemias agudas"],
+    whyConsult: "Cualquier alteración persistente o significativa en las células sanguíneas debe ser evaluada para identificar a tiempo la causa subyacente y prevenir complicaciones mayores.",
+    relatedConditions: ["enf-003", "enf-014", "enf-016", "enf-017"],
+    image: "/sintomas/Alteraciones_Biometria_Hematica.png",
     seo: {
-      title: "Pancitopenia en Niños (Defensas, Plaquetas y Sangre Bajas)",
-      description: "Interpretación experta y diagnóstico de la pancitopenia en niños. Agenda consulta urgente con la Dra. Lizbeth Hernández.",
-      keywords: ["Pancitopenia infantil causas CDMX", "Falla de médula ósea niños", "Estudio de tres líneas celulares bajas"],
-    }
-  },
-  {
-    id: "sym-014",
-    slug: "epistaxis-repeticion",
-    name: "Epistaxis de Repetición",
-    description: "Episodios frecuentes y recurrentes de sangrado por la nariz en niños y adolescentes, que pueden presentarse de forma espontánea o ante mínimos estímulos.",
-    causes: ["Fragilidad vascular nasal", "Trombocitopenia (plaquetas bajas)", "Enfermedad de Von Willebrand", "Hemofilia", "Leucemias agudas"],
-    whyConsult: "El sangrado nasal frecuente puede ser señal de una alteración en la coagulación o de plaquetas bajas en la sangre. Es crucial una evaluación hematológica experta para identificar la causa subyacente y prevenir complicaciones.",
-    relatedConditions: ["enf-002", "enf-003", "enf-008", "enf-010", "enf-014"],
-    image: "/sintomas/epistaxis_repeticion.png",
-    seo: {
-      title: "Epistaxis de Repetición en Niños (Sangrado Nasal) | CDMX",
-      description: "¿Tu hijo presenta sangrado de nariz de forma frecuente? Conoce las causas y cuándo consultar a la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
-      keywords: ["Epistaxis de repetición en niños", "Sangrado nasal frecuente niños CDMX", "Hematólogo pediatra sangrado nariz"],
-    }
-  },
-  {
-    id: "sym-015",
-    slug: "sangrado-encias",
-    name: "Sangrado en Encías",
-    description: "Pérdida de sangre en las encías del niño de forma espontánea, durante el cepillado dental o al comer alimentos blandos, a menudo sin inflamación previa.",
-    causes: ["Trombocitopenia inmune (PTI)", "Deficiencia de factores de coagulación (Hemofilia)", "Enfermedad de Von Willebrand", "Leucemias agudas o aplasia medular"],
-    whyConsult: "El sangrado gingival espontáneo es un signo común de recuento bajo de plaquetas (trombocitopenia) o de fallas en la cascada de coagulación. Requiere una revisión clínica detallada para descartar trastornos hematológicos graves.",
-    relatedConditions: ["enf-002", "enf-003", "enf-008", "enf-010", "enf-014"],
-    image: "/sintomas/sangrado_encias.png",
-    seo: {
-      title: "Sangrado de Encías en Niños y Lactantes | Dra. Lizbeth",
-      description: "El sangrado de encías en niños puede indicar alteraciones plaquetarias o problemas de coagulación. Consulta a una experta en hematología pediátrica.",
-      keywords: ["Sangrado de encías en niños causas", "Gingivorragia infantil CDMX", "Trastornos plaquetarios niños encías"],
-    }
-  },
-  {
-    id: "sym-016",
-    slug: "menstruacion-abundante-ninas",
-    name: "Menstruación Abundante en Niñas",
-    description: "Flujo menstrual excesivamente abundante o prolongado (menorragia) en niñas y adolescentes que inician sus periodos menstruales, a menudo requiriendo cambiar toallas sanitarias con gran frecuencia.",
-    causes: ["Enfermedad de Von Willebrand", "Disfunción plaquetaria", "Trombocitopenia inmune (PTI)", "Alteraciones hormonales de la adolescencia"],
-    whyConsult: "Hasta un veinte por ciento de las adolescentes con sangrado menstrual abundante presentan un trastorno hemorrágico subyacente, como la enfermedad de Von Willebrand. La evaluación a tiempo evita anemia severa y mejora su calidad de vida.",
-    relatedConditions: ["enf-002", "enf-010"],
-    image: "/sintomas/menstruacion_abundante.png",
-    seo: {
-      title: "Menstruación Abundante en Niñas (Menorragia) | CDMX",
-      description: "¿Tu hija tiene periodos menstruales muy abundantes? Podría tratarse de un trastorno hemorrágico. Agenda valoración con la Dra. Lizbeth Hernández.",
-      keywords: ["Menstruación abundante en adolescentes", "Enfermedad de Von Willebrand menorragia", "Hematóloga pediatra menstruación CDMX"],
+      title: "Alteraciones en la Biometría Hemática en Niños | CDMX",
+      description: "Interpretación y diagnóstico de biometrías hemáticas alteradas (anemia, plaquetas o leucocitos) en niños. Dra. Lizbeth Hernández.",
+      keywords: ["Biometría hemática alterada niños", "Estudio de sangre alterado niños", "Hematólogo pediatra Roma Norte"],
     }
   }
 ];

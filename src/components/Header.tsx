@@ -33,16 +33,12 @@ export default function Header() {
       
       {/* Main Nav */}
       <div className="container mx-auto px-4 lg:px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="flex flex-col group">
-          <span className="font-signature text-3xl lg:text-4xl text-[#572D55] leading-none transition-colors group-hover:text-[#971F57]">
-            Dra. Lizbeth Yamilet
-          </span>
-          <span className="text-xs font-bold uppercase tracking-widest text-[#705662] mt-0.5 leading-none">
-            Hernández Verdugo
-          </span>
-          <span className="text-[8px] lg:text-[9px] font-black text-[#971F57] uppercase tracking-[0.2em] mt-1 leading-none">
-            Hematología Pediátrica
-          </span>
+        <Link href="/" className="relative flex items-center overflow-hidden h-28 lg:h-36 w-56 lg:w-72 group">
+          <img 
+            src="/LOGO DRA LIZBETH-01.png" 
+            alt="Dra. Lizbeth Hernández - Hematología Pediátrica" 
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-none w-[220%] h-[220%] object-contain"
+          />
         </Link>
 
         {/* Desktop Menu */}

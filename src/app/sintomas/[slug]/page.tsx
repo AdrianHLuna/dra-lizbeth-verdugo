@@ -81,6 +81,45 @@ export default async function SymptomPage({ params }: { params: Promise<{ slug: 
               </div>
             </StaggerItem>
 
+            {/* Manifestaciones si existen */}
+            {symptom.manifestaciones && (
+              <StaggerItem>
+                <h2 className="text-2xl font-black text-slate-900 mb-6 tracking-tight flex items-center gap-3 border-l-4 border-accent pl-4 uppercase">¿Cómo se manifiesta?</h2>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {symptom.manifestaciones.map(manifestacion => (
+                    <li key={manifestacion} className="bg-white p-5 border border-slate-100 rounded-[1.5rem_0.5rem_1.5rem_0.5rem] shadow-sm flex items-start gap-4 hover:border-accent/20 transition-all group">
+                      <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0 group-hover:scale-125 transition-transform" />
+                      <span className="font-semibold text-slate-650 text-xs leading-relaxed">{manifestacion}</span>
+                    </li>
+                  ))}
+                </ul>
+              </StaggerItem>
+            )}
+
+            {/* Signos de Alarma si existen */}
+            {symptom.signosAlarma && (
+              <StaggerItem>
+                <div className="bg-[#fff5f5] border border-red-200 p-6 sm:p-8 rounded-[2rem_0.5rem_2rem_0.5rem] relative overflow-hidden group shadow-sm flex flex-col sm:flex-row gap-5 items-start">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-red-500/5 rounded-full blur-xl pointer-events-none" />
+                  <div className="p-3 bg-red-100 text-red-650 rounded-full flex-shrink-0">
+                    <span className="text-xl">🚩</span>
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-black text-red-650 uppercase tracking-wider mb-3">
+                      {symptom.signosAlarmaTitle || "Consulta pronto si el síntoma se acompaña de:"}
+                    </h4>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-slate-650 text-xs font-semibold">
+                      {symptom.signosAlarma.map(signo => (
+                        <li key={signo} className="flex items-center gap-2">
+                          <span className="text-red-500">•</span> {signo}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </StaggerItem>
+            )}
+
             {/* Posibles Causas */}
             <StaggerItem>
               <h2 className="text-2xl font-black text-slate-900 mb-6 tracking-tight flex items-center gap-3 border-l-4 border-primary pl-4 uppercase">Posibles Causas de Valoración</h2>
@@ -99,7 +138,9 @@ export default async function SymptomPage({ params }: { params: Promise<{ slug: 
           <FadeUp delay={0.2} className="lg:col-span-1">
             <div className="sticky top-32 bg-gradient-to-br from-primary to-[#3b1c39] p-8 text-white shadow-xl rounded-[2.5rem_0.5rem_2.5rem_0.5rem] group border-t-8 border-accent relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full blur-xl pointer-events-none" />
-              <h3 className="text-lg font-extrabold mb-4 tracking-tight uppercase">La Dra. Lizbeth Hernández evalúa este síntoma</h3>
+              <h3 className="text-lg font-extrabold mb-4 tracking-tight uppercase leading-relaxed">
+                {symptom.preguntaPrincipal || "La Dra. Lizbeth Hernández evalúa este síntoma"}
+              </h3>
               <div className="w-10 h-1 bg-accent mb-6 rounded-full" />
               <p className="text-slate-300 text-xs mb-8 leading-relaxed">
                 La detección oportuna de anomalías sanguíneas previene complicaciones severas. Estamos listos para atender a tu hijo con el mayor cuidado y profesionalismo.
