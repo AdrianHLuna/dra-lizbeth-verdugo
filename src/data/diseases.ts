@@ -217,6 +217,8 @@ export const diseases: MedicalCondition[] = [
     image: "/enfermedades/Drepanocitosis.png",
     relatedServices: ["ser-003", "ser-006", "ser-007"],
     relatedSymptoms: ["sym-001", "sym-002", "sym-007", "sym-012"],
+    ctaQuestion: "¿Tu hijo ha sido diagnosticado con drepanocitosis o presenta síntomas compatibles con esta enfermedad?",
+    ctaAnswer: "La detección y el seguimiento tempranos son fundamentales para prevenir complicaciones y mejorar la calidad de vida de los niños con drepanocitosis. La Dra. Lizbeth Hernández Verdugo puede ayudarte a comprender el diagnóstico y establecer el mejor plan de tratamiento para tu hijo.",
     seo: {
       title: "Drepanocitosis (Anemia Falciforme) en Niños | CDMX",
       description: "Manejo experto de la anemia falciforme y crisis de dolor en niños. Consulta con la Dra. Lizbeth Hernández, Hematóloga Pediatra.",

@@ -76,10 +76,10 @@ export default function Home() {
                 <span className="w-2 h-2 rounded-full bg-accent animate-pulse" /> {doctor.specialistTitle}
               </motion.div>
               
-              <motion.h1 variants={softBlurIn} className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem] font-extrabold text-slate-900 leading-[1.05] mb-8 tracking-tight uppercase">
-                Expertos en la <br className="hidden xl:inline" />
-                salud de la sangre <br />
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">y el sistema inmune de tus hijos</span>
+              <motion.h1 variants={softBlurIn} className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem] xl:text-[5rem] font-extrabold text-slate-900 leading-[1.1] mb-8 tracking-tight uppercase">
+                Diagnóstico y <br className="hidden xl:inline" />
+                tratamiento especializado <br />
+                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">de enfermedades hematológicas pediátricas</span>
               </motion.h1>
               
               <motion.div variants={softBlurIn} className="flex justify-center lg:justify-start">
@@ -88,7 +88,7 @@ export default function Home() {
                 </a>
               </motion.div>
             </motion.div>
-
+ 
             {/* Right Column: Giant Sized Circle Image (Spans 6 cols) */}
             <motion.div 
               className="lg:col-span-6 flex justify-center items-center" 
@@ -100,7 +100,7 @@ export default function Home() {
                 {/* Concentric rings behind the image (Using scale for perfect alignment) */}
                 <div className="absolute inset-0 w-full h-full rounded-full border border-primary/10 scale-[1.12] animate-spin-slow pointer-events-none" />
                 <div className="absolute inset-0 w-full h-full rounded-full border border-accent/10 scale-[1.06] pointer-events-none" />
-
+ 
                 {/* Main Doctor Image Circle - Con fondo degradado de acuarela y Slider */}
                 <motion.div 
                   className="w-full h-full bg-gradient-to-br from-primary via-[#971F57] to-[#F8B0E4] shadow-2xl relative overflow-hidden rounded-full border-[10px] border-white z-10 flex items-center justify-center"
@@ -120,14 +120,14 @@ export default function Home() {
                     />
                   </AnimatePresence>
                 </motion.div>
-
-                {/* Float Experience Badge */}
+ 
+                {/* Float Certification Badge */}
                 <motion.div 
-                  className="absolute bottom-2 right-2 sm:bottom-6 sm:right-6 lg:bottom-8 lg:right-8 xl:bottom-10 xl:right-10 bg-accent p-5 shadow-2xl rounded-full text-white w-20 h-20 flex flex-col items-center justify-center z-20"
+                  className="absolute bottom-2 right-2 sm:bottom-6 sm:right-6 lg:bottom-8 lg:right-8 xl:bottom-10 xl:right-10 bg-accent px-5 py-4 shadow-2xl rounded-2xl text-white max-w-[180px] sm:max-w-[210px] flex flex-col items-center justify-center text-center z-20 border border-white/20"
                   initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.6, type: "spring" }}
                 >
-                  <span className="font-black text-base leading-none">+10</span>
-                  <span className="text-[7px] uppercase font-bold text-center mt-1">Años Exp</span>
+                  <span className="font-bold text-[8px] sm:text-[9px] uppercase tracking-wider leading-tight text-white/90">Certificada por el</span>
+                  <span className="font-extrabold text-[9px] sm:text-[10px] uppercase tracking-widest mt-0.5 leading-tight text-[#fecdf1]">Consejo Mexicano de Hematología</span>
                 </motion.div>
 
               </div>

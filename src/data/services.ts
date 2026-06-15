@@ -6,16 +6,19 @@ export const services: MedicalService[] = [
     slug: "aspirado-medula-osea",
     name: "Aspirado de Médula Ósea",
     description: "Procedimiento especializado para extraer una pequeña muestra de la parte líquida de la médula ósea con fines de diagnóstico de trastornos sanguíneos.",
-    longDescription: "El aspirado de médula ósea consiste en la obtención de una muestra del tejido líquido que se encuentra dentro de los huesos largos o planos (generalmente el hueso de la pelvis). Es indispensable para evaluar la producción de células sanguíneas y diagnosticar leucemias, anemias graves y fallas medulares en niños.",
+    longDescription: "El aspirado de médula ósea es un procedimiento en el que se obtiene una pequeña muestra líquida de la médula ósea, generalmente del hueso de la cadera. Permite evaluar cómo se producen las células de la sangre y ayuda al diagnóstico de leucemias, anemias graves, infecciones, infiltración medular o fallas de médula ósea.",
     type: "ambulatorio",
     isPainful: true,
     anesthesiaType: "Sedación y anestesia local",
     duration: "20 a 30 minutos",
     recoveryTime: "24 a 48 horas",
+    benefitsTitle: "¿Cuándo está indicado realizarlo?",
+    benefitsIntro: "Puede ser útil cuando un niño presenta:",
     benefits: [
-      "Diagnóstico definitivo de leucemias y otras neoplasias hematológicas",
-      "Evaluación precisa de la función y salud de la médula ósea",
-      "Permite diseñar planes de tratamiento específicos y personalizados"
+      "Anemia, plaquetas o leucocitos muy bajos sin causa clara.",
+      "Sospecha de leucemia u otra enfermedad hematológica.",
+      "Fiebre prolongada, crecimiento de ganglios, hígado o bazo.",
+      "Sospecha de falla medular o infiltración de médula ósea."
     ],
     postOpRecommendations: [
       "Mantener el vendaje limpio y seco durante las primeras 24 horas",
@@ -25,9 +28,16 @@ export const services: MedicalService[] = [
     priceRange: "Según valoración médica",
     technicalSpecs: {
       "Equipo requerido": "Agujas especializadas de aspiración pediátrica",
-      "Procesamiento": "Mielograma y citometría de flujo"
+      "Procesamiento": "Mielograma y, según el caso, citometría de flujo, estudios genéticos, moleculares, cultivos u otros estudios complementarios"
     },
     image: "/servicios/Aspirado_Medula_Osea.png",
+    painDescription: "Se realiza con anestesia local y medidas de analgesia o sedación según la edad y condición del niño para mayor comodidad del paciente. Puede presentarse molestia leve o dolor transitorio en el sitio de punción durante las primeras 24 a 48 horas.",
+    risksTitle: "Riesgos",
+    risks: [
+      "Es un procedimiento seguro cuando se realiza por personal capacitado. Las complicaciones son poco frecuentes, pero pueden incluir dolor local, moretón, sangrado o infección en el sitio de punción"
+    ],
+    ctaQuestion: "¿A tu hijo le han solicitado un aspirado de médula ósea?",
+    ctaAnswer: "Recibe una valoración especializada y orientación completa sobre el procedimiento, su indicación y los cuidados posteriores.",
     seo: {
       title: "Aspirado de Médula Ósea Pediátrica | Dra. Lizbeth",
       description: "Estudio especializado de aspirado de médula ósea para el diagnóstico preciso de enfermedades de la sangre en niños.",
@@ -39,28 +49,52 @@ export const services: MedicalService[] = [
     slug: "biopsia-medula-osea",
     name: "Biopsia de Médula Ósea",
     description: "Extracción de una pequeña muestra de hueso y tejido sólido de la médula ósea para un análisis histopatológico detallado.",
-    longDescription: "A diferencia del aspirado, la biopsia de médula ósea extrae un pequeño fragmento cilíndrico de tejido sólido. Esto permite al patólogo observar la estructura celular completa de la médula y su relación con el hueso, proporcionando información diagnóstica crucial que no se obtiene únicamente con el líquido.",
+    longDescription: "La biopsia de médula ósea es un procedimiento en el que se obtiene una pequeña muestra sólida de tejido medular, generalmente del hueso de la cadera. Permite evaluar la estructura de la médula ósea, detectar infiltración por enfermedades hematológicas y complementar la información obtenida con el aspirado de médula ósea.",
     type: "ambulatorio",
     isPainful: true,
     anesthesiaType: "Sedación y anestesia local",
     duration: "30 minutos",
-    recoveryTime: "48 horas",
+    recoveryTime: "24 a 48 horas",
+    benefitsTitle: "¿Cuándo se indica?",
     benefits: [
-      "Determinación de la celularidad global de la médula ósea",
-      "Diagnóstico diferencial de aplasia medular o invasión tumoral",
-      "Estudios complementarios de inmunohistoquímica"
+      "Sospecha de leucemia, linfoma u otros cánceres hematológicos.",
+      "Pancitopenia o alteraciones persistentes de las células sanguíneas.",
+      "Anemia aplásica y otras fallas medulares.",
+      "Evaluación de infiltración de médula ósea.",
+      "Seguimiento y valoración de respuesta al tratamiento."
     ],
+    recommendationsTitle: "Recomendaciones después del procedimiento",
     postOpRecommendations: [
-      "Guardar reposo relativo el día del procedimiento",
-      "Mantener seca la zona de la punción por 24 horas",
-      "Tomar analgésicos indicados por el especialista en caso de molestia leve"
+      "Mantener reposo relativo durante las primeras 24 horas.",
+      "Mantener limpio y seco el sitio de punción durante las primeras 24 horas.",
+      "Administrar el analgésico indicado si existe molestia local.",
+      "Evitar actividades físicas intensas durante 24 a 48 horas.",
+      "Acudir a valoración si presenta sangrado persistente, fiebre, enrojecimiento importante o dolor intenso en el sitio de punción."
     ],
     priceRange: "Según valoración médica",
     technicalSpecs: {
-      "Sitio de punción": "Cresta ilíaca posterior",
-      "Estudios adicionales": "Histopatología de fragmento óseo"
+      "Sitio de punción": "Hueso de la cadera (cresta ilíaca posterior)",
+      "Estudios adicionales": "Estudio histopatológico de la muestra de médula ósea para evaluar su estructura y composición celular.",
+      "Procesamiento": "La muestra es analizada por Anatomía Patológica mediante estudios histológicos y, cuando está indicado, inmunohistoquímica u otras pruebas complementarias."
     },
     image: "/servicios/Biopsia_Medula_Osea.png",
+    painDescription: "Moderado. El procedimiento se realiza con anestesia local y, cuando está indicado, sedación para disminuir las molestias y mejorar la comodidad del paciente.",
+    comfortTitle: "Anestesia y comodidad del paciente",
+    comfortDescription: "El procedimiento se realiza con anestesia local y, dependiendo de la edad del paciente y la indicación médica, puede utilizarse sedación para brindar mayor comodidad y seguridad durante el estudio",
+    risksTitle: "Riesgos",
+    risks: [
+      "La biopsia de médula ósea es un procedimiento seguro. Las complicaciones son poco frecuentes y pueden incluir dolor local, sangrado, hematoma o infección en el sitio de punción."
+    ],
+    ctaQuestion: "¿A tu hijo le han encontrado alteraciones en la biometría hemática o existe sospecha de una enfermedad de la sangre o de la médula ósea?",
+    ctaAnswer: "La biopsia de médula ósea permite estudiar directamente el tejido donde se producen las células sanguíneas. Es una herramienta fundamental para diagnosticar y dar seguimiento a diversas enfermedades hematológicas en niños y adolescentes.",
+    differenceTitle: "¿Cuál es la diferencia con el aspirado?",
+    differenceContent: "El aspirado obtiene la parte líquida de la médula ósea, mientras que la biopsia obtiene una pequeña muestra sólida de tejido. Ambos estudios suelen realizarse al mismo tiempo porque proporcionan información complementaria.",
+    additionalQuestions: [
+      {
+        question: "¿Se realiza junto con aspirado de médula ósea?",
+        answer: "Frecuentemente sí. Ambos procedimientos aportan información complementaria y suelen realizarse durante la misma intervención para obtener un diagnóstico más completo."
+      }
+    ],
     seo: {
       title: "Biopsia de Médula Ósea en Niños | Hematología CDMX",
       description: "Procedimiento de biopsia de médula ósea en pacientes pediátricos realizado por la Dra. Lizbeth Hernández, experta certificada.",
@@ -72,25 +106,38 @@ export const services: MedicalService[] = [
     slug: "lectura-frotis-sangre-periferica",
     name: "Lectura de Frotis de Sangre Periférica",
     description: "Evaluación microscópica detallada de las células sanguíneas para analizar su forma, tamaño y cantidad real en circulación.",
-    longDescription: "Es una de las herramientas más valiosas en la hematología. Mediante la observación directa de una gota de sangre extendida en un portaobjetos y teñida convenientemente, la Dra. Lizbeth analiza la morfología de glóbulos rojos, glóbulos blancos y plaquetas para identificar anemias específicas, células anormales (blastos) o alteraciones en la forma celular.",
+    longDescription: "La lectura de frotis de sangre periférica es un estudio en el que se examinan las células sanguíneas al microscopio. Permite evaluar la forma, tamaño y características de los glóbulos rojos, glóbulos blancos y plaquetas, aportando información clave para el diagnóstico de anemias, infecciones, alteraciones hematológicas y algunos tipos de leucemia.",
     type: "consultorio",
     isPainful: false,
-    duration: "15 a 20 minutos",
+    duration: "Variable según complejidad del caso",
     recoveryTime: "Inmediato",
     benefits: [
-      "Detección inmediata de anomalías morfológicas celulares",
-      "Clasificación rápida de tipos de anemia (ej. microcítica, drepanocitos)",
-      "Confirmación rápida de sospechas de leucemia o infecciones graves"
+      "Identificación de alteraciones en glóbulos rojos, glóbulos blancos y plaquetas.",
+      "Orientación diagnóstica en anemias hereditarias o adquiridas.",
+      "Detección de blastos u otras células anormales.",
+      "Apoyo en la evaluación de infecciones, inflamación y enfermedades hematológicas.",
+      "Complemento fundamental para la interpretación de la biometría hemática."
     ],
     postOpRecommendations: [
-      "No requiere cuidados especiales post-toma de muestra"
+      "No requiere cuidados especiales después de la toma de muestra.",
+      "Puede retomar sus actividades habituales inmediatamente.",
+      "Mantener presión local algunos minutos si la muestra fue obtenida por venopunción.",
+      "Consultar a su médico si presenta sangrado persistente o inflamación en el sitio de punción."
     ],
-    priceRange: "Incluido en la consulta o costo mínimo de análisis",
+    priceRange: "Puede estar incluido dentro de la valoración Hematológica",
     technicalSpecs: {
-      "Método": "Microscopía óptica de alta resolución",
-      "Muestra": "Gota de sangre capilar o venosa"
+      "Método": "Análisis morfológico de celulas sanguineas mediante microscopia"
     },
     image: "/servicios/Lectura_Frotis_Sangre_Periferica.png",
+    painDescription: "Indoloro (solo requiere una muestra de sangre)",
+    ctaQuestion: "¿Tu hijo requiere un frotis de sangre periférica?",
+    ctaAnswer: "La interpretación del frotis de sangre periférica por una hematóloga pediatra aporta información que puede no ser identificada por los equipos automatizados de laboratorio y permite una evaluación más completa del paciente",
+    additionalQuestions: [
+      {
+        question: "¿Qué puede detectar este estudio?",
+        answer: "Este estudio puede detectar: \n• Anemias.\n• Alteraciones de plaquetas.\n• Infecciones.\n• Leucemias y otras enfermedades hematológicas.\n• Anomalías hereditarias de los glóbulos rojos."
+      }
+    ],
     seo: {
       title: "Lectura de Frotis de Sangre Periférica | Dra. Lizbeth",
       description: "Análisis morfológico de células sanguíneas bajo microscopio para el diagnóstico rápido de anemias y leucemias.",
@@ -102,28 +149,35 @@ export const services: MedicalService[] = [
     slug: "puncion-lumbar",
     name: "Punción Lumbar",
     description: "Procedimiento para extraer líquido cefalorraquídeo del canal espinal para diagnosticar o administrar medicamentos en el sistema nervioso.",
-    longDescription: "La punción lumbar consiste en la introducción de una aguja delgada en el espacio intervertebral de la columna lumbar baja para extraer líquido cefalorraquídeo o aplicar quimioterapia intratecal en niños con leucemias o linfomas. Es una técnica segura realizada bajo estrictas condiciones de asepsia.",
+    longDescription: "La punción lumbar es un procedimiento mediante el cual se obtiene una pequeña muestra de líquido cefalorraquídeo (LCR), el líquido que rodea el cerebro y la médula espinal. Permite diagnosticar diversas enfermedades y, en algunos casos, administrar medicamentos directamente en el sistema nervioso central.",
     type: "ambulatorio",
     isPainful: true,
     anesthesiaType: "Sedación y anestesia local",
-    duration: "20 a 30 minutos",
-    recoveryTime: "12 a 24 horas",
+    duration: "15–30 minutos",
+    recoveryTime: "observación breve y alta el mismo día en la mayoría de los casos.",
+    benefitsTitle: "Indicaciones frecuentes",
     benefits: [
-      "Permite diagnosticar la invasión de células tumorales en el sistema nervioso",
-      "Facilita la aplicación directa de tratamientos preventivos o curativos (quimioterapia intratecal)",
-      "Ayuda a medir la presión del líquido cefalorraquídeo"
+      "Sospecha de infección del sistema nervioso central.",
+      "Estudio de enfermedades hematológicas y oncológicas.",
+      "Diagnóstico de infiltración meníngea por leucemia.",
+      "Administración de quimioterapia intratecal."
     ],
+    recommendationsTitle: "Recomendaciones posteriores",
     postOpRecommendations: [
-      "Mantener al niño recostado en posición plana (boca arriba) por 2 a 4 horas post-procedimiento",
-      "Asegurar una buena hidratación oral",
-      "Monitorear la presencia de dolor de cabeza, náuseas o fiebre"
+      "Mantener reposo relativo el día del procedimiento.",
+      "Mantener adecuada hidratación.",
+      "Administrar el analgésico indicado si existe molestia.",
+      "Acudir a valoración si presenta dolor intenso, fiebre, sangrado o síntomas neurológicos."
     ],
     priceRange: "Según valoración médica",
     technicalSpecs: {
-      "Ubicación": "Espacio intervertebral L3-L4 o L4-L5",
-      "Medicamentos": "Quimioterapia intratecal (según protocolo)"
+      "Sitio de punción": "región lumbar baja.",
+      "Muestra": "líquido cefalorraquídeo."
     },
     image: "/servicios/Puncion_Lumbar.png",
+    painDescription: "leve a moderado; se utilizan medidas de analgesia y anestesia.",
+    ctaQuestion: "¿Tu hijo necesita una punción lumbar para completar su diagnóstico o tratamiento?",
+    ctaAnswer: "La punción lumbar es un procedimiento seguro y ampliamente utilizado en pediatría. Permite obtener información importante para el diagnóstico de diversas enfermedades y, en algunos casos, administrar tratamientos específicos de forma segura y eficaz.",
     seo: {
       title: "Punción Lumbar Pediátrica | Hematóloga Pediatra CDMX",
       description: "Procedimiento de punción lumbar y administración de medicamentos intratecales en niños con leucemia o afecciones hematológicas.",
@@ -133,29 +187,38 @@ export const services: MedicalService[] = [
   {
     id: "ser-005",
     slug: "interpretacion-resultados-laboratorio",
-    name: "Interpretación de Resultados de Laboratorio",
+    name: "Análisis e integración clínica de estudios de laboratorio",
     description: "Evaluación y análisis especializado de estudios clínicos y de laboratorio general para identificar indicios de trastornos sanguíneos o inmunológicos en niños.",
-    longDescription: "La interpretación de resultados de laboratorio consiste en el análisis crítico, integrativo y experto de diversos estudios de laboratorio clínico (perfil de hierro, pruebas de función hepática, frotis, etc.). La Dra. Lizbeth Hernández correlaciona estos valores con el cuadro clínico del paciente pediátrico para confirmar diagnósticos hematológicos oportunos o guiar estudios moleculares adicionales.",
+    longDescription: "La interpretación de resultados de laboratorio consiste en el análisis especializado e integral de estudios como biometría hemática, perfil de hierro, pruebas de coagulación, frotis de sangre periférica y otros análisis complementarios. La Dra. Lizbeth Hernández correlaciona estos resultados con la historia clínica y la exploración física del paciente para identificar alteraciones hematológicas, orientar el diagnóstico y definir los estudios o tratamientos más adecuados.",
     type: "consultorio",
     isPainful: false,
-    duration: "30 a 45 minutos",
-    recoveryTime: "Inmediata",
+    duration: "30 a 60 minutos según la complejidad del caso y la cantidad de estudios a revisar",
+    recoveryTime: "no aplica",
     benefits: [
-      "Detección temprana de trastornos metabólicos, hepáticos o inmunológicos vinculados a la sangre",
+      "Identificación temprana de alteraciones hematológicas, inmunológicas o metabólicas reflejadas en los estudios de laboratorio.",
       "Correlación precisa entre síntomas físicos y parámetros medidos en laboratorio",
-      "Optimización de costos al evitar estudios de laboratorio complementarios innecesarios"
+      "Orientación de estudios complementarios para alcanzar un diagnóstico más preciso."
     ],
     postOpRecommendations: [
       "Traer todos los estudios de laboratorio previos impresos o en formato digital",
       "Anotar cualquier síntoma detectado en casa (fatiga, moretones, sangrado) para correlación clínica",
-      "Seguir las indicaciones de ayuno correspondientes en caso de requerirse nuevas muestras"
+      "Informar antecedentes médicos, tratamientos actuales y estudios previos relacionados."
     ],
     priceRange: "Según valoración médica",
     technicalSpecs: {
-      "Alcance": "Análisis de perfiles bioquímicos, inmunológicos e histopatológicos",
-      "Requerimiento": "Estudios de laboratorio impresos o digitales no mayores a 3 meses de antigüedad"
+      "Alcance": "Interpretación de biometría hemática, perfil de hierro, pruebas de coagulación, estudios inmunológicos, frotis de sangre periférica, estudios de médula ósea y otras pruebas especializadas relacionadas con enfermedades hematológicas.",
+      "Requerimiento": "Presentar estudios de laboratorio impresos o digitales, así como información clínica relevante para una interpretación más precisa"
     },
     image: "/servicios/Interpretacion_Resultados_Laboratorio.png",
+    painDescription: "No aplica (servicio de revisión e interpretación de estudios)",
+    ctaQuestion: "¿Los resultados de laboratorio de tu hijo te generan dudas o preocupación?",
+    ctaAnswer: "La valoración especializada permite comprender el significado de los hallazgos, relacionarlos con los síntomas del paciente y establecer un plan diagnóstico o de seguimiento adecuado.",
+    additionalQuestions: [
+      {
+        question: "¿Por qué es importante una interpretación especializada?",
+        answer: "Una interpretación experta puede ayudar a detectar alteraciones hematológicas que no siempre son evidentes en los reportes de laboratorio y orientar oportunamente el diagnóstico y seguimiento."
+      }
+    ],
     seo: {
       title: "Interpretación de Análisis de Laboratorio Pediátrico | CDMX",
       description: "Consulta especializada para la interpretación y diagnóstico a partir de resultados de análisis clínicos en niños con la Dra. Lizbeth Hernández.",
@@ -167,27 +230,37 @@ export const services: MedicalService[] = [
     slug: "interpretacion-biometria-hematica",
     name: "Interpretación de Biometría Hemática",
     description: "Análisis detallado de las tres líneas celulares (glóbulos rojos, glóbulos blancos y plaquetas) para detectar anemias, infecciones y fallas medulares.",
-    longDescription: "La biometría hemática es el estudio de laboratorio más importante en hematología. La interpretación médica experta por parte de la Dra. Lizbeth Hernández va más allá de los valores de referencia del laboratorio general, evaluando índices eritrocitarios, niveles de hemoglobina y recuentos absolutos de leucocitos y plaquetas adaptados a la edad pediátrica del paciente para detectar anemias, leucemias y otras anomalías graves.",
+    longDescription: "La interpretación de biometría hemática consiste en el análisis especializado de los glóbulos rojos, glóbulos blancos y plaquetas. Este estudio permite detectar alteraciones como anemia, infecciones, inflamación, trastornos de coagulación y otras enfermedades hematológicas. Se correlacionan los resultados con la edad, los síntomas y los antecedentes del paciente para ofrecer una valoración más precisa.",
     type: "consultorio",
     isPainful: false,
-    duration: "30 a 40 minutos",
-    recoveryTime: "Inmediata",
+    durationLabel: "Tiempo de revisión",
+    duration: "20 a 30 minutos",
+    recoveryTime: "No aplica",
     benefits: [
-      "Identificación exacta del tipo de anemia (microcítica, macrocítica, etc.)",
-      "Evaluación del recuento absoluto de plaquetas para prevenir riesgos de sangrado",
-      "Monitoreo de neutrófilos y defensas para descartar inmunodeficiencias o fallas en la médula"
+      "Identificación de anemia y sus posibles causas.",
+      "Evaluación de alteraciones en glóbulos blancos relacionadas con infecciones o inflamación.",
+      "Detección de alteraciones en el número de plaquetas.",
+      "Identificación de datos sugestivos de enfermedades hematológicas.",
+      "Seguimiento de pacientes con enfermedades de la sangre."
     ],
     postOpRecommendations: [
-      "Presentar la biometría hemática más reciente con su respectivo histograma si está disponible",
-      "Evitar automedicar al niño antes de la consulta para no alterar los recuentos celulares",
-      "Anotar antecedentes familiares de anemias, transfusiones o problemas de sangrado"
+      "Presentar la biometría hemática más reciente.",
+      "Llevar estudios previos si existen para comparar resultados.",
+      "Informar síntomas como palidez, cansancio, fiebre, sangrados o moretones.",
+      "No suspender medicamentos sin indicación médica."
     ],
     priceRange: "Según valoración médica",
     technicalSpecs: {
-      "Líneas Evaluadas": "Eritroide (glóbulos rojos), Leucocitaria (glóbulos blancos) y Megacariocítica (plaquetas)",
-      "Rango de Referencia": "Ajustado estrictamente por edad pediátrica y género"
+      "Modalidad": "Presencial o en consulta de hematología",
+      "Estudio requerido": "Biometría hemática impresa o digital",
+      "Evaluación": "Glóbulos rojos, glóbulos blancos y plaquetas",
+      "Alcance": "Análisis de hemoglobina, hematocrito, glóbulos rojos, glóbulos blancos, diferencial leucocitario y plaquetas.",
+      "Requerimiento": "Biometría hemática reciente impresa o en formato digital, así como información clínica relevante del paciente."
     },
     image: "/servicios/Interpretacion_Biometria_Hematica.png",
+    painDescription: "No aplica",
+    ctaQuestion: "¿La biometría hemática de tu hijo muestra valores fuera de rango o difíciles de interpretar?",
+    ctaAnswer: "La interpretación especializada de la biometría hemática permite identificar alteraciones en los glóbulos rojos, glóbulos blancos y plaquetas, ayudando a establecer un diagnóstico oportuno y definir si son necesarios estudios adicionales o seguimiento por hematología pediátrica.",
     seo: {
       title: "Interpretación de Biometría Hemática Infantil | CDMX",
       description: "Análisis experto de plaquetas, leucocitos y hemoglobina en niños. Agenda consulta con la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
@@ -199,27 +272,35 @@ export const services: MedicalService[] = [
     slug: "interpretacion-estudios-geneticos-moleculares",
     name: "Interpretación de Estudios Genéticos y Moleculares",
     description: "Análisis avanzado de pruebas moleculares, citogenética y secuenciación para identificar mutaciones específicas y causas hereditarias en enfermedades de la sangre.",
-    longDescription: "Los estudios genéticos y moleculares son fundamentales en la hematología pediátrica moderna para precisar diagnósticos y pronósticos. La Dra. Lizbeth Hernández realiza el análisis e interpretación experta de estudios de cariotipo, PCR cuantitativa, hibridación in situ fluorescente (FISH) y secuenciación genética de nueva generación (NGS) para detectar mutaciones causantes de anemias congénitas, leucemias, talasemias o predisposiciones hereditarias.",
+    longDescription: "La interpretación de estudios genéticos y moleculares consiste en el análisis especializado de pruebas que evalúan genes, cromosomas o alteraciones moleculares relacionadas con enfermedades hematológicas. Estos estudios pueden ayudar a identificar causas hereditarias, confirmar diagnósticos, orientar el pronóstico y apoyar la toma de decisiones terapéuticas. Se correlacionan los resultados con la historia clínica, los antecedentes familiares y los hallazgos de laboratorio para brindar una valoración integral del paciente. Una adecuada interpretación permite comprender el significado clínico de los hallazgos genéticos, evaluar su impacto en la salud del paciente y, cuando es necesario, valorar el riesgo para otros miembros de la familia.",
     type: "consultorio",
     isPainful: false,
-    duration: "40 a 50 minutos",
-    recoveryTime: "Inmediata",
+    durationLabel: "Tiempo de revisión",
+    duration: "30 a 60 minutos",
+    recoveryTime: "No aplica",
     benefits: [
-      "Identificación de mutaciones genéticas específicas para guiar terapias de precisión",
-      "Determinación del pronóstico y estratificación de riesgo en leucemia infantil",
-      "Asesoramiento genético familiar ante la sospecha de trastornos sanguíneos hereditarios"
+      "Interpretación especializada de variantes genéticas y moleculares.",
+      "Correlación entre hallazgos genéticos y manifestaciones clínicas.",
+      "Identificación de alteraciones hereditarias relacionadas con enfermedades hematológicas.",
+      "Orientación sobre estudios complementarios o seguimiento familiar.",
+      "Apoyo en decisiones diagnósticas, pronósticas y terapéuticas"
     ],
     postOpRecommendations: [
-      "Proporcionar copias completas de los informes de citogenética o biología molecular realizados",
-      "Anotar antecedentes detallados de enfermedades de la sangre en familiares de primer y segundo grado",
-      "Seguir indicaciones en caso de que se requiera la toma de muestra a los padres para estudios comparativos"
+      "Presentar el informe completo del estudio genético o molecular.",
+      "Llevar estudios previos relacionados y antecedentes familiares relevantes.",
+      "Informar diagnósticos previos y tratamientos recibidos.",
+      "Acudir con dudas específicas para explicar el significado clínico de los hallazgos."
     ],
     priceRange: "Según valoración médica",
     technicalSpecs: {
-      "Técnicas Analizadas": "PCR, FISH, Cariotipo convencional y molecular, Secuenciación NGS",
-      "Objetivo": "Detección de translocaciones, deleciones, duplicaciones o mutaciones puntuales"
+      "Modalidad": "Presencial o durante consulta de hematología pediátrica",
+      "Estudios requeridos": "Reporte genético o molecular impreso o digital",
+      "Evaluación especializada": "Correlación de hallazgos genéticos con síntomas, antecedentes familiares y diagnóstico clínico"
     },
     image: "/servicios/Interpretacion_Estudios_Geneticos_Moleculares.png",
+    painDescription: "No aplica",
+    ctaQuestion: "¿Tu hijo tiene un estudio genético o molecular relacionado con una enfermedad de la sangre?",
+    ctaAnswer: "Los resultados de estos estudios pueden ser complejos de interpretar. Una valoración especializada ayuda a comprender qué significan los hallazgos genéticos, cómo se relacionan con la enfermedad de tu hijo y qué implicaciones pueden tener para su diagnóstico, tratamiento y seguimiento.",
     seo: {
       title: "Interpretación de Pruebas Genéticas y Moleculares CDMX | Dra. Lizbeth",
       description: "Análisis experto de estudios de cariotipo, FISH y PCR en hematología pediátrica. Dra. Lizbeth Hernández, Hematóloga Pediatra.",

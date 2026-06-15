@@ -84,7 +84,9 @@ export default async function SymptomPage({ params }: { params: Promise<{ slug: 
             {/* Manifestaciones si existen */}
             {symptom.manifestaciones && (
               <StaggerItem>
-                <h2 className="text-2xl font-black text-slate-900 mb-6 tracking-tight flex items-center gap-3 border-l-4 border-accent pl-4 uppercase">¿Cómo se manifiesta?</h2>
+                <h2 className="text-2xl font-black text-slate-900 mb-6 tracking-tight flex items-center gap-3 border-l-4 border-accent pl-4 uppercase">
+                  {symptom.manifestacionesTitle || "¿Cómo se manifiesta?"}
+                </h2>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {symptom.manifestaciones.map(manifestacion => (
                     <li key={manifestacion} className="bg-white p-5 border border-slate-100 rounded-[1.5rem_0.5rem_1.5rem_0.5rem] shadow-sm flex items-start gap-4 hover:border-accent/20 transition-all group">
@@ -122,7 +124,14 @@ export default async function SymptomPage({ params }: { params: Promise<{ slug: 
 
             {/* Posibles Causas */}
             <StaggerItem>
-              <h2 className="text-2xl font-black text-slate-900 mb-6 tracking-tight flex items-center gap-3 border-l-4 border-primary pl-4 uppercase">Posibles Causas de Valoración</h2>
+              <h2 className="text-2xl font-black text-slate-900 mb-6 tracking-tight flex items-center gap-3 border-l-4 border-primary pl-4 uppercase">
+                {symptom.causesTitle || "Posibles Causas de Valoración"}
+              </h2>
+              {symptom.causesIntro && (
+                <p className="text-xs text-slate-500 font-semibold mb-6 leading-relaxed">
+                  {symptom.causesIntro}
+                </p>
+              )}
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {symptom.causes.map(cause => (
                   <li key={cause} className="bg-white p-6 border border-slate-100 rounded-[1.5rem_0.5rem_1.5rem_0.5rem] font-semibold text-slate-650 text-xs hover:border-primary/20 transition-all cursor-default leading-relaxed">
@@ -143,7 +152,7 @@ export default async function SymptomPage({ params }: { params: Promise<{ slug: 
               </h3>
               <div className="w-10 h-1 bg-accent mb-6 rounded-full" />
               <p className="text-slate-300 text-xs mb-8 leading-relaxed">
-                La detección oportuna de anomalías sanguíneas previene complicaciones severas. Estamos listos para atender a tu hijo con el mayor cuidado y profesionalismo.
+                {symptom.preguntaPrincipalResponse || "La detección oportuna de anomalías sanguíneas previene complicaciones severas. Estamos listos para atender a tu hijo con el mayor cuidado y profesionalismo."}
               </p>
               <a href={`https://wa.me/${doctor.whatsapp.replace(/\D/g, "")}`} target="_blank" rel="noreferrer" className="block w-full flex items-center justify-center gap-2 bg-white text-primary font-bold py-4 rounded-full hover:bg-[#FEE5FD] hover:text-[#971F57] transition-all text-[9px] uppercase tracking-widest shadow-lg">
                 <FaCalendarCheck size={12} /> Agendar Valoración Pediátrica

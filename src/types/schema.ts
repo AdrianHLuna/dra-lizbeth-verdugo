@@ -105,6 +105,8 @@ export const MedicalConditionSchema = z.object({
  image: z.string(),
  sameAs: z.string().url().optional(),
  seo: SEOSchema,
+ ctaQuestion: z.string().optional(),
+ ctaAnswer: z.string().optional(),
 });
 
 // ─── Medical Service (Servicio/Cirugía) ───────────────────────
@@ -127,6 +129,20 @@ export const MedicalServiceSchema = z.object({
  video: VideoSchema.optional(),
  image: z.string(),
  seo: SEOSchema,
+ painDescription: z.string().optional(),
+ benefitsTitle: z.string().optional(),
+ benefitsIntro: z.string().optional(),
+ risks: z.array(z.string()).optional(),
+ risksTitle: z.string().optional(),
+ ctaQuestion: z.string().optional(),
+ ctaAnswer: z.string().optional(),
+ differenceTitle: z.string().optional(),
+ differenceContent: z.string().optional(),
+ comfortTitle: z.string().optional(),
+ comfortDescription: z.string().optional(),
+ recommendationsTitle: z.string().optional(),
+ additionalQuestions: z.array(z.object({ question: z.string(), answer: z.string() })).optional(),
+ durationLabel: z.string().optional(),
 });
 
 // ─── Symptom (Síntoma) ───────────────────────────────────────
@@ -141,9 +157,13 @@ export const SymptomSchema = z.object({
  image: z.string(),
  seo: SEOSchema,
  manifestaciones: z.array(z.string()).optional(),
+ manifestacionesTitle: z.string().optional(),
  preguntaPrincipal: z.string().optional(),
+ preguntaPrincipalResponse: z.string().optional(),
  signosAlarma: z.array(z.string()).optional(),
  signosAlarmaTitle: z.string().optional(),
+ causesTitle: z.string().optional(),
+ causesIntro: z.string().optional(),
 });
 
 // ─── Clinical Case (Antes y Después) ─────────────────────────

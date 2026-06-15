@@ -84,16 +84,18 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <h2 className="text-2xl font-black text-slate-900 mb-6 tracking-tight flex items-center gap-3 border-l-4 border-primary pl-4 uppercase"><FaInfoCircle className="text-primary" /> Ficha Técnica</h2>
               <dl className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="bg-white border border-slate-100 p-6 rounded-[2rem_0.5rem_2rem_0.5rem] shadow-sm hover:shadow-md transition-shadow">
-                  <dt className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-1">Duración del procedimiento</dt>
+                  <dt className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-1">{service.durationLabel || "Duración del procedimiento"}</dt>
                   <dd className="text-sm font-black text-slate-900 uppercase">{service.duration || "Variable"}</dd>
                 </div>
                 <div className="bg-white border border-slate-100 p-6 rounded-[0.5rem_2rem_0.5rem_2rem] shadow-sm hover:shadow-md transition-shadow">
                   <dt className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-1">Recuperación estimada</dt>
                   <dd className="text-sm font-black text-slate-900 uppercase">{service.recoveryTime || "Inmediata"}</dd>
                 </div>
-                <div className="bg-white border border-slate-100 p-6 rounded-[0.5rem_2rem_0.5rem_2rem] shadow-sm hover:shadow-md transition-shadow">
-                  <dt className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-1">Nivel de molestia / Dolor</dt>
-                  <dd className="text-xs font-bold text-slate-900 uppercase">{service.isPainful ? "Sí, requiere analgésico infantil" : "Mínimo / Indoloro"}</dd>
+                <div className={`${service.painDescription ? "col-span-1 sm:col-span-2" : ""} bg-white border border-slate-100 p-6 rounded-[0.5rem_2rem_0.5rem_2rem] shadow-sm hover:shadow-md transition-shadow`}>
+                  <dt className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-1">Molestia / Dolor</dt>
+                  <dd className="text-xs font-semibold text-slate-650 leading-relaxed">
+                    {service.painDescription || (service.isPainful ? "Sí, requiere analgésico infantil" : "Mínimo / Indoloro")}
+                  </dd>
                 </div>
                 <div className="bg-white border border-slate-100 p-6 rounded-[2rem_0.5rem_2rem_0.5rem] shadow-sm hover:shadow-md transition-shadow">
                   <dt className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-1">Inversión Aproximada</dt>
@@ -110,9 +112,14 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               </dl>
             </StaggerItem>
 
-            {/* Beneficios */}
+            {/* Beneficios / Indicaciones */}
             <StaggerItem>
-              <h2 className="text-2xl font-black text-slate-900 mb-6 tracking-tight flex items-center gap-3 border-l-4 border-accent pl-4 uppercase"><FaCheckCircle className="text-accent" /> Beneficios Diagnósticos</h2>
+              <h2 className="text-2xl font-black text-slate-900 mb-6 tracking-tight flex items-center gap-3 border-l-4 border-accent pl-4 uppercase">
+                <FaCheckCircle className="text-accent" /> {service.benefitsTitle || "Beneficios Diagnósticos"}
+              </h2>
+              {service.benefitsIntro && (
+                <p className="text-xs lg:text-sm text-slate-500 leading-relaxed font-semibold mb-4">{service.benefitsIntro}</p>
+              )}
               <ul className="grid grid-cols-1 gap-3">
                 {service.benefits.map(benefit => (
                   <li key={benefit} className="bg-white p-6 border border-slate-100 rounded-[1.5rem_0.5rem_1.5rem_0.5rem] shadow-sm flex items-start gap-4 hover:border-primary/20 transition-all group">
@@ -123,25 +130,82 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               </ul>
             </StaggerItem>
 
+            {/* Riesgos */}
+            {service.risks && service.risks.length > 0 && (
+              <StaggerItem>
+                <h2 className="text-2xl font-black text-slate-950 mb-6 tracking-tight flex items-center gap-3 border-l-4 border-[#971F57] pl-4 uppercase">
+                  <FaInfoCircle className="text-[#971F57]" /> {service.risksTitle || "Riesgos"}
+                </h2>
+                <ul className="grid grid-cols-1 gap-3">
+                  {service.risks.map(risk => (
+                    <li key={risk} className="bg-white p-6 border border-slate-100 rounded-[1.5rem_0.5rem_1.5rem_0.5rem] shadow-sm flex items-start gap-4 hover:border-primary/20 transition-all group">
+                      <FaInfoCircle className="text-[#971F57] mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                      <span className="font-semibold text-slate-650 text-xs leading-relaxed">{risk}</span>
+                    </li>
+                  ))}
+                </ul>
+              </StaggerItem>
+            )}
+
+            {/* Diferencia con el aspirado */}
+            {service.differenceTitle && service.differenceContent && (
+              <StaggerItem>
+                <h2 className="text-2xl font-black text-slate-900 mb-6 tracking-tight flex items-center gap-3 border-l-4 border-slate-950 pl-4 uppercase">
+                  <FaInfoCircle className="text-slate-950" /> {service.differenceTitle}
+                </h2>
+                <div className="bg-white p-6 border border-slate-100 rounded-[1.5rem_0.5rem_1.5rem_0.5rem] shadow-sm flex items-start gap-4 hover:border-primary/20 transition-all">
+                  <span className="font-semibold text-slate-650 text-xs leading-relaxed whitespace-pre-line">{service.differenceContent}</span>
+                </div>
+              </StaggerItem>
+            )}
+
+            {/* Anestesia y comodidad */}
+            {service.comfortTitle && service.comfortDescription && (
+              <StaggerItem>
+                <h2 className="text-2xl font-black text-slate-900 mb-6 tracking-tight flex items-center gap-3 border-l-4 border-accent pl-4 uppercase">
+                  <FaCheckCircle className="text-accent" /> {service.comfortTitle}
+                </h2>
+                <div className="bg-white p-6 border border-slate-100 rounded-[1.5rem_0.5rem_1.5rem_0.5rem] shadow-sm flex items-start gap-4 hover:border-accent/20 transition-all">
+                  <span className="font-semibold text-slate-650 text-xs leading-relaxed whitespace-pre-line">{service.comfortDescription}</span>
+                </div>
+              </StaggerItem>
+            )}
+
             {/* Recomendaciones */}
             <StaggerItem>
-              <h2 className="text-2xl font-black text-slate-900 mb-6 tracking-tight flex items-center gap-3 border-l-4 border-slate-900 pl-4 uppercase">Recomendaciones e Instrucciones</h2>
+              <h2 className="text-2xl font-black text-slate-900 mb-6 tracking-tight flex items-center gap-3 border-l-4 border-slate-900 pl-4 uppercase">
+                {service.recommendationsTitle || "Recomendaciones e Instrucciones"}
+              </h2>
               <div className="bg-slate-50 p-8 rounded-[2rem_0.5rem_2rem_0.5rem] border border-slate-150">
                 <ul className="list-disc list-inside text-slate-500 text-[11px] space-y-3 leading-relaxed">
                   {service.postOpRecommendations.map(rec => <li key={rec} className="hover:text-slate-900 transition-colors leading-relaxed">{rec}</li>)}
                 </ul>
               </div>
             </StaggerItem>
+
+            {/* Preguntas adicionales */}
+            {service.additionalQuestions && service.additionalQuestions.map((q, idx) => (
+              <StaggerItem key={idx}>
+                <h2 className="text-2xl font-black text-slate-900 mb-6 tracking-tight flex items-center gap-3 border-l-4 border-primary pl-4 uppercase">
+                  <FaInfoCircle className="text-primary" /> {q.question}
+                </h2>
+                <div className="bg-white p-6 border border-slate-100 rounded-[1.5rem_0.5rem_1.5rem_0.5rem] shadow-sm flex items-start gap-4 hover:border-primary/20 transition-all">
+                  <span className="font-semibold text-slate-650 text-xs leading-relaxed whitespace-pre-line">{q.answer}</span>
+                </div>
+              </StaggerItem>
+            ))}
           </StaggerContainer>
 
           {/* Sidebar CTA (Avant-Garde Luxury Float) */}
           <FadeUp delay={0.2} className="lg:col-span-1">
             <div className="sticky top-32 bg-gradient-to-br from-primary to-[#3b1c39] p-8 text-white shadow-xl rounded-[2.5rem_0.5rem_2.5rem_0.5rem] group border-t-8 border-accent relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full blur-xl pointer-events-none" />
-              <h3 className="text-lg font-extrabold mb-4 tracking-tight uppercase">¿Tu hijo requiere este estudio?</h3>
+              <h3 className="text-lg font-extrabold mb-4 tracking-tight uppercase">
+                {service.ctaQuestion || "¿Tu hijo requiere este estudio?"}
+              </h3>
               <div className="w-10 h-1 bg-accent mb-6 rounded-full" />
               <p className="text-slate-300 text-xs mb-8 leading-relaxed">
-                La Dra. Lizbeth realiza y supervisa personalmente los procedimientos bajo estrictos protocolos de bioseguridad y control analgésico infantil.
+                {service.ctaAnswer || "La Dra. Lizbeth realiza y supervisa personalmente los procedimientos bajo estrictos protocolos de bioseguridad y control analgésico infantil."}
               </p>
               <a href={`https://wa.me/${doctor.whatsapp.replace(/\D/g, "")}`} target="_blank" rel="noreferrer" className="block w-full flex items-center justify-center gap-2 bg-white text-primary font-bold py-4 rounded-full hover:bg-[#FEE5FD] hover:text-[#971F57] transition-all text-[9px] uppercase tracking-widest shadow-lg">
                 <FaCalendarCheck size={12} /> Agendar Valoración Médica
