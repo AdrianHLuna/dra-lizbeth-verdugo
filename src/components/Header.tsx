@@ -21,7 +21,11 @@ export default function Header() {
             <span className="text-white/30 hidden sm:inline">|</span>
             <span>ced. esp. {doctor.cedulaEspecialidad} (UNAM)</span>
             <span className="text-white/30 hidden sm:inline">|</span>
-            <span>ced. subesp. 15486256 (UNAM)</span>
+            {doctor.cedulaSubespecialidad && (
+              <>
+                <span>ced. subesp. {doctor.cedulaSubespecialidad} (UNAM)</span>
+              </>
+            )}
           </div>
           <div className="flex items-center gap-4 text-[10px] md:text-xs">
             <a href={`tel:${doctor.phone}`} className="flex items-center gap-1.5 hover:text-white transition">

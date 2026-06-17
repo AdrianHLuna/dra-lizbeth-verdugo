@@ -8,6 +8,7 @@ export const doctor: DoctorProfile = {
   subspecialty: "Medicina Transfusional",
   cedula: "10807063",
   cedulaEspecialidad: "13914389",
+  cedulaSubespecialidad: "15486256",
   cofepris: "En trámite",
   phone: "5596868266",
   whatsapp: "525611232970",

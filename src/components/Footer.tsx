@@ -79,7 +79,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-8 text-center text-xs flex flex-col gap-3">
           <p className="text-white/80 leading-relaxed max-w-4xl mx-auto">
-            ced. prof. {doctor.cedula} (UNACH) | ced. esp. {doctor.cedulaEspecialidad} (UNAM) | ced. subesp. 15486256 (UNAM) | COFEPRIS: {doctor.cofepris}
+            ced. prof. {doctor.cedula} (UNACH) | ced. esp. {doctor.cedulaEspecialidad} (UNAM) {doctor.cedulaSubespecialidad && `| ced. subesp. ${doctor.cedulaSubespecialidad} (UNAM)`} | COFEPRIS: {doctor.cofepris}
           </p>
           <p className="text-white/50">© {new Date().getFullYear()} Todos los derechos reservados. Desarrollado bajo Arquitectura AISO v2.0.</p>
         </div>

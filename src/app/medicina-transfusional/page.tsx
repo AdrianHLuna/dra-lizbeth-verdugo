@@ -52,7 +52,7 @@ export default function MedicinaTransfusionalPage() {
             Medicina Transfusional Pediátrica
           </h1>
           <p className="text-sm text-slate-600 max-w-4xl leading-relaxed font-semibold">
-            La Medicina Transfusional es una rama especializada que se encarga del uso seguro y adecuado de los componentes sanguíneos, así como de procedimientos avanzados como la aféresis terapéutica. Su objetivo es ofrecer tratamientos eficaces minimizando riesgos y garantizando la mejor atención posible para cada paciente.
+            La Medicina Transfusional es una especialidad médica dedicada al uso seguro y adecuado de los componentes sanguíneos, así como a procedimientos especializados como la aféresis terapéutica. Su objetivo es optimizar el tratamiento de los pacientes, minimizar riesgos y garantizar la máxima seguridad posible.
           </p>
         </FadeUp>
 

@@ -224,6 +224,9 @@ export default function Home() {
                   <div>
                     <h4 className="font-bold text-xs uppercase text-slate-400">Subespecialidad</h4>
                     <p className="text-xs text-slate-650 mt-1 font-semibold">Hematología Pediátrica (UNAM)</p>
+                    {doctor.cedulaSubespecialidad && (
+                      <p className="text-[10px] text-slate-500 mt-1 font-medium">ced. subesp. {doctor.cedulaSubespecialidad}</p>
+                    )}
                   </div>
                 </div>
 

@@ -60,6 +60,7 @@ export const DoctorProfileSchema = z.object({
  subspecialty: z.string().optional(),
  cedula: z.string().min(5),
  cedulaEspecialidad: z.string().optional(),
+ cedulaSubespecialidad: z.string().optional(),
  cofepris: z.string().optional(),
  phone: z.string(),
  whatsapp: z.string(),
@@ -109,6 +110,7 @@ export const MedicalConditionSchema = z.object({
  ctaAnswer: z.string().optional(),
  whenToConsult: z.array(z.string()).optional(),
  diseasesToRuleOut: z.array(z.string()).optional(),
+ category: z.string().optional(),
 });
 
 // ─── Medical Service (Servicio/Cirugía) ───────────────────────

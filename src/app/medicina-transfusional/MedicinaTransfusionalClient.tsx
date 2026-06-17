@@ -97,6 +97,10 @@ const topicsData: Topic[] = [
         a: "Cuando un médico indica una transfusión, es porque considera que los beneficios para la salud del niño superan ampliamente los posibles riesgos. Las transfusiones pueden:\n\n• Corregir una anemia importante.\n• Mejorar el transporte de oxígeno a los tejidos.\n• Disminuir el riesgo de sangrado.\n• Reponer factores de coagulación.\n• Permitir tratamientos médicos o quirúrgicos de forma más segura.\n• Salvar la vida en situaciones de emergencia."
       },
       {
+        q: "¿Las transfusiones pueden transmitir enfermedades?",
+        a: "Actualmente el riesgo es extremadamente bajo gracias a los estudios de selección de donadores, pruebas de tamizaje para enfermedades infecciosas y estrictos controles de calidad realizados en los bancos de sangre."
+      },
+      {
         q: "¿Cómo se protege la seguridad de mi hijo?",
         a: "La sangre donada pasa por rigurosos procesos de selección, análisis y control de calidad antes de ser utilizada. Además, antes de cada transfusión se realizan estudios de compatibilidad y verificaciones de identidad para asegurar que el componente administrado sea el correcto. Gracias a estas medidas, las complicaciones graves son poco frecuentes."
       },
@@ -435,11 +439,11 @@ export default function MedicinaTransfusionalClient() {
             <div className="bg-gradient-to-br from-primary to-[#3b1c39] p-8 text-white shadow-xl rounded-[2.5rem_0.5rem_2.5rem_0.5rem] group border-t-8 border-accent relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full blur-xl pointer-events-none" />
               <h3 className="text-lg font-extrabold mb-4 tracking-tight uppercase">
-                ¿Tu hijo requiere valoración?
+                ¿Tu hijo requiere una transfusión, aféresis terapéutica o una valoración especializada en Medicina Transfusional?
               </h3>
               <div className="w-10 h-1 bg-accent mb-6 rounded-full" />
               <p className="text-slate-300 text-xs mb-8 leading-relaxed font-medium">
-                La Dra. Lizbeth Hernández es especialista en Hematología Pediátrica con Alta Especialidad en Medicina Transfusional. Ella supervisa personalmente cada indicación y procedimiento.
+                La evaluación por una especialista en Hematología Pediátrica y Medicina Transfusional permite determinar la indicación más adecuada, optimizar el tratamiento y garantizar la mayor seguridad posible para cada paciente.
               </p>
               <a 
                 href={whatsappUrl} 

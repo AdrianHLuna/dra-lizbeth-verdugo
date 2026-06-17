@@ -25,7 +25,7 @@ export const symptoms: Symptom[] = [
       "Manos y pies fríos."
     ],
     preguntaPrincipal: "¿Has notado que tu hijo se ve más pálido de lo habitual, especialmente en labios, encías o alrededor de los ojos?",
-    relatedConditions: ["enf-001", "enf-003", "enf-004", "enf-005", "enf-006", "enf-007", "enf-009", "enf-014"],
+    relatedConditions: ["enf-001", "enf-003", "enf-004", "enf-005", "enf-006", "enf-007", "enf-009", "enf-011"],
     image: "/sintomas/Palidez_Intensa_Persistente.png",
     seo: {
       title: "Palidez Intensa en Niños y Lactantes | Dra. Lizbeth Hernández",
@@ -40,7 +40,7 @@ export const symptoms: Symptom[] = [
     description: "Es una sensación de falta de energía o agotamiento que no mejora completamente con el descanso y que puede dificultar las actividades habituales de tu hijo, como jugar, hacer ejercicio, asistir a la escuela o concentrarse",
     causes: ["Anemia ferropénica", "Anemia aplásica", "Anemia hemolítica", "Leucemias agudas"],
     whyConsult: "El cansancio persistente no siempre es normal. Puede relacionarse con anemia, deficiencias nutricionales, infecciones, problemas del sueño, enfermedades endocrinas o trastornos hematológicos. Una valoración médica puede ayudar a identificar la causa y determinar si se requieren estudios adicionales.",
-    relatedConditions: ["enf-001", "enf-003", "enf-004", "enf-005", "enf-006", "enf-007", "enf-009", "enf-014"],
+    relatedConditions: ["enf-001", "enf-003", "enf-004", "enf-005", "enf-006", "enf-007", "enf-009", "enf-011"],
     image: "/sintomas/Fatiga_o_Cansancio_Excesivo.png",
     manifestaciones: [
       "Se cansa más rápido que otros niños.",
@@ -105,7 +105,7 @@ export const symptoms: Symptom[] = [
       "Sangre en orina o heces oscuras",
       "Moretones y/o petequias acompañados de palidez, cansancio o fiebre"
     ],
-    relatedConditions: ["enf-002", "enf-003", "enf-008", "enf-010", "enf-014"],
+    relatedConditions: ["enf-002", "enf-003", "enf-008", "enf-010", "enf-011"],
     image: "/sintomas/Moretones_Faciles_Sangrado_Frecuente.png",
     seo: {
       title: "Moretones y Sangrado de Nariz en Niños | Hematóloga CDMX",
@@ -139,7 +139,7 @@ export const symptoms: Symptom[] = [
     ],
     preguntaPrincipal: "¿Has notado pequeños puntos rojos o morados que no desaparecen al presionarlos, o manchas violáceas sin causa aparente en la piel de tu hijo?",
     preguntaPrincipalResponse: "Las petequias y la púrpura pueden aparecer por diversas causas. Cuando son persistentes, aumentan en número o se acompañan de sangrado, fiebre o moretones frecuentes, es importante que un hematólogo pediatra valore a tu hijo para identificar la causa y determinar si requiere estudios adicionales.",
-    relatedConditions: ["enf-002", "enf-008", "enf-010", "enf-014"],
+    relatedConditions: ["enf-002", "enf-008", "enf-010", "enf-011"],
     image: "/sintomas/petequias.png",
     seo: {
       title: "Puntos Rojos y Manchas Moradas en Niños | Hematóloga CDMX",
@@ -166,7 +166,7 @@ export const symptoms: Symptom[] = [
     whyConsult: "Aunque muchas veces se relaciona con resequedad nasal, alergias o fragilidad de los vasos sanguíneos, el sangrado nasal frecuente también puede ser una manifestación de trastornos de la coagulación, alteraciones plaquetarias o, en casos poco frecuentes, enfermedades hematológicas. Una valoración médica permite identificar la causa y determinar si requiere estudios adicionales.",
     preguntaPrincipal: "¿Tu hijo presenta sangrados nasales frecuentes o difíciles de detener?",
     preguntaPrincipalResponse: "Los sangrados ocasionales suelen ser benignos, pero cuando son repetitivos, abundantes o se acompañan de moretones, sangrado de encías o antecedentes familiares de problemas de coagulación, es recomendable una valoración especializada para descartar alteraciones hematológicas.",
-    relatedConditions: ["enf-002", "enf-003", "enf-008", "enf-010", "enf-014"],
+    relatedConditions: ["enf-002", "enf-003", "enf-008", "enf-010", "enf-011"],
     image: "/sintomas/epistaxis_repeticion.png",
     seo: {
       title: "Epistaxis de Repetición en Niños (Sangrado Nasal) | CDMX",
@@ -202,7 +202,7 @@ export const symptoms: Symptom[] = [
     ],
     preguntaPrincipal: "¿Tu hijo presenta sangrado frecuente de las encías al cepillarse, comer o de forma espontánea?",
     preguntaPrincipalResponse: "Aunque muchas veces se relaciona con inflamación de las encías, el sangrado recurrente también puede ser un signo de alteraciones de la coagulación o enfermedades hematológicas. Una valoración médica puede ayudar a identificar la causa",
-    relatedConditions: ["enf-002", "enf-003", "enf-008", "enf-010", "enf-014"],
+    relatedConditions: ["enf-002", "enf-003", "enf-008", "enf-010", "enf-011"],
     image: "/sintomas/sangrado_encias.png",
     seo: {
       title: "Sangrado de Encías en Niños y Lactantes | Dra. Lizbeth",
@@ -274,7 +274,7 @@ export const symptoms: Symptom[] = [
     signosAlarma: [
       "La mayoría de las infecciones en la infancia son normales, pero cuando son muy frecuentes, severas o difíciles de controlar, es importante realizar una valoración para descartar alteraciones hematológicas o inmunológicas."
     ],
-    relatedConditions: ["enf-003", "enf-011", "enf-014", "enf-017"],
+    relatedConditions: ["enf-003", "enf-011", "enf-017"],
     image: "/sintomas/Fiebre_Prolongada_Infecciones_Recurrentes.png",
     seo: {
       title: "Fiebre Prolongada e Infecciones en Niños | Dra. Lizbeth",
@@ -310,7 +310,7 @@ export const symptoms: Symptom[] = [
     signosAlarma: [
       "La mayoría de los ganglios inflamados en niños se deben a infecciones y desaparecen con el tiempo. Sin embargo, los ganglios que aumentan de tamaño, persisten por varias semanas, son duros o se acompañan de fiebre prolongada, pérdida de peso o sudoración nocturna deben ser valorados por un especialista."
     ],
-    relatedConditions: ["enf-011", "enf-014"],
+    relatedConditions: ["enf-011"],
     image: "/sintomas/Ganglios_Inflamados.png",
     seo: {
       title: "Ganglios Inflamados en Niños | Dra. Lizbeth Hernández",
@@ -350,7 +350,7 @@ export const symptoms: Symptom[] = [
     ],
     preguntaPrincipal: "¿Tu hijo presenta dolor óseo o articular persistente?",
     preguntaPrincipalResponse: "Agenda una valoración. Un diagnóstico oportuno permite identificar la causa del dolor y descartar enfermedades hematológicas, inmunológicas u oncológicas cuando sea necesario.",
-    relatedConditions: ["enf-005", "enf-014", "enf-015"],
+    relatedConditions: ["enf-005", "enf-011", "enf-015"],
     image: "/sintomas/Dolor_Oseo_Articular.png",
     seo: {
       title: "Dolor de Huesos y Articulaciones en Niños | Hematología",
@@ -389,7 +389,7 @@ export const symptoms: Symptom[] = [
     ],
     preguntaPrincipal: "¿Has notado que el abdomen de tu hijo está más abultado o que le han detectado crecimiento del hígado o del bazo?",
     preguntaPrincipalResponse: "Si sospechas que tu hijo tiene crecimiento del hígado o del bazo, es importante una valoración médica para identificar la causa y determinar si requiere estudios o tratamiento especializado.",
-    relatedConditions: ["enf-004", "enf-006", "enf-007", "enf-011", "enf-014"],
+    relatedConditions: ["enf-004", "enf-006", "enf-007", "enf-011"],
     image: "/sintomas/Crecimiento_Hígado_Bazo.png",
     seo: {
       title: "Bazo o Hígado Crecido en Niños | Esplenomegalia CDMX",
@@ -425,7 +425,7 @@ export const symptoms: Symptom[] = [
     ],
     preguntaPrincipal: "¿Tu hijo ha perdido peso sin explicación o presenta sudoración excesiva, especialmente durante la noche?",
     preguntaPrincipalResponse: "Estos síntomas no siempre indican una enfermedad grave, pero sí justifican una valoración médica, sobre todo si se acompañan de fiebre, cansancio, palidez, ganglios inflamados o disminución del apetito. El especialista podrá determinar si se requieren estudios adicionales.",
-    relatedConditions: ["enf-011", "enf-014"],
+    relatedConditions: ["enf-011"],
     image: "/sintomas/Perdida_Peso_Sudoraciones_Nocturnas.png",
     seo: {
       title: "Sudoración Nocturna y Pérdida de Peso en Niños | CDMX",
@@ -516,7 +516,7 @@ export const symptoms: Symptom[] = [
     whyConsult: "Porque puede ser la manifestación de una enfermedad que afecta la producción normal de células sanguíneas. Una evaluación oportuna permite identificar la causa y establecer el tratamiento adecuado antes de que aparezcan complicaciones por anemia, infecciones o sangrados.",
     preguntaPrincipal: "¿En los estudios de laboratorio de tu hijo encontraron disminución de glóbulos rojos, glóbulos blancos y plaquetas?",
     preguntaPrincipalResponse: "La pancitopenia es un hallazgo que requiere valoración especializada. Aunque puede deberse a diferentes causas, algunas necesitan diagnóstico y tratamiento oportunos para evitar complicaciones relacionadas con anemia, infecciones o sangrados.",
-    relatedConditions: ["enf-003", "enf-014", "enf-016", "enf-017"],
+    relatedConditions: ["enf-003", "enf-011", "enf-016", "enf-017"],
     image: "/sintomas/Alteraciones_Biometria_Hematica.png",
     seo: {
       title: "Pancitopenia en Niños (Estudios de Sangre) | Dra. Lizbeth",

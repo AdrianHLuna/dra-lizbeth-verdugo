@@ -58,7 +58,8 @@ export const diseases: MedicalCondition[] = [
       title: "Anemia Ferropénica en Niños | Hematóloga Pediatra CDMX",
       description: "Diagnóstico y tratamiento de la anemia ferropénica por falta de hierro en bebés y niños. Consulta con la Dra. Lizbeth Hernández.",
       keywords: ["Anemia ferropénica infantil CDMX", "Falta de hierro en niños", "Tratamiento de anemia en lactantes"],
-    }
+    },
+    category: "anemias-globulos-rojos",
   },
   {
     id: "enf-002",
@@ -99,7 +100,8 @@ export const diseases: MedicalCondition[] = [
       title: "Trombocitopenia Inmune en Niños | Púrpura Infantil CDMX",
       description: "Información y tratamiento especializado para la Púrpura Trombocitopénica Inmune (PTI) en niños con la Dra. Lizbeth Hernández.",
       keywords: ["Trombocitopenia inmune niños", "Plaquetas bajas en niños causas", "Púrpura infantil tratamiento CDMX"],
-    }
+    },
+    category: "coagulacion-hemostasia",
   },
   {
     id: "enf-003",
@@ -152,7 +154,8 @@ export const diseases: MedicalCondition[] = [
       title: "Anemia Aplásica Infantil | Falla Medular CDMX",
       description: "Diagnóstico y alternativas de tratamiento para la anemia aplásica en niños con la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
       keywords: ["Anemia aplásica en niños CDMX", "Falla de médula ósea infantil", "Hematólogo pediatra experto"],
-    }
+    },
+    category: "anemias-globulos-rojos",
   },
   {
     id: "enf-004",
@@ -193,7 +196,8 @@ export const diseases: MedicalCondition[] = [
       title: "Anemia Hemolítica en Niños | Hematóloga Pediatra CDMX",
       description: "Diagnóstico especializado y tratamiento de la anemia hemolítica e ictericia en niños y bebés. Dra. Lizbeth Hernández.",
       keywords: ["Anemia hemolítica infantil", "Niño con ojos amarillos causas", "Destrucción de glóbulos rojos niños"],
-    }
+    },
+    category: "anemias-globulos-rojos",
   },
   {
     id: "enf-005",
@@ -223,7 +227,8 @@ export const diseases: MedicalCondition[] = [
       title: "Drepanocitosis (Anemia Falciforme) en Niños | CDMX",
       description: "Manejo experto de la anemia falciforme y crisis de dolor en niños. Consulta con la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
       keywords: ["Anemia falciforme niños CDMX", "Drepanocitosis infantil tratamiento", "Crisis de dolor hematológicas"],
-    }
+    },
+    category: "anemias-globulos-rojos",
   },
   {
     id: "enf-006",
@@ -266,7 +271,8 @@ export const diseases: MedicalCondition[] = [
       title: "Talasemia Infantil y Tratamiento de Sobrecarga de Hierro | CDMX",
       description: "Diagnóstico diferencial y control integral de la talasemia en niños. Dra. Lizbeth Hernández, Especialista en Hematología Pediátrica.",
       keywords: ["Talasemia en niños CDMX", "Terapia de quelación de hierro", "Electroforesis de hemoglobina niños"],
-    }
+    },
+    category: "anemias-globulos-rojos",
   },
   {
     id: "enf-007",
@@ -310,7 +316,8 @@ export const diseases: MedicalCondition[] = [
       title: "Esferocitosis Hereditaria en Niños | Hematología CDMX",
       description: "Diagnóstico y control de la esferocitosis hereditaria y esplenectomía en pacientes pediátricos. Dra. Lizbeth Hernández.",
       keywords: ["Esferocitosis hereditaria niños", "Fragilidad osmótica estudio", "Esplenectomía pediátrica CDMX"],
-    }
+    },
+    category: "anemias-globulos-rojos",
   },
   {
     id: "enf-008",
@@ -352,7 +359,8 @@ export const diseases: MedicalCondition[] = [
       title: "Tratamiento de Hemofilia en Niños | Hematología CDMX",
       description: "Control experto y profilaxis para niños con hemofilia A o B. Especialista en coagulación Dra. Lizbeth Hernández.",
       keywords: ["Hemofilia infantil tratamiento CDMX", "Sangrado en articulaciones niños", "Factores de coagulación pediatría"],
-    }
+    },
+    category: "coagulacion-hemostasia",
   },
   {
     id: "enf-009",
@@ -399,7 +407,8 @@ export const diseases: MedicalCondition[] = [
       title: "Deficiencia de G6PD en Niños | Favismo CDMX",
       description: "Diagnóstico y guía de prevención de crisis hemolíticas por deficiencia de G6PD. Consulta con la Dra. Lizbeth Hernández.",
       keywords: ["Deficiencia de G6PD infantil", "Favismo en niños síntomas", "Medicamentos prohibidos G6PD"],
-    }
+    },
+    category: "anemias-globulos-rojos",
   },
   {
     id: "enf-010",
@@ -439,42 +448,50 @@ export const diseases: MedicalCondition[] = [
       title: "Enfermedad de Von Willebrand Infantil | Hematología CDMX",
       description: "Diagnóstico y manejo de sangrados frecuentes y enfermedad de Von Willebrand en niños y adolescentes. Dra. Lizbeth Hernández.",
       keywords: ["Enfermedad de Von Willebrand niños", "Sangrado de nariz frecuente niños", "Hematólogo pediatra experto CDMX"],
-    }
+    },
+    category: "coagulacion-hemostasia",
   },
   {
     id: "enf-011",
     slug: "leucemia-infantil",
     name: "Leucemia Infantil",
-    description: "La leucemia infantil es el cáncer más común en la infancia. Se origina en la médula ósea, donde se producen glóbulos blancos anormales de manera descontrolada, afectando la producción de células sanas como glóbulos rojos y plaquetas.",
+    description: "La leucemia infantil es un tipo de cáncer que se origina en la médula ósea, el tejido encargado de producir las células sanguíneas. Las células leucémicas se multiplican de forma descontrolada y desplazan a las células normales de la sangre, provocando anemia, infecciones y sangrados.",
     symptoms: [
-      "Fiebre prolongada o recurrente sin causa aparente",
-      "Dolor constante en huesos o articulaciones",
-      "Palidez extrema, cansancio y debilidad",
-      "Aparición fácil de moretones o puntitos rojos en la piel (petequias)",
-      "Sangrados frecuentes por la nariz o encías",
-      "Ganglios inflamados en el cuello, axilas o ingle que no causan dolor"
+      "Palidez y cansancio persistente",
+      "Fiebre recurrente o prolongada",
+      "Moretones o sangrados fáciles",
+      "Petequias",
+      "Dolor óseo o articular",
+      "Ganglios inflamados",
+      "Crecimiento del hígado o bazo",
+      "Pérdida de peso o disminución del apetito"
     ],
-    causes: ["Mutaciones o alteraciones en el ADN de las células de la médula ósea (no asociadas a causas hereditarias en su gran mayoría)"],
+    causes: ["En la mayoría de los niños no existe una causa identificable. La leucemia se desarrolla por alteraciones genéticas adquiridas en las células de la médula ósea y generalmente no es hereditaria."],
     riskFactors: ["Trastornos genéticos específicos (como el Síndrome de Down)", "Exposición previa a quimioterapia o radiaciones de alta intensidad"],
     complications: ["Infecciones graves por deficiencia de glóbulos blancos sanos", "Hemorragias severas por falta de plaquetas", "Anemia grave que limita las actividades cotidianas"],
     treatments: [
-      "Quimioterapia combinada (intravenosa, oral e intratecal)",
-      "Soporte transfusional con glóbulos rojos o plaquetas",
-      "Antibióticos y antimicóticos para el control y prevención de infecciones",
-      "Trasplante de médula ósea en casos de alto riesgo o recaída"
+      "Quimioterapia en varias fases",
+      "Terapias dirigidas en algunos tipos de leucemia",
+      "Inmunoterapia en casos seleccionados",
+      "Trasplante de células madre hematopoyéticas cuando está indicado",
+      "Tratamiento de soporte transfusional y prevención de infecciones"
     ],
     faqs: [
       {
-        question: "¿Qué es la leucemia infantil y cómo afecta al cuerpo?",
-        answer: "Es un cáncer de la sangre que se origina en la médula ósea. Al producirse glóbulos blancos anormales (blastos) de manera descontrolada, estos desplazan a las células sanguíneas sanas. Esto causa anemia (por falta de glóbulos rojos), infecciones (por falta de defensas) y sangrados (por falta de plaquetas)."
+        question: "¿Los niños con leucemia pueden curarse?",
+        answer: "Sí. La leucemia infantil, especialmente la leucemia linfoblástica aguda (LLA), tiene tasas de curación superiores al 85-90% con tratamiento oportuno y adecuado. El diagnóstico temprano y el inicio rápido del tratamiento son fundamentales para el pronóstico."
       },
       {
-        question: "¿Cuáles son los principales síntomas de alarma?",
-        answer: "Los síntomas clave son fiebre inexplicable y prolongada, palidez persistente, dolor óseo o articular que puede despertar al niño por las noches, moretones espontáneos, petequias y sangrados de nariz o encías. Ante la presencia de estos síntomas, se requiere una biometría hemática inmediata."
+        question: "¿Cuánto dura el tratamiento de la leucemia infantil?",
+        answer: "El tratamiento puede durar entre 2 y 3 años, dependiendo del tipo y riesgo de la leucemia. Incluye varias fases: inducción a la remisión, consolidación y mantenimiento. Durante este tiempo, el niño requiere seguimiento cercano y apoyo multidisciplinario."
       },
       {
-        question: "¿La leucemia en niños se puede curar?",
-        answer: "Sí. Actualmente, las tasas de curación de la leucemia infantil son muy elevadas, superando el 85-90% en el tipo más común (leucemia linfoblástica aguda). El diagnóstico oportuno y el inicio rápido del tratamiento son fundamentales para el éxito terapéutico."
+        question: "¿La leucemia infantil es hereditaria?",
+        answer: "En la gran mayoría de los casos, no. La leucemia se desarrolla por alteraciones genéticas adquiridas en las células de la médula ósea, no por mutaciones heredadas de los padres. Tener un familiar con leucemia no aumenta significativamente el riesgo."
+      },
+      {
+        question: "¿Qué debo hacer si sospecho que mi hijo tiene leucemia?",
+        answer: "Acudir a una consulta con un hematólogo pediatra para una evaluación clínica y solicitar una biometría hemática completa. No espere a que los síntomas empeoren: el diagnóstico oportuno marca la diferencia en el tratamiento."
       }
     ],
     image: "/enfermedades/Leucemia_Linfoblastica_Aguda.png",
@@ -484,31 +501,8 @@ export const diseases: MedicalCondition[] = [
       title: "Leucemia Infantil | Hematóloga Pediatra CDMX",
       description: "Diagnóstico oportuno y tratamiento especializado para la leucemia infantil. Consulta experta con la Dra. Lizbeth Hernández.",
       keywords: ["Leucemia infantil síntomas", "Tipos de leucemia en niños", "Cáncer en la sangre infantil CDMX"],
-    }
-  },
-  {
-    id: "enf-014",
-    slug: "leucemia-linfoblastica-aguda",
-    name: "Leucemia Linfoblástica Aguda",
-    description: "La leucemia linfoblástica aguda es el cáncer más común en la infancia. Se origina en la médula ósea, donde se producen demasiados glóbulos blancos inmaduros, afectando la producción de células sanas.",
-    symptoms: ["Fiebre prolongada sin causa aparente", "Dolor en huesos o articulaciones", "Palidez intensa y fatiga", "Moretones fáciles o sangrados", "Ganglios inflamados en el cuello"],
-    causes: ["Mutaciones genéticas en las células precursoras de la médula ósea (no son hereditarias en la mayoría de los casos)"],
-    riskFactors: ["Factores genéticos específicos como el Síndrome de Down", "Exposición previa a radiaciones ionizantes"],
-    complications: ["Infecciones severas por falta de defensas", "Anemia grave y sangrados", "Invasión al sistema nervioso central si no se recibe quimioterapia intratecal"],
-    treatments: ["Quimioterapia intravenosa e intratecal", "Soporte transfusional de sangre y plaquetas", "Antibióticos para el control de infecciones"],
-    faqs: [
-      { question: "¿Cuál es la tasa de curación en niños?", answer: "Actualmente, gracias a los avances médicos, más del noventa por ciento de los niños con leucemia linfoblástica aguda logran curarse por completo." },
-      { question: "¿Cómo se confirma el diagnóstico?", answer: "Se confirma de forma definitiva mediante un aspirado de médula ósea y estudios especializados como inmunofenotipo y genética celular." },
-      { question: "¿El tratamiento requiere hospitalización?", answer: "Sí, requiere periodos de hospitalización para la administración de quimioterapia y el manejo de los efectos secundarios." }
-    ],
-    image: "/enfermedades/Leucemia_Linfoblastica_Aguda.png",
-    relatedServices: ["ser-001", "ser-002", "ser-004", "ser-006", "ser-007"],
-    relatedSymptoms: ["sym-001", "sym-002", "sym-003", "sym-004", "sym-006", "sym-007", "sym-014", "sym-015"],
-    seo: {
-      title: "Leucemia Linfoblástica Aguda Infantil | Hematóloga CDMX",
-      description: "Diagnóstico oportuno y manejo integral de la leucemia infantil. Consulta experta con la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
-      keywords: ["Leucemia infantil síntomas CDMX", "Aspirado de médula ósea leucemia", "Cáncer en la sangre niños"],
-    }
+    },
+    category: "leucemias-linfomas",
   },
   {
     id: "enf-015",
@@ -533,13 +527,14 @@ export const diseases: MedicalCondition[] = [
       title: "Trombosis en Niños y Trombofilias | Hematóloga CDMX",
       description: "Diagnóstico y tratamiento especializado de trombosis venosa y estudios de trombofilia en niños. Dra. Lizbeth Hernández.",
       keywords: ["Trombosis en niños causas", "Catéter venoso central complicaciones", "Trombofilia pediátrica CDMX"],
-    }
+    },
+    category: "coagulacion-hemostasia",
   },
   {
     id: "enf-016",
-    slug: "alteraciones-biometria-hematica",
-    name: "Alteraciones en la Biometría Hemática",
-    description: "Las alteraciones en la biometría hemática son hallazgos anormales en los análisis de laboratorio de sangre completa que indican desequilibrios en los glóbulos rojos, glóbulos blancos o plaquetas, requiriendo una evaluación hematológica para diagnosticar su causa origen.",
+    slug: "interpretacion-resultados-laboratorio",
+    name: "Interpretación de Resultados de Laboratorio",
+    description: "La Dra. Lizbeth Hernández evalúa alteraciones en estudios de laboratorio, biometrías hemáticas y pruebas especializadas para identificar la causa y orientar el tratamiento más adecuado para cada paciente.",
     symptoms: [
       "Puntos rojos en la piel (petequias) o moretones sin explicación",
       "Palidez extrema o cansancio inusual",
@@ -586,10 +581,11 @@ export const diseases: MedicalCondition[] = [
     relatedServices: ["ser-003", "ser-005", "ser-006"],
     relatedSymptoms: ["sym-001", "sym-002", "sym-003", "sym-004", "sym-006", "sym-013"],
     seo: {
-      title: "Alteraciones en la Biometría Hemática Pediátrica | CDMX",
-      description: "Diagnóstico y análisis experto de alteraciones en plaquetas, leucocitos o hemoglobina en niños. Consulta con la Dra. Lizbeth Hernández.",
-      keywords: ["Biometría hemática alterada niños", "Plaquetas bajas pediatra CDMX", "Leucocitos altos infantil"]
-    }
+      title: "Interpretación de Resultados de Laboratorio Pediátrico | CDMX",
+      description: "La Dra. Lizbeth Hernández evalúa biometrías hemáticas, estudios especializados y pruebas de laboratorio para identificar la causa de alteraciones en sangre en niños.",
+      keywords: ["Interpretación de estudios de laboratorio CDMX", "Biometría hemática alterada niños", "Plaquetas altas o bajas niños", "Leucocitos elevados infantil"]
+    },
+    category: "celulas-medula-osea",
   },
   {
     id: "enf-017",
@@ -648,6 +644,64 @@ export const diseases: MedicalCondition[] = [
       title: "Neutropenia en Niños | Defensas Bajas CDMX",
       description: "Diagnóstico y tratamiento de la neutropenia y fiebre neutropénica en niños con la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
       keywords: ["Neutropenia infantil CDMX", "Glóbulos blancos bajos niños", "Fiebre neutropénica urgencia"]
-    }
+    },
+    category: "celulas-medula-osea",
+  },
+  {
+    id: "enf-018",
+    slug: "linfoma-infantil",
+    name: "Linfoma Infantil",
+    description: "El linfoma es un tipo de cáncer que se origina en el sistema linfático, principalmente en los linfocitos (un tipo de glóbulo blanco). Puede manifestarse con ganglios inflamados persistentes, fiebre, pérdida de peso y sudoración nocturna. Existen dos tipos principales: el linfoma de Hodgkin y los linfomas no Hodgkin, cada uno con diferentes características y tratamientos.",
+    symptoms: [
+      "Ganglios inflamados en cuello, axilas o ingle que no duelen y no desaparecen",
+      "Fiebre persistente sin causa aparente",
+      "Pérdida de peso involuntaria",
+      "Sudoración nocturna abundante",
+      "Cansancio o fatiga",
+      "Comezón generalizada en la piel",
+      "Crecimiento del hígado o bazo"
+    ],
+    causes: ["En la mayoría de los casos no se identifica una causa única. Se producen por alteraciones en el ADN de los linfocitos que provocan su multiplicación descontrolada."],
+    riskFactors: [
+      "Inmunodeficiencias primárias o adquiridas",
+      "Infección por virus de Epstein-Barr (EBV)",
+      "Antecedente de trasplante de órgano sólido o de médula ósea",
+      "Exposición previa a radioterapia"
+    ],
+    complications: [
+      "Compresión de estructuras vitales por ganglios aumentados de tamaño",
+      "Infecciones graves por afectación del sistema inmune",
+      "Efectos secundarios del tratamiento a largo plazo"
+    ],
+    treatments: [
+      "Quimioterapia según el tipo y estadio del linfoma",
+      "Radioterapia en casos seleccionados",
+      "Inmunoterapia o terapias dirigidas en algunos tipos",
+      "Trasplante de células madre hematopoyéticas cuando está indicado",
+      "Seguimiento estrecho y tratamiento de soporte"
+    ],
+    faqs: [
+      {
+        question: "¿Cuál es la diferencia entre linfoma de Hodgkin y linfoma no Hodgkin?",
+        answer: "El linfoma de Hodgkin tiene características específicas al microscopio (células de Reed-Sternberg) y suele tener mejor pronóstico en la mayoría de los casos. Los linfomas no Hodgkin son un grupo más heterogéneo con diferentes subtipos que requieren tratamientos específicos según el tipo celular."
+      },
+      {
+        question: "¿El linfoma infantil tiene cura?",
+        answer: "Sí. Muchos tipos de linfoma infantil, especialmente el linfoma de Hodgkin, tienen tasas de curación muy elevadas con tratamiento oportuno. El diagnóstico temprano y el tratamiento especializado son fundamentales para el pronóstico."
+      },
+      {
+        question: "¿Cuánto tiempo duran inflamados los ganglios para sospechar de linfoma?",
+        answer: "Ganglios que persisten más de 4 semanas, que no responden a antibióticos, que crecen progresivamente o que se acompañan de fiebre, pérdida de peso o sudoración nocturna requieren una evaluación especializada para descartar linfoma u otras enfermedades."
+      }
+    ],
+    image: "/enfermedades/Leucemia_Linfoblastica_Aguda.png",
+    relatedServices: ["ser-001", "ser-002", "ser-004", "ser-007"],
+    relatedSymptoms: ["sym-004", "sym-006"],
+    seo: {
+      title: "Linfoma Infantil | Hematóloga Pediatra CDMX",
+      description: "Diagnóstico y evaluación de linfoma de Hodgkin y no Hodgkin en niños. Consulta experta con la Dra. Lizbeth Hernández.",
+      keywords: ["Linfoma infantil CDMX", "Ganglios inflamados niños", "Linfoma Hodgkin pediátrico"]
+    },
+    category: "leucemias-linfomas",
   }
 ];
