@@ -219,11 +219,19 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="col-span-1 sm:col-span-2 bg-slate-900 text-white p-6 rounded-2xl flex items-center gap-5">
-                  <FaCertificate className="text-accent text-3xl flex-shrink-0 animate-pulse" />
+                <div className="bg-white p-6 border border-slate-100 rounded-[1rem_3rem_1rem_3rem] shadow-sm flex flex-col justify-between">
+                  <FaCertificate className="text-accent text-2xl mb-4" />
                   <div>
                     <h4 className="font-bold text-xs uppercase text-slate-400">Subespecialidad</h4>
-                    <p className="text-xs text-slate-300 mt-1 font-semibold">Alta Especialidad en Medicina Transfusional (UNAM)</p>
+                    <p className="text-xs text-slate-650 mt-1 font-semibold">Hematología Pediátrica (UNAM)</p>
+                  </div>
+                </div>
+
+                <div className="bg-slate-900 text-white p-6 rounded-[3rem_1rem_3rem_1rem] shadow-sm flex flex-col justify-between">
+                  <FaCertificate className="text-accent text-2xl mb-4 animate-pulse" />
+                  <div>
+                    <h4 className="font-bold text-xs uppercase text-slate-400">Alta Especialidad</h4>
+                    <p className="text-xs text-slate-300 mt-1 font-semibold">Medicina Transfusional (UNAM)</p>
                   </div>
                 </div>
               </div>
