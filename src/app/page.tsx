@@ -9,6 +9,7 @@ import StructuredData from "@/components/StructuredData";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Script from "next/script";
 
 export default function Home() {
   const whatsappUrl = `https://wa.me/${doctor.whatsapp.replace(/\D/g, "")}`;
@@ -25,6 +26,34 @@ export default function Home() {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 4000);
     return () => clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
+    // Clean up any global state set by the Doctoralia widget script
+    delete (window as any).DpWidget;
+
+    // Delay script injection to guarantee Next.js hydration is fully completed
+    const timer = setTimeout(() => {
+      const existingScript = document.getElementById("zl-widget-s");
+      if (existingScript) {
+        existingScript.remove();
+      }
+
+      const script = document.createElement("script");
+      script.id = "zl-widget-s";
+      script.src = `https://platform.docplanner.com/js/widget.js?t=${Date.now()}`;
+      script.async = true;
+      document.body.appendChild(script);
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+      const scriptToRemove = document.getElementById("zl-widget-s");
+      if (scriptToRemove) {
+        scriptToRemove.remove();
+      }
+      delete (window as any).DpWidget;
+    };
   }, []);
 
   const homeSchema = {
@@ -57,7 +86,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#fcfdfd] font-sans selection:bg-primary/20 text-[#705662] relative overflow-hidden">
       <StructuredData data={homeSchema} />
-      
+
       {/* Background watercolor blotches (Sinergia con el logo) */}
       <div className="absolute top-[3%] left-[-15%] w-[60vw] h-[60vw] rounded-full bg-[radial-gradient(circle,rgba(87,45,85,0.06)_0%,transparent_70%)] pointer-events-none -z-10" />
       <div className="absolute top-[20%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-[radial-gradient(circle,rgba(151,31,87,0.05)_0%,transparent_70%)] pointer-events-none -z-10" />
@@ -66,52 +95,55 @@ export default function Home() {
       <section className="relative min-h-[calc(100vh-80px)] lg:min-h-screen flex items-center py-16 lg:py-24 bg-white">
         <div className="w-full px-6 md:px-12 lg:px-20 xl:px-28 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center w-full">
-            
+
             {/* Left Column: Content (Spans 6 cols) */}
-            <motion.div 
-              className="lg:col-span-6 text-center lg:text-left flex flex-col justify-center" 
+            <motion.div
+              className="lg:col-span-6 text-center lg:text-left flex flex-col justify-center"
               initial="hidden" animate="visible" variants={staggerContainer}
             >
               <motion.div variants={softBlurIn} className="inline-flex items-center gap-2 px-5 py-2 bg-primary/5 text-primary font-bold text-xs mb-6 rounded-full border border-primary/10 tracking-wide uppercase self-center lg:self-start">
                 <span className="w-2 h-2 rounded-full bg-accent animate-pulse" /> {doctor.specialistTitle}
               </motion.div>
-              
-              <motion.h1 variants={softBlurIn} className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem] xl:text-[5rem] font-extrabold text-slate-900 leading-[1.1] mb-8 tracking-tight uppercase">
-                Diagnóstico y <br className="hidden xl:inline" />
-                tratamiento especializado <br />
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">de enfermedades hematológicas pediátricas</span>
+
+              <motion.h1 variants={softBlurIn} className="text-4xl sm:text-5xl md:text-6xl lg:text-[3.8rem] xl:text-[4.6rem] font-extrabold text-slate-900 leading-[1.1] mb-6 tracking-tight uppercase">
+                Expertos en la salud <br /> de la sangre <br className="hidden xl:inline" />
+                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">y el sistema inmune</span>
               </motion.h1>
-              
+
+              <motion.p variants={softBlurIn} className="text-slate-600 text-sm sm:text-base md:text-lg mb-8 leading-relaxed font-semibold max-w-xl self-center lg:self-start text-center lg:text-left">
+                Diagnóstico y tratamiento especializado de enfermedades hematológicas en niños y adolescentes
+              </motion.p>
+
               <motion.div variants={softBlurIn} className="flex justify-center lg:justify-start">
                 <a href={whatsappUrl} target="_blank" rel="noreferrer" className="group px-12 py-5.5 bg-primary text-white font-bold rounded-full flex items-center justify-center gap-3 hover:bg-[#971F57] transition-colors duration-300 shadow-xl shadow-primary/10 hover:shadow-2xl uppercase tracking-wider text-xs">
-                   Agendar Valoración Médica <FaCalendarCheck size={16} className="group-hover:rotate-12 transition-transform duration-300" />
+                  Agendar Valoración Médica <FaCalendarCheck size={16} className="group-hover:rotate-12 transition-transform duration-300" />
                 </a>
               </motion.div>
             </motion.div>
- 
+
             {/* Right Column: Giant Sized Circle Image (Spans 6 cols) */}
-            <motion.div 
-              className="lg:col-span-6 flex justify-center items-center" 
+            <motion.div
+              className="lg:col-span-6 flex justify-center items-center"
               initial="hidden" animate="visible" variants={softBlurIn}
             >
               {/* Inner Relative Container representing the exact photo box */}
               <div className="relative w-80 h-80 sm:w-[460px] sm:h-[460px] lg:w-[520px] lg:h-[520px] xl:w-[600px] xl:h-[600px] flex items-center justify-center">
-                
+
                 {/* Concentric rings behind the image (Using scale for perfect alignment) */}
                 <div className="absolute inset-0 w-full h-full rounded-full border border-primary/10 scale-[1.12] animate-spin-slow pointer-events-none" />
                 <div className="absolute inset-0 w-full h-full rounded-full border border-accent/10 scale-[1.06] pointer-events-none" />
- 
+
                 {/* Main Doctor Image Circle - Con fondo degradado de acuarela y Slider */}
-                <motion.div 
+                <motion.div
                   className="w-full h-full bg-gradient-to-br from-primary via-[#971F57] to-[#F8B0E4] shadow-2xl relative overflow-hidden rounded-full border-[10px] border-white z-10 flex items-center justify-center"
                   animate={{ y: [0, -12, 0] }}
                   transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
                 >
                   <AnimatePresence mode="wait">
-                    <motion.img 
+                    <motion.img
                       key={currentSlide}
-                      src={heroSlides[currentSlide].src} 
-                      alt={`Dra. ${doctor.name}`} 
+                      src={heroSlides[currentSlide].src}
+                      alt={`Dra. ${doctor.name}`}
                       className={`absolute w-full h-full object-cover ${heroSlides[currentSlide].align}`}
                       initial={{ opacity: 0, scale: 1.05 }}
                       animate={{ opacity: 1, scale: 1 }}
@@ -120,10 +152,10 @@ export default function Home() {
                     />
                   </AnimatePresence>
                 </motion.div>
- 
+
                 {/* Float Certification Badge */}
-                <motion.div 
-                  className="absolute bottom-2 right-2 sm:bottom-6 sm:right-6 lg:bottom-8 lg:right-8 xl:bottom-10 xl:right-10 bg-accent px-5 py-4 shadow-2xl rounded-2xl text-white max-w-[180px] sm:max-w-[210px] flex flex-col items-center justify-center text-center z-20 border border-white/20"
+                <motion.div
+                  className="absolute bottom-2 right-2 sm:bottom-6 sm:right-6 lg:bottom-8 lg:right-8 xl:bottom-10 xl:right-10 bg-accent px-5 py-4 shadow-2xl rounded-2xl text-white max-w-[160px] sm:max-w-[200px] flex flex-col items-center justify-center text-center z-20 border border-white/20"
                   initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.6, type: "spring" }}
                 >
                   <span className="font-bold text-[8px] sm:text-[9px] uppercase tracking-wider leading-tight text-white/90">Certificada por el</span>
@@ -140,7 +172,7 @@ export default function Home() {
       {/* 2. ABOUT ME SECTION (SOBRE MÍ - INDEPENDENT ELEVATED BLOCK) */}
       <section className="py-24 bg-slate-50/50 border-t border-slate-100 relative">
         <div className="container mx-auto px-6 max-w-7xl">
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start"
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}
           >
@@ -162,9 +194,9 @@ export default function Home() {
             <motion.div variants={softBlurIn} className="lg:col-span-7 space-y-8">
               {/* Foto About Me */}
               <div className="w-full h-[450px] lg:h-[500px] bg-slate-100 rounded-[2rem_0.5rem_2rem_0.5rem] relative overflow-hidden flex items-center justify-center border border-slate-150 shadow-sm">
-                <img 
-                  src="/doctor_aboutme.jpeg" 
-                  alt={`Dra. ${doctor.name}`} 
+                <img
+                  src="/doctor_aboutme.jpeg"
+                  alt={`Dra. ${doctor.name}`}
                   className="w-full h-full object-cover object-[center_43%] transition-transform duration-700 hover:scale-[1.02]"
                 />
               </div>
@@ -191,7 +223,7 @@ export default function Home() {
                   <FaCertificate className="text-accent text-3xl flex-shrink-0 animate-pulse" />
                   <div>
                     <h4 className="font-bold text-xs uppercase text-slate-400">Subespecialidad</h4>
-                    <p className="text-xs text-slate-300 mt-1 font-semibold">Hematología Pediátrica | ced. subesp. 15486256 (UNAM)</p>
+                    <p className="text-xs text-slate-300 mt-1 font-semibold">Alta Especialidad en Medicina Transfusional (UNAM)</p>
                   </div>
                 </div>
               </div>
@@ -205,43 +237,43 @@ export default function Home() {
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Column: doctor_4.jpeg */}
-            <motion.div 
+            <motion.div
               className="lg:col-span-5 h-[350px] lg:h-[450px] rounded-[1rem_3rem_1rem_3rem] overflow-hidden border border-slate-150 shadow-sm relative group"
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={softBlurIn}
             >
-              <img 
-                src="/doctor_4.jpeg" 
-                alt="Compromiso Hematología Pediátrica" 
+              <img
+                src="/doctor_4.jpeg"
+                alt="Compromiso Hematología Pediátrica"
                 className="w-full h-full object-cover object-[center_30%] transition-transform duration-700 hover:scale-[1.02]"
               />
             </motion.div>
 
             {/* Right Column: Text content */}
-            <motion.div 
+            <motion.div
               className="lg:col-span-7 space-y-6"
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={softBlurIn}
             >
               <span className="text-primary font-extrabold text-xs uppercase tracking-widest bg-primary/5 px-4 py-1.5 rounded-full border border-primary/10">
-                Atención Infantil con Amor y Juego
+                Atención especializada con empatía y calidez.
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight uppercase">
-                Un diagnóstico hematológico a tiempo transforma vidas
+                Detectar a tiempo las enfermedades de la sangre puede marcar la diferencia.
               </h2>
               <p className="text-slate-650 text-xs sm:text-sm leading-relaxed font-semibold">
-                La Dra. Lizbeth Hernández comprende que tratar a un niño requiere no solo de la mayor precisión médica, sino también de empatía y calidez. Las enfermedades de la sangre en la infancia, desde anemias hasta leucemias, se abordan con un acompañamiento cercano para disminuir el estrés en el niño y su familia.
+                La Dra. Lizbeth Hernández brinda atención especializada a niños y adolescentes con anemia, alteraciones de las plaquetas, trastornos de la coagulación, leucemias y otras enfermedades hematológicas. Cada paciente recibe una evaluación integral, explicaciones claras y un plan de tratamiento personalizado.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-bold text-slate-700">
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-accent" /> Explicaciones sencillas para los padres.
+                  <span className="w-2 h-2 rounded-full bg-accent" /> Explicaciones claras para padres y cuidadores.
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-accent" /> Procedimientos con mínimo dolor.
+                  <span className="w-2 h-2 rounded-full bg-accent" /> Procedimientos adaptados a la edad pediátrica.
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-accent" /> Seguimiento continuo 24/7.
+                  <span className="w-2 h-2 rounded-full bg-accent" /> Acompañamiento durante el diagnóstico y tratamiento.
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-accent" /> Consulta adaptada al ritmo de tu hijo.
+                  <span className="w-2 h-2 rounded-full bg-accent" /> Atención centrada en el bienestar del paciente y su familia.
                 </div>
               </div>
             </motion.div>
@@ -260,22 +292,22 @@ export default function Home() {
             <div className="w-16 h-1 bg-primary mx-auto rounded-full" />
             <p className="text-sm text-slate-500 max-w-xl mx-auto mt-4">Identifica a tiempo anomalías en el sistema circulatorio e inmunológico de tu hijo.</p>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto items-start"
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={staggerContainer}
           >
             {symptoms.slice(0, 3).map((sym, index) => (
-              <motion.div 
-                key={sym.id} 
-                variants={softBlurIn} 
+              <motion.div
+                key={sym.id}
+                variants={softBlurIn}
                 className={`h-full ${index % 3 === 1 ? 'lg:mt-8' : index % 3 === 2 ? 'lg:mt-4' : ''}`}
               >
                 <Link href={`/sintomas/${sym.slug}`} className="bg-white p-8 border border-slate-150 hover:border-slate-355 hover:bg-[#0f1e36] hover:text-white transition-all duration-300 flex flex-col h-full rounded-[2.5rem_0.5rem_2.5rem_0.5rem] shadow-sm hover:shadow-xl hover:scale-[1.03] group">
                   <div className="w-full h-44 bg-slate-100 rounded-[2rem_0.5rem_2rem_0.5rem] mb-6 relative overflow-hidden flex items-center justify-center text-slate-400 group-hover:bg-[#1a2d4a] transition-colors duration-300">
-                    <img 
-                      src={sym.image} 
-                      alt={sym.name} 
+                    <img
+                      src={sym.image}
+                      alt={sym.name}
                       className="w-full h-full object-cover transition-transform duration-550 group-hover:scale-105"
                     />
                   </div>
@@ -290,12 +322,12 @@ export default function Home() {
           </motion.div>
 
           {/* Botón Ver Todos los Síntomas */}
-          <motion.div 
+          <motion.div
             className="text-center mt-16"
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={softBlurIn}
           >
-            <Link 
-              href="/sintomas" 
+            <Link
+              href="/sintomas"
               className="inline-block bg-[#0f1e36] text-white hover:bg-accent hover:text-[#0f1e36] font-bold px-10 py-4.5 rounded-full transition-all duration-300 text-[10px] uppercase tracking-widest shadow-md hover:shadow-xl hover:scale-105"
             >
               Ver Todos los Síntomas &rarr;
@@ -316,8 +348,8 @@ export default function Home() {
             </div>
             <p className="text-xs text-slate-500 max-w-sm mt-4 lg:mt-0 leading-relaxed font-semibold">Realizados y supervisados por la Dra. Lizbeth bajo estrictos estándares analíticos infantiles.</p>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className="flex flex-col gap-6 max-w-5xl mx-auto"
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={staggerContainer}
           >
@@ -325,19 +357,19 @@ export default function Home() {
               <motion.div key={service.id} variants={softBlurIn} className="w-full">
                 <Link href={`/servicios/${service.slug}`} className="bg-white border border-slate-100 hover:border-primary/20 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row justify-between items-center p-8 rounded-[2rem_0.5rem_2rem_0.5rem] group relative overflow-hidden">
                   <div className="w-full md:w-60 h-40 bg-slate-100 rounded-2xl relative overflow-hidden flex items-center justify-center text-slate-400 transition-colors flex-shrink-0 mb-6 md:mb-0 md:mr-8">
-                    <img 
-                      src={service.image} 
-                      alt={service.name} 
+                    <img
+                      src={service.image}
+                      alt={service.name}
                       className="w-full h-full object-cover transition-transform duration-550 group-hover:scale-105"
                     />
                   </div>
-                  
+
                   <div className="flex-1 md:pr-8 text-center md:text-left">
                     <span className="text-[9px] font-bold text-accent uppercase tracking-widest block mb-2">Procedimiento {index + 1}</span>
                     <h3 className="text-xl font-extrabold text-slate-900 mb-3 group-hover:text-primary transition-colors uppercase">{service.name}</h3>
                     <p className="text-slate-500 text-xs leading-relaxed max-w-2xl">{service.description}</p>
                   </div>
-                  
+
                   <div className="mt-6 md:mt-0 flex-shrink-0">
                     <span className="px-6 py-3.5 bg-slate-900 text-white font-bold group-hover:bg-primary transition-colors text-[9px] uppercase tracking-widest block rounded-full">
                       Ver Ficha &rarr;
@@ -349,12 +381,12 @@ export default function Home() {
           </motion.div>
 
           {/* Botón Ver Todos los Servicios */}
-          <motion.div 
+          <motion.div
             className="text-center mt-16"
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={softBlurIn}
           >
-            <Link 
-              href="/servicios" 
+            <Link
+              href="/servicios"
               className="inline-block bg-slate-900 text-white hover:bg-primary font-bold px-10 py-4.5 rounded-full transition-all duration-300 text-[10px] uppercase tracking-widest shadow-md hover:shadow-xl hover:scale-105"
             >
               Ver Todos los Procedimientos &rarr;
@@ -369,7 +401,7 @@ export default function Home() {
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Col Left: Text content */}
-            <motion.div 
+            <motion.div
               className="lg:col-span-7 space-y-6 text-center lg:text-left"
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={softBlurIn}
             >
@@ -390,13 +422,13 @@ export default function Home() {
             </motion.div>
 
             {/* Col Right: Doctor photo 2 */}
-            <motion.div 
+            <motion.div
               className="lg:col-span-5 h-[320px] sm:h-[400px] rounded-[3rem_1rem_3rem_1rem] overflow-hidden border border-white/10 relative group"
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={softBlurIn}
             >
-              <img 
-                src="/doctor_2.jpeg" 
-                alt="Consulta Médica Especializada" 
+              <img
+                src="/doctor_2.jpeg"
+                alt="Consulta Médica Especializada"
                 className="w-full h-full object-cover object-[center_35%] transition-transform duration-700 hover:scale-[1.02]"
               />
             </motion.div>
@@ -416,8 +448,8 @@ export default function Home() {
             <h2 className="text-3xl lg:text-4xl font-extrabold text-white mb-4 tracking-tight mt-6">Enfermedades Tratadas</h2>
             <div className="w-16 h-1 bg-accent mx-auto rounded-full" />
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={staggerContainer}
           >
@@ -425,15 +457,15 @@ export default function Home() {
               <motion.div key={disease.id} variants={softBlurIn} className="h-full">
                 <Link href={`/enfermedades/${disease.slug}`} className="bg-white/5 border border-white/10 hover:border-accent/40 shadow-sm hover:shadow-accent/5 hover:bg-white/10 transition-all duration-300 flex flex-col h-full p-8 rounded-[100px_0px_100px_0px] overflow-hidden group">
                   <div className="w-full h-40 bg-white/5 rounded-[80px_0px_80px_0px] mb-6 relative overflow-hidden flex items-center justify-center text-white/30 group-hover:bg-white/10 transition-colors">
-                    <img 
-                      src={disease.image} 
-                      alt={disease.name} 
+                    <img
+                      src={disease.image}
+                      alt={disease.name}
                       className="w-full h-full object-cover transition-transform duration-550 group-hover:scale-105"
                     />
                   </div>
                   <h3 className="text-base font-extrabold text-white mb-4 tracking-tight group-hover:text-accent transition-colors uppercase">{disease.name}</h3>
                   <p className="text-slate-400 text-xs mb-8 flex-grow leading-relaxed line-clamp-3">{disease.description}</p>
-                  
+
                   <span className="mt-auto text-white font-bold flex items-center gap-2 uppercase text-[9px] tracking-wider group-hover:text-accent transition-colors">
                     Saber más <span className="group-hover:translate-x-2 transition-transform duration-300">&rarr;</span>
                   </span>
@@ -443,12 +475,12 @@ export default function Home() {
           </motion.div>
 
           {/* Botón Ver Todas las Enfermedades */}
-          <motion.div 
+          <motion.div
             className="text-center mt-16"
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={softBlurIn}
           >
-            <Link 
-              href="/enfermedades" 
+            <Link
+              href="/enfermedades"
               className="inline-block bg-white text-[#3b1c39] hover:bg-accent hover:text-[#3b1c39] font-bold px-10 py-4.5 rounded-full transition-all duration-300 text-[10px] uppercase tracking-widest shadow-md hover:shadow-xl hover:scale-105"
             >
               Ver Todas las Enfermedades &rarr;
@@ -537,7 +569,7 @@ export default function Home() {
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Text details */}
-            <motion.div 
+            <motion.div
               className="lg:col-span-7 space-y-6 text-center lg:text-left"
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={softBlurIn}
             >
@@ -563,13 +595,13 @@ export default function Home() {
             </motion.div>
 
             {/* Doctor photo 5 */}
-            <motion.div 
+            <motion.div
               className="lg:col-span-5 h-[350px] lg:h-[400px] rounded-[3rem_1rem_3rem_1rem] overflow-hidden border border-white/10 relative group"
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={softBlurIn}
             >
-              <img 
-                src="/doctor_5.jpeg" 
-                alt="Hematóloga Pediatra Dra. Lizbeth" 
+              <img
+                src="/doctor_5.jpeg"
+                alt="Hematóloga Pediatra Dra. Lizbeth"
                 className="w-full h-full object-cover object-[center_28%] transition-transform duration-700 hover:scale-[1.02]"
               />
             </motion.div>
@@ -577,6 +609,40 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Doctoralia Booking Section */}
+      <section className="py-20 bg-slate-50 border-t border-b border-slate-100 relative">
+        <div className="container mx-auto px-6 max-w-5xl text-center">
+          <span className="text-[9px] font-bold text-accent uppercase tracking-widest block mb-2">Reserva Inmediata</span>
+          <h2 className="text-3xl font-black text-slate-900 uppercase tracking-tight mb-4">Agenda tu Cita en Línea</h2>
+          <div className="w-16 h-1 bg-primary mx-auto mb-10 rounded-full" />
+
+          <div className="max-w-xl mx-auto bg-white rounded-3xl shadow-lg border border-slate-100 overflow-hidden min-h-[500px] p-2 text-center">
+            <div className="w-full h-full min-h-[500px]">
+              <a
+                id="zl-url"
+                className="zl-url"
+                href="https://www.doctoralia.com.mx/lizbeth-yamilet-hernandez-verdugo/hematologo-pediatra/cuauhtemoc2"
+                rel="nofollow"
+                data-zlw-doctor="lizbeth-yamilet-hernandez-verdugo"
+                data-zlw-type="big_with_calendar"
+                data-zlw-opinion="false"
+                data-zlw-hide-branding="true"
+                data-zlw-saas-only="true"
+                data-zlw-a11y-title="Widget de reserva de citas médicas"
+              >
+                <div className="flex flex-col items-center justify-center min-h-[480px] p-6 text-slate-800 hover:bg-slate-50/50 transition-colors cursor-pointer group">
+                  <p className="text-xs sm:text-sm font-semibold mb-6 text-slate-500 max-w-md">
+                    Cargando calendario de Doctoralia... Si no visualizas el calendario interactivo, haz clic en el botón de abajo para reservar tu cita directamente:
+                  </p>
+                  <span className="inline-block bg-primary text-white font-bold px-8 py-3.5 rounded-full group-hover:bg-[#971F57] transition-all text-xs uppercase tracking-widest shadow-md">
+                    Reservar Cita en Doctoralia
+                  </span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -113,6 +113,44 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
                   </div>
                 </div>
               )}
+
+              {/* Dato de alarma específico para Neutropenia */}
+              {disease.slug === "neutropenia-infantil" && (
+                <div className="mt-6 bg-[#fff5f5] border border-red-200 p-6 sm:p-8 rounded-[2rem_0.5rem_2rem_0.5rem] relative overflow-hidden group shadow-sm flex flex-col sm:flex-row gap-5 items-start">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-red-500/5 rounded-full blur-xl pointer-events-none" />
+                  <div className="p-3 bg-red-100 text-red-650 rounded-full flex-shrink-0">
+                    <FaExclamationTriangle size={20} className="animate-pulse" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-black text-red-650 uppercase tracking-wider mb-2">¡Dato de alarma crítico!</h4>
+                    <p className="text-red-950 font-bold text-sm leading-relaxed mb-1.5">
+                      Fiebre neutropénica
+                    </p>
+                    <p className="text-slate-650 text-xs font-semibold leading-relaxed">
+                      La fiebre neutropénica se considera una urgencia médica principalmente en pacientes con neutropenia grave o asociada a quimioterapia, ya que una infección puede progresar rápidamente y requerir tratamiento inmediato.
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {/* ¿Cuándo consultar a un hematólogo pediatra? */}
+              {disease.whenToConsult && disease.whenToConsult.length > 0 && (
+                <div className="mt-8 bg-gradient-to-br from-[#971F57]/5 to-[#572D55]/5 border-2 border-accent/20 p-6 sm:p-8 rounded-[2rem_0.5rem_2rem_0.5rem] relative overflow-hidden group shadow-sm">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-accent/5 rounded-full blur-xl pointer-events-none" />
+                  <h3 className="text-sm sm:text-base font-black text-slate-900 mb-4 uppercase tracking-tight flex items-center gap-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-accent animate-ping" />
+                    ¿Cuándo consultar a un hematólogo pediatra?
+                  </h3>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {disease.whenToConsult.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <FaCheckCircle className="text-accent mt-0.5 flex-shrink-0" />
+                        <span className="text-xs font-semibold text-slate-650 leading-relaxed">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </StaggerItem>
 
             {/* Causas y Riesgos */}
@@ -145,6 +183,23 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
                 ))}
               </div>
             </StaggerItem>
+
+            {/* Enfermedades que deben descartarse */}
+            {disease.diseasesToRuleOut && disease.diseasesToRuleOut.length > 0 && (
+              <StaggerItem>
+                <h2 className="text-2xl font-black text-slate-900 mb-6 tracking-tight flex items-center gap-3 border-l-4 border-accent pl-4 uppercase">
+                  <FaExclamationTriangle className="text-accent" /> Enfermedades que deben descartarse
+                </h2>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {disease.diseasesToRuleOut.map((item, idx) => (
+                    <li key={idx} className="bg-white p-5 border border-slate-100 rounded-[1.5rem_0.5rem_1.5rem_0.5rem] shadow-sm flex items-start gap-4 hover:border-primary/20 transition-all group">
+                      <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0 group-hover:scale-125 transition-transform" />
+                      <span className="font-semibold text-slate-650 text-xs leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </StaggerItem>
+            )}
 
             {/* FAQs */}
             <StaggerItem>

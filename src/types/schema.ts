@@ -107,6 +107,8 @@ export const MedicalConditionSchema = z.object({
  seo: SEOSchema,
  ctaQuestion: z.string().optional(),
  ctaAnswer: z.string().optional(),
+ whenToConsult: z.array(z.string()).optional(),
+ diseasesToRuleOut: z.array(z.string()).optional(),
 });
 
 // ─── Medical Service (Servicio/Cirugía) ───────────────────────

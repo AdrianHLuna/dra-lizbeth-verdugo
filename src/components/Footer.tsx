@@ -56,7 +56,8 @@ export default function Footer() {
               {services.map(s => (
                 <li key={s.id}><Link href={`/servicios/${s.slug}`} className="hover:text-white transition">{s.name}</Link></li>
               ))}
-              <li><Link href="/servicios" className="text-[#F8B0E4] hover:text-white font-bold text-sm">Ver todos &rarr;</Link></li>
+              <li><Link href="/medicina-transfusional" className="text-[#F8B0E4] hover:text-white font-bold text-sm">Medicina Transfusional &rarr;</Link></li>
+              <li><Link href="/servicios" className="text-[#F8B0E4] hover:text-white font-bold text-sm">Ver todos los servicios &rarr;</Link></li>
             </ul>
           </div>
 

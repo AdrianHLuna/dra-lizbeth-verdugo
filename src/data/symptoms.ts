@@ -105,7 +105,7 @@ export const symptoms: Symptom[] = [
       "Sangre en orina o heces oscuras",
       "Moretones y/o petequias acompañados de palidez, cansancio o fiebre"
     ],
-    relatedConditions: ["enf-002", "enf-003", "enf-008", "enf-010", "enf-013", "enf-014"],
+    relatedConditions: ["enf-002", "enf-003", "enf-008", "enf-010", "enf-014"],
     image: "/sintomas/Moretones_Faciles_Sangrado_Frecuente.png",
     seo: {
       title: "Moretones y Sangrado de Nariz en Niños | Hematóloga CDMX",
@@ -139,7 +139,7 @@ export const symptoms: Symptom[] = [
     ],
     preguntaPrincipal: "¿Has notado pequeños puntos rojos o morados que no desaparecen al presionarlos, o manchas violáceas sin causa aparente en la piel de tu hijo?",
     preguntaPrincipalResponse: "Las petequias y la púrpura pueden aparecer por diversas causas. Cuando son persistentes, aumentan en número o se acompañan de sangrado, fiebre o moretones frecuentes, es importante que un hematólogo pediatra valore a tu hijo para identificar la causa y determinar si requiere estudios adicionales.",
-    relatedConditions: ["enf-002", "enf-008", "enf-010", "enf-013", "enf-014"],
+    relatedConditions: ["enf-002", "enf-008", "enf-010", "enf-014"],
     image: "/sintomas/petequias.png",
     seo: {
       title: "Puntos Rojos y Manchas Moradas en Niños | Hematóloga CDMX",
@@ -274,7 +274,7 @@ export const symptoms: Symptom[] = [
     signosAlarma: [
       "La mayoría de las infecciones en la infancia son normales, pero cuando son muy frecuentes, severas o difíciles de controlar, es importante realizar una valoración para descartar alteraciones hematológicas o inmunológicas."
     ],
-    relatedConditions: ["enf-003", "enf-011", "enf-012", "enf-014", "enf-017"],
+    relatedConditions: ["enf-003", "enf-011", "enf-014", "enf-017"],
     image: "/sintomas/Fiebre_Prolongada_Infecciones_Recurrentes.png",
     seo: {
       title: "Fiebre Prolongada e Infecciones en Niños | Dra. Lizbeth",
@@ -285,7 +285,7 @@ export const symptoms: Symptom[] = [
   {
     id: "sym-004",
     slug: "ganglios-inflamados-adenopatias",
-    name: "Ganglios Inflamados",
+    name: "Adenopatías Pediátricas (Ganglios Inflamados)",
     description: "Los ganglios son pequeñas estructuras del sistema inmunológico que ayudan a combatir infecciones. Es común que aumenten de tamaño durante infecciones virales o bacterianas, pero en algunos casos pueden requerir una valoración médica más detallada.",
     causesTitle: "Posibles causas de adenopatias",
     causes: [
@@ -310,7 +310,7 @@ export const symptoms: Symptom[] = [
     signosAlarma: [
       "La mayoría de los ganglios inflamados en niños se deben a infecciones y desaparecen con el tiempo. Sin embargo, los ganglios que aumentan de tamaño, persisten por varias semanas, son duros o se acompañan de fiebre prolongada, pérdida de peso o sudoración nocturna deben ser valorados por un especialista."
     ],
-    relatedConditions: ["enf-011", "enf-012", "enf-014"],
+    relatedConditions: ["enf-011", "enf-014"],
     image: "/sintomas/Ganglios_Inflamados.png",
     seo: {
       title: "Ganglios Inflamados en Niños | Dra. Lizbeth Hernández",

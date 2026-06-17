@@ -487,55 +487,6 @@ export const diseases: MedicalCondition[] = [
     }
   },
   {
-    id: "enf-012",
-    slug: "adenopatia-infantil",
-    name: "Adenopatías Pediátricas",
-    technicalName: "Linfadenopatía Infantil",
-    description: "Las adenopatías pediátricas consisten en el aumento de tamaño, cambio de consistencia o número de los ganglios linfáticos en los niños. Aunque comúnmente son una respuesta benigna a infecciones, requieren evaluación médica experta para descartar patologías hematológicas graves.",
-    symptoms: ["Bultos palpables o visibles en el cuello, nuca, axilas o ingle", "Dolor local en los ganglios afectados", "Enrojecimiento o calor en la piel sobre el ganglio", "Fiebre asociada a infecciones respiratorias o de oído"],
-    causes: ["Infecciones virales frecuentes (faringitis, mononucleosis, etc.) o bacterianas", "Inflamación reactiva benigna", "Enfermedades hematológicas como leucemias o linfomas"],
-    riskFactors: ["Contacto con personas enfermas de vías respiratorias", "Rasguños de gatos o picaduras de insectos infectadas"],
-    complications: ["Formación de abscesos que requieren drenaje quirúrgico", "Retraso en el diagnóstico de procesos oncohematológicos si no se vigila correctamente"],
-    treatments: ["Tratamiento antibiótico o antiviral si hay infección demostrada", "Vigilancia clínica periódica", "Biopsia de ganglio en casos de sospecha oncológica"],
-    faqs: [
-      { question: "¿Cuándo debo preocuparme por un ganglio inflamado?", answer: "Debe preocuparse y acudir a revisión si el ganglio mide más de 2 centímetros, es duro, no se mueve al palparlo, no causa dolor, se acompaña de pérdida de peso o fiebre prolongada, o no disminuye de tamaño en 4 a 6 semanas." },
-      { question: "¿Por qué se inflaman los ganglios tan seguido en niños?", answer: "El sistema inmunitario de los niños está activo y en constante aprendizaje. Los ganglios son estaciones de defensa que se activan ante cualquier virus o bacteria común." },
-      { question: "¿Se deben dar antibióticos de inmediato?", answer: "No, la mayoría son reactivas a infecciones virales que no requieren antibióticos. El uso indiscriminado de antibióticos automedicados puede ocultar infecciones bacterianas o retrasar diagnósticos." }
-    ],
-    image: "/enfermedades/Adenopatias_Pediatricas.png",
-    relatedServices: ["ser-003"],
-    relatedSymptoms: ["sym-004", "sym-006"],
-    seo: {
-      title: "Adenopatías en Niños (Ganglios Inflamados) | CDMX",
-      description: "Evaluación diagnóstica y tratamiento de ganglios inflamados en bebés y niños. Consulta con la Dra. Lizbeth Hernández.",
-      keywords: ["Adenopatías infantiles CDMX", "Ganglios inflamados en el cuello niños", "Cuándo preocuparse por un ganglio"],
-    }
-  },
-  {
-    id: "enf-013",
-    slug: "petequias-purpura",
-    name: "Petequias y Púrpura",
-    description: "Las petequias (puntos rojos milimétricos) y la púrpura (manchas moradas más grandes) son manifestaciones en la piel causadas por la salida de glóbulos rojos de los vasos sanguíneos hacia el tejido subcutáneo, lo que suele indicar una alteración en la cantidad o función de las plaquetas o inflamación de los vasos.",
-    symptoms: ["Puntos rojos pequeños que no desaparecen al presionarlos", "Manchas moradas de formas diversas en la piel", "Sangrados asociados en encías o nariz", "Molestias articulares en algunos casos"],
-    causes: ["Plaquetas bajas (trombocitopenia)", "Vasculitis (inflamación de los vasos sanguíneos pequeños, como en la Púrpura de Henoch-Schönlein)", "Traumatismos o infecciones graves"],
-    riskFactors: ["Infecciones virales previas", "Exposición a ciertos fármacos", "Defectos en la coagulación"],
-    complications: ["Hemorragias internas espontáneas si las plaquetas son extremadamente bajas", "Afectación de órganos internos en vasculitis sistémicas (ej. riñones)"],
-    treatments: ["Manejo del trastorno subyacente (como PTI o vasculitis)", "Reposo y control sintomático", "Tratamiento inmunosupresor o de soporte transfusional en casos severos"],
-    faqs: [
-      { question: "¿Cómo distingo una petequia de una picadura?", answer: "Una forma sencilla es presionar la mancha firmemente con un dedo o un vaso de vidrio transparente. Si la mancha se vuelve blanca o desaparece momentáneamente, no es petequia. Si permanece roja o morada sin cambiar, es una petequia (sangrado bajo la piel)." },
-      { question: "¿Las petequias son una urgencia médica?", answer: "Sí, la aparición súbita de petequias en un niño sin golpe previo debe ser evaluada de inmediato por un especialista en hematología pediátrica para realizar una biometría hemática de urgencia." },
-      { question: "¿Tiene que ver con la alimentación del niño?", answer: "Generalmente no se debe a la alimentación, sino a trastornos inmunitarios, plaquetarios o infecciosos que deben ser estudiados clínicamente." }
-    ],
-    image: "/enfermedades/Petequias_Purpura.png",
-    relatedServices: ["ser-003", "ser-006"],
-    relatedSymptoms: ["sym-003", "sym-010"],
-    seo: {
-      title: "Petequias y Púrpura en Niños | Hematóloga CDMX",
-      description: "Diagnóstico urgente y tratamiento de manchas moradas y puntos rojos en la piel de niños. Dra. Lizbeth Hernández.",
-      keywords: ["Petequias en niños causas", "Púrpura de Henoch-Schönlein CDMX", "Puntos rojos en la piel niños urgencia"],
-    }
-  },
-  {
     id: "enf-014",
     slug: "leucemia-linfoblastica-aguda",
     name: "Leucemia Linfoblástica Aguda",
@@ -575,7 +526,7 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Los anticoagulantes ponen en riesgo al niño?", answer: "Tienen un riesgo de causar sangrado, por lo que requieren una dosificación muy precisa, monitoreo constante de laboratorio e indicación rigurosa por un hematólogo pediatra." },
       { question: "¿Qué es una trombofilia?", answer: "Es una condición hereditaria o adquirida en la que la sangre tiene una mayor tendencia natural a formar coágulos de forma inapropiada." }
     ],
-    image: "/enfermedades/Trombosis_Niños.png",
+    image: "/enfermedades/Trombosis_Niños.jpeg",
     relatedServices: ["ser-005", "ser-007"],
     relatedSymptoms: ["sym-007"],
     seo: {
