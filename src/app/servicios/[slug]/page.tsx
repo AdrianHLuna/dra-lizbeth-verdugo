@@ -3,6 +3,7 @@ import { doctor } from "@/data/doctor";
 import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import StructuredData from "@/components/StructuredData";
+import Image from "next/image";
 import { FaCheckCircle, FaInfoCircle, FaCalendarCheck } from "react-icons/fa";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/Animations";
 
@@ -66,9 +67,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           
           <div className="lg:w-5/12 min-h-[300px] bg-slate-50 flex items-center justify-center relative overflow-hidden group rounded-full border-8 border-slate-100 shadow-lg">
              <div className="absolute inset-0 bg-slate-100 transition-transform duration-700 flex items-center justify-center">
-                <img 
+                <Image 
                   src={service.image} 
                   alt={service.name} 
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
              </div>
@@ -204,7 +207,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 {service.ctaQuestion || "¿Tu hijo requiere este estudio?"}
               </h3>
               <div className="w-10 h-1 bg-accent mb-6 rounded-full" />
-              <p className="text-slate-300 text-xs mb-8 leading-relaxed">
+              <p className="text-slate-300 text-xs mb-8 leading-relaxed whitespace-pre-line">
                 {service.ctaAnswer || "La Dra. Lizbeth realiza y supervisa personalmente los procedimientos bajo estrictos protocolos de bioseguridad y control analgésico infantil."}
               </p>
               <a href={`https://wa.me/${doctor.whatsapp.replace(/\D/g, "")}`} target="_blank" rel="noreferrer" className="block w-full flex items-center justify-center gap-2 bg-white text-primary font-bold py-4 rounded-full hover:bg-[#FEE5FD] hover:text-[#971F57] transition-all text-[9px] uppercase tracking-widest shadow-lg">

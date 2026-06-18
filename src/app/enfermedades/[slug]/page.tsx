@@ -3,6 +3,7 @@ import { doctor } from "@/data/doctor";
 import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import StructuredData from "@/components/StructuredData";
+import Image from "next/image";
 import { FaCheckCircle, FaExclamationTriangle, FaStethoscope } from "react-icons/fa";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/Animations";
 
@@ -70,10 +71,12 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
           
           <div className="lg:w-5/12 min-h-[300px] bg-slate-50 flex items-center justify-center relative overflow-hidden group rounded-full border-8 border-slate-100 shadow-lg">
              <div className="absolute inset-0 bg-slate-105 transition-transform duration-700 flex items-center justify-center">
-                <img 
+                <Image 
                   src={disease.image} 
                   alt={disease.name} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="w-full h-full object-cover transition-transform duration-550 group-hover:scale-105"
                 />
              </div>
           </div>
@@ -94,6 +97,22 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
                   </li>
                 ))}
               </ul>
+
+              {/* Dato de alerta específico para Anemia Ferropénica */}
+              {disease.slug === "anemia-ferropenica" && (
+                <div className="mt-6 bg-amber-50/50 border border-amber-200 p-6 sm:p-8 rounded-[2rem_0.5rem_2rem_0.5rem] relative overflow-hidden group shadow-sm flex flex-col sm:flex-row gap-5 items-start">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-amber-500/5 rounded-full blur-xl pointer-events-none" />
+                  <div className="p-3 bg-amber-100 text-amber-700 rounded-full flex-shrink-0">
+                    <FaExclamationTriangle size={20} className="animate-pulse" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-black text-amber-700 uppercase tracking-wider mb-2">Información Importante</h4>
+                    <p className="text-slate-700 text-xs font-semibold leading-relaxed">
+                      La anemia ferropénica es tratable cuando se identifica a tiempo. Una valoración especializada permite encontrar la causa, corregir la deficiencia de hierro y prevenir complicaciones en el crecimiento y desarrollo del niño.
+                    </p>
+                  </div>
+                </div>
+              )}
 
               {/* Dato de alarma específico para Talasemia */}
               {disease.slug === "talasemia" && (

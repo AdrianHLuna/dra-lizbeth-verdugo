@@ -5,7 +5,7 @@ export const diseases: MedicalCondition[] = [
     id: "enf-001",
     slug: "anemia-ferropenica",
     name: "Anemia Ferropénica",
-    description: "La anemia ferropénica es la disminución de los niveles de hemoglobina y glóbulos rojos en la sangre debido a la falta de hierro, el mineral necesario para producir hemoglobina en el cuerpo del niño.",
+    description: "La anemia ferropénica es el tipo más frecuente de anemia en la infancia y ocurre cuando el organismo no cuenta con suficiente hierro para producir hemoglobina, la proteína encargada de transportar oxígeno en la sangre. Esto puede ocasionar cansancio, palidez y afectar el crecimiento, el aprendizaje y el desarrollo del niño.",
     symptoms: [
       "Fatiga y cansancio excesivo",
       "Palidez en piel y encías",
@@ -19,19 +19,17 @@ export const diseases: MedicalCondition[] = [
       "Retraso del crecimiento o del desarrollo en casos prolongados"
     ],
     causes: [
-      "Dieta pobre en hierro",
-      "Consumo excesivo de leche de vaca",
-      "Sangrado gastrointestinal",
-      "Menstruaciones abundantes en adolescentes",
-      "Problemas de absorción intestinal (por ejemplo, enfermedad celíaca)"
+      "Dieta insuficiente en hierro.",
+      "Consumo excesivo de leche de vaca.",
+      "Aumento de requerimientos durante el crecimiento.",
+      "Prematuridad o bajo peso al nacer.",
+      "Pérdidas sanguíneas (menstruaciones abundantes o sangrado gastrointestinal).",
+      "Trastornos de absorción intestinal (celiaquía, enfermedad inflamatoria intestinal)."
     ],
     riskFactors: ["Nacimiento prematuro o bajo peso al nacer", "Introducción tardía de alimentos sólidos", "Consumo excesivo de leche de vaca en menores de un año"],
     complications: ["Retraso en el desarrollo psicomotor", "Problemas de aprendizaje y concentración", "Debilidad del sistema inmunitario con propensión a infecciones"],
     treatments: [
-      "Suplementación con hierro por vía oral.",
-      "Ajustes en la alimentación para aumentar el consumo de hierro y vitamina C.",
-      "Identificación y tratamiento de la causa que originó la deficiencia de hierro.",
-      "Seguimiento con estudios de laboratorio para evaluar la respuesta al tratamiento."
+      "Tratamiento con hierro oral bajo supervisión médica"
     ],
     faqs: [
       {
@@ -49,11 +47,23 @@ export const diseases: MedicalCondition[] = [
       {
         question: "¿Qué alimentos ayudan a aumentar el hierro?",
         answer: "Los alimentos ricos en hierro incluyen carnes rojas, pollo, pescado, lentejas, frijoles, garbanzos y cereales fortificados. Consumirlos junto con alimentos ricos en vitamina C ayuda a mejorar la absorción del hierro."
+      },
+      {
+        question: "¿La anemia ferropénica puede afectar el aprendizaje o el desarrollo?",
+        answer: "Sí. Cuando la deficiencia de hierro es prolongada, puede afectar la atención, el aprendizaje, el desarrollo cognitivo y el comportamiento. Por ello es importante detectarla y tratarla oportunamente."
       }
     ],
     image: "/enfermedades/anemia_ferropenica.png",
     relatedServices: ["ser-003", "ser-006"],
     relatedSymptoms: ["sym-001", "sym-002"],
+    whenToConsult: [
+      "Si la anemia es severa.",
+      "Si no mejora con el tratamiento indicado.",
+      "Si existen antecedentes familiares de enfermedades hematológicas.",
+      "Si se acompaña de ictericia, moretones o sangrados.",
+      "Si hay alteraciones adicionales en la biometría hemática.",
+      "Si la causa de la anemia no es clara"
+    ],
     seo: {
       title: "Anemia Ferropénica en Niños | Hematóloga Pediatra CDMX",
       description: "Diagnóstico y tratamiento de la anemia ferropénica por falta de hierro en bebés y niños. Consulta con la Dra. Lizbeth Hernández.",
@@ -66,7 +76,7 @@ export const diseases: MedicalCondition[] = [
     slug: "trombocitopenia-inmune-pti",
     name: "Trombocitopenia Inmune",
     technicalName: "Púrpura Trombocitopénica Inmune",
-    description: "La trombocitopenia inmune es un trastorno sanguíneo caracterizado por una disminución anormal del número de plaquetas en la sangre debido a que el sistema inmunitario del propio niño las destruye.",
+    description: "La Trombocitopenia Inmune Primaria (PTI) es una enfermedad en la que el sistema inmunológico destruye las plaquetas por error, provocando que su cantidad disminuya y aumentando el riesgo de moretones o sangrados.\n\nEs una de las causas más frecuentes de plaquetas bajas en la infancia y, en muchos niños, puede resolverse espontáneamente con el tiempo.",
     symptoms: [
       "Aparición de moretones fáciles sin causa",
       "Petequias que son pequeños puntos rojos en la piel",
@@ -91,11 +101,15 @@ export const diseases: MedicalCondition[] = [
       { question: "¿El niño puede realizar actividades físicas normales?", answer: "La mayoría de los niños puede realizar actividades cotidianas. Sin embargo, cuando las plaquetas están muy bajas, se recomienda evitar deportes de contacto o actividades con alto riesgo de golpes hasta que el hematólogo indique que es seguro retomarlas." },
       { question: "¿Esta enfermedad se vuelve crónica?", answer: "La mayoría de los niños se recupera completamente en los primeros 6 a 12 meses. Aproximadamente entre 20 y 30% pueden desarrollar PTI persistente o crónica." },
       { question: "¿Requiere transfusión de plaquetas?", answer: "Generalmente no. Las transfusiones de plaquetas suelen reservarse para casos de sangrado grave o situaciones especiales, ya que las plaquetas transfundidas pueden ser destruidas rápidamente por el sistema inmunitario." },
-      { question: "¿Cuánto tarda en resolverse con tratamiento?", answer: "La respuesta al tratamiento es variable. Algunos niños presentan aumento de plaquetas en los primeros 7 días, mientras que otros pueden tardar varias semanas. El objetivo principal del tratamiento es disminuir el riesgo de sangrado y permitir una vida segura mientras ocurre la recuperación." }
+      { question: "¿Cuánto tarda en resolverse con tratamiento?", answer: "La respuesta al tratamiento es variable. Algunos niños presentan aumento de plaquetas en los primeros 7 días, mientras que otros pueden tardar varias semanas. El objetivo principal del tratamiento es disminuir el riesgo de sangrado y permitir una vida segura mientras ocurre la recuperación." },
+      { question: "¿Todos los niños con PTI necesitan tratamiento?", answer: "No. En muchos niños con PTI y sangrado leve, la observación cuidadosa puede ser la mejor opción. El tratamiento se individualiza según los síntomas, el riesgo de sangrado y el impacto en la calidad de vida" },
+      { question: "¿Las plaquetas bajas siempre significan una enfermedad grave?", answer: "No. Aunque las plaquetas bajas requieren valoración médica, la PTI suele ser una enfermedad benigna en la mayoría de los niños. Muchos pacientes presentan únicamente petequias, moretones o sangrados leves y pueden recuperarse completamente." }
     ],
     image: "/enfermedades/Trombocitopenia_Inmune.png",
     relatedServices: ["ser-001", "ser-003", "ser-006"],
     relatedSymptoms: ["sym-003", "sym-010", "sym-014", "sym-015", "sym-016"],
+    ctaQuestion: "¿Tu hijo presenta moretones frecuentes, petequias o le han informado que tiene las plaquetas bajas?",
+    ctaAnswer: "Una valoración por Hematología Pediátrica permite confirmar la causa, evaluar el riesgo de sangrado y definir si requiere vigilancia o tratamiento especializado.",
     seo: {
       title: "Trombocitopenia Inmune en Niños | Púrpura Infantil CDMX",
       description: "Información y tratamiento especializado para la Púrpura Trombocitopénica Inmune (PTI) en niños con la Dra. Lizbeth Hernández.",
@@ -150,6 +164,16 @@ export const diseases: MedicalCondition[] = [
     image: "/enfermedades/Anemia_Aplasica.png",
     relatedServices: ["ser-001", "ser-002", "ser-006", "ser-007"],
     relatedSymptoms: ["sym-001", "sym-002", "sym-003", "sym-006", "sym-013", "sym-014", "sym-015"],
+    diseasesToRuleOut: [
+      "Anemia de Fanconi.",
+      "Disqueratosis congénita.",
+      "Síndrome de Shwachman-Diamond.",
+      "Leucemia aguda.",
+      "Síndromes mielodisplásicos.",
+      "Hemoglobinuria paroxística nocturna"
+    ],
+    ctaQuestion: "¿Tu hijo presenta anemia persistente, infecciones frecuentes o sangrados inexplicables?",
+    ctaAnswer: "Una valoración por Hematología Pediátrica permite identificar la causa de la falla medular y definir el tratamiento más adecuado para cada paciente.",
     seo: {
       title: "Anemia Aplásica Infantil | Falla Medular CDMX",
       description: "Diagnóstico y alternativas de tratamiento para la anemia aplásica en niños con la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
@@ -185,9 +209,11 @@ export const diseases: MedicalCondition[] = [
       "Cirugía para retirar el bazo (en algunos casos seleccionados)"
     ],
     faqs: [
-      { question: "¿Por qué se ponen amarillos los ojos del niño?", answer: "Cuando los glóbulos rojos se destruyen más rápido de lo normal, aumenta la cantidad de bilirrubina en la sangre. Esto puede hacer que los ojos y la piel se vean amarillos, una condición llamada ictericia." },
+      { question: "¿Por qué se ponen amarillos los ojos del niño?", answer: "Cuando los glóbulos rojos se destruyen más rápido de lo normal, aumenta la cantidad de bilirrubina en la sangre. Esto puede hacer que los ojos and la piel se vean amarillos, una condición llamada ictericia." },
       { question: "¿Es una enfermedad hereditaria?", answer: "Algunas formas de anemia hemolítica son hereditarias y se transmiten de padres a hijos. Otras son adquiridas y pueden aparecer por enfermedades autoinmunes, infecciones o algunos medicamentos." },
-      { question: "¿Cómo se realiza el diagnóstico?", answer: "El diagnóstico se realiza mediante estudios de sangre que permiten identificar la causa de la destrucción de los glóbulos rojos. Estos incluyen biometría hemática, recuento de reticulocitos, bilirrubinas, deshidrogenasa láctica (DHL), haptoglobina, frotis de sangre periférica y, en algunos casos, la prueba de Coombs. Dependiendo de la sospecha clínica, pueden requerirse estudios especializados adicionales." }
+      { question: "¿Cómo se realiza el diagnóstico?", answer: "El diagnóstico se realiza mediante estudios de sangre que permiten identificar la causa de la destrucción de los glóbulos rojos. Estos incluyen biometría hemática, recuento de reticulocitos, bilirrubinas, deshidrogenasa láctica (DHL), haptoglobina, frotis de sangre periférica y, en algunos casos, la prueba de Coombs. Dependiendo de la sospecha clínica, pueden requerirse estudios especializados adicionales." },
+      { question: "¿La anemia hemolítica puede requerir transfusiones?", answer: "En algunos casos sí. Cuando la anemia es grave o provoca síntomas importantes, puede ser necesaria una transfusión de glóbulos rojos. La decisión depende de la causa, la gravedad y el estado clínico del paciente" },
+      { question: "¿La anemia hemolítica siempre es grave?", answer: "No necesariamente. Algunas formas son leves y solo requieren vigilancia periódica, mientras que otras pueden provocar anemia importante y requerir tratamiento especializado. El pronóstico depende de la causa y de la rapidez con que se establezca el diagnóstico." }
     ],
     image: "/enfermedades/Anemia_Hemolitica.png",
     relatedServices: ["ser-003", "ser-006"],
@@ -682,21 +708,31 @@ export const diseases: MedicalCondition[] = [
     ],
     faqs: [
       {
-        question: "¿Cuál es la diferencia entre linfoma de Hodgkin y linfoma no Hodgkin?",
-        answer: "El linfoma de Hodgkin tiene características específicas al microscopio (células de Reed-Sternberg) y suele tener mejor pronóstico en la mayoría de los casos. Los linfomas no Hodgkin son un grupo más heterogéneo con diferentes subtipos que requieren tratamientos específicos según el tipo celular."
+        question: "¿Qué diferencia hay entre linfoma de Hodgkin y no Hodgkin?",
+        answer: "Son dos tipos diferentes de linfoma que se distinguen por las células que los originan y por su comportamiento clínico. Ambos pueden presentarse en la infancia y requieren tratamiento especializado. Actualmente existen tratamientos muy efectivos para ambos tipos y muchos niños logran curarse."
+      },
+      {
+        question: "¿Un ganglio inflamado siempre es signo de linfoma?",
+        answer: "No. La gran mayoría de los ganglios inflamados en los niños se relacionan con infecciones comunes. Sin embargo, es importante valorarlos cuando persisten varias semanas, aumentan progresivamente de tamaño o se acompañan de fiebre prolongada, pérdida de peso o sudoración nocturna."
+      },
+      {
+        question: "¿Cómo se confirma el diagnóstico?",
+        answer: "El diagnóstico se confirma mediante una biopsia del ganglio o tejido afectado. La muestra es analizada por especialistas en patología para identificar el tipo exacto de linfoma y planificar el tratamiento más adecuado."
       },
       {
         question: "¿El linfoma infantil tiene cura?",
-        answer: "Sí. Muchos tipos de linfoma infantil, especialmente el linfoma de Hodgkin, tienen tasas de curación muy elevadas con tratamiento oportuno. El diagnóstico temprano y el tratamiento especializado son fundamentales para el pronóstico."
+        answer: "Sí. Actualmente muchos niños y adolescentes con linfoma pueden curarse gracias a los avances en el diagnóstico y tratamiento. El pronóstico depende del tipo de linfoma, la extensión de la enfermedad y la respuesta al tratamiento."
       },
       {
-        question: "¿Cuánto tiempo duran inflamados los ganglios para sospechar de linfoma?",
-        answer: "Ganglios que persisten más de 4 semanas, que no responden a antibióticos, que crecen progresivamente o que se acompañan de fiebre, pérdida de peso o sudoración nocturna requieren una evaluación especializada para descartar linfoma u otras enfermedades."
+        question: "¿Todos los ganglios inflamados necesitan una biopsia?",
+        answer: "No. La mayoría de los ganglios inflamados en niños son secundarios a infecciones y desaparecen con el tiempo. La biopsia solo se recomienda cuando existen características que hacen sospechar una enfermedad más importante o cuando los ganglios persisten sin una causa clara."
       }
     ],
     image: "/enfermedades/Leucemia_Linfoblastica_Aguda.png",
     relatedServices: ["ser-001", "ser-002", "ser-004", "ser-007"],
     relatedSymptoms: ["sym-004", "sym-006"],
+    ctaQuestion: "¿Tu hijo presenta ganglios inflamados persistentes, fiebre prolongada o pérdida de peso sin explicación?",
+    ctaAnswer: "La mayoría de estos síntomas pueden deberse a causas benignas, pero cuando persisten o se acompañan de otros signos de alarma es importante una valoración especializada para identificar su causa y brindar el tratamiento adecuado.",
     seo: {
       title: "Linfoma Infantil | Hematóloga Pediatra CDMX",
       description: "Diagnóstico y evaluación de linfoma de Hodgkin y no Hodgkin en niños. Consulta experta con la Dra. Lizbeth Hernández.",

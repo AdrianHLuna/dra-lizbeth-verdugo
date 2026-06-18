@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { doctor } from "@/data/doctor";
 import { diseases } from "@/data/diseases";
 import { services } from "@/data/services";
@@ -15,9 +16,11 @@ export default function Footer() {
           {/* Col 1: Contacto y Métodos de pago */}
           <div className="flex flex-col gap-6">
             <Link href="/" className="relative flex items-center overflow-hidden h-24 w-24 group">
-              <img 
+              <Image 
                 src="/LOGO DRA LIZBETH-10.png" 
                 alt="Dra. Lizbeth Hernández - Hematología Pediátrica" 
+                width={150}
+                height={150}
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-none w-[170%] h-[170%] object-contain"
               />
             </Link>

@@ -299,8 +299,8 @@ export const services: MedicalService[] = [
     },
     image: "/servicios/Interpretacion_Estudios_Geneticos_Moleculares.png",
     painDescription: "No aplica",
-    ctaQuestion: "¿Tu hijo tiene un estudio genético o molecular relacionado con una enfermedad de la sangre?",
-    ctaAnswer: "Los resultados de estos estudios pueden ser complejos de interpretar. Una valoración especializada ayuda a comprender qué significan los hallazgos genéticos, cómo se relacionan con la enfermedad de tu hijo y qué implicaciones pueden tener para su diagnóstico, tratamiento y seguimiento.",
+    ctaQuestion: "¿Tu hijo tiene algún estudio genético alterado?",
+    ctaAnswer: "Biometría hemática alterada.\nPlaquetas altas o bajas.\nNeutropenia.\nAnemia.\nLeucocitos elevados.\nHallazgos incidentales en laboratorio.\n\nLa Dra. Lizbeth Hernández evalúa alteraciones en estudios de laboratorio, biometrías hemáticas y pruebas especializadas para identificar la causa y orientar el tratamiento más adecuado para cada paciente.",
     seo: {
       title: "Interpretación de Pruebas Genéticas y Moleculares CDMX | Dra. Lizbeth",
       description: "Análisis experto de estudios de cariotipo, FISH y PCR en hematología pediátrica. Dra. Lizbeth Hernández, Hematóloga Pediatra.",

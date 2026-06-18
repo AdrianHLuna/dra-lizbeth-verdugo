@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { doctor } from "@/data/doctor";
+import Image from "next/image";
 import { useState } from "react";
 import { FaBars, FaTimes, FaWhatsapp, FaPhone } from "react-icons/fa";
 
@@ -38,9 +39,12 @@ export default function Header() {
       {/* Main Nav */}
       <div className="container mx-auto px-4 lg:px-6 py-4 flex items-center justify-between">
         <Link href="/" className="relative flex items-center overflow-hidden h-28 lg:h-36 w-56 lg:w-72 group">
-          <img 
+          <Image 
             src="/LOGO DRA LIZBETH-01.png" 
             alt="Dra. Lizbeth Hernández - Hematología Pediátrica" 
+            width={500}
+            height={200}
+            priority
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-none w-[220%] h-[220%] object-contain"
           />
         </Link>

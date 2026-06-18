@@ -4,6 +4,7 @@ import { doctor } from "@/data/doctor";
 import { services } from "@/data/services";
 import { symptoms } from "@/data/symptoms";
 import { diseases } from "@/data/diseases";
+import Image from "next/image";
 import { FaCalendarCheck, FaAward, FaUniversity, FaCertificate, FaHospitalSymbol, FaMoneyBillWave, FaExchangeAlt, FaCreditCard, FaMapMarkerAlt, FaClock } from "react-icons/fa";
 import StructuredData from "@/components/StructuredData";
 import Link from "next/link";
@@ -140,16 +141,23 @@ export default function Home() {
                   transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
                 >
                   <AnimatePresence mode="wait">
-                    <motion.img
+                    <motion.div
                       key={currentSlide}
-                      src={heroSlides[currentSlide].src}
-                      alt={`Dra. ${doctor.name}`}
-                      className={`absolute w-full h-full object-cover ${heroSlides[currentSlide].align}`}
+                      className="absolute inset-0 w-full h-full"
                       initial={{ opacity: 0, scale: 1.05 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.8, ease: "easeInOut" }}
-                    />
+                    >
+                      <Image
+                        src={heroSlides[currentSlide].src}
+                        alt={`Dra. ${doctor.name}`}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        priority
+                        className={`object-cover ${heroSlides[currentSlide].align}`}
+                      />
+                    </motion.div>
                   </AnimatePresence>
                 </motion.div>
 
@@ -194,9 +202,11 @@ export default function Home() {
             <motion.div variants={softBlurIn} className="lg:col-span-7 space-y-8">
               {/* Foto About Me */}
               <div className="w-full h-[450px] lg:h-[500px] bg-slate-100 rounded-[2rem_0.5rem_2rem_0.5rem] relative overflow-hidden flex items-center justify-center border border-slate-150 shadow-sm">
-                <img
+                <Image
                   src="/doctor_aboutme.jpeg"
                   alt={`Dra. ${doctor.name}`}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="w-full h-full object-cover object-[center_43%] transition-transform duration-700 hover:scale-[1.02]"
                 />
               </div>
@@ -252,9 +262,11 @@ export default function Home() {
               className="lg:col-span-5 h-[350px] lg:h-[450px] rounded-[1rem_3rem_1rem_3rem] overflow-hidden border border-slate-150 shadow-sm relative group"
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={softBlurIn}
             >
-              <img
+              <Image
                 src="/doctor_4.jpeg"
                 alt="Compromiso Hematología Pediátrica"
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
                 className="w-full h-full object-cover object-[center_30%] transition-transform duration-700 hover:scale-[1.02]"
               />
             </motion.div>
@@ -316,9 +328,11 @@ export default function Home() {
               >
                 <Link href={`/sintomas/${sym.slug}`} className="bg-white p-8 border border-slate-150 hover:border-slate-355 hover:bg-[#0f1e36] hover:text-white transition-all duration-300 flex flex-col h-full rounded-[2.5rem_0.5rem_2.5rem_0.5rem] shadow-sm hover:shadow-xl hover:scale-[1.03] group">
                   <div className="w-full h-44 bg-slate-100 rounded-[2rem_0.5rem_2rem_0.5rem] mb-6 relative overflow-hidden flex items-center justify-center text-slate-400 group-hover:bg-[#1a2d4a] transition-colors duration-300">
-                    <img
+                    <Image
                       src={sym.image}
                       alt={sym.name}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="w-full h-full object-cover transition-transform duration-550 group-hover:scale-105"
                     />
                   </div>
@@ -368,9 +382,11 @@ export default function Home() {
               <motion.div key={service.id} variants={softBlurIn} className="w-full">
                 <Link href={`/servicios/${service.slug}`} className="bg-white border border-slate-100 hover:border-primary/20 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row justify-between items-center p-8 rounded-[2rem_0.5rem_2rem_0.5rem] group relative overflow-hidden">
                   <div className="w-full md:w-60 h-40 bg-slate-100 rounded-2xl relative overflow-hidden flex items-center justify-center text-slate-400 transition-colors flex-shrink-0 mb-6 md:mb-0 md:mr-8">
-                    <img
+                    <Image
                       src={service.image}
                       alt={service.name}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 240px"
                       className="w-full h-full object-cover transition-transform duration-550 group-hover:scale-105"
                     />
                   </div>
@@ -437,9 +453,11 @@ export default function Home() {
               className="lg:col-span-5 h-[320px] sm:h-[400px] rounded-[3rem_1rem_3rem_1rem] overflow-hidden border border-white/10 relative group"
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={softBlurIn}
             >
-              <img
+              <Image
                 src="/doctor_2.jpeg"
                 alt="Consulta Médica Especializada"
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
                 className="w-full h-full object-cover object-[center_35%] transition-transform duration-700 hover:scale-[1.02]"
               />
             </motion.div>
@@ -468,9 +486,11 @@ export default function Home() {
               <motion.div key={disease.id} variants={softBlurIn} className="h-full">
                 <Link href={`/enfermedades/${disease.slug}`} className="bg-white/5 border border-white/10 hover:border-accent/40 shadow-sm hover:shadow-accent/5 hover:bg-white/10 transition-all duration-300 flex flex-col h-full p-8 rounded-[100px_0px_100px_0px] overflow-hidden group">
                   <div className="w-full h-40 bg-white/5 rounded-[80px_0px_80px_0px] mb-6 relative overflow-hidden flex items-center justify-center text-white/30 group-hover:bg-white/10 transition-colors">
-                    <img
+                    <Image
                       src={disease.image}
                       alt={disease.name}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="w-full h-full object-cover transition-transform duration-550 group-hover:scale-105"
                     />
                   </div>
@@ -610,9 +630,11 @@ export default function Home() {
               className="lg:col-span-5 h-[350px] lg:h-[400px] rounded-[3rem_1rem_3rem_1rem] overflow-hidden border border-white/10 relative group"
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={softBlurIn}
             >
-              <img
+              <Image
                 src="/doctor_5.jpeg"
                 alt="Hematóloga Pediatra Dra. Lizbeth"
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
                 className="w-full h-full object-cover object-[center_28%] transition-transform duration-700 hover:scale-[1.02]"
               />
             </motion.div>

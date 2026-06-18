@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { symptoms } from "@/data/symptoms";
 import { doctor } from "@/data/doctor";
 import { notFound } from "next/navigation";
@@ -56,9 +57,11 @@ export default async function SymptomPage({ params }: { params: Promise<{ slug: 
 
           <div className="lg:w-5/12 min-h-[300px] bg-slate-50 flex items-center justify-center relative overflow-hidden group rounded-full border-8 border-slate-100 shadow-lg">
             <div className="absolute inset-0 bg-slate-105 transition-transform duration-700 flex items-center justify-center">
-              <img
+              <Image
                 src={symptom.image}
                 alt={symptom.name}
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>

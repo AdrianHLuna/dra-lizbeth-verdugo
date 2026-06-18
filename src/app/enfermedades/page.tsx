@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { diseases } from "@/data/diseases";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/Animations";
@@ -104,9 +105,11 @@ export default function EnfermedadesPage() {
                         className="bg-white border border-slate-100 hover:border-accent/40 shadow-sm hover:shadow-accent/5 hover:bg-slate-50 transition-all duration-300 flex flex-col h-full p-8 rounded-[100px_0px_100px_0px] overflow-hidden group"
                       >
                         <div className="w-full h-40 bg-slate-100 rounded-[80px_0px_80px_0px] mb-6 relative overflow-hidden flex items-center justify-center text-slate-400 group-hover:bg-slate-200 transition-colors">
-                          <img
+                          <Image
                             src={disease.image}
                             alt={disease.name}
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                             className="w-full h-full object-cover transition-transform duration-550 group-hover:scale-105"
                           />
                         </div>
