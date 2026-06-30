@@ -19,7 +19,7 @@ export default function Home() {
   const heroSlides = [
     { src: "/doctor_hero.jpeg", align: "object-[center_35%]" },
     { src: "/doctor_1.jpeg", align: "object-[center_35%]" },
-    { src: "/doctor_3.jpeg", align: "object-[center_35%]" }
+    { src: "/doctor_3.jpeg", align: "object-[center_90%]" }
   ];
 
   useEffect(() => {
@@ -163,7 +163,7 @@ export default function Home() {
 
                 {/* Float Certification Badge */}
                 <motion.div
-                  className="absolute bottom-2 right-2 sm:bottom-6 sm:right-6 lg:bottom-8 lg:right-8 xl:bottom-10 xl:right-10 bg-accent px-5 py-4 shadow-2xl rounded-2xl text-white max-w-[160px] sm:max-w-[200px] flex flex-col items-center justify-center text-center z-20 border border-white/20"
+                  className="absolute bottom-1 right-1 sm:bottom-3 sm:right-6 lg:bottom-8 lg:right-8 xl:bottom-10 xl:right-10 bg-accent px-5 py-4 shadow-2xl rounded-2xl text-white max-w-[160px] sm:max-w-[130px] flex flex-col items-center justify-center text-center z-20 border border-white/20"
                   initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.6, type: "spring" }}
                 >
                   <span className="font-bold text-[8px] sm:text-[9px] uppercase tracking-wider leading-tight text-white/90">Certificada por el</span>
@@ -540,7 +540,7 @@ export default function Home() {
             {/* Descripción */}
             <div className="px-8 lg:px-12 py-8 border-b border-slate-100">
               <p className="text-slate-500 text-xs leading-relaxed max-w-2xl">
-                La valoración comprende la revisión clínica infantil completa, análisis de estudios sanguíneos previos y prescripción/orientación diagnóstica especializada.
+                La valoración incluye historia clínica completa, exploración física, revisión e interpretación de estudios previos, orientación diagnóstica especializada y plan de seguimiento individualizado.
               </p>
             </div>
 
@@ -578,9 +578,9 @@ export default function Home() {
             </div>
 
             {/* CTA inferior */}
-            <div className="px-8 lg:px-12 py-6 bg-primary/3 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <p className="text-xs text-slate-500 font-semibold">
-                Agenda tu consulta por WhatsApp.
+            <div className="px-8 lg:px-12 py-6 bg-primary/3 flex flex-col sm:flex-row items-center justify-between gap-6">
+              <p className="text-xs text-slate-500 font-semibold max-w-xl">
+                Si tienes dudas sobre los estudios de tu hijo o no sabes si necesita valoración por hematología pediátrica, puedes comunicarte para recibir orientación sobre la cita.
               </p>
               <a
                 href={`https://wa.me/${doctor.whatsapp.replace(/\D/g, "")}`}

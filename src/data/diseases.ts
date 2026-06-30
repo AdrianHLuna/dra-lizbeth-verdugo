@@ -29,7 +29,10 @@ export const diseases: MedicalCondition[] = [
     riskFactors: ["Nacimiento prematuro o bajo peso al nacer", "Introducción tardía de alimentos sólidos", "Consumo excesivo de leche de vaca en menores de un año"],
     complications: ["Retraso en el desarrollo psicomotor", "Problemas de aprendizaje y concentración", "Debilidad del sistema inmunitario con propensión a infecciones"],
     treatments: [
-      "Tratamiento con hierro oral bajo supervisión médica"
+      "Tratamiento con hierro oral bajo supervisión médica",
+      "Ajustes en la alimentación para favorecer una adecuada ingesta de hierro y vitamina C",
+      "Identificación y tratamiento de la causa que originó la deficiencia de hierro",
+      "Seguimiento mediante estudios de laboratorio para evaluar la respuesta al tratamiento y la recuperación de los depósitos de hierro"
     ],
     faqs: [
       {
@@ -228,27 +231,76 @@ export const diseases: MedicalCondition[] = [
   {
     id: "enf-005",
     slug: "drepanocitosis",
-    name: "Drepanocitosis",
+    name: "Drepanocitosis (Anemia de Células Falciformes)",
     technicalName: "Anemia Falciforme",
-    description: "La drepanocitosis o anemia falciforme es un trastorno hereditario autosómico recesivo causado por una mutación puntual en el gen de la β-globina (HBB), que produce hemoglobina S (HbS), una hemoglobina anormal que altera la forma y función de los glóbulos rojos.",
-    symptoms: ["Crisis de dolor severo (huesos, abdomen y pecho)", "Fatiga y palidez constante", "Hinchazón dolorosa de manos y pies (dactilitis)", "Infecciones bacterianas recurrentes", "Retraso en el crecimiento"],
+    description: "La drepanocitosis es un trastorno hereditario causado por una alteración en el gen de la β-globina (HBB), responsable de la producción de hemoglobina. Esta alteración produce hemoglobina S (HbS), una forma anormal de hemoglobina que puede hacer que los glóbulos rojos adopten una forma similar a una hoz o media luna, afectando su función y supervivencia.",
+    symptoms: [
+      "Anemia crónica",
+      "Palidez",
+      "Ictericia (color amarillo en ojos o piel)",
+      "Fatiga",
+      "Crisis de dolor",
+      "Hinchazón de manos y pies en lactantes",
+      "Infecciones frecuentes",
+      "Retraso en el crecimiento",
+      "Crecimiento del bazo"
+    ],
     causes: ["Mutación puntual que produce una hemoglobina anormal, heredada de ambos padres y que afecta la producción de las cadenas de beta-hemoglobina"],
     riskFactors: [
       "Antecedentes familiares de rasgo falciforme o drepanocitosis.",
+      "Padres portadores de la alteración genética, aun cuando no presenten síntomas.",
+      "Resultado positivo en el tamiz neonatal.",
       "Ascendencia africana, caribeña, mediterránea, de Medio Oriente o de algunas regiones de América Latina."
     ],
     complications: ["Accidente cerebrovascular a temprana edad", "Síndrome torácico agudo (infiltrado pulmonar grave)", "Daño orgánico crónico en riñones, bazo y articulaciones"],
     treatments: ["Medicamentos para prevenir las crisis de dolor", "Vacunación completa y antibióticos profilácticos", "Transfusiones de sangre y trasplante de médula ósea"],
     faqs: [
-      { question: "¿Por qué causa tanto dolor?", answer: "Los glóbulos rojos rígidos y con forma de hoz se atoran en los vasos sanguíneos pequeños, bloqueando el flujo de sangre y oxígeno a los tejidos, lo que provoca dolor agudo e inflamación." },
-      { question: "¿Se puede curar definitivamente la drepanocitosis?", answer: "El único tratamiento curativo actual es el trasplante de médula ósea (células madre), el cual se valora de forma individual según el caso clínico del paciente." },
-      { question: "¿Cómo se detecta esta enfermedad en bebés?", answer: "Se puede detectar mediante el tamiz neonatal metabólico ampliado y se confirma con una electroforesis de hemoglobina." }
+      {
+        question: "¿La drepanocitosis es hereditaria?",
+        answer: `Sí. La drepanocitosis es una enfermedad genética que se transmite de padres a hijos. Ocurre cuando un niño hereda una copia alterada del gen de la hemoglobina de cada uno de sus padres.
+
+Muchas personas pueden ser portadoras del llamado rasgo falciforme, lo que significa que tienen una sola copia alterada del gen y generalmente no presentan síntomas. Sin embargo, cuando ambos padres son portadores, existe la posibilidad de que sus hijos desarrollen la enfermedad.
+
+Por esta razón, cuando se diagnostica drepanocitosis en un niño, puede ser recomendable evaluar a otros miembros de la familia y recibir asesoramiento genético para comprender el riesgo en futuros embarazos.`
+      },
+      {
+        question: "¿Por qué ocurren las crisis dolorosas?",
+        answer: `Las crisis dolorosas ocurren cuando los glóbulos rojos con forma anormal se vuelven rígidos y pueden bloquear pequeños vasos sanguíneos. Esto dificulta el flujo normal de sangre y oxígeno hacia los tejidos, provocando episodios de dolor que pueden afectar huesos, articulaciones, abdomen u otras partes del cuerpo.
+
+Las infecciones, la deshidratación, los cambios bruscos de temperatura y otros factores pueden favorecer la aparición de estas crisis.`
+      },
+      {
+        question: "¿La drepanocitosis tiene cura?",
+        answer: `Actualmente, el trasplante de células madre hematopoyéticas es la única opción con potencial curativo para algunos pacientes. Sin embargo, existen tratamientos que ayudan a prevenir complicaciones, disminuir las crisis dolorosas y mejorar significativamente la calidad de vida.
+
+El seguimiento regular por Hematología Pediátrica es fundamental para detectar y tratar oportunamente las complicaciones de la enfermedad.`
+      },
+      {
+        question: "¿Cuándo puede necesitar una transfusión un niño con drepanocitosis?",
+        answer: `Algunas complicaciones de la drepanocitosis pueden requerir transfusiones de sangre. Estas pueden utilizarse para tratar anemia grave o prevenir complicaciones específicas, como algunas alteraciones neurológicas, pulmonares o relacionadas con procedimientos quirúrgicos.
+
+La necesidad de una transfusión depende de cada situación clínica y debe ser valorada por un especialista.`
+      },
+      {
+        question: "¿Mi hijo podrá llevar una vida normal?",
+        answer: `Con un diagnóstico oportuno, seguimiento especializado y medidas adecuadas para prevenir complicaciones, muchos niños con drepanocitosis pueden asistir a la escuela, realizar actividades cotidianas y mantener una buena calidad de vida.
+
+El control médico regular, la prevención de infecciones y el apego al tratamiento son fundamentales para favorecer un desarrollo saludable.`
+      },
+      {
+        question: "¿Cómo se diagnostica la drepanocitosis?",
+        answer: `El diagnóstico se realiza mediante estudios especializados que identifican el tipo de hemoglobina presente en la sangre. Entre ellos se encuentran la electroforesis de hemoglobina, la cromatografía líquida de alta resolución (HPLC) y otras pruebas confirmatorias. En algunos países y regiones, la enfermedad puede detectarse desde el nacimiento mediante tamiz neonatal.`
+      },
+      {
+        question: "¿Por qué son importantes las vacunas y la prevención de infecciones?",
+        answer: `Los niños con drepanocitosis tienen un mayor riesgo de presentar infecciones graves debido a que el bazo puede perder parte de su función con el tiempo. Por ello, es fundamental mantener un esquema de vacunación completo, acudir a controles médicos periódicos y buscar atención médica inmediata ante la presencia de fiebre.`
+      }
     ],
     image: "/enfermedades/Drepanocitosis.png",
     relatedServices: ["ser-003", "ser-006", "ser-007"],
     relatedSymptoms: ["sym-001", "sym-002", "sym-007", "sym-012"],
-    ctaQuestion: "¿Tu hijo ha sido diagnosticado con drepanocitosis o presenta síntomas compatibles con esta enfermedad?",
-    ctaAnswer: "La detección y el seguimiento tempranos son fundamentales para prevenir complicaciones y mejorar la calidad de vida de los niños con drepanocitosis. La Dra. Lizbeth Hernández Verdugo puede ayudarte a comprender el diagnóstico y establecer el mejor plan de tratamiento para tu hijo.",
+    ctaQuestion: "¿Tu hijo presenta anemia persistente, coloración amarilla en ojos o piel, o episodios recurrentes de dolor?",
+    ctaAnswer: "La drepanocitosis puede manifestarse con anemia, ictericia, crisis dolorosas e infecciones frecuentes. Una valoración por Hematología Pediátrica permite confirmar el diagnóstico, prevenir complicaciones y ofrecer el tratamiento más adecuado para cada paciente.",
     seo: {
       title: "Drepanocitosis (Anemia Falciforme) en Niños | CDMX",
       description: "Manejo experto de la anemia falciforme y crisis de dolor en niños. Consulta con la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
@@ -540,9 +592,14 @@ export const diseases: MedicalCondition[] = [
     causes: ["Presencia de catéteres venosos centrales (causa más frecuente en hospitales)", "Trastornos congénitos de la coagulación (trombofilias)", "Infecciones graves, cirugías o cáncer activo"],
     riskFactors: ["Uso prolongado de catéteres centrales", "Enfermedades inflamatorias crónicas", "Antecedentes familiares de trombosis a temprana edad"],
     complications: ["Embolia pulmonar (el coágulo viaja al pulmón, siendo una emergencia vital)", "Síndrome postrombótico (daño crónico y dolor en la vena afectada)", "Pérdida de perfusión y daño de tejidos"],
-    treatments: ["Medicamentos anticoagulantes vigilados estrechamente", "Retiro guiado del catéter causante si es posible", "Medias de compresión y reposo controlado"],
+    treatments: [
+      "Anticoagulación bajo supervisión especializada",
+      "Tratamiento de la enfermedad o factor desencadenante",
+      "Manejo o retiro del catéter cuando esté indicado",
+      "Seguimiento clínico y por estudios de imagen"
+    ],
     faqs: [
-      { question: "¿Por qué a los niños les da trombosis?", answer: "A diferencia de los adultos, casi siempre ocurre como complicación de tener colocado un catéter venoso central para otros tratamientos médicos, o debido a una predisposición genética llamada trombofilia." },
+      { question: "¿Por qué a los niños les da trombosis?", answer: "A diferencia de los adultos, la trombosis en niños suele asociarse a factores de riesgo específicos como catéteres venosos centrales, infecciones graves, cáncer, enfermedades inflamatorias o trastornos de la coagulación. En muchos pacientes intervienen varios factores al mismo tiempo." },
       { question: "¿Los anticoagulantes ponen en riesgo al niño?", answer: "Tienen un riesgo de causar sangrado, por lo que requieren una dosificación muy precisa, monitoreo constante de laboratorio e indicación rigurosa por un hematólogo pediatra." },
       { question: "¿Qué es una trombofilia?", answer: "Es una condición hereditaria o adquirida en la que la sangre tiene una mayor tendencia natural a formar coágulos de forma inapropiada." }
     ],
@@ -626,11 +683,12 @@ export const diseases: MedicalCondition[] = [
       "Retraso en la cicatrización de heridas o infecciones cutáneas frecuentes"
     ],
     causes: [
-      "Infecciones virales previas o activas (causa más común y temporal)",
-      "Neutropenia autoinmune (destrucción de neutrófilos por anticuerpos)",
-      "Efectos secundarios de medicamentos (incluida la quimioterapia)",
-      "Problemas en la médula ósea (como aplasia medular o leucemias)",
-      "Trastornos genéticos o congénitos raros (como la neutropenia congénita severa)"
+      "Infecciones virales recientes o activas (causa más frecuente en la infancia).",
+      "Neutropenia autoinmune infantil.",
+      "Medicamentos.",
+      "Deficiencias nutricionales (vitamina B12, ácido fólico o cobre).",
+      "Trastornos congénitos de los neutrófilos.",
+      "Enfermedades de la médula ósea (casos poco frecuentes)."
     ],
     riskFactors: [
       "Infecciones virales recientes (gripe, varicela, etc.)",
