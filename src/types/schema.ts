@@ -111,6 +111,7 @@ export const MedicalConditionSchema = z.object({
  whenToConsult: z.array(z.string()).optional(),
  diseasesToRuleOut: z.array(z.string()).optional(),
  category: z.string().optional(),
+ treatmentsTitle: z.string().optional(),
 });
 
 // ─── Medical Service (Servicio/Cirugía) ───────────────────────

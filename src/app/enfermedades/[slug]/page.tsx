@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const resolvedParams = await params;
   const disease = diseases.find((d) => d.slug === resolvedParams.slug);
   if (!disease) return {};
-  
+
   return {
     title: disease.seo.title,
     description: disease.seo.description,
@@ -53,14 +53,14 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
   return (
     <div className="min-h-screen bg-[#fcfdfd] py-12 text-[#705662] relative overflow-hidden">
       <StructuredData data={schemas} />
-      
+
       {/* Background watercolor blotches (Sinergia con el logo) */}
       <div className="absolute top-[10%] right-[-10%] w-[450px] h-[450px] rounded-full bg-[radial-gradient(circle,rgba(151,31,87,0.06)_0%,transparent_70%)] pointer-events-none -z-10 animate-pulse" />
       <div className="absolute bottom-[20%] left-[-10%] w-[380px] h-[380px] rounded-full bg-[radial-gradient(circle,rgba(87,45,85,0.05)_0%,transparent_70%)] pointer-events-none -z-10" />
 
       <div className="container mx-auto px-6 max-w-7xl">
         <Breadcrumbs items={[{ label: "Inicio", href: "/" }, { label: "Enfermedades", href: "/enfermedades" }, { label: disease.name }]} />
-        
+
         {/* Hero Enfermedad (Avant-Garde Circular Layout) */}
         <FadeUp className="flex flex-col lg:flex-row gap-12 mb-16 mt-8 bg-white border border-slate-100 shadow-sm p-8 sm:p-12 rounded-[4rem_1rem_4rem_1rem] overflow-hidden relative">
           <div className="lg:w-7/12 flex flex-col justify-center relative z-10">
@@ -68,24 +68,24 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
             <h1 className="text-3xl lg:text-4xl font-extrabold mb-6 tracking-tight leading-tight uppercase">{disease.name}</h1>
             <p className="text-xs lg:text-sm text-slate-500 leading-relaxed font-semibold">{disease.description}</p>
           </div>
-          
+
           <div className="lg:w-5/12 min-h-[300px] bg-slate-50 flex items-center justify-center relative overflow-hidden group rounded-full border-8 border-slate-100 shadow-lg">
-             <div className="absolute inset-0 bg-slate-105 transition-transform duration-700 flex items-center justify-center">
-                <Image 
-                  src={disease.image} 
-                  alt={disease.name} 
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="w-full h-full object-cover transition-transform duration-550 group-hover:scale-105"
-                />
-             </div>
+            <div className="absolute inset-0 bg-slate-105 transition-transform duration-700 flex items-center justify-center">
+              <Image
+                src={disease.image}
+                alt={disease.name}
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="w-full h-full object-cover transition-transform duration-550 group-hover:scale-105"
+              />
+            </div>
           </div>
         </FadeUp>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Contenido Principal */}
           <StaggerContainer className="lg:col-span-2 space-y-12">
-            
+
             {/* Síntomas */}
             <StaggerItem>
               <h2 className="text-2xl font-black text-slate-900 mb-6 tracking-tight flex items-center gap-3 border-l-4 border-accent pl-4 uppercase"><FaExclamationTriangle className="text-accent" /> Síntomas y Signos</h2>
@@ -127,7 +127,7 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
                       Anemia que no mejora con la administración de hierro.
                     </p>
                     <p className="text-slate-650 text-xs font-semibold leading-relaxed">
-                      Es vital recordar que <span className="underline decoration-red-300 font-bold text-red-950">no toda anemia microcítica es ferropenia</span> (deficiencia de hierro). Suministrar hierro sin confirmación médica puede provocar una sobrecarga férrica perjudicial.
+                      Es vital recordar que <span className="underline decoration-red-300 font-bold text-red-950">no toda anemia microcítica es ferropenia</span> (deficiencia de hierro). Administrar hierro sin confirmar una deficiencia puede favorecer la sobrecarga de hierro en algunos pacientes.
                     </p>
                   </div>
                 </div>
@@ -175,7 +175,7 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
 
             {/* Tratamientos */}
             <StaggerItem>
-              <h2 className="text-2xl font-black text-slate-900 mb-6 tracking-tight flex items-center gap-3 border-l-4 border-slate-900 pl-4 uppercase">Opciones de Tratamiento</h2>
+              <h2 className="text-2xl font-black text-slate-900 mb-6 tracking-tight flex items-center gap-3 border-l-4 border-slate-900 pl-4 uppercase">{disease.treatmentsTitle || "Opciones de Tratamiento"}</h2>
               <div className="flex flex-wrap gap-2">
                 {disease.treatments.map(treatment => (
                   <span key={treatment} className="bg-white text-slate-800 px-5 py-3 font-semibold text-[10px] uppercase border border-slate-100 rounded-full hover:bg-slate-50 transition-all cursor-default shadow-sm">
@@ -225,22 +225,26 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
                   {disease.ctaQuestion || (disease.slug === "talasemia"
                     ? "¿Tu hijo tiene anemia persistente, microcitosis o antecedentes familiares de talasemia?"
                     : disease.slug === "anemia-hemolitica"
-                    ? "¿Tu hijo presenta palidez, cansancio o coloración amarilla en ojos y piel?"
-                    : disease.slug === "enfermedad-von-willebrand"
-                    ? "¿Tu hijo presenta sangrados frecuentes, moretones fáciles o sospecha de enfermedad de Von Willebrand?"
-                    : `¿Tu hijo presenta síntomas de ${disease.name}?`)}
+                      ? "¿Tu hijo presenta palidez, cansancio o coloración amarilla en ojos y piel?"
+                      : disease.slug === "enfermedad-von-willebrand"
+                        ? "¿Tu hijo presenta sangrados frecuentes, moretones fáciles o sospecha de enfermedad de Von Willebrand?"
+                        : `¿Tu hijo presenta síntomas de ${disease.name}?`)}
                 </h3>
                 <div className="w-10 h-1 bg-accent mb-6 rounded-full" />
                 <p className="text-slate-300 text-xs mb-8 leading-relaxed">
                   {disease.ctaAnswer || (disease.slug === "talasemia"
                     ? "Una valoración temprana por hematología pediátrica permite establecer un diagnóstico preciso y definir el tratamiento más adecuado para cada caso."
                     : disease.slug === "anemia-ferropenica"
-                    ? "La anemia ferropénica puede afectar el crecimiento, el aprendizaje y la calidad de vida de los niños. Un diagnóstico oportuno permite iniciar el tratamiento adecuado y prevenir complicaciones."
-                    : disease.slug === "anemia-hemolitica"
-                    ? "La palidez, el cansancio, la ictericia (color amarillo en ojos y piel) o la orina oscura pueden ser señales de anemia hemolítica. Una valoración especializada ayuda a establecer un diagnóstico preciso y un tratamiento oportuno."
-                    : disease.slug === "enfermedad-von-willebrand"
-                    ? "Si tu hijo tiene sangrados nasales frecuentes, moretones sin causa aparente, sangrado prolongado después de lesiones o procedimientos dentales, es importante una evaluación por hematología pediátrica."
-                    : `El diagnóstico temprano y correcto cambia el pronóstico. La ${doctor.title} ${doctor.name} es subespecialista en Hematología Pediátrica y puede ayudar a tu familia.`)}
+                      ? "La anemia ferropénica puede afectar el crecimiento, el aprendizaje y la calidad de vida de los niños. Un diagnóstico oportuno permite iniciar el tratamiento adecuado y prevenir complicaciones."
+                      : disease.slug === "anemia-hemolitica"
+                        ? "La palidez, el cansancio, la ictericia (color amarillo en ojos y piel) o la orina oscura pueden ser señales de anemia hemolítica. Una valoración especializada ayuda a establecer un diagnóstico preciso y un tratamiento oportuno."
+                        : disease.slug === "enfermedad-von-willebrand"
+                          ? "Si tu hijo presenta sangrados nasales frecuentes, moretones fáciles, sangrado prolongado después de heridas o procedimientos dentales, o una adolescente tiene menstruaciones muy abundantes, es recomendable una valoración por Hematología Pediátrica para descartar un trastorno de la coagulación como la enfermedad de von Willebrand."
+                          : disease.slug === "deficiencia-g6pd"
+                            ? "La identificación oportuna de esta enfermedad permite prevenir crisis de hemólisis y sus complicaciones. La Dra. Lizbeth Yamilet Hernández Verdugo puede orientar el diagnóstico, confirmar la enfermedad y brindar recomendaciones para evitar los factores desencadenantes."
+                            : disease.slug === "hemofilia-infantil"
+                              ? "El diagnóstico temprano y el tratamiento preventivo ayudan a evitar hemorragias y proteger las articulaciones. La Dra. Lizbeth Yamilet Hernández Verdugo brinda atención especializada para el diagnóstico, tratamiento y seguimiento de niños con hemofilia."
+                              : `El diagnóstico temprano y correcto cambia el pronóstico. La ${doctor.title} ${doctor.name} es subespecialista en Hematología Pediátrica y puede ayudar a tu familia.`)}
                 </p>
                 <a href={`https://wa.me/${doctor.whatsapp.replace(/\D/g, "")}`} target="_blank" rel="noreferrer" className="block w-full text-center bg-white text-primary font-bold py-4 rounded-full hover:bg-[#FEE5FD] hover:text-[#971F57] transition-all shadow-lg text-[9px] uppercase tracking-widest">
                   Agendar Consulta de Especialidad

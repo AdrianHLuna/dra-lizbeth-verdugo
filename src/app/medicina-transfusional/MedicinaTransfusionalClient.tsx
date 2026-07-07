@@ -35,7 +35,7 @@ type Topic = {
   sources: string[];
 };
 
-const topicsData: Topic[] = [
+export const topicsData: Topic[] = [
   {
     id: "indicaciones",
     title: "Indicaciones de Transfusión",

@@ -313,7 +313,7 @@ export default function Home() {
             </span>
             <h2 className="text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight mt-6">Síntomas de Alarma en Niños</h2>
             <div className="w-16 h-1 bg-primary mx-auto rounded-full" />
-            <p className="text-sm text-slate-500 max-w-xl mx-auto mt-4">Identifica a tiempo anomalías en el sistema circulatorio e inmunológico de tu hijo.</p>
+            <p className="text-sm text-slate-500 max-w-xl mx-auto mt-4">Identifica oportunamente los signos y síntomas que pueden requerir valoración por Hematología Pediátrica.</p>
           </motion.div>
 
           <motion.div
@@ -371,7 +371,7 @@ export default function Home() {
               </span>
               <h2 className="text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight mt-6">Procedimientos Clínicos</h2>
             </div>
-            <p className="text-xs text-slate-500 max-w-sm mt-4 lg:mt-0 leading-relaxed font-semibold">Realizados y supervisados por la Dra. Lizbeth bajo estrictos estándares analíticos infantiles.</p>
+            <p className="text-xs text-slate-500 max-w-sm mt-4 lg:mt-0 leading-relaxed font-semibold">Realizados por la Dra. Lizbeth con protocolos de seguridad adaptados a la edad pediátrica.</p>
           </motion.div>
 
           <motion.div
@@ -433,13 +433,13 @@ export default function Home() {
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={softBlurIn}
             >
               <span className="text-accent font-extrabold text-xs uppercase tracking-widest bg-white/5 border border-white/10 px-4 py-1.5 rounded-full">
-                Atención Humana y Científica
+                INTERPRETACIÓN ESPECIALIZADA DE ESTUDIOS
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase leading-tight">
                 ¿Tu hijo tiene algún estudio sanguíneo alterado?
               </h2>
               <p className="text-slate-300 text-xs sm:text-sm leading-relaxed font-semibold max-w-xl">
-                La Dra. Lizbeth Hernández realiza una interpretación experta de biometrías hemáticas y estudios especializados para ofrecer un diagnóstico certero y oportuno.
+                La Dra. Lizbeth Hernández analiza de forma integral la biometría hemática y otros estudios especializados para identificar la causa de las alteraciones y orientar un diagnóstico y tratamiento adecuados.
               </p>
               <div className="flex justify-center lg:justify-start pt-4">
                 <a href={whatsappUrl} target="_blank" rel="noreferrer" className="px-10 py-4.5 bg-primary hover:bg-[#971F57] text-white font-bold rounded-full transition-all duration-300 text-[10px] uppercase tracking-widest shadow-lg">
@@ -472,9 +472,9 @@ export default function Home() {
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
           <motion.div className="mb-20 text-center" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={softBlurIn}>
             <span className="text-accent font-extrabold text-xs uppercase tracking-widest bg-white/5 px-4 py-1.5 rounded-full border border-white/10">
-              Especialidades Clínicas
-            </span>
-            <h2 className="text-3xl lg:text-4xl font-extrabold text-white mb-4 tracking-tight mt-6">Enfermedades Tratadas</h2>
+              ENFERMEDADES HEMATOLÓGICAS PEDIÁTRICAS
+            </span> 
+            <h2 className="text-3xl lg:text-4xl font-extrabold text-white mb-4 tracking-tight mt-6">Enfermedades que atendemos</h2>
             <div className="w-16 h-1 bg-accent mx-auto rounded-full" />
           </motion.div>
 

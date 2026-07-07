@@ -22,17 +22,17 @@ export const diseases: MedicalCondition[] = [
       "Dieta insuficiente en hierro.",
       "Consumo excesivo de leche de vaca.",
       "Aumento de requerimientos durante el crecimiento.",
-      "Prematuridad o bajo peso al nacer.",
       "Pérdidas sanguíneas (menstruaciones abundantes o sangrado gastrointestinal).",
-      "Trastornos de absorción intestinal (celiaquía, enfermedad inflamatoria intestinal)."
+      "Trastornos de absorción intestinal (celiaquía, enfermedad inflamatoria intestinal,parásitosis)."
     ],
-    riskFactors: ["Nacimiento prematuro o bajo peso al nacer", "Introducción tardía de alimentos sólidos", "Consumo excesivo de leche de vaca en menores de un año"],
+    riskFactors: ["Nacimiento prematuro o bajo peso al nacer", "Introducción tardía de alimentos sólidos", "Consumo excesivo de leche de vaca en infantes"],
     complications: ["Retraso en el desarrollo psicomotor", "Problemas de aprendizaje y concentración", "Debilidad del sistema inmunitario con propensión a infecciones"],
     treatments: [
       "Tratamiento con hierro oral bajo supervisión médica",
       "Ajustes en la alimentación para favorecer una adecuada ingesta de hierro y vitamina C",
       "Identificación y tratamiento de la causa que originó la deficiencia de hierro",
-      "Seguimiento mediante estudios de laboratorio para evaluar la respuesta al tratamiento y la recuperación de los depósitos de hierro"
+      "Seguimiento mediante estudios de laboratorio para evaluar la respuesta al tratamiento y la recuperación de los depósitos de hierro",
+      "Hierro intravenoso en casos seleccionados cuando el hierro oral no es suficiente o no puede administrarse"
     ],
     faqs: [
       {
@@ -79,26 +79,32 @@ export const diseases: MedicalCondition[] = [
     slug: "trombocitopenia-inmune-pti",
     name: "Trombocitopenia Inmune",
     technicalName: "Púrpura Trombocitopénica Inmune",
-    description: "La Trombocitopenia Inmune Primaria (PTI) es una enfermedad en la que el sistema inmunológico destruye las plaquetas por error, provocando que su cantidad disminuya y aumentando el riesgo de moretones o sangrados.\n\nEs una de las causas más frecuentes de plaquetas bajas en la infancia y, en muchos niños, puede resolverse espontáneamente con el tiempo.",
+    description: "La trombocitopenia inmune primaria (PTI) es una enfermedad autoinmune en la que el sistema inmunológico destruye las plaquetas y disminuye su producción, lo que provoca un aumento del riesgo de sangrado. Es una de las causas más frecuentes de trombocitopenia adquirida en la infancia y, en muchos niños, se resuelve espontáneamente.",
     symptoms: [
       "Aparición de moretones fáciles sin causa",
       "Petequias que son pequeños puntos rojos en la piel",
       "Epistaxis de repetición",
       "Sangrado en encías",
       "Sangrado prolongado después de golpes o heridas menores.",
-      "Sangrado menstrual abundante"
+      "Sangrado menstrual abundante",
+      "Ampollas con sangre en la boca (ampollas hemorrágicas o sangrado de mucosas)."
     ],
     causes: [
-      "Reacción inmunitaria desencadenada por una infección viral o gastrointestinal previa",
-      "Desregulación del sistema inmunitario del niño",
-      "En raras ocasiones, puede presentarse después de administrarse algunas vacunas, aunque el beneficio de la vacunación supera ampliamente este riesgo."
+      "Producción de autoanticuerpos que destruyen las plaquetas.",
+      "Disminución de la producción de plaquetas en la médula ósea.",
+      "En muchos niños aparece después de una infección viral y no se identifica otra enfermedad que la explique."
     ],
-    riskFactors: ["Infecciones virales o gastrointestinales recientes como gripe, varicela o gastroenteritis", "Predisposición genética a trastornos autoinmunes"],
+    riskFactors: [
+      "Edad entre 2 y 10 años.",
+      "Infección viral reciente.",
+      "Vacunación reciente (muy poco frecuente)."
+    ],
     complications: ["Hemorragias graves espontáneas en órganos internos (poco frecuentes pero de alto riesgo)", "Ansiedad familiar por riesgo de sangrado"],
     treatments: [
-      "Vigilancia clínica y seguimiento hematológico en casos leves.",
+      "Vigilancia clínica en pacientes con sangrado leve.",
       "Inmunoglobulina intravenosa (IVIG).",
-      "Corticosteroides para disminuir la destrucción de plaquetas y aumentar temporalmente su número."
+      "Corticoesteroides.",
+      "Agonistas del receptor de trombopoyetina (eltrombopag o romiplostim) en PTI persistente o crónica seleccionada."
     ],
     faqs: [
       { question: "¿El niño puede realizar actividades físicas normales?", answer: "La mayoría de los niños puede realizar actividades cotidianas. Sin embargo, cuando las plaquetas están muy bajas, se recomienda evitar deportes de contacto o actividades con alto riesgo de golpes hasta que el hematólogo indique que es seguro retomarlas." },
@@ -106,13 +112,14 @@ export const diseases: MedicalCondition[] = [
       { question: "¿Requiere transfusión de plaquetas?", answer: "Generalmente no. Las transfusiones de plaquetas suelen reservarse para casos de sangrado grave o situaciones especiales, ya que las plaquetas transfundidas pueden ser destruidas rápidamente por el sistema inmunitario." },
       { question: "¿Cuánto tarda en resolverse con tratamiento?", answer: "La respuesta al tratamiento es variable. Algunos niños presentan aumento de plaquetas en los primeros 7 días, mientras que otros pueden tardar varias semanas. El objetivo principal del tratamiento es disminuir el riesgo de sangrado y permitir una vida segura mientras ocurre la recuperación." },
       { question: "¿Todos los niños con PTI necesitan tratamiento?", answer: "No. En muchos niños con PTI y sangrado leve, la observación cuidadosa puede ser la mejor opción. El tratamiento se individualiza según los síntomas, el riesgo de sangrado y el impacto en la calidad de vida" },
-      { question: "¿Las plaquetas bajas siempre significan una enfermedad grave?", answer: "No. Aunque las plaquetas bajas requieren valoración médica, la PTI suele ser una enfermedad benigna en la mayoría de los niños. Muchos pacientes presentan únicamente petequias, moretones o sangrados leves y pueden recuperarse completamente." }
+      { question: "¿Las plaquetas bajas siempre significan una enfermedad grave?", answer: "No. Aunque las plaquetas bajas requieren valoración médica, la PTI suele ser una enfermedad benigna en la mayoría de los niños. Muchos pacientes presentan únicamente petequias, moretones o sangrados leves y pueden recuperarse completamente." },
+      { question: "¿Cómo se diagnostica la PTI?", answer: "El diagnóstico se basa en la historia clínica, la exploración física y una biometría hemática que muestra plaquetas bajas con el resto de las células sanguíneas normales. En algunos casos pueden requerirse estudios adicionales para descartar otras causas de trombocitopenia." }
     ],
     image: "/enfermedades/Trombocitopenia_Inmune.png",
     relatedServices: ["ser-001", "ser-003", "ser-006"],
     relatedSymptoms: ["sym-003", "sym-010", "sym-014", "sym-015", "sym-016"],
     ctaQuestion: "¿Tu hijo presenta moretones frecuentes, petequias o le han informado que tiene las plaquetas bajas?",
-    ctaAnswer: "Una valoración por Hematología Pediátrica permite confirmar la causa, evaluar el riesgo de sangrado y definir si requiere vigilancia o tratamiento especializado.",
+    ctaAnswer: "Si tu hijo presenta moretones sin causa aparente, petequias o sangrados frecuentes, una valoración temprana por Hematología Pediátrica permite confirmar el diagnóstico, descartar otras enfermedades e indicar el tratamiento más adecuado cuando sea necesario.",
     seo: {
       title: "Trombocitopenia Inmune en Niños | Púrpura Infantil CDMX",
       description: "Información y tratamiento especializado para la Púrpura Trombocitopénica Inmune (PTI) en niños con la Dra. Lizbeth Hernández.",
@@ -136,29 +143,29 @@ export const diseases: MedicalCondition[] = [
       "Petequias (puntitos rojos o morados en la piel)"
     ],
     causes: [
-      "En muchos niños no se identifica una causa específica",
-      "Algunas enfermedades autoinmunes",
-      "Infecciones virales",
+      "En la mayoría de los niños no se identifica una causa específica (anemia aplásica adquirida idiopática)",
+      "Alteraciones del sistema inmunológico que atacan la médula ósea",
+      "Algunas infecciones virales",
       "Exposición a ciertos medicamentos o sustancias químicas",
-      "Algunas enfermedades hereditarias, como la Anemia de Fanconi"
+      "Enfermedades hereditarias de falla medular, como la anemia de Fanconi"
     ],
     riskFactors: [
-      "Exposición a sustancias químicas nocivas (como benceno o pesticidas)",
-      "Tratamientos previos con radiación o quimioterapia",
-      "Antecedentes de infecciones virales graves",
-      "Predisposición genética (enfermedades hereditarias)"
+      "Antecedentes familiares de enfermedades hereditarias de la médula ósea",
+      "Haber recibido quimioterapia o radioterapia",
+      "Exposición a sustancias químicas como benceno o pesticidas",
+      "Antecedentes de exposición a medicamentos con riesgo de toxicidad medular"
     ],
     complications: ["Hemorragias graves", "Infecciones severas generalizadas (septicemia)", "Insuficiencia cardíaca por anemia crónica"],
     treatments: [
       "Transfusiones de glóbulos rojos o plaquetas cuando son necesarias",
       "Medicamentos inmunosupresores para disminuir el ataque del sistema inmune a la médula ósea",
-      "Medicamentos que estimulan la producción de células sanguíneas",
+      "Medicamentos estimulantes de la médula ósea en casos seleccionados",
       "Antibióticos cuando existen infecciones",
       "Trasplante de médula ósea o de células madre hematopoyéticas, que puede ser el tratamiento curativo en muchos niños"
     ],
     faqs: [
       { question: "¿Es lo mismo que leucemia?", answer: "No. La leucemia es un cáncer de la sangre en el que se producen células anormales de manera descontrolada. En la anemia aplásica, la médula ósea deja de producir suficientes glóbulos rojos, glóbulos blancos y plaquetas." },
-      { question: "¿Cómo se diagnostica la anemia aplásica?", answer: "Para que sea más claro para los padres, el diagnóstico se realiza mediante:\n\n• Biometría hemática completa.\n• Recuento de reticulocitos.\n• Aspirado y biopsia de médula ósea (estudio fundamental para confirmar el diagnóstico).\n• Estudios para investigar la causa." },
+      { question: "¿Cómo se diagnostica la anemia aplásica?", answer: "El diagnóstico se realiza mediante biometría hemática completa, recuento de reticulocitos, aspirado y biopsia de médula ósea, además de estudios especializados para investigar la causa." },
       { question: "¿Se puede curar con trasplante de médula ósea?", answer: "Sí. El trasplante de células madre hematopoyéticas (trasplante de médula ósea) puede curar la enfermedad en muchos pacientes, especialmente cuando existe un donante compatible." },
       { question: "¿La anemia aplásica es cáncer?", answer: "No. La anemia aplásica no es un cáncer. Es una enfermedad en la que la médula ósea produce muy pocas células sanguíneas. Sin embargo, requiere atención especializada porque puede ser grave." },
       { question: "¿La anemia aplásica es hereditaria?", answer: "En la mayoría de los casos no es hereditaria. Sin embargo, existen algunas enfermedades genéticas poco frecuentes, como la anemia de Fanconi, que pueden causar anemia aplásica y requieren estudios especializados." },
@@ -176,7 +183,7 @@ export const diseases: MedicalCondition[] = [
       "Hemoglobinuria paroxística nocturna"
     ],
     ctaQuestion: "¿Tu hijo presenta anemia persistente, infecciones frecuentes o sangrados inexplicables?",
-    ctaAnswer: "Una valoración por Hematología Pediátrica permite identificar la causa de la falla medular y definir el tratamiento más adecuado para cada paciente.",
+    ctaAnswer: "La anemia aplásica requiere una evaluación especializada para identificar la causa e iniciar el tratamiento oportunamente. Un diagnóstico temprano puede mejorar el pronóstico y prevenir complicaciones.",
     seo: {
       title: "Anemia Aplásica Infantil | Falla Medular CDMX",
       description: "Diagnóstico y alternativas de tratamiento para la anemia aplásica en niños con la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
@@ -188,7 +195,7 @@ export const diseases: MedicalCondition[] = [
     id: "enf-004",
     slug: "anemia-hemolitica",
     name: "Anemia Hemolítica",
-    description: "La anemia hemolítica ocurre cuando los glóbulos rojos se destruyen más rápido de lo que la médula ósea puede producirlos. Esto provoca que disminuya la cantidad de glóbulos rojos en la sangre y aparezcan síntomas como palidez, cansancio e ictericia (color amarillo en piel y ojos).",
+    description: "La anemia hemolítica ocurre cuando los glóbulos rojos se destruyen más rápido de lo que la médula ósea puede producirlos. Esto provoca que disminuya la cantidad de glóbulos rojos en la sangre y aparezcan síntomas como palidez, cansancio e ictericia (color amarillo en piel y ojos). Existen diferentes tipos de anemia hemolítica y el tratamiento depende de la causa específica.",
     symptoms: [
       "Palidez",
       "Cansancio o debilidad",
@@ -245,15 +252,16 @@ export const diseases: MedicalCondition[] = [
       "Retraso en el crecimiento",
       "Crecimiento del bazo"
     ],
-    causes: ["Mutación puntual que produce una hemoglobina anormal, heredada de ambos padres y que afecta la producción de las cadenas de beta-hemoglobina"],
+    causes: ["Mutación puntual del gen de la β-globina (HBB) que produce hemoglobina S (HbS). Esta mutación sustituye el ácido glutámico por valina en la posición 6 de la cadena β-globina y se hereda de ambos padres"],
     riskFactors: [
       "Antecedentes familiares de rasgo falciforme o drepanocitosis.",
-      "Padres portadores de la alteración genética, aun cuando no presenten síntomas.",
+      "Ambos padres portadores del rasgo falciforme.",
+      "Hermanos con drepanocitosis o rasgo falciforme",
       "Resultado positivo en el tamiz neonatal.",
       "Ascendencia africana, caribeña, mediterránea, de Medio Oriente o de algunas regiones de América Latina."
     ],
     complications: ["Accidente cerebrovascular a temprana edad", "Síndrome torácico agudo (infiltrado pulmonar grave)", "Daño orgánico crónico en riñones, bazo y articulaciones"],
-    treatments: ["Medicamentos para prevenir las crisis de dolor", "Vacunación completa y antibióticos profilácticos", "Transfusiones de sangre y trasplante de médula ósea"],
+    treatments: ["Hidroxiurea y otros tratamientos para disminuir las crisis dolorosas y prevenir complicaciones.", "Vacunación completa y antibióticos profilácticos", "Transfusiones de sangre y trasplante de médula ósea"],
     faqs: [
       {
         question: "¿La drepanocitosis es hereditaria?",
@@ -294,6 +302,10 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
       {
         question: "¿Por qué son importantes las vacunas y la prevención de infecciones?",
         answer: `Los niños con drepanocitosis tienen un mayor riesgo de presentar infecciones graves debido a que el bazo puede perder parte de su función con el tiempo. Por ello, es fundamental mantener un esquema de vacunación completo, acudir a controles médicos periódicos y buscar atención médica inmediata ante la presencia de fiebre.`
+      },
+      {
+        question: "¿Qué cuidados ayudan a prevenir las crisis?",
+        answer: "Mantener una buena hidratación, evitar cambios bruscos de temperatura, acudir rápidamente ante fiebre, seguir el tratamiento indicado y asistir a las consultas de seguimiento ayuda a disminuir el riesgo de complicaciones."
       }
     ],
     image: "/enfermedades/Drepanocitosis.png",
@@ -312,13 +324,14 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
     id: "enf-006",
     slug: "talasemia",
     name: "Talasemia",
-    description: "Las talasemias son un grupo de trastornos sanguíneos hereditarios caracterizados por una producción deficiente o nula de una o más cadenas de globina de la hemoglobina, lo que causa anemia de intensidad variable.",
+    description: "Las talasemias son un grupo de trastornos sanguíneos hereditarios caracterizados por una producción disminuida o ausente de las cadenas alfa o beta de la globina, lo que causa anemia de intensidad variable.",
     symptoms: [
       "Palidez.",
       "Cansancio o fatiga fácil.",
       "Irritabilidad.",
       "Falta de apetito.",
       "Retraso en el crecimiento y desarrollo.",
+      "Retraso en la pubertad en adolescentes con formas graves",
       "Coloración amarillenta de la piel o los ojos (ictericia).",
       "Orina oscura.",
       "Aumento del tamaño del hígado y/o del bazo (hepatoesplenomegalia).",
@@ -333,7 +346,8 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
       "Terapia de quelación de hierro para prevenir la sobrecarga férrica secundaria a las transfusiones.",
       "Suplementación con ácido fólico cuando esté indicada.",
       "Monitoreo especializado de crecimiento, función cardíaca y niveles de hierro.",
-      "Trasplante de progenitores hematopoyéticos en casos seleccionados"
+      "Trasplante de progenitores hematopoyéticos en casos seleccionados.",
+      "Seguimiento por un equipo multidisciplinario en pacientes con formas graves."
     ],
     faqs: [
       { question: "¿Cuál es la diferencia entre talasemia menor y mayor?", answer: "La talasemia menor (rasgo talasémico) suele producir una anemia leve o incluso no causar síntomas. Las personas con esta condición generalmente llevan una vida normal y muchas veces desconocen que son portadoras.\n\nLa talasemia mayor es una forma grave de la enfermedad que provoca anemia severa desde los primeros años de vida y suele requerir transfusiones sanguíneas periódicas y seguimiento especializado por hematología.\n\nLa diferencia principal radica en la gravedad de la anemia, los síntomas y la necesidad de tratamiento." },
@@ -356,7 +370,7 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
     id: "enf-007",
     slug: "esferocitosis-hereditaria",
     name: "Esferocitosis Hereditaria",
-    description: "La esferocitosis hereditaria es una anemia hemolítica congénita causada por alteraciones genéticas en las proteínas de la membrana de los glóbulos rojos. Estas células adquieren una forma esférica, son menos flexibles y se destruyen principalmente en el bazo. La mayoría de los casos se heredan de forma autosómica dominante, aunque existen formas recesivas menos frecuentes.",
+    description: "La esferocitosis hereditaria es una anemia hemolítica congénita causada por alteraciones genéticas en las proteínas de la membrana de los glóbulos rojos. Como consecuencia, los glóbulos rojos adquieren una forma esférica, son menos flexibles y se destruyen principalmente en el bazo. La mayoría de los casos se heredan de forma autosómica dominante, aunque existen formas recesivas menos frecuentes.",
     symptoms: [
       "Palidez en piel y mucosas",
       "Ictericia intermitente",
@@ -365,9 +379,10 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
       "Desarrollo de piedras en la vesícula (colelitiasis)",
       "Orina oscura ocasional",
       "Ictericia neonatal prolongada o intensa",
-      "Retraso en el crecimiento (en casos moderados o graves)"
+      "Retraso en el crecimiento (en casos moderados o graves)",
+      "Crisis aplásica, generalmente asociada a infección por parvovirus B19"
     ],
-    causes: ["Mutación genética hereditaria (generalmente autosómica dominante) que altera las proteínas estructurales espectrina, anquirina o banda 3 del glóbulo rojo"],
+    causes: ["Mutación genética hereditaria (generalmente autosómica dominante) que altera las proteínas estructurales espectrina, anquirina o banda 3 del glóbulo rojo o proteína 4.2"],
     riskFactors: [
       "Antecedentes familiares de esferocitosis hereditaria",
       "Familiar con anemia hemolítica crónica",
@@ -383,7 +398,7 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
     faqs: [
       { question: "¿Por qué el bazo destruye estos glóbulos rojos?", answer: "El bazo funciona como un filtro natural de la sangre. Los glóbulos rojos normales son flexibles y pueden atravesar espacios muy estrechos. En la esferocitosis hereditaria, los glóbulos rojos tienen forma esférica y son menos flexibles, por lo que quedan atrapados en el bazo y son destruidos antes de tiempo." },
       { question: "¿Siempre se debe retirar el bazo en estos niños?", answer: "No. La esplenectomía se reserva para algunos pacientes con enfermedad moderada o grave que presentan anemia significativa, necesidad frecuente de transfusiones, crecimiento afectado o síntomas importantes. Muchos niños con formas leves pueden manejarse únicamente con vigilancia médica y ácido fólico." },
-      { question: "¿Cómo se realiza el diagnóstico?", answer: "El diagnóstico se realiza mediante biometría hemática, frotis de sangre periférica y pruebas especializadas como la citometría con eosina-5-maleimida (EMA), considerada actualmente una de las pruebas más sensibles para confirmar la enfermedad." },
+      { question: "¿Cómo se realiza el diagnóstico?", answer: "El diagnóstico se realiza mediante biometría hemática, frotis de sangre periférica y pruebas especializadas como la citometría con eosina-5-maleimida (EMA), considerada actualmente una de las pruebas más sensibles para confirmar la enfermedad. En algunos casos también pueden solicitarse estudios genéticos para confirmar el diagnóstico o identificar la alteración responsable" },
       { question: "¿La esferocitosis hereditaria tiene cura?", answer: "Es una enfermedad genética que acompaña al paciente toda su vida. Sin embargo, con seguimiento adecuado, suplementación con ácido fólico y, en algunos casos, esplenectomía, la mayoría de los niños pueden llevar una vida normal." },
       { question: "¿Puede llevar una vida normal un niño con esferocitosis hereditaria?", answer: "En la mayoría de los casos sí. Con seguimiento médico adecuado, suplementación con ácido fólico y tratamiento oportuno de las complicaciones, la mayoría de los niños pueden realizar sus actividades habituales y tener una buena calidad de vida." }
     ],
@@ -401,34 +416,36 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
     id: "enf-008",
     slug: "hemofilia-infantil",
     name: "Hemofilia Infantil",
-    description: "Es un trastorno hereditario de la coagulación causado por la deficiencia de un factor de coagulación: la Hemofilia A se debe al déficit de factor VIII y la Hemofilia B al déficit de factor IX.",
+    description: "La hemofilia es un trastorno hereditario de la coagulación causado por la deficiencia o ausencia de un factor de coagulación. La hemofilia A se debe a la deficiencia del factor VIII y la hemofilia B a la deficiencia del factor IX, lo que dificulta la formación adecuada del coágulo y favorece los sangrados.",
     symptoms: [
       "Moretones fáciles o grandes.",
       "Sangrado prolongado después de heridas, procedimientos o extracciones dentales.",
       "Sangrado nasal frecuente.",
       "Hemorragias en articulaciones (hemartrosis) con dolor, inflamación y limitación del movimiento.",
-      "Hemorragias musculares."
+      "Hemorragias musculares.",
+      "Sangrado después de vacunas o inyecciones intramusculares."
     ],
     causes: [
-      "Cambios genéticos que provocan niveles bajos de ciertos factores de coagulación (deficiencia de factor VIII en Hemofilia A, y deficiencia de factor IX en Hemofilia B).",
-      "Herencia de genes alterados de uno o ambos padres, generalmente de forma ligada al cromosoma X.",
-      "Aparición por una mutación genética nueva (de novo) sin antecedentes familiares previos."
+      "Mutaciones en los genes F8 (hemofilia A) o F9 (hemofilia B), que producen niveles bajos o ausencia del factor VIII o IX.",
+      "La mayoría de los casos se heredan con un patrón ligado al cromosoma X, aunque también pueden aparecer por una mutación nueva (de novo)."
     ],
     riskFactors: [
       "Antecedentes familiares de hemofilia u otros trastornos hemorrágicos hereditarios.",
-      "Tener familiares portadores de la enfermedad.",
       "Sexo masculino (la hemofilia clásica afecta principalmente a los niños debido a su herencia ligada al cromosoma X)."
     ],
     complications: ["Daño articular crónico por sangrados repetitivos (artropatía hemofílica)", "Hemorragias internas espontáneas de difícil control"],
     treatments: [
       "Tratamiento a demanda: se administra el factor cuando ocurre un sangrado.",
       "Profilaxis: administración regular de factor VIII o IX para prevenir hemorragias.",
-      "La profilaxis es el estándar de cuidado en muchos niños con hemofilia grave porque disminuye sangrados y daño articular."
+      "La profilaxis es el estándar de cuidado en muchos niños con hemofilia grave porque disminuye sangrados y daño articular.",
+      "Nuevas terapias preventivas, como emicizumab, en pacientes seleccionados."
     ],
     faqs: [
       { question: "¿La hemofilia se cura?", answer: "No tiene cura definitiva actualmente, pero los tratamientos de reemplazo profiláctico permiten que los niños lleven una vida normal y activa." },
       { question: "¿Se puede diagnosticar desde el nacimiento?", answer: "Sí, mediante pruebas especiales de coagulación que miden la actividad de los factores en sangre de cordón umbilical o periférica." },
-      { question: "¿Qué tipo de ejercicio puede hacer un niño con hemofilia?", answer: "Se recomiendan deportes de bajo impacto como la natación, y se desaconsejan totalmente los deportes de colisión o contacto." }
+      { question: "¿Qué tipo de ejercicio puede hacer un niño con hemofilia?", answer: "Se recomiendan actividades de bajo impacto, como natación, caminata o ciclismo con protección adecuada. Los deportes de contacto deben evitarse o valorarse individualmente con el hematólogo según la gravedad de la enfermedad y el tratamiento que reciba el niño" },
+      { question: "¿Mi hijo puede vacunarse?", answer: "Sí. Los niños con hemofilia deben recibir su esquema completo de vacunación. En algunos casos se toman medidas especiales para disminuir el riesgo de sangrado después de la aplicación." },
+      { question: "¿Qué hacer si mi hijo se golpea la cabeza?", answer: "Todo golpe importante en la cabeza requiere valoración médica inmediata, incluso si el niño parece encontrarse bien, debido al riesgo de hemorragia interna." }
     ],
     image: "/enfermedades/Hemofilia_Infantil.png",
     relatedServices: ["ser-005"],
@@ -445,7 +462,7 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
     slug: "deficiencia-g6pd",
     name: "Deficiencia de G6PD",
     technicalName: "Deficiencia de Glucosa-6-Fosfato Deshidrogenasa",
-    description: "La deficiencia de G6PD es un trastorno genético caracterizado por la escasez de la enzima glucosa-6-fosfato deshidrogenasa en los glóbulos rojos, lo que los hace vulnerables a romperse ante el estrés oxidativo provocado por ciertos medicamentos, infecciones o alimentos.",
+    description: "La deficiencia de glucosa-6-fosfato deshidrogenasa (G6PD) es un trastorno genético hereditario en el que los glóbulos rojos tienen una cantidad o actividad disminuida de esta enzima, lo que los hace más vulnerables a destruirse (hemólisis) ante ciertos medicamentos, infecciones, alimentos o sustancias oxidantes.",
     symptoms: [
       "Palidez repentina",
       "Color amarillo en piel y ojos (ictericia)",
@@ -455,7 +472,7 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
       "Dificultad para respirar en casos graves",
       "Dolor abdominal o dolor de espalda durante una crisis hemolítica"
     ],
-    causes: ["Mutación genética hereditaria ligada al cromosoma X, que reduce la actividad o estabilidad de la enzima protectora G6PD"],
+    causes: ["Mutación hereditaria ligada al cromosoma X que provoca una disminución de la actividad de la enzima glucosa-6-fosfato deshidrogenasa (G6PD), encargada de proteger a los glóbulos rojos del daño oxidativo"],
     riskFactors: [
       "Antecedentes familiares de deficiencia de G6PD",
       "Sexo masculino (más frecuente)",
@@ -466,15 +483,16 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
     ],
     complications: ["Anemia hemolítica aguda grave con riesgo de daño renal", "Necesidad de transfusiones de emergencia en crisis oxidativas"],
     treatments: [
-      "Evitar medicamentos y alimentos que desencadenen hemólisis",
+      "Educación al paciente y su familia sobre los medicamentos y sustancias que deben evitarse",
       "Tratar oportunamente las infecciones",
       "Mantener una adecuada hidratación durante las crisis",
       "Vigilancia médica y estudios de laboratorio cuando aparezcan síntomas",
       "Transfusión de sangre en casos graves de anemia hemolítica"
     ],
     faqs: [
-      { question: "¿Qué es el favismo?", answer: "Es la reacción hemolítica grave que sufren las personas con deficiencia de G6PD tras ingerir habas (o incluso inhalar el polen de la planta de habas), debido a sustancias químicas en ellas que oxidan la sangre." },
-      { question: "¿Qué medicamentos no debe tomar mi hijo?", answer: "Debe evitar las sulfonamidas, ciertos antipalúdicos, algunos analgésicos y sustancias como la naftalina. Se le entregará a la familia una lista detallada y actualizada de medicamentos seguros y prohibidos." },
+      { question: "¿Qué es el favismo?", answer: "Es la reacción hemolítica grave que sufren las personas con deficiencia de G6PD tras ingerir habas (o incluso inhalar el polen de la planta de habas), debido a sustancias químicas en ellas que provocan daño oxidativo en los glóbulos rojos." },
+      { question: "¿Todas las personas con deficiencia de G6PD presentan síntomas?", answer: "No. Muchas personas nunca presentan síntomas y solo desarrollan hemólisis cuando se exponen a medicamentos, infecciones, habas u otros factores desencadenantes." },
+      { question: "¿Qué medicamentos no debe tomar mi hijo?", answer: "Algunos medicamentos y sustancias pueden desencadenar una crisis hemolítica en personas con deficiencia de G6PD, como ciertas sulfonamidas, algunos antipalúdicos y la naftalina. Es importante no administrar medicamentos sin indicación médica e informar siempre que el niño tiene esta enfermedad. El hematólogo proporcionará una lista actualizada de los medicamentos y sustancias que deben evitarse según cada caso." },
       { question: "¿Esta enfermedad dura toda la vida?", answer: "Sí, es una condición genética que acompaña al paciente toda su vida. Sin embargo, con evitar los factores desencadenantes, el niño tendrá una expectativa y calidad de vida completamente normales." },
       { question: "¿Puede mi hijo llevar una vida normal?", answer: "Sí. La mayoría de los niños con deficiencia de G6PD tienen una vida completamente normal si evitan los factores que desencadenan la hemólisis y reciben atención médica cuando presentan síntomas" }
     ],
@@ -492,19 +510,31 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
     id: "enf-010",
     slug: "enfermedad-von-willebrand",
     name: "Enfermedad de Von Willebrand",
-    description: "La enfermedad de von Willebrand es el trastorno hereditario de la coagulación más frecuente. Ocurre cuando el factor von Willebrand está disminuido o no funciona correctamente, lo que dificulta que las plaquetas formen un coágulo adecuado y puede provocar sangrados más prolongados de lo normal",
+    description: "La enfermedad de von Willebrand es el trastorno hereditario de la coagulación más frecuente. Se produce por una disminución en la cantidad o una alteración en la función del factor von Willebrand, una proteína que ayuda a las plaquetas a adherirse al sitio de lesión y protege al factor VIII de su degradación",
     symptoms: [
       "Moretones frecuentes o excesivos",
       "Sangrados nasales repetidos o difíciles de detener",
       "Sangrado prolongado después de extracciones dentales o cirugías",
       "Sangrado de encías",
       "Menstruaciones abundantes en adolescentes",
-      "En casos más graves, sangrado gastrointestinal o articular"
+      "En casos más graves, sangrado gastrointestinal o articular",
+      "Sangrado prolongado después de heridas pequeñas"
     ],
-    causes: ["La mayoría de los casos son hereditarios y se transmiten de padres a hijos. En raras ocasiones puede aparecer sin antecedentes familiares o adquirirse posteriormente por otras enfermedades"],
-    riskFactors: ["Padres con diagnóstico de la enfermedad o síntomas de sangrado anormal inexplicado"],
+    causes: [
+      "La mayoría de los casos son hereditarios y se transmiten de padres a hijos, generalmente con herencia autosómica dominante. Con menor frecuencia existen formas autosómicas recesivas o adquiridas asociadas a otras enfermedades."
+    ],
+    riskFactors: [
+      "Antecedentes familiares de enfermedad de von Willebrand.",
+      "Familiares con sangrados frecuentes o menstruaciones abundantes.",
+      "Historia personal de sangrado excesivo tras cirugías o procedimientos dentales."
+    ],
     complications: ["Anemia crónica por pérdidas de sangre recurrentes", "Hemorragias graves tras procedimientos menores", "Dolor e inflamación articular (en tipos graves)"],
-    treatments: ["Medicamentos para elevar temporalmente los niveles del factor de coagulación", "Antifibrinolíticos para controlar sangrados locales en boca o nariz", "Concentrados purificados de factor Von Willebrand en casos severos o cirugías"],
+    treatments: [
+      "Desmopresina (DDAVP) en pacientes seleccionados.",
+      "Antifibrinolíticos (ácido tranexámico).",
+      "Concentrados de factor von Willebrand/FVIII cuando están indicados.",
+      "Tratamiento hormonal para menstruaciones abundantes en adolescentes, cuando sea necesario."
+    ],
     faqs: [
       {
         question: "¿Es una enfermedad parecida a la hemofilia?",
@@ -517,6 +547,10 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
       {
         question: "¿La enfermedad de von Willebrand tiene cura?",
         answer: "Actualmente no tiene cura definitiva, pero existen tratamientos muy efectivos para prevenir y controlar los episodios de sangrado, permitiendo que la mayoría de los pacientes lleven una vida normal."
+      },
+      {
+        question: "¿Cómo se diagnostica la enfermedad de von Willebrand?",
+        answer: "Se diagnostica mediante una valoración por hematología pediátrica y estudios especializados que incluyen la actividad y el antígeno del factor von Willebrand, la actividad del factor VIII y, en algunos casos, pruebas adicionales para identificar el tipo de enfermedad."
       }
     ],
     image: "/enfermedades/Enfermedad_Von_Willebrand.png",
@@ -533,7 +567,7 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
     id: "enf-011",
     slug: "leucemia-infantil",
     name: "Leucemia Infantil",
-    description: "La leucemia infantil es un tipo de cáncer que se origina en la médula ósea, el tejido encargado de producir las células sanguíneas. Las células leucémicas se multiplican de forma descontrolada y desplazan a las células normales de la sangre, provocando anemia, infecciones y sangrados.",
+    description: "La leucemia infantil es un tipo de cáncer que se origina en la médula ósea, el tejido encargado de producir las células de la sangre. Las células leucémicas se multiplican de forma descontrolada, desplazan a las células normales de la médula ósea y ocasionan anemia, infecciones y sangrados.",
     symptoms: [
       "Palidez y cansancio persistente",
       "Fiebre recurrente o prolongada",
@@ -542,22 +576,29 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
       "Dolor óseo o articular",
       "Ganglios inflamados",
       "Crecimiento del hígado o bazo",
-      "Pérdida de peso o disminución del apetito"
+      "Pérdida de peso o disminución del apetito",
+      "Sudoración nocturna.",
+      "Infecciones frecuentes o difíciles de controlar."
     ],
-    causes: ["En la mayoría de los niños no existe una causa identificable. La leucemia se desarrolla por alteraciones genéticas adquiridas en las células de la médula ósea y generalmente no es hereditaria."],
-    riskFactors: ["Trastornos genéticos específicos (como el Síndrome de Down)", "Exposición previa a quimioterapia o radiaciones de alta intensidad"],
+    causes: [
+      "En la mayoría de los niños no existe una causa identificable. La leucemia se desarrolla por alteraciones genéticas adquiridas en las células de la médula ósea y, en la mayoría de los casos, no es una enfermedad hereditaria."
+    ],
+    riskFactors: [
+      "Síndromes de predisposición genética (ej. síndrome de Down, anemia de Fanconi, síndrome de Li-Fraumeni).",
+      "Exposición previa a quimioterapia o radioterapia."
+    ],
     complications: ["Infecciones graves por deficiencia de glóbulos blancos sanos", "Hemorragias severas por falta de plaquetas", "Anemia grave que limita las actividades cotidianas"],
     treatments: [
-      "Quimioterapia en varias fases",
-      "Terapias dirigidas en algunos tipos de leucemia",
-      "Inmunoterapia en casos seleccionados",
-      "Trasplante de células madre hematopoyéticas cuando está indicado",
-      "Tratamiento de soporte transfusional y prevención de infecciones"
+      "Quimioterapia en varias fases.",
+      "Terapias dirigidas en algunos tipos de leucemia.",
+      "Inmunoterapia en pacientes seleccionados.",
+      "Trasplante de células madre hematopoyéticas cuando esté indicado.",
+      "Tratamiento de soporte, incluyendo transfusiones, prevención y tratamiento de infecciones, y manejo de los efectos secundarios."
     ],
     faqs: [
       {
         question: "¿Los niños con leucemia pueden curarse?",
-        answer: "Sí. La leucemia infantil, especialmente la leucemia linfoblástica aguda (LLA), tiene tasas de curación superiores al 85-90% con tratamiento oportuno y adecuado. El diagnóstico temprano y el inicio rápido del tratamiento son fundamentales para el pronóstico."
+        answer: "Sí. Actualmente, muchos niños con leucemia, especialmente con leucemia linfoblástica aguda (LLA), pueden curarse con un diagnóstico oportuno y tratamiento especializado. Las probabilidades de curación dependen del tipo de leucemia y de los factores de riesgo de cada paciente."
       },
       {
         question: "¿Cuánto dura el tratamiento de la leucemia infantil?",
@@ -575,6 +616,8 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
     image: "/enfermedades/Leucemia_Linfoblastica_Aguda.png",
     relatedServices: ["ser-001", "ser-002", "ser-004", "ser-007"],
     relatedSymptoms: ["sym-001", "sym-002", "sym-003", "sym-004", "sym-006", "sym-007", "sym-014", "sym-015"],
+    ctaQuestion: "¿Tu hijo presenta fiebre persistente, palidez, moretones frecuentes o dolor de huesos?",
+    ctaAnswer: "Estos síntomas no siempre significan leucemia, pero sí requieren una valoración médica oportuna. Una evaluación por Hematología Pediátrica puede ayudar a establecer el diagnóstico e iniciar el tratamiento lo antes posible si es necesario.",
     seo: {
       title: "Leucemia Infantil | Hematóloga Pediatra CDMX",
       description: "Diagnóstico oportuno y tratamiento especializado para la leucemia infantil. Consulta experta con la Dra. Lizbeth Hernández.",
@@ -587,25 +630,48 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
     slug: "trombosis-infantil",
     name: "Trombosis en Niños",
     technicalName: "Trombosis Venosa o Arterial Pediátrica",
-    description: "La trombosis en niños es un trastorno poco común pero grave, caracterizado por la formación de un coágulo de sangre (trombo) dentro de un vaso sanguíneo (vena o arteria), obstruyendo la circulación normal de la sangre.",
-    symptoms: ["Hinchazón dolorosa en una extremidad (brazo o pierna)", "Piel de la zona afectada enrojecida, morada o pálida", "Sensación de calor en la extremidad inflamada", "Dolor de pecho o dificultad respiratoria súbita (sospecha de trombo en pulmón)"],
-    causes: ["Presencia de catéteres venosos centrales (causa más frecuente en hospitales)", "Trastornos congénitos de la coagulación (trombofilias)", "Infecciones graves, cirugías o cáncer activo"],
-    riskFactors: ["Uso prolongado de catéteres centrales", "Enfermedades inflamatorias crónicas", "Antecedentes familiares de trombosis a temprana edad"],
+    description: "La trombosis en niños es la formación de un coágulo de sangre (trombo) dentro de una vena o arteria, que puede obstruir parcial o totalmente el flujo sanguíneo. Aunque es poco frecuente en la infancia, puede provocar complicaciones importantes si no se diagnostica y trata oportunamente.",
+    symptoms: [
+      "Hinchazón dolorosa en una extremidad (brazo o pierna)",
+      "Piel de la zona afectada enrojecida, morada o pálida",
+      "Sensación de calor en la extremidad inflamada",
+      "Dolor de pecho o dificultad respiratoria súbita (sospecha de trombo en pulmón)",
+      "Dolor o aumento de volumen alrededor de un catéter venoso central.",
+      "Dolor de cabeza intenso, convulsiones o alteración del estado de alerta (en trombosis cerebral)."
+    ],
+    causes: [
+      "Catéter venoso central (principal causa en pediatría).",
+      "Infecciones graves, cirugías o traumatismos.",
+      "Cáncer y tratamiento con quimioterapia.",
+      "Trastornos hereditarios o adquiridos de la coagulación (trombofilias)."
+    ],
+    riskFactors: [
+      "Hospitalización prolongada.",
+      "Inmovilización.",
+      "Cardiopatías congénitas.",
+      "Síndrome nefrótico.",
+      "Enfermedad inflamatoria intestinal.",
+      "Obesidad en adolescentes."
+    ],
     complications: ["Embolia pulmonar (el coágulo viaja al pulmón, siendo una emergencia vital)", "Síndrome postrombótico (daño crónico y dolor en la vena afectada)", "Pérdida de perfusión y daño de tejidos"],
     treatments: [
-      "Anticoagulación bajo supervisión especializada",
-      "Tratamiento de la enfermedad o factor desencadenante",
-      "Manejo o retiro del catéter cuando esté indicado",
-      "Seguimiento clínico y por estudios de imagen"
+      "Anticoagulación bajo supervisión especializada.",
+      "Tratamiento de la enfermedad desencadenante.",
+      "Manejo o retiro del catéter cuando esté indicado.",
+      "Seguimiento clínico y estudios de imagen para confirmar la resolución del trombo."
     ],
     faqs: [
       { question: "¿Por qué a los niños les da trombosis?", answer: "A diferencia de los adultos, la trombosis en niños suele asociarse a factores de riesgo específicos como catéteres venosos centrales, infecciones graves, cáncer, enfermedades inflamatorias o trastornos de la coagulación. En muchos pacientes intervienen varios factores al mismo tiempo." },
       { question: "¿Los anticoagulantes ponen en riesgo al niño?", answer: "Tienen un riesgo de causar sangrado, por lo que requieren una dosificación muy precisa, monitoreo constante de laboratorio e indicación rigurosa por un hematólogo pediatra." },
-      { question: "¿Qué es una trombofilia?", answer: "Es una condición hereditaria o adquirida en la que la sangre tiene una mayor tendencia natural a formar coágulos de forma inapropiada." }
+      { question: "¿Qué es una trombofilia?", answer: "Es una condición hereditaria o adquirida en la que la sangre tiene una mayor tendencia natural a formar coágulos de forma inapropiada." },
+      { question: "¿Cómo se diagnostica una trombosis?", answer: "El diagnóstico se confirma mediante estudios de imagen, como ultrasonido Doppler, tomografía o resonancia magnética, dependiendo del sitio donde se sospeche el trombo. En algunos pacientes también se solicitan estudios para investigar trombofilias." },
+      { question: "¿La trombosis puede volver a aparecer?", answer: "Sí. Algunos niños presentan riesgo de recurrencia, especialmente si persisten factores de riesgo o tienen una trombofilia. Por ello es importante el seguimiento por Hematología Pediátrica." }
     ],
     image: "/enfermedades/Trombosis_Niños.jpeg",
     relatedServices: ["ser-005", "ser-007"],
     relatedSymptoms: ["sym-007"],
+    ctaQuestion: "¿Tu hijo presenta inflamación dolorosa de una extremidad, dificultad para respirar repentina o sospecha de trombosis?",
+    ctaAnswer: "La trombosis en niños requiere diagnóstico y tratamiento oportunos para disminuir el riesgo de complicaciones. La Dra. Lizbeth Yamilet Hernández Verdugo, especialista en Hematología Pediátrica, puede realizar la valoración y orientar el tratamiento más adecuado.",
     seo: {
       title: "Trombosis en Niños y Trombofilias | Hematóloga CDMX",
       description: "Diagnóstico y tratamiento especializado de trombosis venosa y estudios de trombofilia en niños. Dra. Lizbeth Hernández.",
@@ -617,23 +683,27 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
     id: "enf-016",
     slug: "interpretacion-resultados-laboratorio",
     name: "Interpretación de Resultados de Laboratorio",
-    description: "La Dra. Lizbeth Hernández evalúa alteraciones en estudios de laboratorio, biometrías hemáticas y pruebas especializadas para identificar la causa y orientar el tratamiento más adecuado para cada paciente.",
+    description: "La interpretación de una biometría hemática u otros estudios de laboratorio permite identificar alteraciones en los glóbulos rojos, glóbulos blancos o plaquetas. La Dra. Lizbeth Hernández evalúa estos resultados en conjunto con la historia clínica y la exploración física para establecer un diagnóstico y orientar el tratamiento más adecuado.",
     symptoms: [
       "Puntos rojos en la piel (petequias) o moretones sin explicación",
       "Palidez extrema o cansancio inusual",
       "Fiebre persistente o infecciones frecuentes",
-      "Sangrados de nariz o encías recurrentes"
+      "Sangrados de nariz o encías recurrentes",
+      "Ganglios aumentados de tamaño.",
+      "Pérdida de peso o sudoración nocturna.",
+      "Dolor óseo persistente."
     ],
     causes: [
-      "Infecciones virales o bacterianas",
-      "Deficiencias nutricionales (falta de hierro, vitamina B12 o ácido fólico)",
-      "Enfermedades autoinmunes o destrucción celular acelerada",
-      "Trastornos de la médula ósea (aplasia medular, leucemias o síndromes de falla medular)"
+      "Infecciones virales o bacterianas.",
+      "Deficiencias nutricionales (hierro, vitamina B12 o ácido fólico).",
+      "Enfermedades autoinmunes o inflamatorias.",
+      "Trastornos hereditarios de la sangre.",
+      "Enfermedades de la médula ósea (aplasia medular, leucemias o síndromes de falla medular)."
     ],
     riskFactors: [
-      "Antecedentes familiares de anemias o trastornos hemorrágicos",
-      "Uso reciente de ciertos medicamentos o tratamientos médicos",
-      "Infecciones recientes o exposición a toxinas ambientales"
+      "Antecedentes familiares de enfermedades hematológicas.",
+      "Tratamientos como quimioterapia o inmunosupresores.",
+      "Enfermedades crónicas."
     ],
     complications: [
       "Retraso en la detección y tratamiento de enfermedades hematológicas graves",
@@ -641,11 +711,13 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
       "Mayor susceptibilidad a infecciones graves por neutropenia"
     ],
     treatments: [
-      "Evaluación clínica completa por un hematólogo pediatra",
-      "Frotis de sangre periférica para análisis morfológico de las células",
-      "Estudios confirmatorios específicos de laboratorio o genéticos",
-      "Aspirado o biopsia de médula ósea en caso de sospecha de falla medular"
+      "Valoración clínica por Hematología Pediátrica.",
+      "Interpretación de la biometría hemática y otros estudios de laboratorio.",
+      "Frotis de sangre periférica.",
+      "Estudios especializados (hierro, vitamina B12, pruebas de coagulación, inmunológicos, genéticos o moleculares, según el caso).",
+      "Aspirado o biopsia de médula ósea cuando esté indicado."
     ],
+    treatmentsTitle: "Evaluación especializada",
     faqs: [
       {
         question: "¿Qué significa tener los leucocitos (glóbulos blancos) alterados?",
@@ -658,11 +730,21 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
       {
         question: "¿Cuándo es urgente consultar al hematólogo por una biometría alterada?",
         answer: "Es prioritario acudir a valoración si hay alteraciones en más de una línea celular (por ejemplo, anemia y plaquetas bajas simultáneamente), sospecha de células anormales (blastos) o si se acompaña de fiebre prolongada, pérdida de peso o sangrados."
+      },
+      {
+        question: "¿Qué es una biometría hemática?",
+        answer: "Es un estudio de sangre que evalúa los glóbulos rojos, los glóbulos blancos y las plaquetas. Permite detectar anemia, infecciones, alteraciones de la coagulación y otras enfermedades hematológicas."
+      },
+      {
+        question: "¿Debo repetir el estudio si salió alterado?",
+        answer: "En algunos casos sí. Dependiendo de la alteración encontrada, el hematólogo puede recomendar repetir la biometría hemática o solicitar estudios complementarios para confirmar el diagnóstico."
       }
     ],
     image: "/enfermedades/Alteraciones_Biometria_Hematica.png",
     relatedServices: ["ser-003", "ser-005", "ser-006"],
     relatedSymptoms: ["sym-001", "sym-002", "sym-003", "sym-004", "sym-006", "sym-013"],
+    ctaQuestion: "¿Tu hijo tiene una biometría hemática o un estudio de laboratorio alterado?",
+    ctaAnswer: "La interpretación especializada de los resultados, junto con la historia clínica y la exploración física, permite identificar la causa de la alteración y orientar el tratamiento más adecuado para cada paciente.",
     seo: {
       title: "Interpretación de Resultados de Laboratorio Pediátrico | CDMX",
       description: "La Dra. Lizbeth Hernández evalúa biometrías hemáticas, estudios especializados y pruebas de laboratorio para identificar la causa de alteraciones en sangre en niños.",
@@ -674,27 +756,29 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
     id: "enf-017",
     slug: "neutropenia-infantil",
     name: "Neutropenia en Niños",
-    description: "La neutropenia es la disminución anormal en la cantidad de neutrófilos, un tipo de glóbulo blanco esencial para combatir infecciones bacterianas y fúngicas. En los niños, esto aumenta el riesgo de contraer infecciones que pueden ser recurrentes o graves.",
+    description: "La neutropenia es la disminución anormal en la cantidad de neutrófilos, un tipo de glóbulo blanco fundamental para defender al organismo contra infecciones, especialmente bacterianas y fúngicas. Dependiendo de su gravedad y de la causa, puede aumentar el riesgo de infecciones recurrentes o graves.",
     symptoms: [
       "Fiebre persistente o inexplicable",
       "Infecciones de oído, garganta o piel recurrentes",
       "Úlceras o llagas dolorosas en la boca (aftas)",
       "Inflamación o sangrado de encías (gingivitis)",
-      "Retraso en la cicatrización de heridas o infecciones cutáneas frecuentes"
+      "Retraso en la cicatrización de heridas o infecciones cutáneas frecuentes",
+      "Abscesos o infecciones recurrentes de la piel.",
+      "Neumonías o infecciones respiratorias repetidas."
     ],
     causes: [
-      "Infecciones virales recientes o activas (causa más frecuente en la infancia).",
+      "Infecciones virales recientes (la causa más frecuente en la infancia).",
       "Neutropenia autoinmune infantil.",
       "Medicamentos.",
-      "Deficiencias nutricionales (vitamina B12, ácido fólico o cobre).",
-      "Trastornos congénitos de los neutrófilos.",
-      "Enfermedades de la médula ósea (casos poco frecuentes)."
+      "Deficiencia de vitamina B12, ácido fólico o cobre.",
+      "Neutropenias congénitas.",
+      "Enfermedades de la médula ósea."
     ],
     riskFactors: [
-      "Infecciones virales recientes (gripe, varicela, etc.)",
-      "Tratamientos médicos activos como quimioterapia o ciertos anticonvulsivos",
-      "Antecedentes de enfermedades autoinmunes",
-      "Predisposición genética"
+      "Quimioterapia o inmunosupresores.",
+      "Enfermedades autoinmunes.",
+      "Antecedentes familiares de neutropenia.",
+      "Prematuridad (en recién nacidos)."
     ],
     complications: [
       "Infecciones bacterianas graves o generalizadas (septicemia)",
@@ -702,10 +786,11 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
       "Hospitalizaciones frecuentes por infecciones de difícil control"
     ],
     treatments: [
-      "Tratamiento antibiótico o antimicótico inmediato ante sospecha de infección",
-      "Factores estimulantes de colonias de granulocitos (G-CSF) para elevar los neutrófilos",
-      "Suspensión o cambio de medicamentos causantes",
-      "Seguimiento estrecho con biometrías hemáticas periódicas"
+      "Observación y seguimiento cuando la neutropenia es transitoria y sin infecciones.",
+      "Antibióticos o antimicóticos cuando existe infección.",
+      "Factores estimulantes de colonias de granulocitos (G-CSF) en pacientes seleccionados.",
+      "Suspensión o cambio del medicamento responsable cuando sea posible.",
+      "Seguimiento con biometrías hemáticas y tratamiento de la causa."
     ],
     faqs: [
       {
@@ -719,11 +804,21 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
       {
         question: "¿Qué precauciones especiales se deben tomar en casa?",
         answer: "Es fundamental mantener una higiene estricta (lavado de manos frecuente), evitar el contacto con personas enfermas, mantener las vacunas al día, cuidar la higiene dental y tener un termómetro en casa para vigilar la temperatura de forma precisa."
+      },
+      {
+        question: "¿Cómo se diagnostica la neutropenia?",
+        answer: "El diagnóstico se realiza mediante una biometría hemática. Dependiendo de la edad del niño, la gravedad y el tiempo de evolución, pueden requerirse estudios adicionales para identificar la causa."
+      },
+      {
+        question: "¿Todos los niños con neutropenia tienen infecciones graves?",
+        answer: "No. Muchos niños presentan neutropenia leve o transitoria, especialmente después de infecciones virales, y nunca desarrollan complicaciones. El riesgo depende del número de neutrófilos, la duración de la neutropenia y la causa que la produce."
       }
     ],
     image: "/enfermedades/Neutropenia_Niños.png",
     relatedServices: ["ser-003", "ser-006", "ser-007"],
     relatedSymptoms: ["sym-006", "sym-013"],
+    ctaQuestion: "¿Tu hijo presenta infecciones frecuentes o neutropenia?",
+    ctaAnswer: "Una valoración oportuna por Hematología Pediátrica permite identificar la causa de la neutropenia, evaluar el riesgo de infecciones e indicar el tratamiento y seguimiento más adecuados. Si presenta fiebre y neutropenia grave, debe acudir de inmediato a un servicio de urgencias.",
     seo: {
       title: "Neutropenia en Niños | Defensas Bajas CDMX",
       description: "Diagnóstico y tratamiento de la neutropenia y fiebre neutropénica en niños con la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
@@ -735,7 +830,7 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
     id: "enf-018",
     slug: "linfoma-infantil",
     name: "Linfoma Infantil",
-    description: "El linfoma es un tipo de cáncer que se origina en el sistema linfático, principalmente en los linfocitos (un tipo de glóbulo blanco). Puede manifestarse con ganglios inflamados persistentes, fiebre, pérdida de peso y sudoración nocturna. Existen dos tipos principales: el linfoma de Hodgkin y los linfomas no Hodgkin, cada uno con diferentes características y tratamientos.",
+    description: "El linfoma es un tipo de cáncer que afecta al sistema linfático, una parte del sistema de defensa del organismo. Se origina cuando los linfocitos (un tipo de glóbulo blanco) crecen de forma descontrolada y forman ganglios o masas. Los dos tipos principales son el linfoma de Hodgkin y el linfoma no Hodgkin, que requieren tratamientos diferentes.",
     symptoms: [
       "Ganglios inflamados en cuello, axilas o ingle que no duelen y no desaparecen",
       "Fiebre persistente sin causa aparente",
@@ -743,14 +838,17 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
       "Sudoración nocturna abundante",
       "Cansancio o fatiga",
       "Comezón generalizada en la piel",
-      "Crecimiento del hígado o bazo"
+      "Crecimiento del hígado o bazo",
+      "Tos persistente o dificultad para respirar (cuando existen ganglios en el tórax)."
     ],
-    causes: ["En la mayoría de los casos no se identifica una causa única. Se producen por alteraciones en el ADN de los linfocitos que provocan su multiplicación descontrolada."],
+    causes: [
+      "En la mayoría de los niños no se identifica una causa específica. El linfoma se desarrolla por alteraciones adquiridas en los linfocitos que hacen que crezcan y se multipliquen sin control."
+    ],
     riskFactors: [
-      "Inmunodeficiencias primárias o adquiridas",
-      "Infección por virus de Epstein-Barr (EBV)",
-      "Antecedente de trasplante de órgano sólido o de médula ósea",
-      "Exposición previa a radioterapia"
+      "Inmunodeficiencias congénitas o adquiridas.",
+      "Infección por virus de Epstein-Barr (EBV) en algunos tipos de linfoma.",
+      "Antecedente de trasplante de órgano sólido o de células madre hematopoyéticas.",
+      "Tratamiento previo con quimioterapia o radioterapia (menos frecuente)."
     ],
     complications: [
       "Compresión de estructuras vitales por ganglios aumentados de tamaño",
@@ -758,16 +856,16 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
       "Efectos secundarios del tratamiento a largo plazo"
     ],
     treatments: [
-      "Quimioterapia según el tipo y estadio del linfoma",
-      "Radioterapia en casos seleccionados",
-      "Inmunoterapia o terapias dirigidas en algunos tipos",
-      "Trasplante de células madre hematopoyéticas cuando está indicado",
-      "Seguimiento estrecho y tratamiento de soporte"
+      "Quimioterapia según el tipo y estadio del linfoma.",
+      "Radioterapia en casos seleccionados.",
+      "Inmunoterapia o terapias dirigidas en algunos pacientes.",
+      "Trasplante de células madre hematopoyéticas cuando está indicado.",
+      "Tratamiento de soporte para prevenir y tratar complicaciones."
     ],
     faqs: [
       {
         question: "¿Qué diferencia hay entre linfoma de Hodgkin y no Hodgkin?",
-        answer: "Son dos tipos diferentes de linfoma que se distinguen por las células que los originan y por su comportamiento clínico. Ambos pueden presentarse en la infancia y requieren tratamiento especializado. Actualmente existen tratamientos muy efectivos para ambos tipos y muchos niños logran curarse."
+        answer: "Son dos tipos diferentes de linfoma que se distinguen por las células que los originan y por su comportamiento clínico. Ambos pueden presentarse en niños y adolescentes, pero tienen características, tratamiento y pronóstico diferentes. Con el tratamiento adecuado, muchos pacientes logran curarse."
       },
       {
         question: "¿Un ganglio inflamado siempre es signo de linfoma?",
@@ -784,6 +882,10 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
       {
         question: "¿Todos los ganglios inflamados necesitan una biopsia?",
         answer: "No. La mayoría de los ganglios inflamados en niños son secundarios a infecciones y desaparecen con el tiempo. La biopsia solo se recomienda cuando existen características que hacen sospechar una enfermedad más importante o cuando los ganglios persisten sin una causa clara."
+      },
+      {
+        question: "¿El linfoma es hereditario?",
+        answer: "No. En la gran mayoría de los casos el linfoma no se hereda de padres a hijos. Solo algunos niños con enfermedades genéticas poco frecuentes o inmunodeficiencias tienen un mayor riesgo de desarrollarlo."
       }
     ],
     image: "/enfermedades/Leucemia_Linfoblastica_Aguda.png",

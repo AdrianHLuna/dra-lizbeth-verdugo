@@ -1,0 +1,2093 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Lizbeth Hernández | Contenido Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #572D55;
+            --accent: #A6225F;
+            --text: #333333;
+            --bg: #FDFBFC;
+            --card-bg: #FFFFFF;
+            --light-bg: #F5EFF4;
+            --border: #D3C9D1;
+            --primary-light: rgba(87, 45, 85, 0.05);
+            --accent-light: rgba(166, 34, 95, 0.04);
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        /* Sidebar de Navegación */
+        aside {
+            width: 320px;
+            background-color: #FFFFFF;
+            border-right: 1px solid var(--border);
+            padding: 2rem;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            overflow-y: auto;
+            display: flex;
+            flex-col: column;
+            flex-direction: column;
+            gap: 1.5rem;
+            z-index: 100;
+        }
+        .aside-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.2rem;
+        }
+        .aside-header p {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+        }
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            list-style: none;
+            margin-top: 1rem;
+        }
+        .nav-links a {
+            display: block;
+            padding: 0.75rem 1rem;
+            border-radius: 1rem;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+        }
+        .nav-links a:hover {
+            background-color: var(--primary-light);
+            color: var(--primary);
+        }
+        .nav-links .active {
+            background-color: var(--primary);
+            color: #FFFFFF;
+        }
+
+        /* Contenido Principal */
+        main {
+            margin-left: 320px;
+            flex: 1;
+            padding: 3rem 4rem;
+            max-width: 1000px;
+        }
+        header.doc-header {
+            margin-bottom: 3rem;
+            border-bottom: 2px solid var(--primary-light);
+            padding-bottom: 2rem;
+        }
+        .doc-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+        .doc-subtitle {
+            font-size: 1.1rem;
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        
+        section {
+            margin-bottom: 4rem;
+            scroll-margin-top: 2rem;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        h3 {
+            font-size: 1.3rem;
+            color: var(--accent);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        h4 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #4a4a4a;
+            text-align: justify;
+        }
+        ul, ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+            color: #4a4a4a;
+        }
+        
+        /* Tablas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            margin-bottom: 2rem;
+            background-color: var(--card-bg);
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border: 1px solid var(--border);
+        }
+        th, td {
+            padding: 1rem 1.25rem;
+            text-align: left;
+            border-bottom: 1px solid var(--primary-light);
+            font-size: 0.95rem;
+        }
+        th {
+            background-color: var(--primary);
+            color: #FFFFFF;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        tr:nth-child(even) td:first-child {
+            background-color: var(--primary-light);
+        }
+        td:first-child {
+            font-weight: 700;
+            color: var(--primary);
+            width: 30%;
+        }
+        
+        /* Callouts / Tarjetas de Alerta */
+        .callout {
+            background-color: var(--light-bg);
+            border-left: 5px solid var(--accent);
+            padding: 1.5rem 2rem;
+            border-radius: 0.5rem 1.5rem 1.5rem 0.5rem;
+            margin: 2rem 0;
+            box-shadow: 0 5px 15px rgba(166, 34, 95, 0.03);
+        }
+        .callout-title {
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+            text-transform: uppercase;
+        }
+        .callout-text {
+            font-style: italic;
+            color: var(--primary);
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background-color: var(--accent-light);
+            color: var(--accent);
+            border-radius: 2rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            border: 1px solid rgba(166,34,95,0.1);
+        }
+        
+        .faq-box {
+            background: #FFFFFF;
+            border: 1px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        }
+        .faq-q {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+        .faq-a {
+            color: #555555;
+            font-style: italic;
+            margin-bottom: 0;
+            padding-left: 0.5rem;
+        }
+        
+        .sources-list {
+            background: rgba(0,0,0,0.01);
+            padding: 1rem 1.5rem;
+            border-radius: 1rem;
+            border: 1px dashed var(--border);
+        }
+        .sources-list li {
+            font-size: 0.85rem;
+            color: #777777;
+            list-style-type: square;
+        }
+        
+        /* Botón de impresión o exportar */
+        .btn-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .btn-print {
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary);
+            color: #FFFFFF;
+            border: none;
+            border-radius: 2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 10px rgba(87, 45, 85, 0.2);
+        }
+        .btn-print:hover {
+            background-color: var(--accent);
+            box-shadow: 0 4px 10px rgba(166, 34, 95, 0.2);
+        }
+        
+        @media (max-width: 1024px) {
+            body {
+                flex-direction: column;
+            }
+            aside {
+                position: relative;
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+                padding: 1.5rem;
+            }
+            main {
+                margin-left: 0;
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside>
+        <div class="aside-header">
+            <h1>Dra. Lizbeth Hernández</h1>
+            <p>Contenido del Sitio Web</p>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#perfil" class="active">1. Perfil Profesional</a></li>
+            <li><a href="#servicios">2. Servicios y Procedimientos</a></li>
+            <li><a href="#sintomas">3. Guía de Síntomas</a></li>
+            <li><a href="#enfermedades">4. Enfermedades</a></li>
+            <li><a href="#transfusion">5. Medicina Transfusional</a></li>
+            <li><a href="#legales">6. Páginas de Soporte</a></li>
+        </ul>
+        <div class="btn-actions">
+            <button class="btn-print" onclick="window.print()">Imprimir / Guardar PDF</button>
+        </div>
+    </aside>
+
+    <main>
+        <header class="doc-header">
+            <div class="doc-subtitle">Manual de Contenidos Consolidados</div>
+            <div class="doc-title">Estructura y Textos del Sitio Web</div>
+            <p>Este documento interactivo consolida el total de textos, descripciones médicas, especificaciones de procedimientos e información del perfil clínico del portal de la Dra. Lizbeth Hernández Verdugo. Está diseñado para ser leído en pantalla, impreso o copiado directamente en procesadores de texto.</p>
+        </header>
+
+        <!-- SECCIÓN 1: PERFIL DOCTORA -->
+        <section id="perfil">
+            <h2>1. Perfil Profesional de la Doctora</h2>
+            <p style="font-size: 1.1rem; font-weight: 600; color: var(--primary); margin-bottom: 1.5rem;">Dra. Lizbeth Yamilet Hernández Verdugo</p>
+            <p>Soy la Dra. Lizbeth Yamilet Hernández Verdugo, médica especialista en Pediatría con subespecialidad en Hematología Pediátrica y formación de alta especialidad en Medicina Transfusional. Mi práctica profesional se enfoca en el diagnóstico, tratamiento y seguimiento integral de niños y adolescentes con enfermedades hematológicas, trastornos de la coagulación y alteraciones plaquetarias (altas y bajas), incluyendo anemias, leucemias, hemofilia y otros padecimientos de la sangre. Mi compromiso es brindar una atención médica cálida, ética y altamente especializada, orientada al bienestar de mis pacientes y la tranquilidad de sus familias.</p>
+            
+            <h3>Filosofía Médica</h3>
+            <div class="callout">
+                <p class="callout-text">"Atención médica pediátrica especializada y humana, con enfoque científico para el diagnóstico y tratamiento integral de los trastornos de la sangre."</p>
+            </div>
+            
+            <h3>Información General del Consultorio</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Concepto / Campo</th>
+                        <th>Detalle de Información</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Especialidad</td><td>Pediatría, Hematología Pediátrica y Medicina Transfusional</td></tr>
+                    <tr><td>Subespecialidad</td><td>Alta Especialidad en Medicina Transfusional</td></tr>
+                    <tr><td>Dirección del Consultorio</td><td>Calle San Luis Potosí #143, Interior 207, entre Calle Tonalá y Calle Jalapa, Colonia Roma Norte, C.P. 06700, Delegación Cuauhtémoc, Ciudad de México</td></tr>
+                    <tr><td>Teléfono de Contacto</td><td>5596868266</td></tr>
+                    <tr><td>WhatsApp de Citas</td><td>525611232970</td></tr>
+                    <tr><td>Correo Electrónico</td><td>dra.lizbethyamilet.hp@gmail.com</td></tr>
+                    <tr><td>Costo de Consulta</td><td>$1500 MXN</td></tr>
+                    <tr><td>Métodos de Pago</td><td>Efectivo, Transferencia, Tarjeta de débito, Tarjeta de crédito</td></tr>
+                    <tr><td>Horarios de Atención</td><td>Lunes a viernes de 10:00 a 19:00. Sábados de 9:00 a 14:00</td></tr>
+                    <tr><td>Cédula Profesional</td><td>10807063</td></tr>
+                    <tr><td>Cédula de Especialidad</td><td>13914389</td></tr>
+                    <tr><td>Cédula de Subespecialidad</td><td>15486256</td></tr>
+                    <tr><td>Registro COFEPRIS</td><td>En trámite</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Educación y Formación</h3>
+            <ul>
+    <li><strong>Médico Cirujano</strong> — Universidad Autónoma de Chiapas</li><li><strong>Especialidad en Pediatría</strong> — Universidad Nacional Autónoma de México</li><li><strong>Subespecialidad en Hematología Pediátrica</strong> — Universidad Nacional Autónoma de México</li>
+            </ul>
+
+            <h3>Certificaciones</h3>
+            <ul>
+    <li><strong>Certificación en Hematología</strong> — Consejo Mexicano de Hematología</li><li><strong>Certificación en Pediatría</strong> — Consejo Mexicano de Pediatría</li>
+            </ul>
+
+            <h3>Experiencia Laboral y Trayectoria</h3>
+            <ul>
+    <li><strong>Actualidad - Hematóloga Pediatra y Especialista en Medicina Transfusional:</strong> Más de 1 año de experiencia profesional y más de 1,200 pacientes pediátricos atendidos integralmente.</li>
+            </ul>
+        </section>
+
+        <!-- SECCIÓN 2: SERVICIOS -->
+        <section id="servicios">
+            <h2>2. Portafolio de Servicios y Procedimientos Médicos</h2>
+            <p>Guía de los procedimientos diagnósticos y terapéuticos especializados realizados en consultorio y ambiente hospitalario.</p>
+    
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <span class="badge">AMBULATORIO</span>
+                <h3 style="margin-top: 0.5rem; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.6rem; color: var(--primary);">Aspirado de Médula Ósea</h3>
+                <p><strong>Resumen Diagnóstico:</strong> Procedimiento especializado para extraer una pequeña muestra de la parte líquida de la médula ósea con fines de diagnóstico de trastornos sanguíneos.</p>
+                <p><strong>Descripción Ampliada:</strong> El aspirado de médula ósea es un procedimiento en el que se obtiene una pequeña muestra líquida de la médula ósea, generalmente del hueso de la cadera. Permite evaluar cómo se producen las células de la sangre y ayuda al diagnóstico de leucemias, anemias graves, infecciones, infiltración medular o fallas de médula ósea.</p>
+        <p><strong>Experiencia y Control del Dolor:</strong> Se realiza con anestesia local y medidas de analgesia o sedación según la edad y condición del niño para mayor comodidad del paciente. Puede presentarse molestia leve o dolor transitorio en el sitio de punción durante las primeras 24 a 48 horas.</p>
+                <h4>Ficha Técnica</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Especificación</th>
+                            <th>Detalle Técnico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Tipo de Procedimiento</td><td>AMBULATORIO</td></tr>
+                        <tr><td>Tipo de Anestesia</td><td>Sedación y anestesia local</td></tr>
+                        <tr><td>Duración Promedio</td><td>20 a 30 minutos</td></tr>
+                        <tr><td>Tiempo de Recuperación</td><td>24 a 48 horas</td></tr>
+                        <tr><td>¿Provoca dolor o molestia?</td><td>Sí</td></tr>
+                        <tr><td>Costo Aproximado</td><td>Según valoración médica</td></tr>
+        <tr><td>Equipo requerido</td><td>Agujas especializadas de aspiración pediátrica</td></tr><tr><td>Procesamiento</td><td>Mielograma y, según el caso, citometría de flujo, estudios genéticos, moleculares, cultivos u otros estudios complementarios</td></tr>
+                    </tbody>
+                </table>
+
+                <h4>¿Cuándo está indicado realizarlo?</h4>
+                <ul>
+        <li>Anemia, plaquetas o leucocitos muy bajos sin causa clara.</li><li>Sospecha de leucemia u otra enfermedad hematológica.</li><li>Fiebre prolongada, crecimiento de ganglios, hígado o bazo.</li><li>Sospecha de falla medular o infiltración de médula ósea.</li>
+                </ul>
+
+                <h4>Recomendaciones</h4>
+                <ul>
+        <li>Mantener el vendaje limpio y seco durante las primeras 24 horas</li><li>Evitar actividades físicas intensas o deportes de contacto por 2 a 3 días</li><li>Vigilar la aparición de sangrado persistente, fiebre o dolor intenso en el sitio</li>
+                </ul>
+        
+                <h4>Riesgos</h4>
+                <ul>
+            <li>Es un procedimiento seguro cuando se realiza por personal capacitado. Las complicaciones son poco frecuentes, pero pueden incluir dolor local, moretón, sangrado o infección en el sitio de punción</li></ul>
+                <div class="callout">
+                    <div class="callout-title">¿A tu hijo le han solicitado un aspirado de médula ósea?</div>
+                    <div class="callout-text">Recibe una valoración especializada y orientación completa sobre el procedimiento, su indicación y los cuidados posteriores.</div>
+                </div>
+            </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <span class="badge">AMBULATORIO</span>
+                <h3 style="margin-top: 0.5rem; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.6rem; color: var(--primary);">Biopsia de Médula Ósea</h3>
+                <p><strong>Resumen Diagnóstico:</strong> Extracción de una pequeña muestra de hueso y tejido sólido de la médula ósea para un análisis histopatológico detallado.</p>
+                <p><strong>Descripción Ampliada:</strong> La biopsia de médula ósea es un procedimiento en el que se obtiene una pequeña muestra sólida de tejido medular, generalmente del hueso de la cadera. Permite evaluar la estructura de la médula ósea, detectar infiltración por enfermedades hematológicas y complementar la información obtenida con el aspirado de médula ósea.</p>
+        <p><strong>Experiencia y Control del Dolor:</strong> Moderado. El procedimiento se realiza con anestesia local y, cuando está indicado, sedación para disminuir las molestias y mejorar la comodidad del paciente.</p>
+                <h4>Ficha Técnica</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Especificación</th>
+                            <th>Detalle Técnico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Tipo de Procedimiento</td><td>AMBULATORIO</td></tr>
+                        <tr><td>Tipo de Anestesia</td><td>Sedación y anestesia local</td></tr>
+                        <tr><td>Duración Promedio</td><td>30 minutos</td></tr>
+                        <tr><td>Tiempo de Recuperación</td><td>24 a 48 horas</td></tr>
+                        <tr><td>¿Provoca dolor o molestia?</td><td>Sí</td></tr>
+                        <tr><td>Costo Aproximado</td><td>Según valoración médica</td></tr>
+        <tr><td>Sitio de punción</td><td>Hueso de la cadera (cresta ilíaca posterior)</td></tr><tr><td>Estudios adicionales</td><td>Estudio histopatológico de la muestra de médula ósea para evaluar su estructura y composición celular.</td></tr><tr><td>Procesamiento</td><td>La muestra es analizada por Anatomía Patológica mediante estudios histológicos y, cuando está indicado, inmunohistoquímica u otras pruebas complementarias.</td></tr>
+                    </tbody>
+                </table>
+
+                <h4>¿Cuándo se indica?</h4>
+                <ul>
+        <li>Sospecha de leucemia, linfoma u otros cánceres hematológicos.</li><li>Pancitopenia o alteraciones persistentes de las células sanguíneas.</li><li>Anemia aplásica y otras fallas medulares.</li><li>Evaluación de infiltración de médula ósea.</li><li>Seguimiento y valoración de respuesta al tratamiento.</li>
+                </ul>
+
+                <h4>Recomendaciones después del procedimiento</h4>
+                <ul>
+        <li>Mantener reposo relativo durante las primeras 24 horas.</li><li>Mantener limpio y seco el sitio de punción durante las primeras 24 horas.</li><li>Administrar el analgésico indicado si existe molestia local.</li><li>Evitar actividades físicas intensas durante 24 a 48 horas.</li><li>Acudir a valoración si presenta sangrado persistente, fiebre, enrojecimiento importante o dolor intenso en el sitio de punción.</li>
+                </ul>
+        
+                <h4>Riesgos</h4>
+                <ul>
+            <li>La biopsia de médula ósea es un procedimiento seguro. Las complicaciones son poco frecuentes y pueden incluir dolor local, sangrado, hematoma o infección en el sitio de punción.</li></ul><h4>Preguntas Frecuentes del Procedimiento</h4>
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Se realiza junto con aspirado de médula ósea??</div>
+                    <div class="faq-a">Frecuentemente sí. Ambos procedimientos aportan información complementaria y suelen realizarse durante la misma intervención para obtener un diagnóstico más completo.</div>
+                </div>
+                
+                <div class="callout">
+                    <div class="callout-title">¿A tu hijo le han encontrado alteraciones en la biometría hemática o existe sospecha de una enfermedad de la sangre o de la médula ósea?</div>
+                    <div class="callout-text">La biopsia de médula ósea permite estudiar directamente el tejido donde se producen las células sanguíneas. Es una herramienta fundamental para diagnosticar y dar seguimiento a diversas enfermedades hematológicas en niños y adolescentes.</div>
+                </div>
+            </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <span class="badge">CONSULTORIO</span>
+                <h3 style="margin-top: 0.5rem; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.6rem; color: var(--primary);">Lectura de Frotis de Sangre Periférica</h3>
+                <p><strong>Resumen Diagnóstico:</strong> Evaluación microscópica detallada de las células sanguíneas para analizar su forma, tamaño y cantidad real en circulación.</p>
+                <p><strong>Descripción Ampliada:</strong> La lectura de frotis de sangre periférica es un estudio en el que se examinan las células sanguíneas al microscopio. Permite evaluar la forma, tamaño y características de los glóbulos rojos, glóbulos blancos y plaquetas, aportando información clave para el diagnóstico de anemias, infecciones, alteraciones hematológicas y algunos tipos de leucemia.</p>
+        <p><strong>Experiencia y Control del Dolor:</strong> Indoloro (solo requiere una muestra de sangre)</p>
+                <h4>Ficha Técnica</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Especificación</th>
+                            <th>Detalle Técnico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Tipo de Procedimiento</td><td>CONSULTORIO</td></tr>
+                        <tr><td>Tipo de Anestesia</td><td>No especificado</td></tr>
+                        <tr><td>Duración Promedio</td><td>Variable según complejidad del caso</td></tr>
+                        <tr><td>Tiempo de Recuperación</td><td>Inmediato</td></tr>
+                        <tr><td>¿Provoca dolor o molestia?</td><td>No</td></tr>
+                        <tr><td>Costo Aproximado</td><td>Puede estar incluido dentro de la valoración Hematológica</td></tr>
+        <tr><td>Método</td><td>Análisis morfológico de celulas sanguineas mediante microscopia</td></tr>
+                    </tbody>
+                </table>
+
+                <h4>¿Cuáles son los beneficios?</h4>
+                <ul>
+        <li>Identificación de alteraciones en glóbulos rojos, glóbulos blancos y plaquetas.</li><li>Orientación diagnóstica en anemias hereditarias o adquiridas.</li><li>Detección de blastos u otras células anormales.</li><li>Apoyo en la evaluación de infecciones, inflamación y enfermedades hematológicas.</li><li>Complemento fundamental para la interpretación de la biometría hemática.</li>
+                </ul>
+
+                <h4>Recomendaciones</h4>
+                <ul>
+        <li>No requiere cuidados especiales después de la toma de muestra.</li><li>Puede retomar sus actividades habituales inmediatamente.</li><li>Mantener presión local algunos minutos si la muestra fue obtenida por venopunción.</li><li>Consultar a su médico si presenta sangrado persistente o inflamación en el sitio de punción.</li>
+                </ul>
+        <h4>Preguntas Frecuentes del Procedimiento</h4>
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Qué puede detectar este estudio??</div>
+                    <div class="faq-a">Este estudio puede detectar: 
+• Anemias.
+• Alteraciones de plaquetas.
+• Infecciones.
+• Leucemias y otras enfermedades hematológicas.
+• Anomalías hereditarias de los glóbulos rojos.</div>
+                </div>
+                
+                <div class="callout">
+                    <div class="callout-title">¿Tu hijo requiere un frotis de sangre periférica?</div>
+                    <div class="callout-text">La interpretación del frotis de sangre periférica por una hematóloga pediatra aporta información que puede no ser identificada por los equipos automatizados de laboratorio y permite una evaluación más completa del paciente</div>
+                </div>
+            </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <span class="badge">AMBULATORIO</span>
+                <h3 style="margin-top: 0.5rem; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.6rem; color: var(--primary);">Punción Lumbar</h3>
+                <p><strong>Resumen Diagnóstico:</strong> Procedimiento para extraer líquido cefalorraquídeo del canal espinal para diagnosticar o administrar medicamentos en el sistema nervioso.</p>
+                <p><strong>Descripción Ampliada:</strong> La punción lumbar es un procedimiento mediante el cual se obtiene una pequeña muestra de líquido cefalorraquídeo (LCR), el líquido que rodea el cerebro y la médula espinal. Permite diagnosticar diversas enfermedades y, en algunos casos, administrar medicamentos directamente en el sistema nervioso central.</p>
+        <p><strong>Experiencia y Control del Dolor:</strong> leve a moderado; se utilizan medidas de analgesia y anestesia.</p>
+                <h4>Ficha Técnica</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Especificación</th>
+                            <th>Detalle Técnico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Tipo de Procedimiento</td><td>AMBULATORIO</td></tr>
+                        <tr><td>Tipo de Anestesia</td><td>Sedación y anestesia local</td></tr>
+                        <tr><td>Duración Promedio</td><td>15–30 minutos</td></tr>
+                        <tr><td>Tiempo de Recuperación</td><td>observación breve y alta el mismo día en la mayoría de los casos.</td></tr>
+                        <tr><td>¿Provoca dolor o molestia?</td><td>Sí</td></tr>
+                        <tr><td>Costo Aproximado</td><td>Según valoración médica</td></tr>
+        <tr><td>Sitio de punción</td><td>región lumbar baja.</td></tr><tr><td>Muestra</td><td>líquido cefalorraquídeo.</td></tr>
+                    </tbody>
+                </table>
+
+                <h4>Indicaciones frecuentes</h4>
+                <ul>
+        <li>Sospecha de infección del sistema nervioso central.</li><li>Estudio de enfermedades hematológicas y oncológicas.</li><li>Diagnóstico de infiltración meníngea por leucemia.</li><li>Administración de quimioterapia intratecal.</li>
+                </ul>
+
+                <h4>Recomendaciones posteriores</h4>
+                <ul>
+        <li>Mantener reposo relativo el día del procedimiento.</li><li>Mantener adecuada hidratación.</li><li>Administrar el analgésico indicado si existe molestia.</li><li>Acudir a valoración si presenta dolor intenso, fiebre, sangrado o síntomas neurológicos.</li>
+                </ul>
+        
+                <div class="callout">
+                    <div class="callout-title">¿Tu hijo necesita una punción lumbar para completar su diagnóstico o tratamiento?</div>
+                    <div class="callout-text">La punción lumbar es un procedimiento seguro y ampliamente utilizado en pediatría. Permite obtener información importante para el diagnóstico de diversas enfermedades y, en algunos casos, administrar tratamientos específicos de forma segura y eficaz.</div>
+                </div>
+            </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <span class="badge">CONSULTORIO</span>
+                <h3 style="margin-top: 0.5rem; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.6rem; color: var(--primary);">Análisis e integración clínica de estudios de laboratorio</h3>
+                <p><strong>Resumen Diagnóstico:</strong> Evaluación y análisis especializado de estudios clínicos y de laboratorio general para identificar indicios de trastornos sanguíneos o inmunológicos en niños.</p>
+                <p><strong>Descripción Ampliada:</strong> La interpretación de resultados de laboratorio consiste en el análisis especializado e integral de estudios como biometría hemática, perfil de hierro, pruebas de coagulación, frotis de sangre periférica y otros análisis complementarios. La Dra. Lizbeth Hernández correlaciona estos resultados con la historia clínica y la exploración física del paciente para identificar alteraciones hematológicas, orientar el diagnóstico y definir los estudios o tratamientos más adecuados.</p>
+        <p><strong>Experiencia y Control del Dolor:</strong> No aplica (servicio de revisión e interpretación de estudios)</p>
+                <h4>Ficha Técnica</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Especificación</th>
+                            <th>Detalle Técnico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Tipo de Procedimiento</td><td>CONSULTORIO</td></tr>
+                        <tr><td>Tipo de Anestesia</td><td>No especificado</td></tr>
+                        <tr><td>Duración Promedio</td><td>30 a 60 minutos según la complejidad del caso y la cantidad de estudios a revisar</td></tr>
+                        <tr><td>Tiempo de Recuperación</td><td>no aplica</td></tr>
+                        <tr><td>¿Provoca dolor o molestia?</td><td>No</td></tr>
+                        <tr><td>Costo Aproximado</td><td>Según valoración médica</td></tr>
+        <tr><td>Alcance</td><td>Interpretación de biometría hemática, perfil de hierro, pruebas de coagulación, estudios inmunológicos, frotis de sangre periférica, estudios de médula ósea y otras pruebas especializadas relacionadas con enfermedades hematológicas.</td></tr><tr><td>Requerimiento</td><td>Presentar estudios de laboratorio impresos o digitales, así como información clínica relevante para una interpretación más precisa</td></tr>
+                    </tbody>
+                </table>
+
+                <h4>¿Cuáles son los beneficios?</h4>
+                <ul>
+        <li>Identificación temprana de alteraciones hematológicas, inmunológicas o metabólicas reflejadas en los estudios de laboratorio.</li><li>Correlación precisa entre síntomas físicos y parámetros medidos en laboratorio</li><li>Orientación de estudios complementarios para alcanzar un diagnóstico más preciso.</li>
+                </ul>
+
+                <h4>Recomendaciones</h4>
+                <ul>
+        <li>Traer todos los estudios de laboratorio previos impresos o en formato digital</li><li>Anotar cualquier síntoma detectado en casa (fatiga, moretones, sangrado) para correlación clínica</li><li>Informar antecedentes médicos, tratamientos actuales y estudios previos relacionados.</li>
+                </ul>
+        <h4>Preguntas Frecuentes del Procedimiento</h4>
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Por qué es importante una interpretación especializada??</div>
+                    <div class="faq-a">Una interpretación experta puede ayudar a detectar alteraciones hematológicas que no siempre son evidentes en los reportes de laboratorio y orientar oportunamente el diagnóstico y seguimiento.</div>
+                </div>
+                
+                <div class="callout">
+                    <div class="callout-title">¿Los resultados de laboratorio de tu hijo te generan dudas o preocupación?</div>
+                    <div class="callout-text">La valoración especializada permite comprender el significado de los hallazgos, relacionarlos con los síntomas del paciente y establecer un plan diagnóstico o de seguimiento adecuado.</div>
+                </div>
+            </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <span class="badge">CONSULTORIO</span>
+                <h3 style="margin-top: 0.5rem; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.6rem; color: var(--primary);">Interpretación de Biometría Hemática</h3>
+                <p><strong>Resumen Diagnóstico:</strong> Análisis detallado de las tres líneas celulares (glóbulos rojos, glóbulos blancos y plaquetas) para detectar anemias, infecciones y fallas medulares.</p>
+                <p><strong>Descripción Ampliada:</strong> La interpretación de biometría hemática consiste en el análisis especializado de los glóbulos rojos, glóbulos blancos y plaquetas. Este estudio permite detectar alteraciones como anemia, infecciones, inflamación, trastornos de coagulación y otras enfermedades hematológicas. Se correlacionan los resultados con la edad, los síntomas y los antecedentes del paciente para ofrecer una valoración más precisa.</p>
+        <p><strong>Experiencia y Control del Dolor:</strong> No aplica</p>
+                <h4>Ficha Técnica</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Especificación</th>
+                            <th>Detalle Técnico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Tipo de Procedimiento</td><td>CONSULTORIO</td></tr>
+                        <tr><td>Tipo de Anestesia</td><td>No especificado</td></tr>
+                        <tr><td>Duración Promedio</td><td>20 a 30 minutos</td></tr>
+                        <tr><td>Tiempo de Recuperación</td><td>No aplica</td></tr>
+                        <tr><td>¿Provoca dolor o molestia?</td><td>No</td></tr>
+                        <tr><td>Costo Aproximado</td><td>Según valoración médica</td></tr>
+        <tr><td>Modalidad</td><td>Presencial o en consulta de hematología</td></tr><tr><td>Estudio requerido</td><td>Biometría hemática impresa o digital</td></tr><tr><td>Evaluación</td><td>Glóbulos rojos, glóbulos blancos y plaquetas</td></tr><tr><td>Alcance</td><td>Análisis de hemoglobina, hematocrito, glóbulos rojos, glóbulos blancos, diferencial leucocitario y plaquetas.</td></tr><tr><td>Requerimiento</td><td>Biometría hemática reciente impresa o en formato digital, así como información clínica relevante del paciente.</td></tr>
+                    </tbody>
+                </table>
+
+                <h4>¿Cuáles son los beneficios?</h4>
+                <ul>
+        <li>Identificación de anemia y sus posibles causas.</li><li>Evaluación de alteraciones en glóbulos blancos relacionadas con infecciones o inflamación.</li><li>Detección de alteraciones en el número de plaquetas.</li><li>Identificación de datos sugestivos de enfermedades hematológicas.</li><li>Seguimiento de pacientes con enfermedades de la sangre.</li>
+                </ul>
+
+                <h4>Recomendaciones</h4>
+                <ul>
+        <li>Presentar la biometría hemática más reciente.</li><li>Llevar estudios previos si existen para comparar resultados.</li><li>Informar síntomas como palidez, cansancio, fiebre, sangrados o moretones.</li><li>No suspender medicamentos sin indicación médica.</li>
+                </ul>
+        
+                <div class="callout">
+                    <div class="callout-title">¿La biometría hemática de tu hijo muestra valores fuera de rango o difíciles de interpretar?</div>
+                    <div class="callout-text">La interpretación especializada de la biometría hemática permite identificar alteraciones en los glóbulos rojos, glóbulos blancos y plaquetas, ayudando a establecer un diagnóstico oportuno y definir si son necesarios estudios adicionales o seguimiento por hematología pediátrica.</div>
+                </div>
+            </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <span class="badge">CONSULTORIO</span>
+                <h3 style="margin-top: 0.5rem; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.6rem; color: var(--primary);">Interpretación de Estudios Genéticos y Moleculares</h3>
+                <p><strong>Resumen Diagnóstico:</strong> Análisis avanzado de pruebas moleculares, citogenética y secuenciación para identificar mutaciones específicas y causas hereditarias en enfermedades de la sangre.</p>
+                <p><strong>Descripción Ampliada:</strong> La interpretación de estudios genéticos y moleculares consiste en el análisis especializado de pruebas que evalúan genes, cromosomas o alteraciones moleculares relacionadas con enfermedades hematológicas. Estos estudios pueden ayudar a identificar causas hereditarias, confirmar diagnósticos, orientar el pronóstico y apoyar la toma de decisiones terapéuticas. Se correlacionan los resultados con la historia clínica, los antecedentes familiares y los hallazgos de laboratorio para brindar una valoración integral del paciente. Una adecuada interpretación permite comprender el significado clínico de los hallazgos genéticos, evaluar su impacto en la salud del paciente y, cuando es necesario, valorar el riesgo para otros miembros de la familia.</p>
+        <p><strong>Experiencia y Control del Dolor:</strong> No aplica</p>
+                <h4>Ficha Técnica</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Especificación</th>
+                            <th>Detalle Técnico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Tipo de Procedimiento</td><td>CONSULTORIO</td></tr>
+                        <tr><td>Tipo de Anestesia</td><td>No especificado</td></tr>
+                        <tr><td>Duración Promedio</td><td>30 a 60 minutos</td></tr>
+                        <tr><td>Tiempo de Recuperación</td><td>No aplica</td></tr>
+                        <tr><td>¿Provoca dolor o molestia?</td><td>No</td></tr>
+                        <tr><td>Costo Aproximado</td><td>Según valoración médica</td></tr>
+        <tr><td>Modalidad</td><td>Presencial o durante consulta de hematología pediátrica</td></tr><tr><td>Estudios requeridos</td><td>Reporte genético o molecular impreso o digital</td></tr><tr><td>Evaluación especializada</td><td>Correlación de hallazgos genéticos con síntomas, antecedentes familiares y diagnóstico clínico</td></tr>
+                    </tbody>
+                </table>
+
+                <h4>¿Cuáles son los beneficios?</h4>
+                <ul>
+        <li>Interpretación especializada de variantes genéticas y moleculares.</li><li>Correlación entre hallazgos genéticos y manifestaciones clínicas.</li><li>Identificación de alteraciones hereditarias relacionadas con enfermedades hematológicas.</li><li>Orientación sobre estudios complementarios o seguimiento familiar.</li><li>Apoyo en decisiones diagnósticas, pronósticas y terapéuticas</li>
+                </ul>
+
+                <h4>Recomendaciones</h4>
+                <ul>
+        <li>Presentar el informe completo del estudio genético o molecular.</li><li>Llevar estudios previos relacionados y antecedentes familiares relevantes.</li><li>Informar diagnósticos previos y tratamientos recibidos.</li><li>Acudir con dudas específicas para explicar el significado clínico de los hallazgos.</li>
+                </ul>
+        
+                <div class="callout">
+                    <div class="callout-title">¿Tu hijo tiene algún estudio genético alterado?</div>
+                    <div class="callout-text">Biometría hemática alterada.
+Plaquetas altas o bajas.
+Neutropenia.
+Anemia.
+Leucocitos elevados.
+Hallazgos incidentales en laboratorio.
+
+La Dra. Lizbeth Hernández evalúa alteraciones en estudios de laboratorio, biometrías hemáticas y pruebas especializadas para identificar la causa y orientar el tratamiento más adecuado para cada paciente.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: SÍNTOMAS -->
+        <section id="sintomas">
+            <h2>3. Guía de Síntomas y Motivos de Consulta</h2>
+            <p>Sección para que padres de familia y pacientes identifiquen signos de alarma relacionados con la salud de la sangre.</p>
+    
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <h3 style="font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.5rem; color: var(--primary);">Palidez Intensa o Persistente</h3>
+                <p>La palidez intensa es una disminución notable del color normal de la piel y las mucosas (labios, encías o interior de los párpados). Puede ser un signo de anemia u otras enfermedades que requieren valoración médica.</p>
+                
+                <h4>Manifestaciones clínicas</h4>
+                <ul>
+        <li>Piel, labios o encías más pálidos de lo habitual.</li><li>Cansancio o falta de energía.</li><li>Mareos o dolor de cabeza.</li><li>Falta de aire al jugar o hacer ejercicio.</li><li>Palpitaciones.</li><li>Somnolencia o irritabilidad.</li><li>Manos y pies fríos.</li>
+                </ul>
+
+                <h4>Causas comunes</h4>
+        <ul><li>Anemia por deficiencia de hierro.</li><li>Anemias hemolíticas.</li><li>Pérdida de sangre.</li><li>Infecciones o enfermedades crónicas.</li><li>Trastornos de la médula ósea.</li><li>Algunas enfermedades hereditarias de la sangre</li>
+                </ul>
+
+                <h4>¿Cuándo se debe consultar a la especialista?</h4>
+                <p>Busca atención médica inmediata si la palidez aparece de forma repentina o se acompaña de dificultad para respirar, desmayo, sangrado importante, somnolencia excesiva o debilidad.</p>
+        
+                <div class="callout">
+                    <div class="callout-title">¿Has notado que tu hijo se ve más pálido de lo habitual, especialmente en labios, encías o alrededor de los ojos?</div>
+                    <div class="callout-text"></div>
+                </div>
+            </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <h3 style="font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.5rem; color: var(--primary);">Fatiga o Cansancio Excesivo</h3>
+                <p>Es una sensación de falta de energía o agotamiento que no mejora completamente con el descanso y que puede dificultar las actividades habituales de tu hijo, como jugar, hacer ejercicio, asistir a la escuela o concentrarse</p>
+                
+                <h4>Manifestaciones clínicas</h4>
+                <ul>
+        <li>Se cansa más rápido que otros niños.</li><li>Disminución del rendimiento escolar.</li><li>Necesita dormir más de lo habitual.</li><li>Falta de energía para jugar o hacer deporte.</li><li>Mareos o dolor de cabeza.</li><li>Palidez.</li><li>Falta de aire al esfuerzo.</li><li>Irritabilidad o dificultad para concentrarse.</li><li>Taquicardia o sensación de que el corazón late más rápido.</li><li>Debilidad generalizada.</li>
+                </ul>
+
+                <h4>Causas comunes</h4>
+        <ul><li>Anemia ferropénica</li><li>Anemia aplásica</li><li>Anemia hemolítica</li><li>Leucemias agudas</li>
+                </ul>
+
+                <h4>¿Cuándo se debe consultar a la especialista?</h4>
+                <p>El cansancio persistente no siempre es normal. Puede relacionarse con anemia, deficiencias nutricionales, infecciones, problemas del sueño, enfermedades endocrinas o trastornos hematológicos. Una valoración médica puede ayudar a identificar la causa y determinar si se requieren estudios adicionales.</p>
+        
+                <div class="callout" style="background-color: rgba(166, 34, 95, 0.03); border-left-color: var(--accent);">
+                    <div class="callout-title" style="color: var(--accent);">Signos de alarma</div>
+                    <ul>
+            <li style='color: var(--accent); font-weight: 700;'>Palidez marcada.</li><li style='color: var(--accent); font-weight: 700;'>Falta de aire.</li><li style='color: var(--accent); font-weight: 700;'>Mareos frecuentes.</li><li style='color: var(--accent); font-weight: 700;'>Pérdida de peso.</li><li style='color: var(--accent); font-weight: 700;'>Fiebre prolongada.</li><li style='color: var(--accent); font-weight: 700;'>Moretones o sangrado inusual.</li><li style='color: var(--accent); font-weight: 700;'>Ganglios aumentados de tamaño</li></ul></div>
+                <div class="callout">
+                    <div class="callout-title">¿Tu hijo se cansa fácilmente o tiene menos energía de lo habitual para jugar, hacer ejercicio o realizar sus actividades diarias?</div>
+                    <div class="callout-text"></div>
+                </div>
+            </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <h3 style="font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.5rem; color: var(--primary);">Moretones Fáciles y Sangrado Frecuente</h3>
+                <p>Aparición de moretones frecuentes o excesivos ante golpes leves, así como sangrados repetitivos de nariz, encías o después de pequeñas heridas.</p>
+                
+                <h4>Manifestaciones clínicas</h4>
+                <ul>
+        <li>Moretones frecuentes o muy grandes</li><li>Aparición de moretones sin golpes importantes</li><li>Sangrado nasal frecuente</li><li>Sangrado de encías al cepillarse los dientes</li><li>Puntitos rojos en la piel (petequias)</li><li>Sangrado prolongado despues de una herida o procedimiento dentale</li><li>Menstruaciones muy abundantes en adolescentes</li><li>Antecedentes familiares de problemas de sangrado</li>
+                </ul>
+
+                <h4>Causas comunes</h4>
+        <ul><li>Trombocitopenia inmune (PTI)</li><li>Hemofilia</li><li>Enfermedad de Von Willebrand</li><li>Alteraciones plaquetarias</li><li>Algunos medicamentos</li><li>Deficiencias nutricionales</li><li>Otras alteraciones de la coagulación</li>
+                </ul>
+
+                <h4>¿Cuándo se debe consultar a la especialista?</h4>
+                <p>Los moretones frecuentes o los sangrados repetitivos pueden ser una señal de alteraciones en las plaquetas, la coagulación o, en algunos casos, otras enfermedades. Una valoración médica oportuna permite identificar la causa y ofrecer el tratamiento adecuado.</p>
+        
+                <div class="callout" style="background-color: rgba(166, 34, 95, 0.03); border-left-color: var(--accent);">
+                    <div class="callout-title" style="color: var(--accent);">Síntoma de alarma hematológico:</div>
+                    <ul>
+            <li style='color: var(--accent); font-weight: 700;'>Moretones grandes sin golpes importantes</li><li style='color: var(--accent); font-weight: 700;'>Sangrado nasal frecuente o difícil de detener</li><li style='color: var(--accent); font-weight: 700;'>Sangrado de encías sin causa aparente</li><li style='color: var(--accent); font-weight: 700;'>Aparición de petequias</li><li style='color: var(--accent); font-weight: 700;'>Sangre en orina o heces oscuras</li><li style='color: var(--accent); font-weight: 700;'>Moretones y/o petequias acompañados de palidez, cansancio o fiebre</li></ul></div>
+                <div class="callout">
+                    <div class="callout-title">¿Cuándo buscar atención médica?</div>
+                    <div class="callout-text"></div>
+                </div>
+            </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <h3 style="font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.5rem; color: var(--primary);">Petequias y Púrpura</h3>
+                <p>Las petequias son pequeños puntos rojos o morados en la piel que no desaparecen al presionarlos. La púrpura son manchas similares, pero de mayor tamaño. Ambas pueden aparecer cuando hay sangrado debajo de la piel debido a alteraciones de las plaquetas, los vasos sanguíneos o la coagulación</p>
+                
+                <h4>Síntomas asociados</h4>
+                <ul>
+        <li>Moretones frecuentes o sin golpes importantes.</li><li>Sangrado de nariz o encías.</li><li>Sangrado prolongado después de heridas pequeñas.</li><li>Fiebre.</li><li>Palidez o cansancio.</li><li>Aparición rápida de nuevas lesiones</li>
+                </ul>
+
+                <h4>Posibles causas de valoración</h4>
+        <ul><li>Disminución de plaquetas (por ejemplo, trombocitopenia inmune).</li><li>Alteraciones de la coagulación.</li><li>Infecciones virales o bacterianas.</li><li>Inflamación de los vasos sanguíneos (vasculitis).</li><li>Enfermedades hematológicas como algunas leucemias.</li><li>Reacciones a medicamentos</li>
+                </ul>
+
+                <h4>¿Cuándo se debe consultar a la especialista?</h4>
+                <p>Aunque algunas causas son benignas, las petequias o la púrpura también pueden ser una señal de trastornos hematológicos, infecciones graves o problemas de coagulación. Si aparecen de forma repentina, aumentan rápidamente o se acompañan de fiebre, sangrado o moretones frecuentes, requieren valoración médica.</p>
+        
+                <div class="callout">
+                    <div class="callout-title">¿Has notado pequeños puntos rojos o morados que no desaparecen al presionarlos, o manchas violáceas sin causa aparente en la piel de tu hijo?</div>
+                    <div class="callout-text">Las petequias y la púrpura pueden aparecer por diversas causas. Cuando son persistentes, aumentan en número o se acompañan de sangrado, fiebre o moretones frecuentes, es importante que un hematólogo pediatra valore a tu hijo para identificar la causa y determinar si requiere estudios adicionales.</div>
+                </div>
+            </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <h3 style="font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.5rem; color: var(--primary);">Epistaxis de Repetición</h3>
+                <p>Episodios frecuentes y recurrentes de sangrado por la nariz en niños y adolescentes, que pueden presentarse de forma espontánea o ante mínimos estímulos.</p>
+                
+                <h4>Manifestaciones clínicas</h4>
+                <ul>
+        
+                </ul>
+
+                <h4>Posibles causas</h4>
+        <ul><li>Fragilidad vascular nasal</li><li>Rinitis alérgica</li><li>Resequedad o irritación de la mucosa nasal</li><li>Hábito de hurgarse la nariz o traumatismos locales</li><li>Trombocitopenia (plaquetas bajas)</li><li>Enfermedad de Von Willebrand</li><li>Hemofilia u otros trastornos de la coagulación</li><li>Leucemias agudas (poco frecuentes)</li>
+                </ul>
+
+                <h4>¿Cuándo se debe consultar a la especialista?</h4>
+                <p>Aunque muchas veces se relaciona con resequedad nasal, alergias o fragilidad de los vasos sanguíneos, el sangrado nasal frecuente también puede ser una manifestación de trastornos de la coagulación, alteraciones plaquetarias o, en casos poco frecuentes, enfermedades hematológicas. Una valoración médica permite identificar la causa y determinar si requiere estudios adicionales.</p>
+        
+                <div class="callout">
+                    <div class="callout-title">¿Tu hijo presenta sangrados nasales frecuentes o difíciles de detener?</div>
+                    <div class="callout-text">Los sangrados ocasionales suelen ser benignos, pero cuando son repetitivos, abundantes o se acompañan de moretones, sangrado de encías o antecedentes familiares de problemas de coagulación, es recomendable una valoración especializada para descartar alteraciones hematológicas.</div>
+                </div>
+            </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <h3 style="font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.5rem; color: var(--primary);">Sangrado en Encías</h3>
+                <p>Sangrado de las encías que aparece de forma espontánea o ante traumatismos mínimos, como el cepillado dental o la alimentación.</p>
+                
+                <h4>Manifestaciones clínicas</h4>
+                <ul>
+        
+                </ul>
+
+                <h4>Posibles causas de valoración</h4>
+        <ul><li>Gingivitis o inflamación de las encías.</li><li>Acumulación de placa dental o sarro.</li><li>Cepillado dental traumático o uso inadecuado del hilo dental.</li><li>Deficiencias nutricionales (vitamina C o vitamina K).</li><li>Trastornos de las plaquetas (como trombocitopenia).</li><li>Enfermedad de Von Willebrand u otros trastornos de la coagulación.</li><li>Leucemia u otras enfermedades hematológicas.</li><li>Algunos medicamentos que favorecen el sangrado</li>
+                </ul>
+
+                <h4>¿Cuándo se debe consultar a la especialista?</h4>
+                <p>El sangrado de encías puede deberse a problemas dentales frecuentes, como gingivitis o acumulación de placa. Sin embargo, cuando es recurrente, abundante o se acompaña de otros sangrados o moretones, puede ser una señal de alteraciones de la coagulación, trastornos plaquetarios o enfermedades hematológicas que requieren valoración médica.</p>
+        
+                <div class="callout" style="background-color: rgba(166, 34, 95, 0.03); border-left-color: var(--accent);">
+                    <div class="callout-title" style="color: var(--accent);">Signos de alarma:</div>
+                    <ul>
+            <li style='color: var(--accent); font-weight: 700;'>Sangrado frecuente o difícil de detener.</li><li style='color: var(--accent); font-weight: 700;'>Moretones sin causa aparente.</li><li style='color: var(--accent); font-weight: 700;'>Sangrado nasal recurrente.</li><li style='color: var(--accent); font-weight: 700;'>Petequias o puntitos rojos en la piel.</li><li style='color: var(--accent); font-weight: 700;'>Palidez, cansancio o fiebre.</li><li style='color: var(--accent); font-weight: 700;'>Inflamación importante de las encías o dolor dental.</li></ul></div>
+                <div class="callout">
+                    <div class="callout-title">¿Tu hijo presenta sangrado frecuente de las encías al cepillarse, comer o de forma espontánea?</div>
+                    <div class="callout-text">Aunque muchas veces se relaciona con inflamación de las encías, el sangrado recurrente también puede ser un signo de alteraciones de la coagulación o enfermedades hematológicas. Una valoración médica puede ayudar a identificar la causa</div>
+                </div>
+            </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <h3 style="font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.5rem; color: var(--primary);">Menstruación Abundante</h3>
+                <p>Menstruación abundante (sangrado menstrual abundante) es la presencia de un sangrado menstrual en niñas y adolescentes que interfiere con sus actividades habituales o que puede provocar anemia.</p>
+                
+                <h4>Manifestaciones clínicas</h4>
+                <ul>
+        
+                </ul>
+
+                <h4>Posibles causas que requieren valoración</h4>
+        <ul><li>Ciclos anovulatorios (muy frecuentes durante los primeros años tras la primera menstruación).</li><li>Enfermedad de Von Willebrand u otros trastornos de la coagulación.</li><li>Alteraciones de las plaquetas.</li><li>Deficiencias de factores de coagulación.</li><li>Trombocitopenia.</li><li>Síndrome de ovario poliquístico.</li><li>Alteraciones tiroideas.</li><li>Anemia por deficiencia de hierro secundaria al sangrado</li>
+                </ul>
+
+                <h4>¿Cuándo se debe consultar a la especialista?</h4>
+                <p>Porque el sangrado menstrual abundante puede ocasionar anemia, cansancio, mareos, disminución del rendimiento escolar y, en algunos casos, ser la primera manifestación de un trastorno hemorrágico hereditario como la enfermedad de Von Willebrand</p>
+        
+                <div class="callout" style="background-color: rgba(166, 34, 95, 0.03); border-left-color: var(--accent);">
+                    <div class="callout-title" style="color: var(--accent);">Signos de alarma para consultar</div>
+                    <ul>
+            <li style='color: var(--accent); font-weight: 700;'>Menstruación que dura más de 7 días.</li><li style='color: var(--accent); font-weight: 700;'>Necesidad de cambiar la toalla sanitaria cada 1–2 horas.</li><li style='color: var(--accent); font-weight: 700;'>Sangrado que empapa la ropa o las sábanas.</li><li style='color: var(--accent); font-weight: 700;'>Coágulos grandes y frecuentes.</li><li style='color: var(--accent); font-weight: 700;'>Palidez, cansancio excesivo, mareos o falta de aire.</li><li style='color: var(--accent); font-weight: 700;'>Antecedentes familiares de trastornos de la coagulación o sangrados anormales</li></ul></div>
+                <div class="callout">
+                    <div class="callout-title">¿Tu hija tiene menstruaciones muy abundantes, prolongadas o presenta cansancio y palidez durante su periodo?</div>
+                    <div class="callout-text">El sangrado menstrual abundante en niñas y adolescentes puede ser normal en algunos casos, pero también puede indicar una alteración hematológica o causar anemia. Una valoración temprana permite identificar la causa y ofrecer el tratamiento adecuado.</div>
+                </div>
+            </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <h3 style="font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.5rem; color: var(--primary);">Fiebre Prolongada e Infecciones Recurrentes</h3>
+                <p>Fiebre que persiste por más de 7 días sin una causa clara, o infecciones frecuentes, recurrentes o de difícil control. Este síntoma puede indicar problemas en las defensas del organismo o enfermedades de la sangre que requieren valoración médica.</p>
+                
+                <h4>Además de la fiebre, pueden presentarse:</h4>
+                <ul>
+        <li>Infecciones frecuentes de oído, garganta o pulmones.</li><li>Infecciones que tardan mucho en mejorar.</li><li>Cansancio o falta de energía.</li><li>Palidez.</li><li>Pérdida de peso involuntaria.</li><li>Ganglios inflamados.</li><li>Moretones o sangrado fácil</li>
+                </ul>
+
+                <h4>Causas comunes</h4>
+        <ul><li>Neutropenia.</li><li>Inmunodeficiencias primarias o secundarias.</li><li>Leucemias agudas.</li><li>Falla medular (anemia aplásica).</li><li>Infecciones crónicas o recurrentes que requieren estudio.</li>
+                </ul>
+
+                <h4>¿Cuándo se debe consultar a la especialista?</h4>
+                <p>La fiebre prolongada o las infecciones repetidas pueden ser una señal de alteraciones en el sistema inmunológico, los glóbulos blancos o la médula ósea. Una evaluación temprana ayuda a identificar la causa y prevenir complicaciones.</p>
+        
+                <div class="callout" style="background-color: rgba(166, 34, 95, 0.03); border-left-color: var(--accent);">
+                    <div class="callout-title" style="color: var(--accent);">Respuesta:</div>
+                    <ul>
+            <li style='color: var(--accent); font-weight: 700;'>La mayoría de las infecciones en la infancia son normales, pero cuando son muy frecuentes, severas o difíciles de controlar, es importante realizar una valoración para descartar alteraciones hematológicas o inmunológicas.</li></ul></div>
+                <div class="callout">
+                    <div class="callout-title">¿Tu hijo presenta fiebre durante varios días o infecciones frecuentes que requieren antibióticos repetidamente?</div>
+                    <div class="callout-text"></div>
+                </div>
+            </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <h3 style="font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.5rem; color: var(--primary);">Adenopatías Pediátricas (Ganglios Inflamados)</h3>
+                <p>Los ganglios son pequeñas estructuras del sistema inmunológico que ayudan a combatir infecciones. Es común que aumenten de tamaño durante infecciones virales o bacterianas, pero en algunos casos pueden requerir una valoración médica más detallada.</p>
+                
+                <h4>¿Qué otros síntomas pueden acompañarlos?</h4>
+                <ul>
+        <li>Fiebre.</li><li>Dolor de garganta o infecciones recientes.</li><li>Cansancio excesivo.</li><li>Pérdida de peso involuntaria.</li><li>Sudoración nocturna.</li><li>Moretones o sangrados fáciles</li>
+                </ul>
+
+                <h4>Posibles causas de adenopatias</h4>
+        <ul><li>Infecciones virales o bacterianas (la causa más frecuente)</li><li>Mononucleosis infecciosa</li><li>Enfermedades autoinmunes</li><li>Histiocitosis</li><li>Linfomas</li><li>Leucemias</li>
+                </ul>
+
+                <h4>¿Cuándo se debe consultar a la especialista?</h4>
+                <p>Aunque la mayoría de los ganglios inflamados responden a infecciones comunes, los nódulos que crecen de forma persistente, que no duelen o que son duros deben ser evaluados por un hematólogo pediatra.</p>
+        
+                <div class="callout" style="background-color: rgba(166, 34, 95, 0.03); border-left-color: var(--accent);">
+                    <div class="callout-title" style="color: var(--accent);">Dato de alarma:</div>
+                    <ul>
+            <li style='color: var(--accent); font-weight: 700;'>La mayoría de los ganglios inflamados en niños se deben a infecciones y desaparecen con el tiempo. Sin embargo, los ganglios que aumentan de tamaño, persisten por varias semanas, son duros o se acompañan de fiebre prolongada, pérdida de peso o sudoración nocturna deben ser valorados por un especialista.</li></ul></div></div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <h3 style="font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.5rem; color: var(--primary);">Dolor Óseo o Articular</h3>
+                <p>El dolor en huesos o articulaciones es frecuente en la infancia y muchas veces se relaciona con crecimiento, actividad física o infecciones. Sin embargo, cuando es persistente, intenso o se acompaña de otros síntomas, puede requerir una valoración médica especializada.</p>
+                
+                <h4>Manifestaciones:</h4>
+                <ul>
+        <li>Dolor en piernas, brazos o espalda.</li><li>Dolor que despierta al niño durante la noche.</li><li>Cojera o dificultad para caminar.</li><li>Dolor que limita las actividades habituales.</li><li>Inflamación o aumento de volumen de una articulación.</li><li>Dolor persistente por varias semanas.</li><li>Dolor acompañado de fiebre.</li><li>Dolor asociado a palidez, cansancio, moretones o sangrados</li>
+                </ul>
+
+                <h4>Causas comunes</h4>
+        <ul><li>Leucemia linfoblástica aguda</li><li>Crisis oclusivas por drepanocitosis</li><li>Infecciones óseas</li><li>Dolores de crecimiento benignos</li>
+                </ul>
+
+                <h4>¿Cuándo se debe consultar a la especialista?</h4>
+                <p>Porque el dolor persistente puede afectar la calidad de vida del niño y, en algunos casos, ser un signo de una enfermedad que necesita diagnóstico y tratamiento oportunos. Si el dolor no mejora o se acompaña de otros síntomas, es importante acudir a valoración médica.</p>
+        
+                <div class="callout" style="background-color: rgba(166, 34, 95, 0.03); border-left-color: var(--accent);">
+                    <div class="callout-title" style="color: var(--accent);">Signos de alarma:</div>
+                    <ul>
+            <li style='color: var(--accent); font-weight: 700;'>Dolor que empeora progresivamente.</li><li style='color: var(--accent); font-weight: 700;'>Dolor nocturno que interrumpe el sueño.</li><li style='color: var(--accent); font-weight: 700;'>Dolor sin antecedente de golpe o lesión.</li><li style='color: var(--accent); font-weight: 700;'>Cojera persistente o rechazo a caminar.</li><li style='color: var(--accent); font-weight: 700;'>Fiebre prolongada.</li><li style='color: var(--accent); font-weight: 700;'>Pérdida de peso o disminución del apetito.</li><li style='color: var(--accent); font-weight: 700;'>Ganglios inflamados.</li><li style='color: var(--accent); font-weight: 700;'>Palidez marcada.</li><li style='color: var(--accent); font-weight: 700;'>Aparición de moretones o sangrados frecuentes.</li></ul></div>
+                <div class="callout">
+                    <div class="callout-title">¿Tu hijo presenta dolor óseo o articular persistente?</div>
+                    <div class="callout-text">Agenda una valoración. Un diagnóstico oportuno permite identificar la causa del dolor y descartar enfermedades hematológicas, inmunológicas u oncológicas cuando sea necesario.</div>
+                </div>
+            </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <h3 style="font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.5rem; color: var(--primary);">Crecimiento de Hígado o Bazo</h3>
+                <p>El crecimiento del hígado o del bazo no es una enfermedad en sí misma, sino un signo de que algo está ocurriendo en el organismo. Puede presentarse por infecciones, enfermedades de la sangre, trastornos metabólicos, enfermedades del hígado u otras condiciones que requieren valoración médica.</p>
+                
+                <h4>Síntomas que pueden acompañarlo</h4>
+                <ul>
+        <li>Abdomen más grande o abultado de lo habitual.</li><li>Sensación de llenura rápida al comer.</li><li>Dolor o molestia abdominal.</li><li>Palidez.</li><li>Cansancio excesivo.</li><li>Moretones o sangrados fáciles.</li><li>Color amarillo en la piel o los ojos.</li><li>Fiebre prolongada.</li><li>Pérdida de peso o falta de apetito.</li>
+                </ul>
+
+                <h4>Posibles causas que requieren valoración médica</h4>
+        <p>El crecimiento del hígado o del bazo puede tener diversas causas. Algunas son temporales y benignas, mientras que otras requieren estudios y tratamiento especializado para identificar su origen.</p><ul><li>Infecciones virales, bacterianas o parasitarias.</li><li>Anemias y otras enfermedades de la sangre.</li><li>Enfermedades del hígado.</li><li>Trastornos del sistema inmunológico.</li><li>Enfermedades metabólicas o genéticas poco frecuentes.</li><li>Algunas enfermedades oncológicas, como leucemias o linfomas.</li><li>Problemas de circulación de la sangre en el hígado o el bazo</li>
+                </ul>
+
+                <h4>¿Cuándo se debe consultar a la especialista?</h4>
+                <p>El crecimiento del hígado o del bazo puede ser una señal de enfermedades que requieren diagnóstico y tratamiento oportunos. Si no se identifica la causa, algunas condiciones pueden progresar y afectar la salud del niño.</p>
+        
+                <div class="callout">
+                    <div class="callout-title">¿Has notado que el abdomen de tu hijo está más abultado o que le han detectado crecimiento del hígado o del bazo?</div>
+                    <div class="callout-text">Si sospechas que tu hijo tiene crecimiento del hígado o del bazo, es importante una valoración médica para identificar la causa y determinar si requiere estudios o tratamiento especializado.</div>
+                </div>
+            </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <h3 style="font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.5rem; color: var(--primary);">Pérdida de Peso y Sudoraciones Nocturnas</h3>
+                <p>Pérdida involuntaria de peso o estancamiento en el crecimiento del niño, acompañada de sudoración profusa durante el sueño que empapa su ropa.</p>
+                
+                <h4>Síntomas que pueden acompañarlo</h4>
+                <ul>
+        <li>Pérdida de peso sin cambios en la alimentación.</li><li>Sudoración nocturna que moja la ropa o las sábanas.</li><li>Fiebre persistente o recurrente.</li><li>Cansancio o falta de energía.</li><li>Palidez.</li><li>Ganglios inflamados.</li><li>Disminución del apetito.</li><li>Infecciones frecuentes</li>
+                </ul>
+
+                <h4>Posibles causas de valoración</h4>
+        <ul><li>Infecciones prolongadas.</li><li>Alteraciones hormonales o metabólicas.</li><li>Enfermedades inflamatorias o autoinmunes.</li><li>Problemas de absorción intestinal.</li><li>Trastornos hematológicos.</li><li>Otras enfermedades que requieren estudio médico.</li>
+                </ul>
+
+                <h4>¿Cuándo se debe consultar a la especialista?</h4>
+                <p>Cuando un niño pierde peso sin una explicación clara o presenta sudoración excesiva, especialmente durante la noche, puede ser una señal de que su cuerpo está enfrentando un problema de salud que requiere evaluación médica. Aunque muchas veces las causas son benignas, en algunos casos estos síntomas pueden asociarse con infecciones prolongadas, alteraciones hormonales, enfermedades inflamatorias o trastornos hematológicos. La valoración oportuna permite identificar la causa y ofrecer el tratamiento adecuado.</p>
+        
+                <div class="callout">
+                    <div class="callout-title">¿Tu hijo ha perdido peso sin explicación o presenta sudoración excesiva, especialmente durante la noche?</div>
+                    <div class="callout-text">Estos síntomas no siempre indican una enfermedad grave, pero sí justifican una valoración médica, sobre todo si se acompañan de fiebre, cansancio, palidez, ganglios inflamados o disminución del apetito. El especialista podrá determinar si se requieren estudios adicionales.</div>
+                </div>
+            </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <h3 style="font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.5rem; color: var(--primary);">Ictericia Prolongada</h3>
+                <p>La ictericia prolongada es la coloración amarillenta de la piel y los ojos que persiste más tiempo de lo esperado. En recién nacidos de término se considera prolongada cuando dura más de 14 días, y en prematuros más de 21 días. Aunque con frecuencia se relaciona con la lactancia materna, también puede ser un signo de enfermedades del hígado, las vías biliares o algunos trastornos de la sangre</p>
+                
+                <h4>Síntomas que pueden acompañarlo</h4>
+                <ul>
+        <li>Color amarillo en piel y ojos.</li><li>Orina oscura.</li><li>Heces muy claras o blancas.</li><li>Falta de apetito.</li><li>Poca ganancia de peso.</li><li>Somnolencia excesiva o irritabilidad.</li><li>Crecimiento del hígado o del bazo.</li>
+                </ul>
+
+                <h4>Posibles causas que requieren valoración médica</h4>
+        <ul><li>Ictericia asociada a la leche materna.</li><li>Incompatibilidad de grupo sanguíneo (ABO o Rh).</li><li>Anemias hemolíticas hereditarias, como la esferocitosis hereditaria.</li><li>Deficiencia de G6PD y otros trastornos hereditarios de los glóbulos rojos.</li><li>Infecciones.</li><li>Enfermedades del hígado o de las vías biliares.</li><li>Alteraciones metabólicas o endocrinas, como el hipotiroidismo congénito.</li>
+                </ul>
+
+                <h4>¿Cuándo se debe consultar a la especialista?</h4>
+                <p>Aunque muchas veces la ictericia prolongada tiene causas benignas, en algunos niños puede ser la primera manifestación de enfermedades del hígado, las vías biliares o trastornos hematológicos que requieren diagnóstico y tratamiento oportunos. Una valoración médica temprana ayuda a identificar la causa y evitar complicaciones</p>
+        </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <h3 style="font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.5rem; color: var(--primary);">Anemia o Sangrado Neonatal</h3>
+                <p>Palidez intensa al nacimiento o sangrado anormal durante el primer mes de vida, incluyendo sangrado por el cordón umbilical, boca, nariz, tracto digestivo u otros sitios.</p>
+                
+                <h4>Síntomas</h4>
+                <ul>
+        <li>Palidez de piel o mucosas.</li><li>Dificultad para alimentarse.</li><li>Sueño excesivo o poca actividad.</li><li>Respiración rápida.</li><li>Latidos cardíacos rápidos.</li><li>Ictericia (piel u ojos amarillos), especialmente cuando existe hemólisis</li>
+                </ul>
+
+                <h4>Posibles causas</h4>
+        <ul><li>Pérdida de sangre antes, durante o después del nacimiento (hemorragia fetomaterna, complicaciones del parto o sangrados internos).</li><li>Incompatibilidad de grupo sanguíneo ABO o Rh, que puede provocar destrucción acelerada de los glóbulos rojos.</li><li>Otras anemias hemolíticas hereditarias, como esferocitosis hereditaria o deficiencia de G6PD.</li><li>Infecciones congénitas o neonatales, que pueden afectar la producción o supervivencia de los glóbulos rojos.</li><li>Trastornos de la coagulación o enfermedad hemorrágica del recién nacido por deficiencia de vitamina K.</li><li>Producción insuficiente de glóbulos rojos, especialmente en recién nacidos prematuros (anemia de la prematuridad) o por enfermedades poco frecuentes de la médula ósea.</li>
+                </ul>
+
+                <h4>¿Cuándo se debe consultar a la especialista?</h4>
+                <p>La anemia neonatal puede disminuir el aporte de oxígeno a los órganos y tejidos. Dependiendo de la causa y la gravedad, puede provocar dificultad para alimentarse, cansancio excesivo, respiración rápida, palidez marcada o, en casos severos, compromiso cardiovascular. Una valoración oportuna permite identificar la causa y brindar el tratamiento adecuado.</p>
+        </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <h3 style="font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.5rem; color: var(--primary);">Pancitopenia</h3>
+                <p>La pancitopenia es un hallazgo en los estudios de laboratorio que significa que hay una disminución de los tres tipos principales de células sanguíneas: glóbulos rojos, glóbulos blancos y plaquetas. Esto puede aumentar el riesgo de anemia, infecciones y sangrados, por lo que requiere una valoración médica para identificar la causa.</p>
+                
+                <h4>Manifestaciones clínicas</h4>
+                <ul>
+        
+                </ul>
+
+                <h4>¿Qué puede provocar?</h4>
+        <ul><li>Anemia aplásica u otros trastornos de la médula ósea.</li><li>Leucemia y otras enfermedades hematológicas.</li><li>Deficiencia de vitamina B12 o ácido fólico.</li><li>Algunas infecciones virales o bacterianas.</li><li>Enfermedades autoinmunes.</li><li>Efectos de ciertos medicamentos o tratamientos.</li>
+                </ul>
+
+                <h4>¿Cuándo se debe consultar a la especialista?</h4>
+                <p>Porque puede ser la manifestación de una enfermedad que afecta la producción normal de células sanguíneas. Una evaluación oportuna permite identificar la causa y establecer el tratamiento adecuado antes de que aparezcan complicaciones por anemia, infecciones o sangrados.</p>
+        
+                <div class="callout">
+                    <div class="callout-title">¿En los estudios de laboratorio de tu hijo encontraron disminución de glóbulos rojos, glóbulos blancos y plaquetas?</div>
+                    <div class="callout-text">La pancitopenia es un hallazgo que requiere valoración especializada. Aunque puede deberse a diferentes causas, algunas necesitan diagnóstico y tratamiento oportunos para evitar complicaciones relacionadas con anemia, infecciones o sangrados.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: ENFERMEDADES -->
+        <section id="enfermedades">
+            <h2>4. Enfermedades y Condiciones de la Sangre</h2>
+            <p>Información detallada sobre las condiciones hematológicas y del sistema inmune en niños y adolescentes.</p>
+    
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <span class="badge" style="background-color: var(--primary-light); color: var(--primary);">Anemias Globulos Rojos</span>
+                <h3 style="margin-top: 0.5rem; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.6rem; color: var(--primary);">Anemia Ferropénica</h3>
+                
+                <p style="margin-top: 1rem;">La anemia ferropénica es el tipo más frecuente de anemia en la infancia y ocurre cuando el organismo no cuenta con suficiente hierro para producir hemoglobina, la proteína encargada de transportar oxígeno en la sangre. Esto puede ocasionar cansancio, palidez y afectar el crecimiento, el aprendizaje y el desarrollo del niño.</p>
+                
+                <h4>Síntomas Comunes</h4>
+                <ul>
+        <li>Fatiga y cansancio excesivo</li><li>Palidez en piel y encías</li><li>Irritabilidad</li><li>Falta de apetito</li><li>Uñas quebradizas</li><li>Mareo o dolor de cabeza</li><li>Disminución del rendimiento escolar o dificultad para concentrarse</li><li>Taquicardia o palpitaciones</li><li>Antojos inusuales (comer hielo, tierra o almidón)</li><li>Retraso del crecimiento o del desarrollo en casos prolongados</li>
+                </ul>
+
+                <h4>Causas y Origen</h4>
+                <ul>
+        <li>Dieta insuficiente en hierro.</li><li>Consumo excesivo de leche de vaca.</li><li>Aumento de requerimientos durante el crecimiento.</li><li>Prematuridad o bajo peso al nacer.</li><li>Pérdidas sanguíneas (menstruaciones abundantes o sangrado gastrointestinal).</li><li>Trastornos de absorción intestinal (celiaquía, enfermedad inflamatoria intestinal).</li></ul>
+                <h4>Factores de Riesgo</h4>
+                <ul>
+            <li>Nacimiento prematuro o bajo peso al nacer</li><li>Introducción tardía de alimentos sólidos</li><li>Consumo excesivo de leche de vaca en menores de un año</li></ul>
+                <h4>Complicaciones Potenciales</h4>
+                <ul>
+            <li>Retraso en el desarrollo psicomotor</li><li>Problemas de aprendizaje y concentración</li><li>Debilidad del sistema inmunitario con propensión a infecciones</li></ul>
+                <h4>Tratamiento y Abordaje</h4>
+                <ul>
+        <li>Tratamiento con hierro oral bajo supervisión médica</li><li>Ajustes en la alimentación para favorecer una adecuada ingesta de hierro y vitamina C</li><li>Identificación y tratamiento de la causa que originó la deficiencia de hierro</li><li>Seguimiento mediante estudios de laboratorio para evaluar la respuesta al tratamiento y la recuperación de los depósitos de hierro</li></ul>
+                <h4>¿Cuándo Consultar con la Especialista?</h4>
+                <ul>
+            <li>Si la anemia es severa.</li><li>Si no mejora con el tratamiento indicado.</li><li>Si existen antecedentes familiares de enfermedades hematológicas.</li><li>Si se acompaña de ictericia, moretones o sangrados.</li><li>Si hay alteraciones adicionales en la biometría hemática.</li><li>Si la causa de la anemia no es clara</li></ul><h4>Preguntas Frecuentes sobre esta Condición</h4>
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Cuánto tiempo dura el tratamiento con hierro??</div>
+                    <div class="faq-a">Generalmente dura entre 3 y 6 meses, aunque puede variar según la gravedad de la anemia y la respuesta al tratamiento. Es importante continuar el hierro incluso después de que la hemoglobina se normalice para reponer las reservas de hierro del organismo.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿La leche de vaca puede causar anemia??</div>
+                    <div class="faq-a">Sí. El consumo excesivo de leche de vaca puede favorecer la anemia ferropénica, especialmente en niños pequeños. Además de disminuir la absorción de hierro, puede desplazar otros alimentos ricos en hierro de la dieta.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Cómo se diagnostica la anemia ferropénica??</div>
+                    <div class="faq-a">El diagnóstico se realiza mediante una valoración médica y estudios de laboratorio, que incluyen biometría hemática, perfil de hierro y ferritina sérica. En algunos casos pueden requerirse estudios adicionales para identificar la causa de la deficiencia de hierro.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Qué alimentos ayudan a aumentar el hierro??</div>
+                    <div class="faq-a">Los alimentos ricos en hierro incluyen carnes rojas, pollo, pescado, lentejas, frijoles, garbanzos y cereales fortificados. Consumirlos junto con alimentos ricos en vitamina C ayuda a mejorar la absorción del hierro.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿La anemia ferropénica puede afectar el aprendizaje o el desarrollo??</div>
+                    <div class="faq-a">Sí. Cuando la deficiencia de hierro es prolongada, puede afectar la atención, el aprendizaje, el desarrollo cognitivo y el comportamiento. Por ello es importante detectarla y tratarla oportunamente.</div>
+                </div>
+                </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <span class="badge" style="background-color: var(--primary-light); color: var(--primary);">Coagulacion Hemostasia</span>
+                <h3 style="margin-top: 0.5rem; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.6rem; color: var(--primary);">Trombocitopenia Inmune</h3>
+                <span class='badge' style='background-color: var(--primary-light); color: var(--primary);'>Púrpura Trombocitopénica Inmune</span>
+                <p style="margin-top: 1rem;">La Trombocitopenia Inmune Primaria (PTI) es una enfermedad en la que el sistema inmunológico destruye las plaquetas por error, provocando que su cantidad disminuya y aumentando el riesgo de moretones o sangrados.
+
+Es una de las causas más frecuentes de plaquetas bajas en la infancia y, en muchos niños, puede resolverse espontáneamente con el tiempo.</p>
+                
+                <h4>Síntomas Comunes</h4>
+                <ul>
+        <li>Aparición de moretones fáciles sin causa</li><li>Petequias que son pequeños puntos rojos en la piel</li><li>Epistaxis de repetición</li><li>Sangrado en encías</li><li>Sangrado prolongado después de golpes o heridas menores.</li><li>Sangrado menstrual abundante</li>
+                </ul>
+
+                <h4>Causas y Origen</h4>
+                <ul>
+        <li>Reacción inmunitaria desencadenada por una infección viral o gastrointestinal previa</li><li>Desregulación del sistema inmunitario del niño</li><li>En raras ocasiones, puede presentarse después de administrarse algunas vacunas, aunque el beneficio de la vacunación supera ampliamente este riesgo.</li></ul>
+                <h4>Factores de Riesgo</h4>
+                <ul>
+            <li>Infecciones virales o gastrointestinales recientes como gripe, varicela o gastroenteritis</li><li>Predisposición genética a trastornos autoinmunes</li></ul>
+                <h4>Complicaciones Potenciales</h4>
+                <ul>
+            <li>Hemorragias graves espontáneas en órganos internos (poco frecuentes pero de alto riesgo)</li><li>Ansiedad familiar por riesgo de sangrado</li></ul>
+                <h4>Tratamiento y Abordaje</h4>
+                <ul>
+        <li>Vigilancia clínica y seguimiento hematológico en casos leves.</li><li>Inmunoglobulina intravenosa (IVIG).</li><li>Corticosteroides para disminuir la destrucción de plaquetas y aumentar temporalmente su número.</li></ul><h4>Preguntas Frecuentes sobre esta Condición</h4>
+                <div class="faq-box">
+                    <div class="faq-q">¿¿El niño puede realizar actividades físicas normales??</div>
+                    <div class="faq-a">La mayoría de los niños puede realizar actividades cotidianas. Sin embargo, cuando las plaquetas están muy bajas, se recomienda evitar deportes de contacto o actividades con alto riesgo de golpes hasta que el hematólogo indique que es seguro retomarlas.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Esta enfermedad se vuelve crónica??</div>
+                    <div class="faq-a">La mayoría de los niños se recupera completamente en los primeros 6 a 12 meses. Aproximadamente entre 20 y 30% pueden desarrollar PTI persistente o crónica.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Requiere transfusión de plaquetas??</div>
+                    <div class="faq-a">Generalmente no. Las transfusiones de plaquetas suelen reservarse para casos de sangrado grave o situaciones especiales, ya que las plaquetas transfundidas pueden ser destruidas rápidamente por el sistema inmunitario.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Cuánto tarda en resolverse con tratamiento??</div>
+                    <div class="faq-a">La respuesta al tratamiento es variable. Algunos niños presentan aumento de plaquetas en los primeros 7 días, mientras que otros pueden tardar varias semanas. El objetivo principal del tratamiento es disminuir el riesgo de sangrado y permitir una vida segura mientras ocurre la recuperación.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Todos los niños con PTI necesitan tratamiento??</div>
+                    <div class="faq-a">No. En muchos niños con PTI y sangrado leve, la observación cuidadosa puede ser la mejor opción. El tratamiento se individualiza según los síntomas, el riesgo de sangrado y el impacto en la calidad de vida</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Las plaquetas bajas siempre significan una enfermedad grave??</div>
+                    <div class="faq-a">No. Aunque las plaquetas bajas requieren valoración médica, la PTI suele ser una enfermedad benigna en la mayoría de los niños. Muchos pacientes presentan únicamente petequias, moretones o sangrados leves y pueden recuperarse completamente.</div>
+                </div>
+                </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <span class="badge" style="background-color: var(--primary-light); color: var(--primary);">Anemias Globulos Rojos</span>
+                <h3 style="margin-top: 0.5rem; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.6rem; color: var(--primary);">Anemia Aplásica</h3>
+                
+                <p style="margin-top: 1rem;">La anemia aplásica es una enfermedad poco frecuente en la que la médula ósea deja de producir suficientes células sanguíneas: glóbulos rojos, glóbulos blancos y plaquetas. Esto provoca anemia, infecciones frecuentes y tendencia al sangrado.</p>
+                
+                <h4>Síntomas Comunes</h4>
+                <ul>
+        <li>Cansancio excesivo o debilidad</li><li>Palidez</li><li>Falta de aire al esfuerzo</li><li>Infecciones frecuentes o difíciles de controlar</li><li>Fiebre</li><li>Aparición fácil de moretones</li><li>Sangrado de nariz o encías</li><li>Petequias (puntitos rojos o morados en la piel)</li>
+                </ul>
+
+                <h4>Causas y Origen</h4>
+                <ul>
+        <li>En muchos niños no se identifica una causa específica</li><li>Algunas enfermedades autoinmunes</li><li>Infecciones virales</li><li>Exposición a ciertos medicamentos o sustancias químicas</li><li>Algunas enfermedades hereditarias, como la Anemia de Fanconi</li></ul>
+                <h4>Factores de Riesgo</h4>
+                <ul>
+            <li>Exposición a sustancias químicas nocivas (como benceno o pesticidas)</li><li>Tratamientos previos con radiación o quimioterapia</li><li>Antecedentes de infecciones virales graves</li><li>Predisposición genética (enfermedades hereditarias)</li></ul>
+                <h4>Complicaciones Potenciales</h4>
+                <ul>
+            <li>Hemorragias graves</li><li>Infecciones severas generalizadas (septicemia)</li><li>Insuficiencia cardíaca por anemia crónica</li></ul>
+                <h4>Tratamiento y Abordaje</h4>
+                <ul>
+        <li>Transfusiones de glóbulos rojos o plaquetas cuando son necesarias</li><li>Medicamentos inmunosupresores para disminuir el ataque del sistema inmune a la médula ósea</li><li>Medicamentos que estimulan la producción de células sanguíneas</li><li>Antibióticos cuando existen infecciones</li><li>Trasplante de médula ósea o de células madre hematopoyéticas, que puede ser el tratamiento curativo en muchos niños</li></ul>
+                <h4>Diagnósticos a Descartar (Diagnóstico Diferencial)</h4>
+                <ul>
+            <li>Anemia de Fanconi.</li><li>Disqueratosis congénita.</li><li>Síndrome de Shwachman-Diamond.</li><li>Leucemia aguda.</li><li>Síndromes mielodisplásicos.</li><li>Hemoglobinuria paroxística nocturna</li></ul><h4>Preguntas Frecuentes sobre esta Condición</h4>
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Es lo mismo que leucemia??</div>
+                    <div class="faq-a">No. La leucemia es un cáncer de la sangre en el que se producen células anormales de manera descontrolada. En la anemia aplásica, la médula ósea deja de producir suficientes glóbulos rojos, glóbulos blancos y plaquetas.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Cómo se diagnostica la anemia aplásica??</div>
+                    <div class="faq-a">Para que sea más claro para los padres, el diagnóstico se realiza mediante:
+
+• Biometría hemática completa.
+• Recuento de reticulocitos.
+• Aspirado y biopsia de médula ósea (estudio fundamental para confirmar el diagnóstico).
+• Estudios para investigar la causa.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Se puede curar con trasplante de médula ósea??</div>
+                    <div class="faq-a">Sí. El trasplante de células madre hematopoyéticas (trasplante de médula ósea) puede curar la enfermedad en muchos pacientes, especialmente cuando existe un donante compatible.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿La anemia aplásica es cáncer??</div>
+                    <div class="faq-a">No. La anemia aplásica no es un cáncer. Es una enfermedad en la que la médula ósea produce muy pocas células sanguíneas. Sin embargo, requiere atención especializada porque puede ser grave.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿La anemia aplásica es hereditaria??</div>
+                    <div class="faq-a">En la mayoría de los casos no es hereditaria. Sin embargo, existen algunas enfermedades genéticas poco frecuentes, como la anemia de Fanconi, que pueden causar anemia aplásica y requieren estudios especializados.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Cuánto dura el tratamiento inmunosupresor??</div>
+                    <div class="faq-a">La respuesta al tratamiento inmunosupresor suele observarse después de varios meses. El seguimiento médico es prolongado y puede continuar durante varios años para vigilar recaídas o complicaciones.</div>
+                </div>
+                </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <span class="badge" style="background-color: var(--primary-light); color: var(--primary);">Anemias Globulos Rojos</span>
+                <h3 style="margin-top: 0.5rem; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.6rem; color: var(--primary);">Anemia Hemolítica</h3>
+                
+                <p style="margin-top: 1rem;">La anemia hemolítica ocurre cuando los glóbulos rojos se destruyen más rápido de lo que la médula ósea puede producirlos. Esto provoca que disminuya la cantidad de glóbulos rojos en la sangre y aparezcan síntomas como palidez, cansancio e ictericia (color amarillo en piel y ojos).</p>
+                
+                <h4>Síntomas Comunes</h4>
+                <ul>
+        <li>Palidez</li><li>Cansancio o debilidad</li><li>Color amarillo en piel y ojos (ictericia)</li><li>Orina oscura</li><li>Latidos rápidos del corazón</li><li>Dificultad para realizar actividades físicas</li><li>Crecimiento del bazo (esplenomegalia)</li>
+                </ul>
+
+                <h4>Causas y Origen</h4>
+                <ul>
+        <li>Causas hereditarias: Esferocitosis hereditaria, Drepanocitosis (anemia falciforme), Talasemias, Deficiencia de glucosa-6-fosfato deshidrogenasa (G6PD) y Deficiencia de piruvato quinasa</li><li>Causas adquiridas: Anemia hemolítica autoinmune, Infecciones, Algunos medicamentos, Reacciones transfusionales y Enfermedades autoinmunes</li></ul>
+                <h4>Factores de Riesgo</h4>
+                <ul>
+            <li>Antecedentes familiares de anemias hereditarias</li><li>Enfermedades autoinmunes</li><li>Infecciones virales recientes</li></ul>
+                <h4>Complicaciones Potenciales</h4>
+                <ul>
+            <li>Cálculos biliares a temprana edad</li><li>Crisis aplásicas por infecciones virales</li><li>Anemia grave que requiere transfusiones de urgencia</li></ul>
+                <h4>Tratamiento y Abordaje</h4>
+                <ul>
+        <li>Observación y vigilancia médica según la causa</li><li>Suplementos de ácido fólico</li><li>Medicamentos para controlar el sistema inmunológico</li><li>Transfusiones sanguíneas</li><li>Cirugía para retirar el bazo (en algunos casos seleccionados)</li></ul><h4>Preguntas Frecuentes sobre esta Condición</h4>
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Por qué se ponen amarillos los ojos del niño??</div>
+                    <div class="faq-a">Cuando los glóbulos rojos se destruyen más rápido de lo normal, aumenta la cantidad de bilirrubina en la sangre. Esto puede hacer que los ojos and la piel se vean amarillos, una condición llamada ictericia.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Es una enfermedad hereditaria??</div>
+                    <div class="faq-a">Algunas formas de anemia hemolítica son hereditarias y se transmiten de padres a hijos. Otras son adquiridas y pueden aparecer por enfermedades autoinmunes, infecciones o algunos medicamentos.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Cómo se realiza el diagnóstico??</div>
+                    <div class="faq-a">El diagnóstico se realiza mediante estudios de sangre que permiten identificar la causa de la destrucción de los glóbulos rojos. Estos incluyen biometría hemática, recuento de reticulocitos, bilirrubinas, deshidrogenasa láctica (DHL), haptoglobina, frotis de sangre periférica y, en algunos casos, la prueba de Coombs. Dependiendo de la sospecha clínica, pueden requerirse estudios especializados adicionales.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿La anemia hemolítica puede requerir transfusiones??</div>
+                    <div class="faq-a">En algunos casos sí. Cuando la anemia es grave o provoca síntomas importantes, puede ser necesaria una transfusión de glóbulos rojos. La decisión depende de la causa, la gravedad y el estado clínico del paciente</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿La anemia hemolítica siempre es grave??</div>
+                    <div class="faq-a">No necesariamente. Algunas formas son leves y solo requieren vigilancia periódica, mientras que otras pueden provocar anemia importante y requerir tratamiento especializado. El pronóstico depende de la causa y de la rapidez con que se establezca el diagnóstico.</div>
+                </div>
+                </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <span class="badge" style="background-color: var(--primary-light); color: var(--primary);">Anemias Globulos Rojos</span>
+                <h3 style="margin-top: 0.5rem; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.6rem; color: var(--primary);">Drepanocitosis (Anemia de Células Falciformes)</h3>
+                <span class='badge' style='background-color: var(--primary-light); color: var(--primary);'>Anemia Falciforme</span>
+                <p style="margin-top: 1rem;">La drepanocitosis es un trastorno hereditario causado por una alteración en el gen de la β-globina (HBB), responsable de la producción de hemoglobina. Esta alteración produce hemoglobina S (HbS), una forma anormal de hemoglobina que puede hacer que los glóbulos rojos adopten una forma similar a una hoz o media luna, afectando su función y supervivencia.</p>
+                
+                <h4>Síntomas Comunes</h4>
+                <ul>
+        <li>Anemia crónica</li><li>Palidez</li><li>Ictericia (color amarillo en ojos o piel)</li><li>Fatiga</li><li>Crisis de dolor</li><li>Hinchazón de manos y pies en lactantes</li><li>Infecciones frecuentes</li><li>Retraso en el crecimiento</li><li>Crecimiento del bazo</li>
+                </ul>
+
+                <h4>Causas y Origen</h4>
+                <ul>
+        <li>Mutación puntual que produce una hemoglobina anormal, heredada de ambos padres y que afecta la producción de las cadenas de beta-hemoglobina</li></ul>
+                <h4>Factores de Riesgo</h4>
+                <ul>
+            <li>Antecedentes familiares de rasgo falciforme o drepanocitosis.</li><li>Padres portadores de la alteración genética, aun cuando no presenten síntomas.</li><li>Resultado positivo en el tamiz neonatal.</li><li>Ascendencia africana, caribeña, mediterránea, de Medio Oriente o de algunas regiones de América Latina.</li></ul>
+                <h4>Complicaciones Potenciales</h4>
+                <ul>
+            <li>Accidente cerebrovascular a temprana edad</li><li>Síndrome torácico agudo (infiltrado pulmonar grave)</li><li>Daño orgánico crónico en riñones, bazo y articulaciones</li></ul>
+                <h4>Tratamiento y Abordaje</h4>
+                <ul>
+        <li>Medicamentos para prevenir las crisis de dolor</li><li>Vacunación completa y antibióticos profilácticos</li><li>Transfusiones de sangre y trasplante de médula ósea</li></ul><h4>Preguntas Frecuentes sobre esta Condición</h4>
+                <div class="faq-box">
+                    <div class="faq-q">¿¿La drepanocitosis es hereditaria??</div>
+                    <div class="faq-a">Sí. La drepanocitosis es una enfermedad genética que se transmite de padres a hijos. Ocurre cuando un niño hereda una copia alterada del gen de la hemoglobina de cada uno de sus padres.
+
+Muchas personas pueden ser portadoras del llamado rasgo falciforme, lo que significa que tienen una sola copia alterada del gen y generalmente no presentan síntomas. Sin embargo, cuando ambos padres son portadores, existe la posibilidad de que sus hijos desarrollen la enfermedad.
+
+Por esta razón, cuando se diagnostica drepanocitosis en un niño, puede ser recomendable evaluar a otros miembros de la familia y recibir asesoramiento genético para comprender el riesgo en futuros embarazos.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Por qué ocurren las crisis dolorosas??</div>
+                    <div class="faq-a">Las crisis dolorosas ocurren cuando los glóbulos rojos con forma anormal se vuelven rígidos y pueden bloquear pequeños vasos sanguíneos. Esto dificulta el flujo normal de sangre y oxígeno hacia los tejidos, provocando episodios de dolor que pueden afectar huesos, articulaciones, abdomen u otras partes del cuerpo.
+
+Las infecciones, la deshidratación, los cambios bruscos de temperatura y otros factores pueden favorecer la aparición de estas crisis.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿La drepanocitosis tiene cura??</div>
+                    <div class="faq-a">Actualmente, el trasplante de células madre hematopoyéticas es la única opción con potencial curativo para algunos pacientes. Sin embargo, existen tratamientos que ayudan a prevenir complicaciones, disminuir las crisis dolorosas y mejorar significativamente la calidad de vida.
+
+El seguimiento regular por Hematología Pediátrica es fundamental para detectar y tratar oportunamente las complicaciones de la enfermedad.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Cuándo puede necesitar una transfusión un niño con drepanocitosis??</div>
+                    <div class="faq-a">Algunas complicaciones de la drepanocitosis pueden requerir transfusiones de sangre. Estas pueden utilizarse para tratar anemia grave o prevenir complicaciones específicas, como algunas alteraciones neurológicas, pulmonares o relacionadas con procedimientos quirúrgicos.
+
+La necesidad de una transfusión depende de cada situación clínica y debe ser valorada por un especialista.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Mi hijo podrá llevar una vida normal??</div>
+                    <div class="faq-a">Con un diagnóstico oportuno, seguimiento especializado y medidas adecuadas para prevenir complicaciones, muchos niños con drepanocitosis pueden asistir a la escuela, realizar actividades cotidianas y mantener una buena calidad de vida.
+
+El control médico regular, la prevención de infecciones y el apego al tratamiento son fundamentales para favorecer un desarrollo saludable.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Cómo se diagnostica la drepanocitosis??</div>
+                    <div class="faq-a">El diagnóstico se realiza mediante estudios especializados que identifican el tipo de hemoglobina presente en la sangre. Entre ellos se encuentran la electroforesis de hemoglobina, la cromatografía líquida de alta resolución (HPLC) y otras pruebas confirmatorias. En algunos países y regiones, la enfermedad puede detectarse desde el nacimiento mediante tamiz neonatal.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Por qué son importantes las vacunas y la prevención de infecciones??</div>
+                    <div class="faq-a">Los niños con drepanocitosis tienen un mayor riesgo de presentar infecciones graves debido a que el bazo puede perder parte de su función con el tiempo. Por ello, es fundamental mantener un esquema de vacunación completo, acudir a controles médicos periódicos y buscar atención médica inmediata ante la presencia de fiebre.</div>
+                </div>
+                </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <span class="badge" style="background-color: var(--primary-light); color: var(--primary);">Anemias Globulos Rojos</span>
+                <h3 style="margin-top: 0.5rem; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.6rem; color: var(--primary);">Talasemia</h3>
+                
+                <p style="margin-top: 1rem;">Las talasemias son un grupo de trastornos sanguíneos hereditarios caracterizados por una producción deficiente o nula de una o más cadenas de globina de la hemoglobina, lo que causa anemia de intensidad variable.</p>
+                
+                <h4>Síntomas Comunes</h4>
+                <ul>
+        <li>Palidez.</li><li>Cansancio o fatiga fácil.</li><li>Irritabilidad.</li><li>Falta de apetito.</li><li>Retraso en el crecimiento y desarrollo.</li><li>Coloración amarillenta de la piel o los ojos (ictericia).</li><li>Orina oscura.</li><li>Aumento del tamaño del hígado y/o del bazo (hepatoesplenomegalia).</li><li>Deformidades óseas faciales en casos graves y no tratados.</li><li>Necesidad de transfusiones sanguíneas recurrentes.</li>
+                </ul>
+
+                <h4>Causas y Origen</h4>
+                <ul>
+        <li>Mutaciones o deleciones genéticas en los genes responsables de la síntesis de cadenas alfa o beta de globina</li></ul>
+                <h4>Factores de Riesgo</h4>
+                <ul>
+            <li>Antecedentes familiares de talasemia</li><li>Ascendencia mediterránea, asiática o del Medio Oriente</li></ul>
+                <h4>Complicaciones Potenciales</h4>
+                <ul>
+            <li>Sobrecarga de hierro en el cuerpo (hemocromatosis) por transfusiones repetidas</li><li>Problemas cardíacos y óseos</li><li>Mayor riesgo de infecciones severas</li></ul>
+                <h4>Tratamiento y Abordaje</h4>
+                <ul>
+        <li>Transfusiones sanguíneas programadas en pacientes con formas graves.</li><li>Terapia de quelación de hierro para prevenir la sobrecarga férrica secundaria a las transfusiones.</li><li>Suplementación con ácido fólico cuando esté indicada.</li><li>Monitoreo especializado de crecimiento, función cardíaca y niveles de hierro.</li><li>Trasplante de progenitores hematopoyéticos en casos seleccionados</li></ul><h4>Preguntas Frecuentes sobre esta Condición</h4>
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Cuál es la diferencia entre talasemia menor y mayor??</div>
+                    <div class="faq-a">La talasemia menor (rasgo talasémico) suele producir una anemia leve o incluso no causar síntomas. Las personas con esta condición generalmente llevan una vida normal y muchas veces desconocen que son portadoras.
+
+La talasemia mayor es una forma grave de la enfermedad que provoca anemia severa desde los primeros años de vida y suele requerir transfusiones sanguíneas periódicas y seguimiento especializado por hematología.
+
+La diferencia principal radica en la gravedad de la anemia, los síntomas y la necesidad de tratamiento.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Qué es la terapia de quelación de hierro y por qué puede ser necesaria??</div>
+                    <div class="faq-a">La terapia de quelación es un tratamiento que ayuda a eliminar el exceso de hierro acumulado en el organismo. Los pacientes con talasemia que reciben transfusiones sanguíneas frecuentes pueden desarrollar sobrecarga de hierro, ya que el cuerpo no cuenta con un mecanismo natural eficaz para eliminarlo.
+
+Si no se trata, el exceso de hierro puede afectar órganos como el corazón, el hígado y las glándulas endocrinas. Por ello, algunos pacientes requieren medicamentos quelantes para mantener niveles seguros de hierro y prevenir complicaciones a largo plazo.
+
+El hematólogo determinará cuándo iniciar este tratamiento y qué medicamento es el más adecuado para cada paciente.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Un niño con talasemia menor necesita tomar hierro??</div>
+                    <div class="faq-a">No necesariamente. Antes de administrar hierro es indispensable confirmar que exista deficiencia de hierro mediante estudios de laboratorio. Muchos pacientes con talasemia menor no presentan déficit de hierro y recibir suplementos sin indicación médica puede favorecer la sobrecarga férrica.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Cómo se diagnostica la talasemia??</div>
+                    <div class="faq-a">El diagnóstico definitivo se establece mediante los siguientes estudios y valoraciones: biometría hemática, frotis de sangre periférica, electroforesis de hemoglobina, estudios moleculares o genéticos en casos seleccionados, y la valoración especializada por un hematólogo pediatra.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿La talasemia puede heredarse??</div>
+                    <div class="faq-a">Sí. La talasemia se transmite de padres a hijos mediante genes alterados que afectan la producción de hemoglobina. Por ello, en algunas familias puede recomendarse el estudio de otros familiares y la asesoría genética.</div>
+                </div>
+                </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <span class="badge" style="background-color: var(--primary-light); color: var(--primary);">Anemias Globulos Rojos</span>
+                <h3 style="margin-top: 0.5rem; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.6rem; color: var(--primary);">Esferocitosis Hereditaria</h3>
+                
+                <p style="margin-top: 1rem;">La esferocitosis hereditaria es una anemia hemolítica congénita causada por alteraciones genéticas en las proteínas de la membrana de los glóbulos rojos. Estas células adquieren una forma esférica, son menos flexibles y se destruyen principalmente en el bazo. La mayoría de los casos se heredan de forma autosómica dominante, aunque existen formas recesivas menos frecuentes.</p>
+                
+                <h4>Síntomas Comunes</h4>
+                <ul>
+        <li>Palidez en piel y mucosas</li><li>Ictericia intermitente</li><li>Crecimiento del bazo (esplenomegalia)</li><li>Cansancio recurrente</li><li>Desarrollo de piedras en la vesícula (colelitiasis)</li><li>Orina oscura ocasional</li><li>Ictericia neonatal prolongada o intensa</li><li>Retraso en el crecimiento (en casos moderados o graves)</li>
+                </ul>
+
+                <h4>Causas y Origen</h4>
+                <ul>
+        <li>Mutación genética hereditaria (generalmente autosómica dominante) que altera las proteínas estructurales espectrina, anquirina o banda 3 del glóbulo rojo</li></ul>
+                <h4>Factores de Riesgo</h4>
+                <ul>
+            <li>Antecedentes familiares de esferocitosis hereditaria</li><li>Familiar con anemia hemolítica crónica</li><li>Familiar sometido a esplenectomía por anemia hemolítica</li></ul>
+                <h4>Complicaciones Potenciales</h4>
+                <ul>
+            <li>Crisis aplásicas causadas por infecciones virales (ej. parvovirus B19)</li><li>Piedras en la vesícula biliar a edades muy tempranas</li><li>Anemia severa</li></ul>
+                <h4>Tratamiento y Abordaje</h4>
+                <ul>
+        <li>Suplementación con ácido fólico</li><li>Transfusiones de glóbulos rojos cuando existe anemia grave o crisis hemolítica</li><li>Esplenectomía en pacientes seleccionados con enfermedad moderada o grave, generalmente después de los 5–6 años</li><li>Colecistectomía cuando existen cálculos biliares sintomáticos</li></ul><h4>Preguntas Frecuentes sobre esta Condición</h4>
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Por qué el bazo destruye estos glóbulos rojos??</div>
+                    <div class="faq-a">El bazo funciona como un filtro natural de la sangre. Los glóbulos rojos normales son flexibles y pueden atravesar espacios muy estrechos. En la esferocitosis hereditaria, los glóbulos rojos tienen forma esférica y son menos flexibles, por lo que quedan atrapados en el bazo y son destruidos antes de tiempo.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Siempre se debe retirar el bazo en estos niños??</div>
+                    <div class="faq-a">No. La esplenectomía se reserva para algunos pacientes con enfermedad moderada o grave que presentan anemia significativa, necesidad frecuente de transfusiones, crecimiento afectado o síntomas importantes. Muchos niños con formas leves pueden manejarse únicamente con vigilancia médica y ácido fólico.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Cómo se realiza el diagnóstico??</div>
+                    <div class="faq-a">El diagnóstico se realiza mediante biometría hemática, frotis de sangre periférica y pruebas especializadas como la citometría con eosina-5-maleimida (EMA), considerada actualmente una de las pruebas más sensibles para confirmar la enfermedad.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿La esferocitosis hereditaria tiene cura??</div>
+                    <div class="faq-a">Es una enfermedad genética que acompaña al paciente toda su vida. Sin embargo, con seguimiento adecuado, suplementación con ácido fólico y, en algunos casos, esplenectomía, la mayoría de los niños pueden llevar una vida normal.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Puede llevar una vida normal un niño con esferocitosis hereditaria??</div>
+                    <div class="faq-a">En la mayoría de los casos sí. Con seguimiento médico adecuado, suplementación con ácido fólico y tratamiento oportuno de las complicaciones, la mayoría de los niños pueden realizar sus actividades habituales y tener una buena calidad de vida.</div>
+                </div>
+                </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <span class="badge" style="background-color: var(--primary-light); color: var(--primary);">Coagulacion Hemostasia</span>
+                <h3 style="margin-top: 0.5rem; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.6rem; color: var(--primary);">Hemofilia Infantil</h3>
+                
+                <p style="margin-top: 1rem;">Es un trastorno hereditario de la coagulación causado por la deficiencia de un factor de coagulación: la Hemofilia A se debe al déficit de factor VIII y la Hemofilia B al déficit de factor IX.</p>
+                
+                <h4>Síntomas Comunes</h4>
+                <ul>
+        <li>Moretones fáciles o grandes.</li><li>Sangrado prolongado después de heridas, procedimientos o extracciones dentales.</li><li>Sangrado nasal frecuente.</li><li>Hemorragias en articulaciones (hemartrosis) con dolor, inflamación y limitación del movimiento.</li><li>Hemorragias musculares.</li>
+                </ul>
+
+                <h4>Causas y Origen</h4>
+                <ul>
+        <li>Cambios genéticos que provocan niveles bajos de ciertos factores de coagulación (deficiencia de factor VIII en Hemofilia A, y deficiencia de factor IX en Hemofilia B).</li><li>Herencia de genes alterados de uno o ambos padres, generalmente de forma ligada al cromosoma X.</li><li>Aparición por una mutación genética nueva (de novo) sin antecedentes familiares previos.</li></ul>
+                <h4>Factores de Riesgo</h4>
+                <ul>
+            <li>Antecedentes familiares de hemofilia u otros trastornos hemorrágicos hereditarios.</li><li>Tener familiares portadores de la enfermedad.</li><li>Sexo masculino (la hemofilia clásica afecta principalmente a los niños debido a su herencia ligada al cromosoma X).</li></ul>
+                <h4>Complicaciones Potenciales</h4>
+                <ul>
+            <li>Daño articular crónico por sangrados repetitivos (artropatía hemofílica)</li><li>Hemorragias internas espontáneas de difícil control</li></ul>
+                <h4>Tratamiento y Abordaje</h4>
+                <ul>
+        <li>Tratamiento a demanda: se administra el factor cuando ocurre un sangrado.</li><li>Profilaxis: administración regular de factor VIII o IX para prevenir hemorragias.</li><li>La profilaxis es el estándar de cuidado en muchos niños con hemofilia grave porque disminuye sangrados y daño articular.</li></ul><h4>Preguntas Frecuentes sobre esta Condición</h4>
+                <div class="faq-box">
+                    <div class="faq-q">¿¿La hemofilia se cura??</div>
+                    <div class="faq-a">No tiene cura definitiva actualmente, pero los tratamientos de reemplazo profiláctico permiten que los niños lleven una vida normal y activa.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Se puede diagnosticar desde el nacimiento??</div>
+                    <div class="faq-a">Sí, mediante pruebas especiales de coagulación que miden la actividad de los factores en sangre de cordón umbilical o periférica.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Qué tipo de ejercicio puede hacer un niño con hemofilia??</div>
+                    <div class="faq-a">Se recomiendan deportes de bajo impacto como la natación, y se desaconsejan totalmente los deportes de colisión o contacto.</div>
+                </div>
+                </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <span class="badge" style="background-color: var(--primary-light); color: var(--primary);">Anemias Globulos Rojos</span>
+                <h3 style="margin-top: 0.5rem; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.6rem; color: var(--primary);">Deficiencia de G6PD</h3>
+                <span class='badge' style='background-color: var(--primary-light); color: var(--primary);'>Deficiencia de Glucosa-6-Fosfato Deshidrogenasa</span>
+                <p style="margin-top: 1rem;">La deficiencia de G6PD es un trastorno genético caracterizado por la escasez de la enzima glucosa-6-fosfato deshidrogenasa en los glóbulos rojos, lo que los hace vulnerables a romperse ante el estrés oxidativo provocado por ciertos medicamentos, infecciones o alimentos.</p>
+                
+                <h4>Síntomas Comunes</h4>
+                <ul>
+        <li>Palidez repentina</li><li>Color amarillo en piel y ojos (ictericia)</li><li>Orina oscura (color té o coca-cola)</li><li>Cansancio o debilidad</li><li>Taquicardia</li><li>Dificultad para respirar en casos graves</li><li>Dolor abdominal o dolor de espalda durante una crisis hemolítica</li>
+                </ul>
+
+                <h4>Causas y Origen</h4>
+                <ul>
+        <li>Mutación genética hereditaria ligada al cromosoma X, que reduce la actividad o estabilidad de la enzima protectora G6PD</li></ul>
+                <h4>Factores de Riesgo</h4>
+                <ul>
+            <li>Antecedentes familiares de deficiencia de G6PD</li><li>Sexo masculino (más frecuente)</li><li>Ascendencia africana, mediterránea, asiática o de Medio Oriente</li><li>Exposición a medicamentos oxidantes</li><li>Infecciones virales o bacterianas</li><li>Consumo de habas (favismo)</li></ul>
+                <h4>Complicaciones Potenciales</h4>
+                <ul>
+            <li>Anemia hemolítica aguda grave con riesgo de daño renal</li><li>Necesidad de transfusiones de emergencia en crisis oxidativas</li></ul>
+                <h4>Tratamiento y Abordaje</h4>
+                <ul>
+        <li>Evitar medicamentos y alimentos que desencadenen hemólisis</li><li>Tratar oportunamente las infecciones</li><li>Mantener una adecuada hidratación durante las crisis</li><li>Vigilancia médica y estudios de laboratorio cuando aparezcan síntomas</li><li>Transfusión de sangre en casos graves de anemia hemolítica</li></ul><h4>Preguntas Frecuentes sobre esta Condición</h4>
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Qué es el favismo??</div>
+                    <div class="faq-a">Es la reacción hemolítica grave que sufren las personas con deficiencia de G6PD tras ingerir habas (o incluso inhalar el polen de la planta de habas), debido a sustancias químicas en ellas que oxidan la sangre.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Qué medicamentos no debe tomar mi hijo??</div>
+                    <div class="faq-a">Debe evitar las sulfonamidas, ciertos antipalúdicos, algunos analgésicos y sustancias como la naftalina. Se le entregará a la familia una lista detallada y actualizada de medicamentos seguros y prohibidos.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Esta enfermedad dura toda la vida??</div>
+                    <div class="faq-a">Sí, es una condición genética que acompaña al paciente toda su vida. Sin embargo, con evitar los factores desencadenantes, el niño tendrá una expectativa y calidad de vida completamente normales.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Puede mi hijo llevar una vida normal??</div>
+                    <div class="faq-a">Sí. La mayoría de los niños con deficiencia de G6PD tienen una vida completamente normal si evitan los factores que desencadenan la hemólisis y reciben atención médica cuando presentan síntomas</div>
+                </div>
+                </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <span class="badge" style="background-color: var(--primary-light); color: var(--primary);">Coagulacion Hemostasia</span>
+                <h3 style="margin-top: 0.5rem; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.6rem; color: var(--primary);">Enfermedad de Von Willebrand</h3>
+                
+                <p style="margin-top: 1rem;">La enfermedad de von Willebrand es el trastorno hereditario de la coagulación más frecuente. Ocurre cuando el factor von Willebrand está disminuido o no funciona correctamente, lo que dificulta que las plaquetas formen un coágulo adecuado y puede provocar sangrados más prolongados de lo normal</p>
+                
+                <h4>Síntomas Comunes</h4>
+                <ul>
+        <li>Moretones frecuentes o excesivos</li><li>Sangrados nasales repetidos o difíciles de detener</li><li>Sangrado prolongado después de extracciones dentales o cirugías</li><li>Sangrado de encías</li><li>Menstruaciones abundantes en adolescentes</li><li>En casos más graves, sangrado gastrointestinal o articular</li>
+                </ul>
+
+                <h4>Causas y Origen</h4>
+                <ul>
+        <li>La mayoría de los casos son hereditarios y se transmiten de padres a hijos. En raras ocasiones puede aparecer sin antecedentes familiares o adquirirse posteriormente por otras enfermedades</li></ul>
+                <h4>Factores de Riesgo</h4>
+                <ul>
+            <li>Padres con diagnóstico de la enfermedad o síntomas de sangrado anormal inexplicado</li></ul>
+                <h4>Complicaciones Potenciales</h4>
+                <ul>
+            <li>Anemia crónica por pérdidas de sangre recurrentes</li><li>Hemorragias graves tras procedimientos menores</li><li>Dolor e inflamación articular (en tipos graves)</li></ul>
+                <h4>Tratamiento y Abordaje</h4>
+                <ul>
+        <li>Medicamentos para elevar temporalmente los niveles del factor de coagulación</li><li>Antifibrinolíticos para controlar sangrados locales en boca o nariz</li><li>Concentrados purificados de factor Von Willebrand en casos severos o cirugías</li></ul><h4>Preguntas Frecuentes sobre esta Condición</h4>
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Es una enfermedad parecida a la hemofilia??</div>
+                    <div class="faq-a">Tienen similitudes porque ambas son enfermedades que afectan la coagulación y pueden causar sangrados prolongados. Sin embargo, la enfermedad de von Willebrand suele ser más leve, afecta tanto a niños como a niñas y se debe a una alteración del factor von Willebrand, una proteína que ayuda a que las plaquetas se adhieran y formen el coágulo.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Una niña con esta condición puede llevar una vida normal al crecer??</div>
+                    <div class="faq-a">Sí. La mayoría de las niñas con enfermedad de von Willebrand pueden llevar una vida completamente normal. Es importante informar a sus médicos sobre el diagnóstico y recibir orientación especial antes de cirugías, procedimientos dentales o si presenta menstruaciones abundantes.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿La enfermedad de von Willebrand tiene cura??</div>
+                    <div class="faq-a">Actualmente no tiene cura definitiva, pero existen tratamientos muy efectivos para prevenir y controlar los episodios de sangrado, permitiendo que la mayoría de los pacientes lleven una vida normal.</div>
+                </div>
+                </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <span class="badge" style="background-color: var(--primary-light); color: var(--primary);">Leucemias Linfomas</span>
+                <h3 style="margin-top: 0.5rem; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.6rem; color: var(--primary);">Leucemia Infantil</h3>
+                
+                <p style="margin-top: 1rem;">La leucemia infantil es un tipo de cáncer que se origina en la médula ósea, el tejido encargado de producir las células sanguíneas. Las células leucémicas se multiplican de forma descontrolada y desplazan a las células normales de la sangre, provocando anemia, infecciones y sangrados.</p>
+                
+                <h4>Síntomas Comunes</h4>
+                <ul>
+        <li>Palidez y cansancio persistente</li><li>Fiebre recurrente o prolongada</li><li>Moretones o sangrados fáciles</li><li>Petequias</li><li>Dolor óseo o articular</li><li>Ganglios inflamados</li><li>Crecimiento del hígado o bazo</li><li>Pérdida de peso o disminución del apetito</li>
+                </ul>
+
+                <h4>Causas y Origen</h4>
+                <ul>
+        <li>En la mayoría de los niños no existe una causa identificable. La leucemia se desarrolla por alteraciones genéticas adquiridas en las células de la médula ósea y generalmente no es hereditaria.</li></ul>
+                <h4>Factores de Riesgo</h4>
+                <ul>
+            <li>Trastornos genéticos específicos (como el Síndrome de Down)</li><li>Exposición previa a quimioterapia o radiaciones de alta intensidad</li></ul>
+                <h4>Complicaciones Potenciales</h4>
+                <ul>
+            <li>Infecciones graves por deficiencia de glóbulos blancos sanos</li><li>Hemorragias severas por falta de plaquetas</li><li>Anemia grave que limita las actividades cotidianas</li></ul>
+                <h4>Tratamiento y Abordaje</h4>
+                <ul>
+        <li>Quimioterapia en varias fases</li><li>Terapias dirigidas en algunos tipos de leucemia</li><li>Inmunoterapia en casos seleccionados</li><li>Trasplante de células madre hematopoyéticas cuando está indicado</li><li>Tratamiento de soporte transfusional y prevención de infecciones</li></ul><h4>Preguntas Frecuentes sobre esta Condición</h4>
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Los niños con leucemia pueden curarse??</div>
+                    <div class="faq-a">Sí. La leucemia infantil, especialmente la leucemia linfoblástica aguda (LLA), tiene tasas de curación superiores al 85-90% con tratamiento oportuno y adecuado. El diagnóstico temprano y el inicio rápido del tratamiento son fundamentales para el pronóstico.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Cuánto dura el tratamiento de la leucemia infantil??</div>
+                    <div class="faq-a">El tratamiento puede durar entre 2 y 3 años, dependiendo del tipo y riesgo de la leucemia. Incluye varias fases: inducción a la remisión, consolidación y mantenimiento. Durante este tiempo, el niño requiere seguimiento cercano y apoyo multidisciplinario.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿La leucemia infantil es hereditaria??</div>
+                    <div class="faq-a">En la gran mayoría de los casos, no. La leucemia se desarrolla por alteraciones genéticas adquiridas en las células de la médula ósea, no por mutaciones heredadas de los padres. Tener un familiar con leucemia no aumenta significativamente el riesgo.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Qué debo hacer si sospecho que mi hijo tiene leucemia??</div>
+                    <div class="faq-a">Acudir a una consulta con un hematólogo pediatra para una evaluación clínica y solicitar una biometría hemática completa. No espere a que los síntomas empeoren: el diagnóstico oportuno marca la diferencia en el tratamiento.</div>
+                </div>
+                </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <span class="badge" style="background-color: var(--primary-light); color: var(--primary);">Coagulacion Hemostasia</span>
+                <h3 style="margin-top: 0.5rem; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.6rem; color: var(--primary);">Trombosis en Niños</h3>
+                <span class='badge' style='background-color: var(--primary-light); color: var(--primary);'>Trombosis Venosa o Arterial Pediátrica</span>
+                <p style="margin-top: 1rem;">La trombosis en niños es un trastorno poco común pero grave, caracterizado por la formación de un coágulo de sangre (trombo) dentro de un vaso sanguíneo (vena o arteria), obstruyendo la circulación normal de la sangre.</p>
+                
+                <h4>Síntomas Comunes</h4>
+                <ul>
+        <li>Hinchazón dolorosa en una extremidad (brazo o pierna)</li><li>Piel de la zona afectada enrojecida, morada o pálida</li><li>Sensación de calor en la extremidad inflamada</li><li>Dolor de pecho o dificultad respiratoria súbita (sospecha de trombo en pulmón)</li>
+                </ul>
+
+                <h4>Causas y Origen</h4>
+                <ul>
+        <li>Presencia de catéteres venosos centrales (causa más frecuente en hospitales)</li><li>Trastornos congénitos de la coagulación (trombofilias)</li><li>Infecciones graves, cirugías o cáncer activo</li></ul>
+                <h4>Factores de Riesgo</h4>
+                <ul>
+            <li>Uso prolongado de catéteres centrales</li><li>Enfermedades inflamatorias crónicas</li><li>Antecedentes familiares de trombosis a temprana edad</li></ul>
+                <h4>Complicaciones Potenciales</h4>
+                <ul>
+            <li>Embolia pulmonar (el coágulo viaja al pulmón, siendo una emergencia vital)</li><li>Síndrome postrombótico (daño crónico y dolor en la vena afectada)</li><li>Pérdida de perfusión y daño de tejidos</li></ul>
+                <h4>Tratamiento y Abordaje</h4>
+                <ul>
+        <li>Anticoagulación bajo supervisión especializada</li><li>Tratamiento de la enfermedad o factor desencadenante</li><li>Manejo o retiro del catéter cuando esté indicado</li><li>Seguimiento clínico y por estudios de imagen</li></ul><h4>Preguntas Frecuentes sobre esta Condición</h4>
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Por qué a los niños les da trombosis??</div>
+                    <div class="faq-a">A diferencia de los adultos, la trombosis en niños suele asociarse a factores de riesgo específicos como catéteres venosos centrales, infecciones graves, cáncer, enfermedades inflamatorias o trastornos de la coagulación. En muchos pacientes intervienen varios factores al mismo tiempo.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Los anticoagulantes ponen en riesgo al niño??</div>
+                    <div class="faq-a">Tienen un riesgo de causar sangrado, por lo que requieren una dosificación muy precisa, monitoreo constante de laboratorio e indicación rigurosa por un hematólogo pediatra.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Qué es una trombofilia??</div>
+                    <div class="faq-a">Es una condición hereditaria o adquirida en la que la sangre tiene una mayor tendencia natural a formar coágulos de forma inapropiada.</div>
+                </div>
+                </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <span class="badge" style="background-color: var(--primary-light); color: var(--primary);">Celulas Medula Osea</span>
+                <h3 style="margin-top: 0.5rem; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.6rem; color: var(--primary);">Interpretación de Resultados de Laboratorio</h3>
+                
+                <p style="margin-top: 1rem;">La Dra. Lizbeth Hernández evalúa alteraciones en estudios de laboratorio, biometrías hemáticas y pruebas especializadas para identificar la causa y orientar el tratamiento más adecuado para cada paciente.</p>
+                
+                <h4>Síntomas Comunes</h4>
+                <ul>
+        <li>Puntos rojos en la piel (petequias) o moretones sin explicación</li><li>Palidez extrema o cansancio inusual</li><li>Fiebre persistente o infecciones frecuentes</li><li>Sangrados de nariz o encías recurrentes</li>
+                </ul>
+
+                <h4>Causas y Origen</h4>
+                <ul>
+        <li>Infecciones virales o bacterianas</li><li>Deficiencias nutricionales (falta de hierro, vitamina B12 o ácido fólico)</li><li>Enfermedades autoinmunes o destrucción celular acelerada</li><li>Trastornos de la médula ósea (aplasia medular, leucemias o síndromes de falla medular)</li></ul>
+                <h4>Factores de Riesgo</h4>
+                <ul>
+            <li>Antecedentes familiares de anemias o trastornos hemorrágicos</li><li>Uso reciente de ciertos medicamentos o tratamientos médicos</li><li>Infecciones recientes o exposición a toxinas ambientales</li></ul>
+                <h4>Complicaciones Potenciales</h4>
+                <ul>
+            <li>Retraso en la detección y tratamiento de enfermedades hematológicas graves</li><li>Riesgo de hemorragias severas por recuentos plaquetarios muy bajos</li><li>Mayor susceptibilidad a infecciones graves por neutropenia</li></ul>
+                <h4>Tratamiento y Abordaje</h4>
+                <ul>
+        <li>Evaluación clínica completa por un hematólogo pediatra</li><li>Frotis de sangre periférica para análisis morfológico de las células</li><li>Estudios confirmatorios específicos de laboratorio o genéticos</li><li>Aspirado o biopsia de médula ósea en caso de sospecha de falla medular</li></ul><h4>Preguntas Frecuentes sobre esta Condición</h4>
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Qué significa tener los leucocitos (glóbulos blancos) alterados??</div>
+                    <div class="faq-a">Los leucocitos pueden estar altos (leucocitosis) o bajos (leucopenia). Frecuentemente indican una respuesta a infecciones, pero niveles muy fuera de rango o con presencia de células anormales (blastos) requieren descartar problemas en la médula ósea.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Una biometría hemática alterada siempre significa algo grave??</div>
+                    <div class="faq-a">No necesariamente. Muchas alteraciones son temporales y secundarias a infecciones virales comunes o deficiencias nutricionales como la falta de hierro. Sin embargo, siempre deben ser interpretadas por un especialista.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Cuándo es urgente consultar al hematólogo por una biometría alterada??</div>
+                    <div class="faq-a">Es prioritario acudir a valoración si hay alteraciones en más de una línea celular (por ejemplo, anemia y plaquetas bajas simultáneamente), sospecha de células anormales (blastos) o si se acompaña de fiebre prolongada, pérdida de peso o sangrados.</div>
+                </div>
+                </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <span class="badge" style="background-color: var(--primary-light); color: var(--primary);">Celulas Medula Osea</span>
+                <h3 style="margin-top: 0.5rem; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.6rem; color: var(--primary);">Neutropenia en Niños</h3>
+                
+                <p style="margin-top: 1rem;">La neutropenia es la disminución anormal en la cantidad de neutrófilos, un tipo de glóbulo blanco esencial para combatir infecciones bacterianas y fúngicas. En los niños, esto aumenta el riesgo de contraer infecciones que pueden ser recurrentes o graves.</p>
+                
+                <h4>Síntomas Comunes</h4>
+                <ul>
+        <li>Fiebre persistente o inexplicable</li><li>Infecciones de oído, garganta o piel recurrentes</li><li>Úlceras o llagas dolorosas en la boca (aftas)</li><li>Inflamación o sangrado de encías (gingivitis)</li><li>Retraso en la cicatrización de heridas o infecciones cutáneas frecuentes</li>
+                </ul>
+
+                <h4>Causas y Origen</h4>
+                <ul>
+        <li>Infecciones virales recientes o activas (causa más frecuente en la infancia).</li><li>Neutropenia autoinmune infantil.</li><li>Medicamentos.</li><li>Deficiencias nutricionales (vitamina B12, ácido fólico o cobre).</li><li>Trastornos congénitos de los neutrófilos.</li><li>Enfermedades de la médula ósea (casos poco frecuentes).</li></ul>
+                <h4>Factores de Riesgo</h4>
+                <ul>
+            <li>Infecciones virales recientes (gripe, varicela, etc.)</li><li>Tratamientos médicos activos como quimioterapia o ciertos anticonvulsivos</li><li>Antecedentes de enfermedades autoinmunes</li><li>Predisposición genética</li></ul>
+                <h4>Complicaciones Potenciales</h4>
+                <ul>
+            <li>Infecciones bacterianas graves o generalizadas (septicemia)</li><li>Fiebre neutropénica (considerada una urgencia médica)</li><li>Hospitalizaciones frecuentes por infecciones de difícil control</li></ul>
+                <h4>Tratamiento y Abordaje</h4>
+                <ul>
+        <li>Tratamiento antibiótico o antimicótico inmediato ante sospecha de infección</li><li>Factores estimulantes de colonias de granulocitos (G-CSF) para elevar los neutrófilos</li><li>Suspensión o cambio de medicamentos causantes</li><li>Seguimiento estrecho con biometrías hemáticas periódicas</li></ul><h4>Preguntas Frecuentes sobre esta Condición</h4>
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Qué es la fiebre neutropénica y por qué es una urgencia??</div>
+                    <div class="faq-a">La fiebre neutropénica ocurre cuando un niño con neutropenia presenta fiebre (generalmente 38°C o más). Debido a la falta de defensas, una infección bacteriana puede diseminarse muy rápido por el cuerpo. Se considera una emergencia médica y requiere atención hospitalaria inmediata para iniciar antibióticos intravenosos.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿La neutropenia en niños es permanente??</div>
+                    <div class="faq-a">En la gran mayoría de los niños es de origen infeccioso o autoinmune y suele resolverse por completo de forma espontánea en unas semanas o meses. Solo en casos muy raros, asociados a fallas congénitas o de la médula ósea, puede ser una condición a largo plazo que requiere tratamiento continuo.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Qué precauciones especiales se deben tomar en casa??</div>
+                    <div class="faq-a">Es fundamental mantener una higiene estricta (lavado de manos frecuente), evitar el contacto con personas enfermas, mantener las vacunas al día, cuidar la higiene dental y tener un termómetro en casa para vigilar la temperatura de forma precisa.</div>
+                </div>
+                </div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <span class="badge" style="background-color: var(--primary-light); color: var(--primary);">Leucemias Linfomas</span>
+                <h3 style="margin-top: 0.5rem; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.6rem; color: var(--primary);">Linfoma Infantil</h3>
+                
+                <p style="margin-top: 1rem;">El linfoma es un tipo de cáncer que se origina en el sistema linfático, principalmente en los linfocitos (un tipo de glóbulo blanco). Puede manifestarse con ganglios inflamados persistentes, fiebre, pérdida de peso y sudoración nocturna. Existen dos tipos principales: el linfoma de Hodgkin y los linfomas no Hodgkin, cada uno con diferentes características y tratamientos.</p>
+                
+                <h4>Síntomas Comunes</h4>
+                <ul>
+        <li>Ganglios inflamados en cuello, axilas o ingle que no duelen y no desaparecen</li><li>Fiebre persistente sin causa aparente</li><li>Pérdida de peso involuntaria</li><li>Sudoración nocturna abundante</li><li>Cansancio o fatiga</li><li>Comezón generalizada en la piel</li><li>Crecimiento del hígado o bazo</li>
+                </ul>
+
+                <h4>Causas y Origen</h4>
+                <ul>
+        <li>En la mayoría de los casos no se identifica una causa única. Se producen por alteraciones en el ADN de los linfocitos que provocan su multiplicación descontrolada.</li></ul>
+                <h4>Factores de Riesgo</h4>
+                <ul>
+            <li>Inmunodeficiencias primárias o adquiridas</li><li>Infección por virus de Epstein-Barr (EBV)</li><li>Antecedente de trasplante de órgano sólido o de médula ósea</li><li>Exposición previa a radioterapia</li></ul>
+                <h4>Complicaciones Potenciales</h4>
+                <ul>
+            <li>Compresión de estructuras vitales por ganglios aumentados de tamaño</li><li>Infecciones graves por afectación del sistema inmune</li><li>Efectos secundarios del tratamiento a largo plazo</li></ul>
+                <h4>Tratamiento y Abordaje</h4>
+                <ul>
+        <li>Quimioterapia según el tipo y estadio del linfoma</li><li>Radioterapia en casos seleccionados</li><li>Inmunoterapia o terapias dirigidas en algunos tipos</li><li>Trasplante de células madre hematopoyéticas cuando está indicado</li><li>Seguimiento estrecho y tratamiento de soporte</li></ul><h4>Preguntas Frecuentes sobre esta Condición</h4>
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Qué diferencia hay entre linfoma de Hodgkin y no Hodgkin??</div>
+                    <div class="faq-a">Son dos tipos diferentes de linfoma que se distinguen por las células que los originan y por su comportamiento clínico. Ambos pueden presentarse en la infancia y requieren tratamiento especializado. Actualmente existen tratamientos muy efectivos para ambos tipos y muchos niños logran curarse.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Un ganglio inflamado siempre es signo de linfoma??</div>
+                    <div class="faq-a">No. La gran mayoría de los ganglios inflamados en los niños se relacionan con infecciones comunes. Sin embargo, es importante valorarlos cuando persisten varias semanas, aumentan progresivamente de tamaño o se acompañan de fiebre prolongada, pérdida de peso o sudoración nocturna.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Cómo se confirma el diagnóstico??</div>
+                    <div class="faq-a">El diagnóstico se confirma mediante una biopsia del ganglio o tejido afectado. La muestra es analizada por especialistas en patología para identificar el tipo exacto de linfoma y planificar el tratamiento más adecuado.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿El linfoma infantil tiene cura??</div>
+                    <div class="faq-a">Sí. Actualmente muchos niños y adolescentes con linfoma pueden curarse gracias a los avances en el diagnóstico y tratamiento. El pronóstico depende del tipo de linfoma, la extensión de la enfermedad y la respuesta al tratamiento.</div>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-q">¿¿Todos los ganglios inflamados necesitan una biopsia??</div>
+                    <div class="faq-a">No. La mayoría de los ganglios inflamados en niños son secundarios a infecciones y desaparecen con el tiempo. La biopsia solo se recomienda cuando existen características que hacen sospechar una enfermedad más importante o cuando los ganglios persisten sin una causa clara.</div>
+                </div>
+                </div>
+        </section>
+
+        <!-- SECCIÓN 5: MEDICINA TRANSFUSIONAL -->
+        <section id="transfusion">
+            <h2>5. Medicina Transfusional y Aféresis Terapéutica</h2>
+            <p>Compilación del soporte transfusional y tratamientos avanzados para pacientes de hematología pediátrica.</p>
+    
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <h3 style="font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.5rem; color: var(--primary);">Indicaciones de Transfusión</h3>
+        <h4>Preguntas Frecuentes y Respuestas Clínicas</h4>
+            <div class="faq-box">
+                <div class="faq-q">¿Qué son las transfusiones sanguíneas en niños?</div>
+                <div class="faq-a">Las transfusiones son tratamientos que permiten administrar componentes de la sangre cuando el organismo no puede producirlos en cantidad suficiente o cuando existe una pérdida importante de sangre. Dependiendo de la situación clínica, un niño puede requerir glóbulos rojos, plaquetas, plasma o crioprecipitado.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Cuándo puede necesitar una transfusión un niño?</div>
+                <div class="faq-a">Una transfusión puede ser necesaria en diversas situaciones, entre ellas:<br><br>• Anemia moderada o severa que provoca síntomas importantes.<br>• Sangrado agudo por accidentes, cirugías o enfermedades.<br>• Plaquetas bajas con riesgo de sangrado.<br>• Trastornos de la coagulación.<br>• Enfermedades hematológicas como talasemia o drepanocitosis.<br>• Cáncer y tratamientos como la quimioterapia.<br>• Algunas condiciones del recién nacido.<br>• Procedimientos médicos o quirúrgicos que requieren apoyo transfusional.<br><br>La decisión de transfundir siempre se basa en la condición clínica del paciente, sus síntomas y los resultados de laboratorio.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Qué componentes de la sangre pueden transfundirse?</div>
+                <div class="faq-a">• **Glóbulos rojos:** Ayudan a transportar oxígeno y suelen utilizarse para tratar distintos tipos de anemia o pérdidas importantes de sangre.<br>• **Plaquetas:** Se administran cuando existe trombocitopenia o alteraciones que aumentan el riesgo de sangrado.<br>• **Plasma:** Contiene factores de coagulación y puede utilizarse en ciertas enfermedades hemorrágicas o alteraciones de la coagulación.<br>• **Crioprecipitado:** Es un componente rico en fibrinógeno y otros factores de coagulación que se utiliza en situaciones específicas.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Son seguras las transfusiones?</div>
+                <div class="faq-a">Las transfusiones actuales son procedimientos seguros que siguen estrictos controles de calidad y compatibilidad. Antes de administrar cualquier componente sanguíneo se realizan estudios para disminuir al máximo los riesgos y garantizar que el producto sea adecuado para cada paciente.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Por qué es importante una valoración especializada?</div>
+                <div class="faq-a">No todos los niños con anemia, plaquetas bajas o alteraciones de laboratorio necesitan una transfusión. Una valoración por Hematología Pediátrica y Medicina Transfusional permite determinar cuándo está indicada, cuál es el componente más adecuado y cómo realizar un seguimiento seguro.</div>
+            </div>
+            
+                <div class="callout">
+                    <div class="callout-title">¿Mi hijo necesita una transfusión?</div>
+                    <div class="callout-text">Si tu hijo presenta anemia importante, sangrado, plaquetas bajas o una enfermedad hematológica que requiere apoyo transfusional, una valoración especializada puede ayudar a determinar si realmente necesita una transfusión y cuál es la opción más segura para su situación clínica.</div>
+                </div>
+            
+                <h4>Referencias Científicas</h4>
+                <ul class="sources-list">
+            <li>AABB. Red Blood Cell Transfusion: 2023 International Guidelines.</li><li>AABB Technical Manual.</li><li>Wintrobe's Clinical Hematology.</li><li>Lanzkowsky's Manual of Pediatric Hematology and Oncology.</li><li>British Society for Haematology. Guidelines on Transfusion for Fetuses, Neonates and Older Children.</li></ul></div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <h3 style="font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.5rem; color: var(--primary);">Seguridad y Reacciones</h3>
+        <p>Las transfusiones son procedimientos médicos que se realizan diariamente en hospitales de todo el mundo y han ayudado a salvar millones de vidas. Antes de administrar cualquier componente sanguíneo, se realizan estrictos controles de calidad, pruebas de compatibilidad y múltiples verificaciones de seguridad para garantizar que el tratamiento sea adecuado para cada paciente. La gran mayoría de los niños reciben sus transfusiones sin presentar complicaciones importantes.</p><h4>Preguntas Frecuentes y Respuestas Clínicas</h4>
+            <div class="faq-box">
+                <div class="faq-q">¿Pueden ocurrir reacciones durante una transfusión?</div>
+                <div class="faq-a">Como sucede con cualquier tratamiento médico, pueden presentarse efectos secundarios o reacciones. Sin embargo, la mayoría son leves, temporales y pueden identificarse y tratarse oportunamente. Durante la transfusión, el personal médico y de enfermería vigila de forma continua al paciente para detectar cualquier cambio y actuar de inmediato si es necesario.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Qué síntomas pueden presentarse?</div>
+                <div class="faq-a">Algunos niños pueden presentar:<br><br>• Fiebre o escalofríos.<br>• Enrojecimiento de la piel.<br>• Comezón o ronchas.<br>• Molestia leve durante la transfusión.<br><br>En la mayoría de los casos, estos síntomas son transitorios y responden adecuadamente al tratamiento indicado por el equipo médico.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Existen reacciones más importantes?</div>
+                <div class="faq-a">Aunque son poco frecuentes, algunas reacciones pueden requerir valoración médica inmediata. Por este motivo, las transfusiones siempre se realizan bajo supervisión y siguiendo protocolos de seguridad establecidos. La detección temprana y el manejo oportuno permiten reducir significativamente el riesgo de complicaciones.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Por qué los beneficios suelen ser mayores que los riesgos?</div>
+                <div class="faq-a">Cuando un médico indica una transfusión, es porque considera que los beneficios para la salud del niño superan ampliamente los posibles riesgos. Las transfusiones pueden:<br><br>• Corregir una anemia importante.<br>• Mejorar el transporte de oxígeno a los tejidos.<br>• Disminuir el riesgo de sangrado.<br>• Reponer factores de coagulación.<br>• Permitir tratamientos médicos o quirúrgicos de forma más segura.<br>• Salvar la vida en situaciones de emergencia.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Las transfusiones pueden transmitir enfermedades?</div>
+                <div class="faq-a">Actualmente el riesgo es extremadamente bajo gracias a los estudios de selección de donadores, pruebas de tamizaje para enfermedades infecciosas y estrictos controles de calidad realizados en los bancos de sangre.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Cómo se protege la seguridad de mi hijo?</div>
+                <div class="faq-a">La sangre donada pasa por rigurosos procesos de selección, análisis y control de calidad antes de ser utilizada. Además, antes de cada transfusión se realizan estudios de compatibilidad y verificaciones de identidad para asegurar que el componente administrado sea el correcto. Gracias a estas medidas, las complicaciones graves son poco frecuentes.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Cuándo debo informar al personal médico?</div>
+                <div class="faq-a">Es importante avisar inmediatamente si durante o después de la transfusión tu hijo presenta:<br><br>• Fiebre.<br>• Escalofríos.<br>• Dificultad para respirar.<br>• Ronchas o comezón.<br>• Dolor intenso.<br>• Cualquier síntoma que parezca fuera de lo habitual.<br><br>La mayoría de estos eventos pueden evaluarse y tratarse rápidamente cuando se detectan a tiempo.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Por qué es importante una valoración especializada?</div>
+                <div class="faq-a">No todos los pacientes tienen el mismo riesgo ni requieren las mismas medidas de seguridad. La valoración por Hematología Pediátrica y Medicina Transfusional permite seleccionar el componente más adecuado, vigilar posibles complicaciones y ofrecer un seguimiento individualizado cuando sea necesario.</div>
+            </div>
+            
+                <div class="callout">
+                    <div class="callout-title">¿Debo preocuparme si mi hijo necesita una transfusión?</div>
+                    <div class="callout-text">Es normal tener dudas o sentir preocupación. Sin embargo, las transfusiones actuales son procedimientos seguros y cuidadosamente supervisados. Si tu hijo necesita una transfusión, significa que su equipo médico considera que este tratamiento puede mejorar su estado de salud o prevenir complicaciones importantes. Una adecuada valoración médica permite ofrecer el mayor beneficio con el menor riesgo posible.</div>
+                </div>
+            
+                <h4>Referencias Científicas</h4>
+                <ul class="sources-list">
+            <li>AABB Technical Manual.</li><li>Mollison's Blood Transfusion in Clinical Medicine.</li><li>ISBT. Educational Resources.</li><li>British Society for Haematology. Transfusion Guidelines.</li><li>Rossi's Principles of Transfusion Medicine.</li></ul></div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <h3 style="font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.5rem; color: var(--primary);">Compatibilidad Sanguínea</h3>
+        <h4>Preguntas Frecuentes y Respuestas Clínicas</h4>
+            <div class="faq-box">
+                <div class="faq-q">¿Qué es la compatibilidad sanguínea?</div>
+                <div class="faq-a">La compatibilidad sanguínea es el proceso mediante el cual se verifica que la sangre que recibirá un paciente sea adecuada y segura para él. Antes de cualquier transfusión, se realizan estudios especiales para identificar el grupo sanguíneo y comprobar que exista compatibilidad entre el paciente y el componente que va a recibir. Estas medidas ayudan a disminuir riesgos y permiten que la transfusión se realice de forma segura.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Por qué no cualquier persona puede recibir cualquier sangre?</div>
+                <div class="faq-a">Cada persona tiene características específicas en sus glóbulos rojos, conocidas como grupo sanguíneo. Las más importantes son el sistema ABO y el factor Rh. Cuando una persona recibe sangre incompatible, su sistema inmunológico puede reconocerla como extraña y reaccionar contra ella. Por esta razón, siempre se realizan pruebas antes de administrar una transfusión.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Qué es el grupo sanguíneo ABO?</div>
+                <div class="faq-a">Los grupos sanguíneos más conocidos son:<br><br>• **Grupo A**<br>• **Grupo B**<br>• **Grupo AB**<br>• **Grupo O**<br><br>Cada uno presenta características diferentes que deben considerarse al momento de una transfusión.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Qué es el factor Rh?</div>
+                <div class="faq-a">Además del grupo ABO, las personas pueden ser:<br><br>• **Rh positivo (+)**<br>• **Rh negativo (-)**<br><br>El factor Rh también se toma en cuenta para seleccionar el componente sanguíneo más adecuado.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Qué estudios se realizan antes de una transfusión?</div>
+                <div class="faq-a">Antes de transfundir, pueden realizarse estudios como:<br><br>• Determinación del grupo sanguíneo ABO.<br>• Determinación del factor Rh.<br>• Pruebas de compatibilidad.<br>• Búsqueda de anticuerpos que puedan reaccionar contra la sangre transfundida.<br><br>Estas pruebas forman parte de los protocolos de seguridad transfusional.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Por qué algunos pacientes necesitan estudios adicionales?</div>
+                <div class="faq-a">Algunos niños requieren transfusiones repetidas debido a enfermedades hematológicas o tratamientos prolongados. En estos casos, pueden necesitar estudios más específicos para identificar características adicionales de sus glóbulos rojos y seleccionar componentes con una compatibilidad más amplia. Esto ayuda a reducir el riesgo de desarrollar anticuerpos y facilita futuras transfusiones.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿La compatibilidad es importante en recién nacidos?</div>
+                <div class="faq-a">Sí. En los recién nacidos, la compatibilidad sanguínea puede ser especialmente importante en situaciones como la incompatibilidad ABO o Rh entre la madre y el bebé. Estas condiciones pueden ocasionar anemia o ictericia y requieren valoración médica especializada.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Cómo se garantiza la seguridad de una transfusión?</div>
+                <div class="faq-a">Antes de cada transfusión se siguen múltiples pasos de verificación:<br><br>• Confirmación de la identidad del paciente.<br>• Revisión del grupo sanguíneo.<br>• Estudios de compatibilidad.<br>• Selección adecuada del componente sanguíneo.<br>• Vigilancia durante la administración.<br><br>Gracias a estos procedimientos, las transfusiones son actualmente más seguras que nunca.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Por qué es importante una valoración especializada?</div>
+                <div class="faq-a">Algunos pacientes requieren componentes especiales, como sangre irradiada, leucorreducida o compatible con características específicas. La participación de especialistas en Hematología Pediátrica y Medicina Transfusional ayuda a seleccionar la mejor opción para cada niño.</div>
+            </div>
+            
+                <div class="callout">
+                    <div class="callout-title">¿Mi hijo puede recibir sangre de cualquier donador?</div>
+                    <div class="callout-text">No. Antes de una transfusión es necesario verificar que exista compatibilidad entre el paciente y la sangre que recibirá. Para ello se realizan estudios específicos que permiten seleccionar el componente más seguro y adecuado para cada caso. Gracias a estos controles, las transfusiones pueden realizarse con un alto nivel de seguridad.</div>
+                </div>
+            
+                <h4>Referencias Científicas</h4>
+                <ul class="sources-list">
+            <li>Mollison's Blood Transfusion in Clinical Medicine.</li><li>AABB Technical Manual.</li><li>ISBT.</li><li>Wintrobe's Clinical Hematology.</li><li>Practical Transfusion Medicine</li></ul></div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <h3 style="font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.5rem; color: var(--primary);">Aféresis Terapéutica</h3>
+        <h4>Preguntas Frecuentes y Respuestas Clínicas</h4>
+            <div class="faq-box">
+                <div class="faq-q">¿Qué es la aféresis terapéutica?</div>
+                <div class="faq-a">La aféresis terapéutica es un procedimiento especializado que permite separar y retirar de la sangre ciertos componentes que están causando una enfermedad o que necesitan ser reemplazados como parte del tratamiento. Durante el procedimiento, la sangre circula a través de un equipo especializado que selecciona el componente que debe retirarse o intercambiarse, mientras el resto de la sangre regresa al paciente. Es una técnica utilizada en diversas enfermedades pediátricas y puede formar parte del tratamiento de situaciones graves o complejas.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿En qué enfermedades puede utilizarse?</div>
+                <div class="faq-a">La aféresis terapéutica puede emplearse en algunas enfermedades hematológicas, inmunológicas, neurológicas y metabólicas. Algunos ejemplos incluyen:<br><br>• Púrpura trombocitopénica trombótica.<br>• Síndrome urémico hemolítico en situaciones específicas.<br>• Enfermedades autoinmunes.<br>• Algunas complicaciones neurológicas.<br>• Drepanocitosis.<br>• Hiperleucocitosis asociada a leucemias.<br>• Determinadas enfermedades metabólicas o hereditarias.<br><br>La indicación siempre depende de la enfermedad y de la valoración individual de cada paciente.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Qué tipos de aféresis existen?</div>
+                <div class="faq-a">• **Plasmaféresis terapéutica:** Permite retirar el plasma del paciente y reemplazarlo por soluciones o componentes sanguíneos específicos. Se utiliza en algunas enfermedades autoinmunes y hematológicas.<br>• **Recambio eritrocitario:** Consiste en retirar parte de los glóbulos rojos del paciente y sustituirlos por glóbulos rojos compatibles. Es una estrategia utilizada en determinadas complicaciones de la drepanocitosis.<br>• **Leucaféresis:** Permite disminuir temporalmente cantidades muy elevadas de glóbulos blancos en algunas enfermedades hematológicas.<br>• **Plaquetaféresis terapéutica:** Puede utilizarse en situaciones especiales cuando existe un aumento extremo de plaquetas y riesgo de complicaciones.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Cómo se realiza el procedimiento?</div>
+                <div class="faq-a">La aféresis se lleva a cabo mediante un equipo especializado que procesa la sangre de manera continua. Dependiendo de la edad, peso y condición clínica del paciente, puede realizarse a través de accesos venosos periféricos o mediante un catéter venoso central. Durante todo el procedimiento, el paciente permanece bajo vigilancia médica y de enfermería especializada.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Es un procedimiento seguro?</div>
+                <div class="faq-a">La aféresis terapéutica es un procedimiento seguro cuando se realiza por personal capacitado y con monitorización adecuada. Como cualquier procedimiento médico, pueden presentarse efectos secundarios o complicaciones, pero la mayoría son temporales y pueden tratarse oportunamente. El equipo médico vigila continuamente signos vitales, niveles de calcio y otros parámetros importantes para garantizar la seguridad del paciente.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Qué beneficios puede ofrecer?</div>
+                <div class="faq-a">Dependiendo de la enfermedad, la aféresis terapéutica puede:<br><br>• Eliminar sustancias dañinas presentes en la sangre.<br>• Disminuir células sanguíneas elevadas de forma rápida.<br>• Mejorar síntomas graves.<br>• Reducir el riesgo de complicaciones.<br>• Servir como tratamiento puente mientras otros medicamentos comienzan a hacer efecto.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Por qué es importante la valoración especializada?</div>
+                <div class="faq-a">No todos los pacientes requieren aféresis terapéutica. La decisión debe basarse en la enfermedad, la gravedad del cuadro clínico y las recomendaciones médicas actuales. La valoración por especialistas en Hematología Pediátrica y Medicina Transfusional permite determinar si este procedimiento está indicado, cuál es la técnica más adecuada y cómo realizarlo de manera segura.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿La aféresis es una cirugía?</div>
+                <div class="faq-a">No. La aféresis terapéutica no es una cirugía. Es un procedimiento especializado que utiliza equipos médicos para procesar temporalmente la sangre del paciente y retirar o intercambiar determinados componentes según la enfermedad que se esté tratando.</div>
+            </div>
+            
+                <h4>Causas e Indicaciones Asociadas</h4>
+                <ul>
+            <li>Drepanocitosis con complicaciones.</li><li>Leucocitos extremadamente elevados.</li><li>Enfermedades autoinmunes.</li><li>Púrpura trombocitopénica trombótica.</li><li>Síndromes neurológicos con indicación de plasmaféresis.</li><li>Algunas enfermedades metabólicas o hereditarias.</li><li>Pacientes que requieren recambio eritrocitario terapéutico.</li></ul>
+                <h4>Referencias Científicas</h4>
+                <ul class="sources-list">
+            <li>American Society for Apheresis. Guidelines on the Use of Therapeutic Apheresis in Clinical Practice (2023).</li><li>Principles of Apheresis Technology.</li><li>Therapeutic Apheresis: A Physician's Handbook.</li><li>AABB Technical Manual.</li><li>Wintrobe's Clinical Hematology.</li></ul></div>
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <h3 style="font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: 0; font-size: 1.5rem; color: var(--primary);">Sobrecarga de Hierro</h3>
+        <h4>Preguntas Frecuentes y Respuestas Clínicas</h4>
+            <div class="faq-box">
+                <div class="faq-q">¿Qué es la sobrecarga de hierro?</div>
+                <div class="faq-a">La sobrecarga de hierro ocurre cuando el organismo acumula más hierro del que puede eliminar. Esto puede suceder en niños que necesitan recibir transfusiones de sangre de manera repetida durante meses o años. Cada transfusión aporta hierro que el cuerpo no puede eliminar fácilmente. Con el tiempo, este hierro puede depositarse en diferentes órganos y afectar su funcionamiento.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Qué niños tienen mayor riesgo?</div>
+                <div class="faq-a">La sobrecarga de hierro puede presentarse en pacientes que requieren transfusiones frecuentes, como aquellos con:<br><br>• Talasemia.<br>• Drepanocitosis.<br>• Anemia aplásica.<br>• Algunas enfermedades de la médula ósea.<br>• Ciertos tipos de cáncer.<br>• Otros trastornos hematológicos que requieren apoyo transfusional prolongado.<br><br>No todos los niños que reciben una transfusión desarrollarán sobrecarga de hierro. El riesgo aumenta principalmente cuando las transfusiones son repetidas.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Por qué es importante detectarla?</div>
+                <div class="faq-a">Cuando el hierro se acumula durante largos periodos puede depositarse en órganos como:<br><br>• Hígado.<br>• Corazón.<br>• Glándulas endocrinas.<br>• Páncreas.<br><br>La detección temprana permite iniciar medidas para prevenir complicaciones a largo plazo.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Cuáles son los síntomas?</div>
+                <div class="faq-a">En etapas iniciales, la sobrecarga de hierro generalmente no produce síntomas. Por esta razón, el seguimiento médico y los estudios de control son fundamentales en niños que reciben transfusiones frecuentes.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Cómo se diagnostica?</div>
+                <div class="faq-a">El seguimiento puede incluir:<br><br>• Estudios de laboratorio.<br>• Ferritina sérica.<br>• Evaluación clínica periódica.<br>• Estudios de imagen especializados en determinados pacientes.<br><br>La interpretación de estos resultados debe realizarse dentro del contexto clínico de cada niño.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Tiene tratamiento?</div>
+                <div class="faq-a">Sí. Existen medicamentos llamados quelantes de hierro que ayudan al organismo a eliminar el exceso de hierro acumulado. La necesidad de tratamiento depende de la cantidad de hierro acumulado, la enfermedad de base y la frecuencia de las transfusiones.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Las transfusiones deben suspenderse?</div>
+                <div class="faq-a">No. Cuando una transfusión es necesaria, los beneficios suelen ser mucho mayores que los riesgos asociados a la acumulación de hierro. El objetivo del seguimiento médico es permitir que el niño continúe recibiendo el tratamiento que necesita mientras se vigila y controla adecuadamente el hierro acumulado.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Cómo se realiza el seguimiento?</div>
+                <div class="faq-a">Los niños que reciben transfusiones repetidas requieren vigilancia periódica para detectar de forma temprana la acumulación de hierro. Dependiendo de la enfermedad y de la cantidad de transfusiones recibidas, el médico puede solicitar estudios de laboratorio y pruebas de imagen específicas para evaluar el estado de diferentes órganos.</div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-q">¿Por qué es importante una valoración especializada?</div>
+                <div class="faq-a">La prevención, detección y tratamiento de la sobrecarga de hierro forman parte del seguimiento integral de many pacientes hematológicos. La valoración por Hematología Pediátrica permite identificar a los niños con mayor riesgo, interpretar correctamente los estudios y decidir el momento adecuado para iniciar tratamiento cuando sea necesario.</div>
+            </div>
+            
+                <h4>Causas e Indicaciones Asociadas</h4>
+                <ul>
+            <li>Talasemia dependiente de transfusión.</li><li>Drepanocitosis con programa transfusional crónico.</li><li>Anemia aplásica.</li><li>Síndromes de falla medular.</li><li>Pacientes oncológicos con múltiples transfusiones.</li><li>Ferritina elevada.</li><li>Sospecha de acumulación de hierro secundaria a transfusiones.</li></ul>
+                <div class="callout">
+                    <div class="callout-title">¿Las transfusiones pueden hacer daño por el hierro acumulado?</div>
+                    <div class="callout-text">Las transfusiones son tratamientos esenciales para muchas enfermedades y, en la mayoría de los casos, sus beneficios superan ampliamente los riesgos. Cuando un niño requiere transfusiones frecuentes durante largos periodos, se realiza un seguimiento especializado para detectar y tratar oportunamente la acumulación de hierro, permitiendo que continúe recibiendo la atención que necesita de forma segura.</div>
+                </div>
+            
+                <h4>Referencias Científicas</h4>
+                <ul class="sources-list">
+            <li>American Society of Hematology. Guidelines for Sickle Cell Disease: Transfusion Support.</li><li>Wintrobe's Clinical Hematology.</li><li>Lanzkowsky's Manual of Pediatric Hematology and Oncology.</li><li>Nathan and Oski's Hematology and Oncology of Infancy and Childhood.</li><li>AABB Technical Manual</li></ul></div>
+        </section>
+
+        <!-- SECCIÓN 6: LEGALES Y CONTACTO -->
+        <section id="legales">
+            <h2>6. Páginas de Soporte Legal y de Contacto</h2>
+            
+            <div style="margin-top: 2rem;">
+                <h3>Aviso de Privacidad</h3>
+                <p>Con fundamento en los artículos 15 y 16 de la Ley Federal de Protección de Datos Personales en Posesión de Particulares hacemos de su conocimiento que la Dra. Lizbeth Yamilet Hernández Verdugo, con domicilio en Calle San Luis Potosí #143, Interior 207, entre Calle Tonalá y Calle Jalapa, Colonia Roma Norte, C.P. 06700, Delegación Cuauhtémoc, Ciudad de México es responsable de recabar sus datos personales, del uso que se le dé a los mismos y de su protección.</p>
+    
+                <h4>Fines del tratamiento de datos personales</h4>
+                <p>Su información personal será utilizada para las siguientes finalidades: proveer los servicios y productos que ha solicitado; notificarle sobre nuevos servicios o productos que tengan relación con los ya contratados o adquiridos; comunicarle sobre cambios en los mismos; elaborar estudios y programas que son necesarios para determinar hábitos de consumo; realizar evaluaciones periódicas de nuestros productos y servicios a efecto de mejorar la calidad de los mismos; evaluar la calidad del servicio que brindamos, y en general, para dar cumplimiento a las obligaciones que hemos contraído con usted.</p>
+        
+                <h4>Datos recabados</h4>
+                <p>Para las finalidades antes mencionadas, requerimos obtener los siguientes datos personales:<br>• Nombre completo<br>• Teléfono fijo y/o celular<br>• Correo electrónico<br>• Antecedentes médicos (exclusivamente para la apertura de expediente clínico)</p>
+        
+                <h4>Derechos ARCO</h4>
+                <p>Es importante informarle que usted tiene derecho al Acceso, Rectificación y Cancelación de sus datos personales, a Oponerse al tratamiento de los mismos o a revocar el consentimiento que para dicho fin nos haya otorgado. Para ello, es necesario que envíe la solicitud en los términos que marca la Ley en su Art. 29 a nuestro Departamento de Protección de Datos Personales, o bien, se comunique al teléfono 5596868266.</p>
+        
+                <p style="font-size: 0.85rem; color: #777777; margin-top: 2rem;">Última actualización: 1/7/2026</p>
+            </div>
+            
+            <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                <h3>Información de Contacto y Agenda</h3>
+                <p>Resumen de los canales de atención de la Dra. Lizbeth Hernández:</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Concepto</th>
+                            <th>Ubicación y Canales de Citas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Doctora</td><td>Dra. Lizbeth Yamilet Hernández Verdugo</td></tr>
+                        <tr><td>Ubicación del Consultorio</td><td>Calle San Luis Potosí #143, Interior 207, entre Calle Tonalá y Calle Jalapa, Colonia Roma Norte, C.P. 06700, Delegación Cuauhtémoc, Ciudad de México, Ciudad de México, Ciudad de México</td></tr>
+                        <tr><td>WhatsApp Citas</td><td>525611232970</td></tr>
+                        <tr><td>Teléfono de Contacto</td><td>5596868266</td></tr>
+                        <tr><td>Email Oficial</td><td>dra.lizbethyamilet.hp@gmail.com</td></tr>
+                        <tr><td>Horarios de Atención</td><td>Lunes a viernes de 10:00 a 19:00. Sábados de 9:00 a 14:00</td></tr>
+                        <tr><td>Costo de Consulta</td><td>$1500 MXN</td></tr>
+                        <tr><td>Métodos de Pago Aceptados</td><td>Efectivo, Transferencia, Tarjeta de débito, Tarjeta de crédito</td></tr>
+                        <tr><td>Enlace Google Maps</td><td><a href="https://maps.google.com/?q=Calle+San+Luis+Potosi+143+Roma+Norte+Cuauhtemoc+Ciudad+de+Mexico" target="_blank">https://maps.google.com/?q=Calle+San+Luis+Potosi+143+Roma+Norte+Cuauhtemoc+Ciudad+de+Mexico</a></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        // Efecto scroll activo para el menú lateral
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-links a');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
