@@ -3,6 +3,7 @@ import Image from "next/image";
 import { diseases } from "@/data/diseases";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/Animations";
+import { FaBookOpen } from "react-icons/fa";
 
 export const metadata = {
   title: "Enfermedades y Trastornos de la Sangre | Hematología Pediátrica",
@@ -139,6 +140,41 @@ export default function EnfermedadesPage() {
               </section>
             );
           })}
+        </div>
+
+        {/* Fuentes Consultadas & Medical Sign-off Disclaimer */}
+        <div className="mt-24 pt-8 border-t border-slate-200/80 max-w-4xl mx-auto space-y-8">
+          <div className="bg-slate-50 border border-slate-200/60 p-6 rounded-2xl">
+            <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+              <FaBookOpen className="text-slate-400" /> Fuentes Consultadas
+            </h4>
+            <ul className="space-y-2">
+              <li className="text-[10px] font-semibold text-slate-500 leading-relaxed list-disc list-inside hover:text-slate-800 transition-colors">
+                Nathan and Oski&apos;s Hematology and Oncology of Infancy and Childhood.
+              </li>
+              <li className="text-[10px] font-semibold text-slate-500 leading-relaxed list-disc list-inside hover:text-slate-800 transition-colors">
+                Lanzkowsky&apos;s Manual of Pediatric Hematology and Oncology.
+              </li>
+              <li className="text-[10px] font-semibold text-slate-500 leading-relaxed list-disc list-inside hover:text-slate-800 transition-colors">
+                Williams Hematology.
+              </li>
+              <li className="text-[10px] font-semibold text-slate-500 leading-relaxed list-disc list-inside hover:text-slate-800 transition-colors">
+                Wintrobe&apos;s Clinical Hematology.
+              </li>
+              <li className="text-[10px] font-semibold text-slate-500 leading-relaxed list-disc list-inside hover:text-slate-800 transition-colors">
+                Guías internacionales de la American Society of Hematology (ASH), International Society on Thrombosis and Haemostasis (ISTH), World Federation of Hemophilia (WFH), National Comprehensive Cancer Network (NCCN) y Children&apos;s Oncology Group (COG).
+              </li>
+            </ul>
+          </div>
+
+          <div className="text-center space-y-4">
+            <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest leading-relaxed">
+              Contenido revisado por la Dra. Lizbeth Yamilet Hernández Verdugo, médico subespecialista en Hematología Pediátrica y Alta Especialidad en Medicina Transfusional.
+            </p>
+            <p className="text-[10px] text-slate-400 font-semibold leading-relaxed">
+              La información presentada tiene fines educativos y busca orientar a pacientes, padres y cuidadores sobre las enfermedades hematológicas más frecuentes en la infancia. No sustituye la valoración médica individual ni el juicio clínico de un profesional de la salud. Ante cualquier duda o síntoma, es recomendable acudir a una consulta especializada.
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -53,9 +53,9 @@ export default function Header() {
         <nav className="hidden lg:flex items-center gap-6 xl:gap-8 font-bold text-[#705662]">
           <Link href="/" className="hover:text-primary transition">Inicio</Link>
           <Link href="/enfermedades" className="hover:text-primary transition">Enfermedades</Link>
-          <Link href="/servicios" className="hover:text-primary transition">Servicios</Link>
-          <Link href="/medicina-transfusional" className="hover:text-primary transition">Medicina Transfusional</Link>
           <Link href="/sintomas" className="hover:text-primary transition">Síntomas</Link>
+          <Link href="/medicina-transfusional" className="hover:text-primary transition">Medicina Transfusional</Link>
+          <Link href="/servicios" className="hover:text-primary transition">Servicios</Link>
           <Link href="/contacto" className="hover:text-primary transition">Contacto</Link>
         </nav>
 
@@ -74,9 +74,9 @@ export default function Header() {
         <div className="lg:hidden bg-white border-t border-slate-100 p-6 flex flex-col gap-4 font-bold text-lg text-slate-800 shadow-xl absolute w-full left-0 z-50">
           <Link href="/" onClick={() => setIsOpen(false)} className="py-2 border-b border-slate-50">Inicio</Link>
           <Link href="/enfermedades" onClick={() => setIsOpen(false)} className="py-2 border-b border-slate-50">Enfermedades</Link>
-          <Link href="/servicios" onClick={() => setIsOpen(false)} className="py-2 border-b border-slate-50">Servicios</Link>
-          <Link href="/medicina-transfusional" onClick={() => setIsOpen(false)} className="py-2 border-b border-slate-50">Medicina Transfusional</Link>
           <Link href="/sintomas" onClick={() => setIsOpen(false)} className="py-2 border-b border-slate-50">Síntomas</Link>
+          <Link href="/medicina-transfusional" onClick={() => setIsOpen(false)} className="py-2 border-b border-slate-50">Medicina Transfusional</Link>
+          <Link href="/servicios" onClick={() => setIsOpen(false)} className="py-2 border-b border-slate-50">Servicios</Link>
           <Link href="/contacto" onClick={() => setIsOpen(false)} className="py-2 border-b border-slate-50">Contacto</Link>
           <a href={whatsappUrl} target="_blank" rel="noreferrer" className="mt-4 flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-bold">
             <FaWhatsapp size={20} /> Agendar Cita

@@ -15,15 +15,15 @@ export const services: MedicalService[] = [
     benefitsTitle: "¿Cuándo está indicado realizarlo?",
     benefitsIntro: "Puede ser útil cuando un niño presenta:",
     benefits: [
-      "Anemia, plaquetas o leucocitos muy bajos sin causa clara.",
+      "Anemia, alteraciones en los leucocitos o plaquetas sin una causa clara.",
       "Sospecha de leucemia u otra enfermedad hematológica.",
       "Fiebre prolongada, crecimiento de ganglios, hígado o bazo.",
       "Sospecha de falla medular o infiltración de médula ósea."
     ],
     postOpRecommendations: [
-      "Mantener el vendaje limpio y seco durante las primeras 24 horas",
-      "Evitar actividades físicas intensas o deportes de contacto por 2 a 3 días",
-      "Vigilar la aparición de sangrado persistente, fiebre o dolor intenso en el sitio"
+      "Mantener el vendaje limpio y seco durante las primeras 24 horas.",
+      "Evitar actividades físicas intensas o deportes de contacto por 2 a 3 días.",
+      "Vigilar la aparición de sangrado persistente, fiebre o dolor intenso en el sitio."
     ],
     priceRange: "Según valoración médica",
     technicalSpecs: {
@@ -34,7 +34,7 @@ export const services: MedicalService[] = [
     painDescription: "Se realiza con anestesia local y medidas de analgesia o sedación según la edad y condición del niño para mayor comodidad del paciente. Puede presentarse molestia leve o dolor transitorio en el sitio de punción durante las primeras 24 a 48 horas.",
     risksTitle: "Riesgos",
     risks: [
-      "Es un procedimiento seguro cuando se realiza por personal capacitado. Las complicaciones son poco frecuentes, pero pueden incluir dolor local, moretón, sangrado o infección en el sitio de punción"
+      "Es un procedimiento seguro cuando se realiza por personal capacitado. Las complicaciones son poco frecuentes, pero pueden incluir dolor local, moretón, sangrado o infección en el sitio de punción."
     ],
     ctaQuestion: "¿A tu hijo le han solicitado un aspirado de médula ósea?",
     ctaAnswer: "Recibe una valoración especializada y orientación completa sobre el procedimiento, su indicación y los cuidados posteriores.",
@@ -57,7 +57,7 @@ export const services: MedicalService[] = [
     recoveryTime: "24 a 48 horas",
     benefitsTitle: "¿Cuándo se indica?",
     benefits: [
-      "Sospecha de leucemia, linfoma u otros cánceres hematológicos.",
+      "Sospecha de leucemia, linfoma u otras neoplasias hematológicas.",
       "Pancitopenia o alteraciones persistentes de las células sanguíneas.",
       "Anemia aplásica y otras fallas medulares.",
       "Evaluación de infiltración de médula ósea.",
@@ -80,7 +80,7 @@ export const services: MedicalService[] = [
     image: "/servicios/Biopsia_Medula_Osea.png",
     painDescription: "Moderado. El procedimiento se realiza con anestesia local y, cuando está indicado, sedación para disminuir las molestias y mejorar la comodidad del paciente.",
     comfortTitle: "Anestesia y comodidad del paciente",
-    comfortDescription: "El procedimiento se realiza con anestesia local y, dependiendo de la edad del paciente y la indicación médica, puede utilizarse sedación para brindar mayor comodidad y seguridad durante el estudio",
+    comfortDescription: "El procedimiento se realiza con anestesia local y, dependiendo de la edad del paciente y la indicación médica, puede utilizarse sedación para brindar mayor comodidad y seguridad durante el estudio.",
     risksTitle: "Riesgos",
     risks: [
       "La biopsia de médula ósea es un procedimiento seguro. Las complicaciones son poco frecuentes y pueden incluir dolor local, sangrado, hematoma o infección en el sitio de punción."
@@ -102,49 +102,6 @@ export const services: MedicalService[] = [
     }
   },
   {
-    id: "ser-003",
-    slug: "lectura-frotis-sangre-periferica",
-    name: "Lectura de Frotis de Sangre Periférica",
-    description: "Evaluación microscópica detallada de las células sanguíneas para analizar su forma, tamaño y cantidad real en circulación.",
-    longDescription: "La lectura de frotis de sangre periférica es un estudio en el que se examinan las células sanguíneas al microscopio. Permite evaluar la forma, tamaño y características de los glóbulos rojos, glóbulos blancos y plaquetas, aportando información clave para el diagnóstico de anemias, infecciones, alteraciones hematológicas y algunos tipos de leucemia.",
-    type: "consultorio",
-    isPainful: false,
-    duration: "Variable según complejidad del caso",
-    recoveryTime: "Inmediato",
-    benefits: [
-      "Identificación de alteraciones en glóbulos rojos, glóbulos blancos y plaquetas.",
-      "Orientación diagnóstica en anemias hereditarias o adquiridas.",
-      "Detección de blastos u otras células anormales.",
-      "Apoyo en la evaluación de infecciones, inflamación y enfermedades hematológicas.",
-      "Complemento fundamental para la interpretación de la biometría hemática."
-    ],
-    postOpRecommendations: [
-      "No requiere cuidados especiales después de la toma de muestra.",
-      "Puede retomar sus actividades habituales inmediatamente.",
-      "Mantener presión local algunos minutos si la muestra fue obtenida por venopunción.",
-      "Consultar a su médico si presenta sangrado persistente o inflamación en el sitio de punción."
-    ],
-    priceRange: "Puede estar incluido dentro de la valoración Hematológica",
-    technicalSpecs: {
-      "Método": "Análisis morfológico de celulas sanguineas mediante microscopia"
-    },
-    image: "/servicios/Lectura_Frotis_Sangre_Periferica.png",
-    painDescription: "Indoloro (solo requiere una muestra de sangre)",
-    ctaQuestion: "¿Tu hijo requiere un frotis de sangre periférica?",
-    ctaAnswer: "La interpretación del frotis de sangre periférica por una hematóloga pediatra aporta información que puede no ser identificada por los equipos automatizados de laboratorio y permite una evaluación más completa del paciente",
-    additionalQuestions: [
-      {
-        question: "¿Qué puede detectar este estudio?",
-        answer: "Este estudio puede detectar: \n• Anemias.\n• Alteraciones de plaquetas.\n• Infecciones.\n• Leucemias y otras enfermedades hematológicas.\n• Anomalías hereditarias de los glóbulos rojos."
-      }
-    ],
-    seo: {
-      title: "Lectura de Frotis de Sangre Periférica | Dra. Lizbeth",
-      description: "Análisis morfológico de células sanguíneas bajo microscopio para el diagnóstico rápido de anemias y leucemias.",
-      keywords: ["Frotis de sangre periférica niños CDMX", "Morfología de células sanguíneas", "Análisis microscópico de sangre"],
-    }
-  },
-  {
     id: "ser-004",
     slug: "puncion-lumbar",
     name: "Punción Lumbar",
@@ -154,7 +111,7 @@ export const services: MedicalService[] = [
     isPainful: true,
     anesthesiaType: "Sedación y anestesia local",
     duration: "15–30 minutos",
-    recoveryTime: "observación breve y alta el mismo día en la mayoría de los casos.",
+    recoveryTime: "Observación breve y alta el mismo día en la mayoría de los casos.",
     benefitsTitle: "Indicaciones frecuentes",
     benefits: [
       "Sospecha de infección del sistema nervioso central.",
@@ -171,58 +128,17 @@ export const services: MedicalService[] = [
     ],
     priceRange: "Según valoración médica",
     technicalSpecs: {
-      "Sitio de punción": "región lumbar baja.",
-      "Muestra": "líquido cefalorraquídeo."
+      "Sitio de punción": "Región lumbar baja.",
+      "Muestra": "Líquido cefalorraquídeo."
     },
     image: "/servicios/Puncion_Lumbar.png",
-    painDescription: "leve a moderado; se utilizan medidas de analgesia y anestesia.",
+    painDescription: "Leve a moderado; se utilizan medidas de analgesia y anestesia.",
     ctaQuestion: "¿Tu hijo necesita una punción lumbar para completar su diagnóstico o tratamiento?",
     ctaAnswer: "La punción lumbar es un procedimiento seguro y ampliamente utilizado en pediatría. Permite obtener información importante para el diagnóstico de diversas enfermedades y, en algunos casos, administrar tratamientos específicos de forma segura y eficaz.",
     seo: {
       title: "Punción Lumbar Pediátrica | Hematóloga Pediatra CDMX",
       description: "Procedimiento de punción lumbar y administración de medicamentos intratecales en niños con leucemia o afecciones hematológicas.",
       keywords: ["Punción lumbar en niños CDMX", "Líquido cefalorraquídeo estudio", "Quimioterapia intratecal infantil"],
-    }
-  },
-  {
-    id: "ser-005",
-    slug: "interpretacion-resultados-laboratorio",
-    name: "Análisis e integración clínica de estudios de laboratorio",
-    description: "Evaluación y análisis especializado de estudios clínicos y de laboratorio general para identificar indicios de trastornos sanguíneos o inmunológicos en niños.",
-    longDescription: "La interpretación de resultados de laboratorio consiste en el análisis especializado e integral de estudios como biometría hemática, perfil de hierro, pruebas de coagulación, frotis de sangre periférica y otros análisis complementarios. La Dra. Lizbeth Hernández correlaciona estos resultados con la historia clínica y la exploración física del paciente para identificar alteraciones hematológicas, orientar el diagnóstico y definir los estudios o tratamientos más adecuados.",
-    type: "consultorio",
-    isPainful: false,
-    duration: "30 a 60 minutos según la complejidad del caso y la cantidad de estudios a revisar",
-    recoveryTime: "no aplica",
-    benefits: [
-      "Identificación temprana de alteraciones hematológicas, inmunológicas o metabólicas reflejadas en los estudios de laboratorio.",
-      "Correlación precisa entre síntomas físicos y parámetros medidos en laboratorio",
-      "Orientación de estudios complementarios para alcanzar un diagnóstico más preciso."
-    ],
-    postOpRecommendations: [
-      "Traer todos los estudios de laboratorio previos impresos o en formato digital",
-      "Anotar cualquier síntoma detectado en casa (fatiga, moretones, sangrado) para correlación clínica",
-      "Informar antecedentes médicos, tratamientos actuales y estudios previos relacionados."
-    ],
-    priceRange: "Según valoración médica",
-    technicalSpecs: {
-      "Alcance": "Interpretación de biometría hemática, perfil de hierro, pruebas de coagulación, estudios inmunológicos, frotis de sangre periférica, estudios de médula ósea y otras pruebas especializadas relacionadas con enfermedades hematológicas.",
-      "Requerimiento": "Presentar estudios de laboratorio impresos o digitales, así como información clínica relevante para una interpretación más precisa"
-    },
-    image: "/servicios/Interpretacion_Resultados_Laboratorio.png",
-    painDescription: "No aplica (servicio de revisión e interpretación de estudios)",
-    ctaQuestion: "¿Los resultados de laboratorio de tu hijo te generan dudas o preocupación?",
-    ctaAnswer: "La valoración especializada permite comprender el significado de los hallazgos, relacionarlos con los síntomas del paciente y establecer un plan diagnóstico o de seguimiento adecuado.",
-    additionalQuestions: [
-      {
-        question: "¿Por qué es importante una interpretación especializada?",
-        answer: "Una interpretación experta puede ayudar a detectar alteraciones hematológicas que no siempre son evidentes en los reportes de laboratorio y orientar oportunamente el diagnóstico y seguimiento."
-      }
-    ],
-    seo: {
-      title: "Interpretación de Análisis de Laboratorio Pediátrico | CDMX",
-      description: "Consulta especializada para la interpretación y diagnóstico a partir de resultados de análisis clínicos en niños con la Dra. Lizbeth Hernández.",
-      keywords: ["Interpretación de estudios de laboratorio CDMX", "Análisis clínicos niños", "Hematóloga Pediatra Roma Norte"]
     }
   },
   {
@@ -268,6 +184,90 @@ export const services: MedicalService[] = [
     }
   },
   {
+    id: "ser-003",
+    slug: "lectura-frotis-sangre-periferica",
+    name: "Lectura de Frotis de Sangre Periférica",
+    description: "Evaluación microscópica detallada de las células sanguíneas para analizar su forma, tamaño y cantidad real en circulación.",
+    longDescription: "La lectura de frotis de sangre periférica es un estudio en el que se examinan las células sanguíneas al microscopio. Permite evaluar la forma, tamaño y características de los glóbulos rojos, glóbulos blancos y plaquetas, aportando información clave para el diagnóstico de anemias, infecciones, alteraciones hematológicas y algunos tipos de leucemia.",
+    type: "consultorio",
+    isPainful: false,
+    duration: "Variable según complejidad del caso",
+    recoveryTime: "Inmediato",
+    benefits: [
+      "Identificación de alteraciones en glóbulos rojos, glóbulos blancos y plaquetas.",
+      "Orientación diagnóstica en anemias hereditarias o adquiridas.",
+      "Detección de blastos u otras células anormales.",
+      "Apoyo en la evaluación de infecciones, inflamación y enfermedades hematológicas.",
+      "Complemento fundamental para la interpretación de la biometría hemática."
+    ],
+    postOpRecommendations: [
+      "No requiere cuidados especiales después de la toma de muestra.",
+      "Puede retomar sus actividades habituales inmediatamente.",
+      "Mantener presión local algunos minutos si la muestra fue obtenida por venopunción.",
+      "Consultar a su médico si presenta sangrado persistente o inflamación en el sitio de punción."
+    ],
+    priceRange: "Puede estar incluido dentro de la valoración Hematológica",
+    technicalSpecs: {
+      "Método": "Análisis morfológico de células sanguíneas mediante microscopía."
+    },
+    image: "/servicios/Lectura_Frotis_Sangre_Periferica.png",
+    painDescription: "Indoloro (solo requiere una muestra de sangre)",
+    ctaQuestion: "¿Tu hijo requiere un frotis de sangre periférica?",
+    ctaAnswer: "La interpretación del frotis de sangre periférica por una hematóloga pediatra aporta información que puede no ser identificada por los equipos automatizados de laboratorio y permite una evaluación más completa del paciente.",
+    additionalQuestions: [
+      {
+        question: "¿Qué puede detectar este estudio?",
+        answer: "Este estudio puede detectar: \n• Anemias.\n• Alteraciones de plaquetas.\n• Infecciones.\n• Leucemias y otras enfermedades hematológicas.\n• Anomalías hereditarias de los glóbulos rojos."
+      }
+    ],
+    seo: {
+      title: "Lectura de Frotis de Sangre Periférica | Dra. Lizbeth",
+      description: "Análisis morfológico de células sanguíneas bajo microscopio para el diagnóstico rápido de anemias y leucemias.",
+      keywords: ["Frotis de sangre periférica niños CDMX", "Morfología de células sanguíneas", "Análisis microscópico de sangre"],
+    }
+  },
+  {
+    id: "ser-005",
+    slug: "interpretacion-resultados-laboratorio",
+    name: "Análisis e integración clínica de estudios de laboratorio",
+    description: "Evaluación y análisis especializado de estudios clínicos y de laboratorio general para identificar indicios de trastornos sanguíneos o inmunológicos en niños.",
+    longDescription: "La interpretación de resultados de laboratorio consiste en el análisis especializado e integral de estudios como biometría hemática, perfil de hierro, pruebas de coagulación, frotis de sangre periférica y otros análisis complementarios. La Dra. Lizbeth Hernández correlaciona estos resultados con la historia clínica y la exploración física del paciente para identificar alteraciones hematológicas, orientar el diagnóstico y definir los estudios o tratamientos más adecuados.",
+    type: "consultorio",
+    isPainful: false,
+    duration: "30 a 60 minutos según la complejidad del caso y la cantidad de estudios a revisar",
+    recoveryTime: "no aplica",
+    benefits: [
+      "Identificación temprana de alteraciones hematológicas, inmunológicas o metabólicas reflejadas en los estudios de laboratorio.",
+      "Correlación precisa entre síntomas físicos y parámetros medidos en laboratorio.",
+      "Orientación de estudios complementarios para alcanzar un diagnóstico más preciso."
+    ],
+    postOpRecommendations: [
+      "Traer todos los estudios de laboratorio previos impresos o en formato digital",
+      "Anotar cualquier síntoma detectado en casa (fatiga, moretones, sangrado) para correlación clínica",
+      "Informar antecedentes médicos, tratamientos actuales y estudios previos relacionados."
+    ],
+    priceRange: "Según valoración médica",
+    technicalSpecs: {
+      "Alcance": "Interpretación de biometría hemática, perfil de hierro, pruebas de coagulación, estudios inmunológicos, frotis de sangre periférica, estudios de médula ósea y otras pruebas especializadas relacionadas con enfermedades hematológicas.",
+      "Requerimiento": "Presentar estudios de laboratorio impresos o digitales, así como información clínica relevante para una interpretación más precisa."
+    },
+    image: "/servicios/Interpretacion_Resultados_Laboratorio.png",
+    painDescription: "No aplica (servicio de revisión e interpretación de estudios)",
+    ctaQuestion: "¿Los resultados de laboratorio de tu hijo te generan dudas o preocupación?",
+    ctaAnswer: "La valoración especializada permite comprender el significado de los hallazgos, relacionarlos con los síntomas del paciente y establecer un plan diagnóstico o de seguimiento adecuado.",
+    additionalQuestions: [
+      {
+        question: "¿Por qué es importante una interpretación especializada?",
+        answer: "Una interpretación experta puede ayudar a detectar alteraciones hematológicas que no siempre son evidentes en los reportes de laboratorio y orientar oportunamente el diagnóstico y seguimiento."
+      }
+    ],
+    seo: {
+      title: "Interpretación de Análisis de Laboratorio Pediátrico | CDMX",
+      description: "Consulta especializada para la interpretación y diagnóstico a partir de resultados de análisis clínicos en niños con la Dra. Lizbeth Hernández.",
+      keywords: ["Interpretación de estudios de laboratorio CDMX", "Análisis clínicos niños", "Hematóloga Pediatra Roma Norte"]
+    }
+  },
+  {
     id: "ser-007",
     slug: "interpretacion-estudios-geneticos-moleculares",
     name: "Interpretación de Estudios Genéticos y Moleculares",
@@ -283,7 +283,7 @@ export const services: MedicalService[] = [
       "Correlación entre hallazgos genéticos y manifestaciones clínicas.",
       "Identificación de alteraciones hereditarias relacionadas con enfermedades hematológicas.",
       "Orientación sobre estudios complementarios o seguimiento familiar.",
-      "Apoyo en decisiones diagnósticas, pronósticas y terapéuticas"
+      "Apoyo en decisiones diagnósticas, pronósticas y terapéuticas."
     ],
     postOpRecommendations: [
       "Presentar el informe completo del estudio genético o molecular.",
@@ -295,7 +295,7 @@ export const services: MedicalService[] = [
     technicalSpecs: {
       "Modalidad": "Presencial o durante consulta de hematología pediátrica",
       "Estudios requeridos": "Reporte genético o molecular impreso o digital",
-      "Evaluación especializada": "Correlación de hallazgos genéticos con síntomas, antecedentes familiares y diagnóstico clínico"
+      "Evaluación especializada": "Correlación de hallazgos genéticos con síntomas, antecedentes familiares y diagnóstico clínico."
     },
     image: "/servicios/Interpretacion_Estudios_Geneticos_Moleculares.png",
     painDescription: "No aplica",

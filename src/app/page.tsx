@@ -5,12 +5,27 @@ import { services } from "@/data/services";
 import { symptoms } from "@/data/symptoms";
 import { diseases } from "@/data/diseases";
 import Image from "next/image";
-import { FaCalendarCheck, FaAward, FaUniversity, FaCertificate, FaHospitalSymbol, FaMoneyBillWave, FaExchangeAlt, FaCreditCard, FaMapMarkerAlt, FaClock } from "react-icons/fa";
+import { FaCalendarCheck, FaAward, FaUniversity, FaCertificate, FaHospitalSymbol, FaMoneyBillWave, FaExchangeAlt, FaCreditCard, FaMapMarkerAlt, FaClock, FaCheckCircle, FaExclamationTriangle } from "react-icons/fa";
 import StructuredData from "@/components/StructuredData";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Script from "next/script";
+
+const reasonsToConsult = [
+  { text: "Anemia persistente o hemoglobina baja." },
+  { text: "Plaquetas bajas (trombocitopenia) o elevadas (trombocitosis)." },
+  { text: "Leucocitos altos o bajos sin una causa clara." },
+  { text: "Sangrados frecuentes por nariz (epistaxis) o encías (gingivorragia)." },
+  { text: "Moretones frecuentes o sangrado prolongado." },
+  { text: "Menstruaciones abundantes en adolescentes." },
+  { text: "Ganglios aumentados de tamaño de forma persistente." },
+  { text: "Palidez, cansancio o fatiga sin explicación." },
+  { text: "Ictericia (color amarillo en piel u ojos) o sospecha de anemia hemolítica." },
+  { text: "Sospecha de enfermedades hereditarias de la sangre, como drepanocitosis, talasemias, hemofilia o enfermedad de Von Willebrand." },
+  { text: "Alteraciones en la biometría hemática detectadas durante un chequeo." },
+  { text: "Necesidad de una segunda opinión en enfermedades hematológicas." }
+];
 
 export default function Home() {
   const whatsappUrl = `https://wa.me/${doctor.whatsapp.replace(/\D/g, "")}`;
@@ -191,7 +206,7 @@ export default function Home() {
               <h2 className="text-3xl font-extrabold text-slate-900 mb-6 uppercase tracking-tight">Dra. Lizbeth Hernández</h2>
               <div className="w-10 h-1 bg-accent mb-6 rounded-full" />
               <p className="text-base lg:text-lg leading-relaxed text-slate-600 mb-6 font-medium italic">
-                "{doctor.bio}"
+                &ldquo;{doctor.bio}&rdquo;
               </p>
               <span className="text-[10px] font-black text-primary uppercase tracking-widest block">
                 Universidad Nacional Autónoma de México
@@ -301,6 +316,77 @@ export default function Home() {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* ¿CUÁNDO ACUDIR CON UN HEMATÓLOGO PEDIATRA? */}
+      <section className="py-24 bg-[#fdfafb] border-t border-b border-slate-100 relative overflow-hidden">
+        {/* Watercolor background element */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] h-[70vw] rounded-full bg-[radial-gradient(circle,rgba(151,31,87,0.03)_0%,transparent_70%)] pointer-events-none -z-10" />
+
+        <div className="container mx-auto px-6 max-w-7xl relative z-10">
+          <motion.div
+            className="text-center mb-16"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={softBlurIn}
+          >
+            <span className="text-accent font-extrabold text-xs uppercase tracking-widest bg-white border border-accent/20 px-4 py-1.5 rounded-full">
+              Guía para Padres y Cuidadores
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight mt-6 uppercase">
+              ¿Cuándo acudir con un hematólogo pediatra?
+            </h2>
+            <div className="w-16 h-1 bg-primary mx-auto rounded-full mb-6" />
+            <p className="text-slate-650 text-sm md:text-base max-w-3xl mx-auto leading-relaxed font-semibold">
+              Una valoración por hematología pediátrica es recomendable cuando un niño presenta alteraciones en la sangre, sangrados, problemas de coagulación o resultados de laboratorio anormales que requieren una evaluación especializada.
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={staggerContainer}
+          >
+            {reasonsToConsult.map((reason, idx) => (
+              <motion.div
+                key={idx}
+                variants={softBlurIn}
+                className="bg-white p-6 border border-slate-150 rounded-2xl flex gap-4 items-start shadow-xs hover:shadow-md hover:border-primary/20 transition-all duration-300 group"
+              >
+                <div className="w-8 h-8 rounded-full bg-primary/5 text-primary flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors duration-300 mt-0.5">
+                  <FaCheckCircle size={16} />
+                </div>
+                <p className="text-slate-650 text-xs sm:text-sm font-semibold leading-relaxed">
+                  {reason.text}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Información Importante Callout */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={softBlurIn}
+            className="mt-12 bg-accent/5 border border-accent/15 rounded-3xl p-6 md:p-8 max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6"
+          >
+            <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent text-xl flex-shrink-0">
+              <FaExclamationTriangle />
+            </div>
+            <div>
+              <h4 className="font-bold text-slate-900 mb-1 flex items-center gap-2 text-sm sm:text-base uppercase tracking-wider">
+                Información importante ⚠️
+              </h4>
+              <p className="text-xs sm:text-sm text-slate-650 leading-relaxed font-semibold">
+                No todas las alteraciones en los estudios de sangre significan una enfermedad grave. Una valoración oportuna permite identificar la causa, establecer un diagnóstico preciso e iniciar el tratamiento adecuado cuando sea necesario.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 

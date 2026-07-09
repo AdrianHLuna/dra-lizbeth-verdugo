@@ -264,44 +264,10 @@ export const diseases: MedicalCondition[] = [
     treatments: ["Hidroxiurea y otros tratamientos para disminuir las crisis dolorosas y prevenir complicaciones.", "Vacunación completa y antibióticos profilácticos", "Transfusiones de sangre y trasplante de médula ósea"],
     faqs: [
       {
-        question: "¿La drepanocitosis es hereditaria?",
-        answer: `Sí. La drepanocitosis es una enfermedad genética que se transmite de padres a hijos. Ocurre cuando un niño hereda una copia alterada del gen de la hemoglobina de cada uno de sus padres.
-
-Muchas personas pueden ser portadoras del llamado rasgo falciforme, lo que significa que tienen una sola copia alterada del gen y generalmente no presentan síntomas. Sin embargo, cuando ambos padres son portadores, existe la posibilidad de que sus hijos desarrollen la enfermedad.
-
-Por esta razón, cuando se diagnostica drepanocitosis en un niño, puede ser recomendable evaluar a otros miembros de la familia y recibir asesoramiento genético para comprender el riesgo en futuros embarazos.`
-      },
-      {
         question: "¿Por qué ocurren las crisis dolorosas?",
         answer: `Las crisis dolorosas ocurren cuando los glóbulos rojos con forma anormal se vuelven rígidos y pueden bloquear pequeños vasos sanguíneos. Esto dificulta el flujo normal de sangre y oxígeno hacia los tejidos, provocando episodios de dolor que pueden afectar huesos, articulaciones, abdomen u otras partes del cuerpo.
 
 Las infecciones, la deshidratación, los cambios bruscos de temperatura y otros factores pueden favorecer la aparición de estas crisis.`
-      },
-      {
-        question: "¿La drepanocitosis tiene cura?",
-        answer: `Actualmente, el trasplante de células madre hematopoyéticas es la única opción con potencial curativo para algunos pacientes. Sin embargo, existen tratamientos que ayudan a prevenir complicaciones, disminuir las crisis dolorosas y mejorar significativamente la calidad de vida.
-
-El seguimiento regular por Hematología Pediátrica es fundamental para detectar y tratar oportunamente las complicaciones de la enfermedad.`
-      },
-      {
-        question: "¿Cuándo puede necesitar una transfusión un niño con drepanocitosis?",
-        answer: `Algunas complicaciones de la drepanocitosis pueden requerir transfusiones de sangre. Estas pueden utilizarse para tratar anemia grave o prevenir complicaciones específicas, como algunas alteraciones neurológicas, pulmonares o relacionadas con procedimientos quirúrgicos.
-
-La necesidad de una transfusión depende de cada situación clínica y debe ser valorada por un especialista.`
-      },
-      {
-        question: "¿Mi hijo podrá llevar una vida normal?",
-        answer: `Con un diagnóstico oportuno, seguimiento especializado y medidas adecuadas para prevenir complicaciones, muchos niños con drepanocitosis pueden asistir a la escuela, realizar actividades cotidianas y mantener una buena calidad de vida.
-
-El control médico regular, la prevención de infecciones y el apego al tratamiento son fundamentales para favorecer un desarrollo saludable.`
-      },
-      {
-        question: "¿Cómo se diagnostica la drepanocitosis?",
-        answer: `El diagnóstico se realiza mediante estudios especializados que identifican el tipo de hemoglobina presente en la sangre. Entre ellos se encuentran la electroforesis de hemoglobina, la cromatografía líquida de alta resolución (HPLC) y otras pruebas confirmatorias. En algunos países y regiones, la enfermedad puede detectarse desde el nacimiento mediante tamiz neonatal.`
-      },
-      {
-        question: "¿Por qué son importantes las vacunas y la prevención de infecciones?",
-        answer: `Los niños con drepanocitosis tienen un mayor riesgo de presentar infecciones graves debido a que el bazo puede perder parte de su función con el tiempo. Por ello, es fundamental mantener un esquema de vacunación completo, acudir a controles médicos periódicos y buscar atención médica inmediata ante la presencia de fiebre.`
       },
       {
         question: "¿Qué cuidados ayudan a prevenir las crisis?",
@@ -382,7 +348,9 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
       "Retraso en el crecimiento (en casos moderados o graves)",
       "Crisis aplásica, generalmente asociada a infección por parvovirus B19"
     ],
-    causes: ["Mutación genética hereditaria (generalmente autosómica dominante) que altera las proteínas estructurales espectrina, anquirina o banda 3 del glóbulo rojo o proteína 4.2"],
+    causes: [
+      "Mutaciones genéticas hereditarias (generalmente con herencia autosómica dominante y, con menor frecuencia, autosómica recesiva) que afectan las proteínas de la membrana del glóbulo rojo, como espectrina, anquirina, banda 3 o proteína 4.2"
+    ],
     riskFactors: [
       "Antecedentes familiares de esferocitosis hereditaria",
       "Familiar con anemia hemolítica crónica",
@@ -610,7 +578,7 @@ El control médico regular, la prevención de infecciones y el apego al tratamie
       },
       {
         question: "¿Qué debo hacer si sospecho que mi hijo tiene leucemia?",
-        answer: "Acudir a una consulta con un hematólogo pediatra para una evaluación clínica y solicitar una biometría hemática completa. No espere a que los síntomas empeoren: el diagnóstico oportuno marca la diferencia en el tratamiento."
+        answer: "Si sospechas que tu hijo puede tener leucemia, es importante acudir a valoración con un hematólogo pediatra lo antes posible. Tras la evaluación clínica, se solicitarán los estudios de laboratorio necesarios, como una biometría hemática completa y, si es necesario, otros estudios especializados para confirmar o descartar el diagnóstico. Un diagnóstico oportuno permite iniciar el tratamiento adecuado en el momento indicado y mejorar el pronóstico."
       }
     ],
     image: "/enfermedades/Leucemia_Linfoblastica_Aguda.png",
