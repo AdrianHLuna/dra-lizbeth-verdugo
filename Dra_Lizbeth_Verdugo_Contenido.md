@@ -25,7 +25,7 @@ Soy la Dra. Lizbeth Yamilet Hernández Verdugo, médica especialista en Pediatr�
 * **Cédula Profesional:** 10807063
 * **Cédula de Especialidad:** 13914389
 * **Cédula de Subespecialidad:** 15486256
-* **Acreditación COFEPRIS:** En trámite
+* **Acreditación COFEPRIS:** 2609152002A00439
 
 ### Educación
 * **Médico Cirujano** — Universidad Autónoma de Chiapas

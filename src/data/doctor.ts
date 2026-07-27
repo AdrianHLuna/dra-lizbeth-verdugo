@@ -9,7 +9,7 @@ export const doctor: DoctorProfile = {
   cedula: "10807063",
   cedulaEspecialidad: "13914389",
   cedulaSubespecialidad: "15486256",
-  cofepris: "En trámite",
+  cofepris: "2609152002A00439",
   phone: "5596868266",
   whatsapp: "525611232970",
   email: "dra.lizbethyamilet.hp@gmail.com",
