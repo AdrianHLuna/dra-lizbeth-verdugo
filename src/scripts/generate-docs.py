@@ -168,7 +168,7 @@ def main():
         footer = section.footer
         f_p = footer.paragraphs[0]
         f_p.alignment = WD_ALIGN_PARAGRAPH.RIGHT
-        f_run = f_p.add_run(f"Dra. Lizbeth Yamilet Hernández Verdugo  |  Contenido del Sitio Web")
+        f_run = f_p.add_run(f"Dra. Lizbeth Verdugo  |  Contenido del Sitio Web")
         f_run.font.name = 'Calibri'
         f_run.font.size = Pt(9)
         f_run.font.color.rgb = RGBColor(120, 120, 120)
@@ -671,7 +671,7 @@ def main():
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dra. Lizbeth Hernández | Contenido Web</title>
+    <title>Dra. Lizbeth Verdugo | Contenido Web</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,500&display=swap" rel="stylesheet">
     <style>
         :root {{
@@ -980,7 +980,7 @@ def main():
 <body>
     <aside>
         <div class="aside-header">
-            <h1>Dra. Lizbeth Hernández</h1>
+            <h1>Dra. Lizbeth Verdugo</h1>
             <p>Contenido del Sitio Web</p>
         </div>
         <ul class="nav-links">
@@ -1000,7 +1000,7 @@ def main():
         <header class="doc-header">
             <div class="doc-subtitle">Manual de Contenidos Consolidados</div>
             <div class="doc-title">Estructura y Textos del Sitio Web</div>
-            <p>Este documento interactivo consolida el total de textos, descripciones médicas, especificaciones de procedimientos e información del perfil clínico del portal de la Dra. Lizbeth Hernández Verdugo. Está diseñado para ser leído en pantalla, impreso o copiado directamente en procesadores de texto.</p>
+            <p>Este documento interactivo consolida el total de textos, descripciones médicas, especificaciones de procedimientos e información del perfil clínico del portal de la Dra. Lizbeth Verdugo. Está diseñado para ser leído en pantalla, impreso o copiado directamente en procesadores de texto.</p>
         </header>
 
         <!-- SECCIÓN 1: PERFIL DOCTORA -->
@@ -1406,7 +1406,7 @@ def main():
             
             <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
                 <h3>Información de Contacto y Agenda</h3>
-                <p>Resumen de los canales de atención de la Dra. Lizbeth Hernández:</p>
+                <p>Resumen de los canales de atención de la Dra. Lizbeth Verdugo:</p>
                 <table>
                     <thead>
                         <tr>

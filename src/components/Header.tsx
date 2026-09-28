@@ -41,7 +41,7 @@ export default function Header() {
         <Link href="/" className="relative flex items-center overflow-hidden h-28 lg:h-36 w-56 lg:w-72 group">
           <Image 
             src="/LOGO DRA LIZBETH-01.png" 
-            alt="Dra. Lizbeth Hernández - Hematología Pediátrica" 
+            alt="Dra. Lizbeth Verdugo - Hematología Pediátrica" 
             width={500}
             height={200}
             priority

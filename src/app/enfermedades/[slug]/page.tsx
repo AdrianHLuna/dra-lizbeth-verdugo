@@ -241,9 +241,9 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
                         : disease.slug === "enfermedad-von-willebrand"
                           ? "Si tu hijo presenta sangrados nasales frecuentes, moretones fáciles, sangrado prolongado después de heridas o procedimientos dentales, o una adolescente tiene menstruaciones muy abundantes, es recomendable una valoración por Hematología Pediátrica para descartar un trastorno de la coagulación como la enfermedad de von Willebrand."
                           : disease.slug === "deficiencia-g6pd"
-                            ? "La identificación oportuna de esta enfermedad permite prevenir crisis de hemólisis y sus complicaciones. La Dra. Lizbeth Yamilet Hernández Verdugo puede orientar el diagnóstico, confirmar la enfermedad y brindar recomendaciones para evitar los factores desencadenantes."
+                            ? "La identificación oportuna de esta enfermedad permite prevenir crisis de hemólisis y sus complicaciones. La Dra. Lizbeth Verdugo puede orientar el diagnóstico, confirmar la enfermedad y brindar recomendaciones para evitar los factores desencadenantes."
                             : disease.slug === "hemofilia-infantil"
-                              ? "El diagnóstico temprano y el tratamiento preventivo ayudan a evitar hemorragias y proteger las articulaciones. La Dra. Lizbeth Yamilet Hernández Verdugo brinda atención especializada para el diagnóstico, tratamiento y seguimiento de niños con hemofilia."
+                              ? "El diagnóstico temprano y el tratamiento preventivo ayudan a evitar hemorragias y proteger las articulaciones. La Dra. Lizbeth Verdugo brinda atención especializada para el diagnóstico, tratamiento y seguimiento de niños con hemofilia."
                               : `El diagnóstico temprano y correcto cambia el pronóstico. La ${doctor.title} ${doctor.name} es subespecialista en Hematología Pediátrica y puede ayudar a tu familia.`)}
                 </p>
                 <a href={`https://wa.me/${doctor.whatsapp.replace(/\D/g, "")}`} target="_blank" rel="noreferrer" className="block w-full text-center bg-white text-primary font-bold py-4 rounded-full hover:bg-[#FEE5FD] hover:text-[#971F57] transition-all shadow-lg text-[9px] uppercase tracking-widest">
@@ -299,7 +299,7 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
         {/* Medical Sign-off Disclaimer */}
         <div className="mt-20 pt-8 border-t border-slate-200/80 text-center max-w-4xl mx-auto space-y-4">
           <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest leading-relaxed">
-            Contenido revisado por la Dra. Lizbeth Yamilet Hernández Verdugo, médico subespecialista en Hematología Pediátrica y Alta Especialidad en Medicina Transfusional.
+            Contenido revisado por la Dra. Lizbeth Verdugo, médico subespecialista en Hematología Pediátrica y Alta Especialidad en Medicina Transfusional.
           </p>
           <p className="text-[10px] text-slate-400 font-semibold leading-relaxed">
             La información presentada tiene fines educativos y busca orientar a pacientes, padres y cuidadores sobre las enfermedades hematológicas más frecuentes en la infancia. No sustituye la valoración médica individual ni el juicio clínico de un profesional de la salud. Ante cualquier duda o síntoma, es recomendable acudir a una consulta especializada.

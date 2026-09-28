@@ -28,7 +28,7 @@ export const symptoms: Symptom[] = [
     relatedConditions: ["enf-001", "enf-003", "enf-004", "enf-005", "enf-006", "enf-007", "enf-009", "enf-011"],
     image: "/sintomas/Palidez_Intensa_Persistente.png",
     seo: {
-      title: "Palidez Intensa en Niños y Lactantes | Dra. Lizbeth Hernández",
+      title: "Palidez Intensa en Niños y Lactantes | Dra. Lizbeth Verdugo",
       description: "¿Notas a tu hijo muy pálido, desganado o con taquicardia? Descubre las causas con una especialista en hematología pediátrica.",
       keywords: ["Palidez en niños causas CDMX", "Tratamiento de anemia infantil", "Hematólogo pediatra Roma Norte"],
     }
@@ -66,7 +66,7 @@ export const symptoms: Symptom[] = [
     ],
     seo: {
       title: "Fatiga y Cansancio Excesivo en Niños | Hematóloga Pediatra",
-      description: "¿Tu hijo se nota cansado o sin energía para jugar? Podría ser anemia o un problema hematológico. Agenda consulta con la Dra. Lizbeth Hernández.",
+      description: "¿Tu hijo se nota cansado o sin energía para jugar? Podría ser anemia o un problema hematológico. Agenda consulta con la Dra. Lizbeth Verdugo.",
       keywords: ["Cansancio extremo en niños CDMX", "Anemia infantil fatiga", "Hematología pediátrica fatiga"],
     }
   },
@@ -170,7 +170,7 @@ export const symptoms: Symptom[] = [
     image: "/sintomas/epistaxis_repeticion.png",
     seo: {
       title: "Epistaxis de Repetición en Niños (Sangrado Nasal) | CDMX",
-      description: "¿Tu hijo presenta sangrado de nariz de forma frecuente? Conoce las causas y cuándo consultar a la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
+      description: "¿Tu hijo presenta sangrado de nariz de forma frecuente? Conoce las causas y cuándo consultar a la Dra. Lizbeth Verdugo, Hematóloga Pediatra.",
       keywords: ["Epistaxis de repetición en niños", "Sangrado nasal frecuente niños CDMX", "Hematólogo pediatra sangrado nariz"],
     }
   },
@@ -205,7 +205,7 @@ export const symptoms: Symptom[] = [
     relatedConditions: ["enf-002", "enf-003", "enf-008", "enf-010", "enf-011"],
     image: "/sintomas/sangrado_encias.png",
     seo: {
-      title: "Sangrado de Encías en Niños y Lactantes | Dra. Lizbeth",
+      title: "Sangrado de Encías en Niños y Lactantes | Dra. Lizbeth Verdugo",
       description: "El sangrado de encías en niños puede indicar alteraciones plaquetarias o problemas de coagulación. Consulta a una experta en hematología pediátrica.",
       keywords: ["Sangrado de encías en niños causas", "Gingivorragia infantil CDMX", "Trastornos plaquetarios niños encías"],
     }
@@ -242,7 +242,7 @@ export const symptoms: Symptom[] = [
     image: "/sintomas/menstruacion_abundante.png",
     seo: {
       title: "Menstruación Abundante en Niñas (Menorragia) | CDMX",
-      description: "¿Tu hija tiene periodos menstruales muy abundantes? Podría tratarse de un trastorno hemorrágico. Agenda valoración con la Dra. Lizbeth Hernández.",
+      description: "¿Tu hija tiene periodos menstruales muy abundantes? Podría tratarse de un trastorno hemorrágico. Agenda valoración con la Dra. Lizbeth Verdugo.",
       keywords: ["Menstruación abundante en adolescentes", "Enfermedad de Von Willebrand menorragia", "Hematóloga pediatra menstruación CDMX"],
     }
   },
@@ -277,7 +277,7 @@ export const symptoms: Symptom[] = [
     relatedConditions: ["enf-003", "enf-011", "enf-017"],
     image: "/sintomas/Fiebre_Prolongada_Infecciones_Recurrentes.png",
     seo: {
-      title: "Fiebre Prolongada e Infecciones en Niños | Dra. Lizbeth",
+      title: "Fiebre Prolongada e Infecciones en Niños | Dra. Lizbeth Verdugo",
       description: "¿Tu hijo presenta fiebre de muchos días o se enferma muy seguido? Podría ser neutropenia o un problema hematológico. Consulta experta.",
       keywords: ["Fiebre prolongada en niños CDMX", "Neutropenia infantil", "Infecciones recurrentes pediatría"],
     }
@@ -313,7 +313,7 @@ export const symptoms: Symptom[] = [
     relatedConditions: ["enf-011"],
     image: "/sintomas/Ganglios_Inflamados.png",
     seo: {
-      title: "Ganglios Inflamados en Niños | Dra. Lizbeth Hernández",
+      title: "Ganglios Inflamados en Niños | Dra. Lizbeth Verdugo",
       description: "Valoración especializada de adenopatías o ganglios inflamados persistentes en el cuello, axilas e ingle en la Ciudad de México.",
       keywords: ["Ganglios inflamados niños CDMX", "Adenopatías infantiles causas", "Linfoma infantil síntomas"],
     }
@@ -393,7 +393,7 @@ export const symptoms: Symptom[] = [
     image: "/sintomas/Crecimiento_Hígado_Bazo.png",
     seo: {
       title: "Bazo o Hígado Crecido en Niños | Esplenomegalia CDMX",
-      description: "¿El pediatra detectó que tu hijo tiene el bazo o hígado inflamado? Consulta con la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
+      description: "¿El pediatra detectó que tu hijo tiene el bazo o hígado inflamado? Consulta con la Dra. Lizbeth Verdugo, Hematóloga Pediatra.",
       keywords: ["Esplenomegalia en niños causas", "Bazo inflamado en niños", "Hepatomegalia infantil hematología"],
     }
   },
@@ -429,7 +429,7 @@ export const symptoms: Symptom[] = [
     image: "/sintomas/Perdida_Peso_Sudoraciones_Nocturnas.png",
     seo: {
       title: "Sudoración Nocturna y Pérdida de Peso en Niños | CDMX",
-      description: "Valoración de sudoraciones abundantes en la noche y pérdida de peso sin justificación en pacientes pediátricos. Dra. Lizbeth Hernández.",
+      description: "Valoración de sudoraciones abundantes en la noche y pérdida de peso sin justificación en pacientes pediátricos. Dra. Lizbeth Verdugo.",
       keywords: ["Sudores nocturnos niños causas", "Pérdida de peso infantil cáncer", "Síntomas B hematología pediatría"],
     }
   },
@@ -463,7 +463,7 @@ export const symptoms: Symptom[] = [
     image: "/sintomas/ictericia.png",
     seo: {
       title: "Ojos y Piel Amarilla en Bebés | Ictericia Neonatal CDMX",
-      description: "Diagnóstico de ictericia prolongada en recién nacidos y lactantes. Evita complicaciones con la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
+      description: "Diagnóstico de ictericia prolongada en recién nacidos y lactantes. Evita complicaciones con la Dra. Lizbeth Verdugo, Hematóloga Pediatra.",
       keywords: ["Ictericia prolongada lactantes", "Bebé amarillo causas hematológicas", "Incompatibilidad Rh recién nacido"],
     }
   },
@@ -519,7 +519,7 @@ export const symptoms: Symptom[] = [
     relatedConditions: ["enf-003", "enf-011", "enf-016", "enf-017"],
     image: "/sintomas/Alteraciones_Biometria_Hematica.png",
     seo: {
-      title: "Pancitopenia en Niños (Estudios de Sangre) | Dra. Lizbeth",
+      title: "Pancitopenia en Niños (Estudios de Sangre) | Dra. Lizbeth Verdugo",
       description: "¿Los estudios de tu hijo muestran glóbulos rojos, blancos y plaquetas bajas? Conoce qué es la pancitopenia y cuándo consultar a la hematóloga pediatra.",
       keywords: ["Pancitopenia en niños causas", "Glóbulos rojos blancos y plaquetas bajas", "Hematólogo pediatra Roma Norte"],
     }

@@ -169,7 +169,7 @@ export default function EnfermedadesPage() {
 
           <div className="text-center space-y-4">
             <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest leading-relaxed">
-              Contenido revisado por la Dra. Lizbeth Yamilet Hernández Verdugo, médico subespecialista en Hematología Pediátrica y Alta Especialidad en Medicina Transfusional.
+              Contenido revisado por la Dra. Lizbeth Verdugo, médico subespecialista en Hematología Pediátrica y Alta Especialidad en Medicina Transfusional.
             </p>
             <p className="text-[10px] text-slate-400 font-semibold leading-relaxed">
               La información presentada tiene fines educativos y busca orientar a pacientes, padres y cuidadores sobre las enfermedades hematológicas más frecuentes en la infancia. No sustituye la valoración médica individual ni el juicio clínico de un profesional de la salud. Ante cualquier duda o síntoma, es recomendable acudir a una consulta especializada.

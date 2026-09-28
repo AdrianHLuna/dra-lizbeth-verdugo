@@ -18,7 +18,7 @@ export default function Footer() {
             <Link href="/" className="relative flex items-center overflow-hidden h-24 w-24 group">
               <Image 
                 src="/LOGO DRA LIZBETH-10.png" 
-                alt="Dra. Lizbeth Hernández - Hematología Pediátrica" 
+                alt="Dra. Lizbeth Verdugo - Hematología Pediátrica" 
                 width={150}
                 height={150}
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-none w-[170%] h-[170%] object-contain"

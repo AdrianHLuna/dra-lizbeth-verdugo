@@ -69,7 +69,7 @@ export const diseases: MedicalCondition[] = [
     ],
     seo: {
       title: "Anemia Ferropénica en Niños | Hematóloga Pediatra CDMX",
-      description: "Diagnóstico y tratamiento de la anemia ferropénica por falta de hierro en bebés y niños. Consulta con la Dra. Lizbeth Hernández.",
+      description: "Diagnóstico y tratamiento de la anemia ferropénica por falta de hierro en bebés y niños. Consulta con la Dra. Lizbeth Verdugo.",
       keywords: ["Anemia ferropénica infantil CDMX", "Falta de hierro en niños", "Tratamiento de anemia en lactantes"],
     },
     category: "anemias-globulos-rojos",
@@ -122,7 +122,7 @@ export const diseases: MedicalCondition[] = [
     ctaAnswer: "Si tu hijo presenta moretones sin causa aparente, petequias o sangrados frecuentes, una valoración temprana por Hematología Pediátrica permite confirmar el diagnóstico, descartar otras enfermedades e indicar el tratamiento más adecuado cuando sea necesario.",
     seo: {
       title: "Trombocitopenia Inmune en Niños | Púrpura Infantil CDMX",
-      description: "Información y tratamiento especializado para la Púrpura Trombocitopénica Inmune (PTI) en niños con la Dra. Lizbeth Hernández.",
+      description: "Información y tratamiento especializado para la Púrpura Trombocitopénica Inmune (PTI) en niños con la Dra. Lizbeth Verdugo.",
       keywords: ["Trombocitopenia inmune niños", "Plaquetas bajas en niños causas", "Púrpura infantil tratamiento CDMX"],
     },
     category: "coagulacion-hemostasia",
@@ -186,7 +186,7 @@ export const diseases: MedicalCondition[] = [
     ctaAnswer: "La anemia aplásica requiere una evaluación especializada para identificar la causa e iniciar el tratamiento oportunamente. Un diagnóstico temprano puede mejorar el pronóstico y prevenir complicaciones.",
     seo: {
       title: "Anemia Aplásica Infantil | Falla Medular CDMX",
-      description: "Diagnóstico y alternativas de tratamiento para la anemia aplásica en niños con la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
+      description: "Diagnóstico y alternativas de tratamiento para la anemia aplásica en niños con la Dra. Lizbeth Verdugo, Hematóloga Pediatra.",
       keywords: ["Anemia aplásica en niños CDMX", "Falla de médula ósea infantil", "Hematólogo pediatra experto"],
     },
     category: "anemias-globulos-rojos",
@@ -230,7 +230,7 @@ export const diseases: MedicalCondition[] = [
     relatedSymptoms: ["sym-001", "sym-002", "sym-008", "sym-011"],
     seo: {
       title: "Anemia Hemolítica en Niños | Hematóloga Pediatra CDMX",
-      description: "Diagnóstico especializado y tratamiento de la anemia hemolítica e ictericia en niños y bebés. Dra. Lizbeth Hernández.",
+      description: "Diagnóstico especializado y tratamiento de la anemia hemolítica e ictericia en niños y bebés. Dra. Lizbeth Verdugo.",
       keywords: ["Anemia hemolítica infantil", "Niño con ojos amarillos causas", "Destrucción de glóbulos rojos niños"],
     },
     category: "anemias-globulos-rojos",
@@ -281,7 +281,7 @@ Las infecciones, la deshidratación, los cambios bruscos de temperatura y otros 
     ctaAnswer: "La drepanocitosis puede manifestarse con anemia, ictericia, crisis dolorosas e infecciones frecuentes. Una valoración por Hematología Pediátrica permite confirmar el diagnóstico, prevenir complicaciones y ofrecer el tratamiento más adecuado para cada paciente.",
     seo: {
       title: "Drepanocitosis (Anemia Falciforme) en Niños | CDMX",
-      description: "Manejo experto de la anemia falciforme y crisis de dolor en niños. Consulta con la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
+      description: "Manejo experto de la anemia falciforme y crisis de dolor en niños. Consulta con la Dra. Lizbeth Verdugo, Hematóloga Pediatra.",
       keywords: ["Anemia falciforme niños CDMX", "Drepanocitosis infantil tratamiento", "Crisis de dolor hematológicas"],
     },
     category: "anemias-globulos-rojos",
@@ -327,7 +327,7 @@ Las infecciones, la deshidratación, los cambios bruscos de temperatura y otros 
     relatedSymptoms: ["sym-001", "sym-002", "sym-008", "sym-012"],
     seo: {
       title: "Talasemia Infantil y Tratamiento de Sobrecarga de Hierro | CDMX",
-      description: "Diagnóstico diferencial y control integral de la talasemia en niños. Dra. Lizbeth Hernández, Especialista en Hematología Pediátrica.",
+      description: "Diagnóstico diferencial y control integral de la talasemia en niños. Dra. Lizbeth Verdugo, Especialista en Hematología Pediátrica.",
       keywords: ["Talasemia en niños CDMX", "Terapia de quelación de hierro", "Electroforesis de hemoglobina niños"],
     },
     category: "anemias-globulos-rojos",
@@ -375,7 +375,7 @@ Las infecciones, la deshidratación, los cambios bruscos de temperatura y otros 
     relatedSymptoms: ["sym-001", "sym-002", "sym-008", "sym-011"],
     seo: {
       title: "Esferocitosis Hereditaria en Niños | Hematología CDMX",
-      description: "Diagnóstico y control de la esferocitosis hereditaria y esplenectomía en pacientes pediátricos. Dra. Lizbeth Hernández.",
+      description: "Diagnóstico y control de la esferocitosis hereditaria y esplenectomía en pacientes pediátricos. Dra. Lizbeth Verdugo.",
       keywords: ["Esferocitosis hereditaria niños", "Fragilidad osmótica estudio", "Esplenectomía pediátrica CDMX"],
     },
     category: "anemias-globulos-rojos",
@@ -420,7 +420,7 @@ Las infecciones, la deshidratación, los cambios bruscos de temperatura y otros 
     relatedSymptoms: ["sym-003", "sym-010", "sym-014", "sym-015"],
     seo: {
       title: "Tratamiento de Hemofilia en Niños | Hematología CDMX",
-      description: "Control experto y profilaxis para niños con hemofilia A o B. Especialista en coagulación Dra. Lizbeth Hernández.",
+      description: "Control experto y profilaxis para niños con hemofilia A o B. Especialista en coagulación Dra. Lizbeth Verdugo.",
       keywords: ["Hemofilia infantil tratamiento CDMX", "Sangrado en articulaciones niños", "Factores de coagulación pediatría"],
     },
     category: "coagulacion-hemostasia",
@@ -469,7 +469,7 @@ Las infecciones, la deshidratación, los cambios bruscos de temperatura y otros 
     relatedSymptoms: ["sym-001", "sym-002", "sym-011"],
     seo: {
       title: "Deficiencia de G6PD en Niños | Favismo CDMX",
-      description: "Diagnóstico y guía de prevención de crisis hemolíticas por deficiencia de G6PD. Consulta con la Dra. Lizbeth Hernández.",
+      description: "Diagnóstico y guía de prevención de crisis hemolíticas por deficiencia de G6PD. Consulta con la Dra. Lizbeth Verdugo.",
       keywords: ["Deficiencia de G6PD infantil", "Favismo en niños síntomas", "Medicamentos prohibidos G6PD"],
     },
     category: "anemias-globulos-rojos",
@@ -526,7 +526,7 @@ Las infecciones, la deshidratación, los cambios bruscos de temperatura y otros 
     relatedSymptoms: ["sym-003", "sym-010", "sym-014", "sym-015", "sym-016"],
     seo: {
       title: "Enfermedad de Von Willebrand Infantil | Hematología CDMX",
-      description: "Diagnóstico y manejo de sangrados frecuentes y enfermedad de Von Willebrand en niños y adolescentes. Dra. Lizbeth Hernández.",
+      description: "Diagnóstico y manejo de sangrados frecuentes y enfermedad de Von Willebrand en niños y adolescentes. Dra. Lizbeth Verdugo.",
       keywords: ["Enfermedad de Von Willebrand niños", "Sangrado de nariz frecuente niños", "Hematólogo pediatra experto CDMX"],
     },
     category: "coagulacion-hemostasia",
@@ -588,7 +588,7 @@ Las infecciones, la deshidratación, los cambios bruscos de temperatura y otros 
     ctaAnswer: "Estos síntomas no siempre significan leucemia, pero sí requieren una valoración médica oportuna. Una evaluación por Hematología Pediátrica puede ayudar a establecer el diagnóstico e iniciar el tratamiento lo antes posible si es necesario.",
     seo: {
       title: "Leucemia Infantil | Hematóloga Pediatra CDMX",
-      description: "Diagnóstico oportuno y tratamiento especializado para la leucemia infantil. Consulta experta con la Dra. Lizbeth Hernández.",
+      description: "Diagnóstico oportuno y tratamiento especializado para la leucemia infantil. Consulta experta con la Dra. Lizbeth Verdugo.",
       keywords: ["Leucemia infantil síntomas", "Tipos de leucemia en niños", "Cáncer en la sangre infantil CDMX"],
     },
     category: "leucemias-linfomas",
@@ -639,10 +639,10 @@ Las infecciones, la deshidratación, los cambios bruscos de temperatura y otros 
     relatedServices: ["ser-005", "ser-007"],
     relatedSymptoms: ["sym-007"],
     ctaQuestion: "¿Tu hijo presenta inflamación dolorosa de una extremidad, dificultad para respirar repentina o sospecha de trombosis?",
-    ctaAnswer: "La trombosis en niños requiere diagnóstico y tratamiento oportunos para disminuir el riesgo de complicaciones. La Dra. Lizbeth Yamilet Hernández Verdugo, especialista en Hematología Pediátrica, puede realizar la valoración y orientar el tratamiento más adecuado.",
+    ctaAnswer: "La trombosis en niños requiere diagnóstico y tratamiento oportunos para disminuir el riesgo de complicaciones. La Dra. Lizbeth Verdugo, especialista en Hematología Pediátrica, puede realizar la valoración y orientar el tratamiento más adecuado.",
     seo: {
       title: "Trombosis en Niños y Trombofilias | Hematóloga CDMX",
-      description: "Diagnóstico y tratamiento especializado de trombosis venosa y estudios de trombofilia en niños. Dra. Lizbeth Hernández.",
+      description: "Diagnóstico y tratamiento especializado de trombosis venosa y estudios de trombofilia en niños. Dra. Lizbeth Verdugo.",
       keywords: ["Trombosis en niños causas", "Catéter venoso central complicaciones", "Trombofilia pediátrica CDMX"],
     },
     category: "coagulacion-hemostasia",
@@ -651,7 +651,7 @@ Las infecciones, la deshidratación, los cambios bruscos de temperatura y otros 
     id: "enf-016",
     slug: "interpretacion-resultados-laboratorio",
     name: "Interpretación de Resultados de Laboratorio",
-    description: "La interpretación de una biometría hemática u otros estudios de laboratorio permite identificar alteraciones en los glóbulos rojos, glóbulos blancos o plaquetas. La Dra. Lizbeth Hernández evalúa estos resultados en conjunto con la historia clínica y la exploración física para establecer un diagnóstico y orientar el tratamiento más adecuado.",
+    description: "La interpretación de una biometría hemática u otros estudios de laboratorio permite identificar alteraciones en los glóbulos rojos, glóbulos blancos o plaquetas. La Dra. Lizbeth Verdugo evalúa estos resultados en conjunto con la historia clínica y la exploración física para establecer un diagnóstico y orientar el tratamiento más adecuado.",
     symptoms: [
       "Puntos rojos en la piel (petequias) o moretones sin explicación",
       "Palidez extrema o cansancio inusual",
@@ -715,7 +715,7 @@ Las infecciones, la deshidratación, los cambios bruscos de temperatura y otros 
     ctaAnswer: "La interpretación especializada de los resultados, junto con la historia clínica y la exploración física, permite identificar la causa de la alteración y orientar el tratamiento más adecuado para cada paciente.",
     seo: {
       title: "Interpretación de Resultados de Laboratorio Pediátrico | CDMX",
-      description: "La Dra. Lizbeth Hernández evalúa biometrías hemáticas, estudios especializados y pruebas de laboratorio para identificar la causa de alteraciones en sangre en niños.",
+      description: "La Dra. Lizbeth Verdugo evalúa biometrías hemáticas, estudios especializados y pruebas de laboratorio para identificar la causa de alteraciones en sangre en niños.",
       keywords: ["Interpretación de estudios de laboratorio CDMX", "Biometría hemática alterada niños", "Plaquetas altas o bajas niños", "Leucocitos elevados infantil"]
     },
     category: "celulas-medula-osea",
@@ -789,7 +789,7 @@ Las infecciones, la deshidratación, los cambios bruscos de temperatura y otros 
     ctaAnswer: "Una valoración oportuna por Hematología Pediátrica permite identificar la causa de la neutropenia, evaluar el riesgo de infecciones e indicar el tratamiento y seguimiento más adecuados. Si presenta fiebre y neutropenia grave, debe acudir de inmediato a un servicio de urgencias.",
     seo: {
       title: "Neutropenia en Niños | Defensas Bajas CDMX",
-      description: "Diagnóstico y tratamiento de la neutropenia y fiebre neutropénica en niños con la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
+      description: "Diagnóstico y tratamiento de la neutropenia y fiebre neutropénica en niños con la Dra. Lizbeth Verdugo, Hematóloga Pediatra.",
       keywords: ["Neutropenia infantil CDMX", "Glóbulos blancos bajos niños", "Fiebre neutropénica urgencia"]
     },
     category: "celulas-medula-osea",
@@ -863,7 +863,7 @@ Las infecciones, la deshidratación, los cambios bruscos de temperatura y otros 
     ctaAnswer: "La mayoría de estos síntomas pueden deberse a causas benignas, pero cuando persisten o se acompañan de otros signos de alarma es importante una valoración especializada para identificar su causa y brindar el tratamiento adecuado.",
     seo: {
       title: "Linfoma Infantil | Hematóloga Pediatra CDMX",
-      description: "Diagnóstico y evaluación de linfoma de Hodgkin y no Hodgkin en niños. Consulta experta con la Dra. Lizbeth Hernández.",
+      description: "Diagnóstico y evaluación de linfoma de Hodgkin y no Hodgkin en niños. Consulta experta con la Dra. Lizbeth Verdugo.",
       keywords: ["Linfoma infantil CDMX", "Ganglios inflamados niños", "Linfoma Hodgkin pediátrico"]
     },
     category: "leucemias-linfomas",

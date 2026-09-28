@@ -1,5 +1,5 @@
 # Guía de Contenidos Consolidados del Sitio Web
-## Dra. Lizbeth Yamilet Hernández Verdugo
+## Dra. Lizbeth Verdugo
 ### Especialista en Pediatría, Hematología Pediátrica y Medicina Transfusional
 
 *Este documento consolida y organiza de manera perfecta toda la información de textos, consultas, sintomatología y medicina transfusional que compone el sitio web.*
@@ -9,7 +9,7 @@
 ## 1. Perfil Profesional de la Doctora
 
 ### Biografía
-Soy la Dra. Lizbeth Yamilet Hernández Verdugo, médica especialista en Pediatría con subespecialidad en Hematología Pediátrica y formación de alta especialidad en Medicina Transfusional. Mi práctica profesional se enfoca en el diagnóstico, tratamiento y seguimiento integral de niños y adolescentes con enfermedades hematológicas, trastornos de la coagulación y alteraciones plaquetarias (altas y bajas), incluyendo anemias, leucemias, hemofilia y otros padecimientos de la sangre. Mi compromiso es brindar una atención médica cálida, ética y altamente especializada, orientada al bienestar de mis pacientes y la tranquilidad de sus familias.
+Soy la Dra. Lizbeth Verdugo, médica especialista en Pediatría con subespecialidad en Hematología Pediátrica y formación de alta especialidad en Medicina Transfusional. Mi práctica profesional se enfoca en el diagnóstico, tratamiento y seguimiento integral de niños y adolescentes con enfermedades hematológicas, trastornos de la coagulación y alteraciones plaquetarias (altas y bajas), incluyendo anemias, leucemias, hemofilia y otros padecimientos de la sangre. Mi compromiso es brindar una atención médica cálida, ética y altamente especializada, orientada al bienestar de mis pacientes y la tranquilidad de sus familias.
 
 ### Filosofía Médica
 > "Atención médica pediátrica especializada y humana, con enfoque científico para el diagnóstico y tratamiento integral de los trastornos de la sangre."
@@ -205,7 +205,7 @@ Puede ser útil cuando un niño presenta:
 
 * **Clasificación:** CONSULTORIO
 * **Descripción:** Evaluación y análisis especializado de estudios clínicos y de laboratorio general para identificar indicios de trastornos sanguíneos o inmunológicos en niños.
-* **Detalle del Procedimiento:** La interpretación de resultados de laboratorio consiste en el análisis especializado e integral de estudios como biometría hemática, perfil de hierro, pruebas de coagulación, frotis de sangre periférica y otros análisis complementarios. La Dra. Lizbeth Hernández correlaciona estos resultados con la historia clínica y la exploración física del paciente para identificar alteraciones hematológicas, orientar el diagnóstico y definir los estudios o tratamientos más adecuados.
+* **Detalle del Procedimiento:** La interpretación de resultados de laboratorio consiste en el análisis especializado e integral de estudios como biometría hemática, perfil de hierro, pruebas de coagulación, frotis de sangre periférica y otros análisis complementarios. La Dra. Lizbeth Verdugo correlaciona estos resultados con la historia clínica y la exploración física del paciente para identificar alteraciones hematológicas, orientar el diagnóstico y definir los estudios o tratamientos más adecuados.
 * **Control de Dolor:** No aplica (servicio de revisión e interpretación de estudios)
 
 #### Ficha Técnica
@@ -314,7 +314,7 @@ Anemia.
 Leucocitos elevados.
 Hallazgos incidentales en laboratorio.
 
-La Dra. Lizbeth Hernández evalúa alteraciones en estudios de laboratorio, biometrías hemáticas y pruebas especializadas para identificar la causa y orientar el tratamiento más adecuado para cada paciente.*
+La Dra. Lizbeth Verdugo evalúa alteraciones en estudios de laboratorio, biometrías hemáticas y pruebas especializadas para identificar la causa y orientar el tratamiento más adecuado para cada paciente.*
 
 ---
 
@@ -1385,7 +1385,7 @@ La trombosis en niños es un trastorno poco común pero grave, caracterizado por
 ### Condición 13: Interpretación de Resultados de Laboratorio
 **Categoría:** Celulas Medula Osea
 
-La Dra. Lizbeth Hernández evalúa alteraciones en estudios de laboratorio, biometrías hemáticas y pruebas especializadas para identificar la causa y orientar el tratamiento más adecuado para cada paciente.
+La Dra. Lizbeth Verdugo evalúa biometrías hemáticas, estudios especializados y pruebas de laboratorio para identificar la causa de alteraciones en sangre en niños.
 
 #### Síntomas
 * Puntos rojos en la piel (petequias) o moretones sin explicación
@@ -1847,7 +1847,7 @@ La interpretación de estos resultados debe realizarse dentro del contexto clín
 ## 6. Páginas de Soporte Legal y de Contacto
 
 ### Aviso de Privacidad
-Con fundamento en los artículos 15 y 16 de la Ley Federal de Protección de Datos Personales en Posesión de Particulares hacemos de su conocimiento que la Dra. Lizbeth Yamilet Hernández Verdugo, con domicilio en Calle San Luis Potosí #143, Interior 207, entre Calle Tonalá y Calle Jalapa, Colonia Roma Norte, C.P. 06700, Delegación Cuauhtémoc, Ciudad de México es responsable de recabar sus datos personales, del uso que se le dé a los mismos y de su protección.
+Con fundamento en los artículos 15 y 16 de la Ley Federal de Protección de Datos Personales en Posesión de Particulares hacemos de su conocimiento que la Dra. Lizbeth Verdugo, con domicilio en Calle San Luis Potosí #143, Interior 207, entre Calle Tonalá y Calle Jalapa, Colonia Roma Norte, C.P. 06700, Delegación Cuauhtémoc, Ciudad de México es responsable de recabar sus datos personales, del uso que se le dé a los mismos y de su protección.
 
 #### Fines del tratamiento de datos personales
 Su información personal será utilizada para las siguientes finalidades: proveer los servicios y productos que ha solicitado; notificarle sobre nuevos servicios o productos que tengan relación con los ya contratados o adquiridos; comunicarle sobre cambios en los mismos; elaborar estudios y programas que son necesarios para determinar hábitos de consumo; realizar evaluaciones periódicas de nuestros productos y servicios a efecto de mejorar la calidad de los mismos; evaluar la calidad del servicio que brindamos, y en general, para dar cumplimiento a las obligaciones que hemos contraído con usted.
@@ -1867,7 +1867,7 @@ Es importante informarle que usted tiene derecho al Acceso, Rectificación y Can
 ---
 
 ### Página de Contacto e Información General
-* **Médico Responsable:** Dra. Lizbeth Yamilet Hernández Verdugo
+* **Médico Responsable:** Dra. Lizbeth Verdugo
 * **Ubicación:** Calle San Luis Potosí #143, Interior 207, entre Calle Tonalá y Calle Jalapa, Colonia Roma Norte, C.P. 06700, Delegación Cuauhtémoc, Ciudad de México
 * **WhatsApp:** 525611232970
 * **Teléfono Urgencias:** 5596868266

@@ -1,6 +1,6 @@
 {
   "doctor": {
-    "name": "Lizbeth Yamilet Hernández Verdugo",
+    "name": "Lizbeth Verdugo",
     "title": "Dra.",
     "specialty": "Pediatría, Hematología Pediátrica y Medicina Transfusional",
     "specialistTitle": "Hematóloga Pediatra",
@@ -25,7 +25,7 @@
       "Tarjeta de crédito"
     ],
     "schedule": "Lunes a viernes de 10:00 a 19:00. Sábados de 9:00 a 14:00",
-    "bio": "Soy la Dra. Lizbeth Yamilet Hernández Verdugo, médica especialista en Pediatría con subespecialidad en Hematología Pediátrica y formación de alta especialidad en Medicina Transfusional. Mi práctica profesional se enfoca en el diagnóstico, tratamiento y seguimiento integral de niños y adolescentes con enfermedades hematológicas, trastornos de la coagulación y alteraciones plaquetarias (altas y bajas), incluyendo anemias, leucemias, hemofilia y otros padecimientos de la sangre. Mi compromiso es brindar una atención médica cálida, ética y altamente especializada, orientada al bienestar de mis pacientes y la tranquilidad de sus familias.",
+    "bio": "Soy la Dra. Lizbeth Verdugo, médica especialista en Pediatría con subespecialidad en Hematología Pediátrica y formación de alta especialidad en Medicina Transfusional. Mi práctica profesional se enfoca en el diagnóstico, tratamiento y seguimiento integral de niños y adolescentes con enfermedades hematológicas, trastornos de la coagulación y alteraciones plaquetarias (altas y bajas), incluyendo anemias, leucemias, hemofilia y otros padecimientos de la sangre. Mi compromiso es brindar una atención médica cálida, ética y altamente especializada, orientada al bienestar de mis pacientes y la tranquilidad de sus familias.",
     "philosophy": "Atención médica pediátrica especializada y humana, con enfoque científico para el diagnóstico y tratamiento integral de los trastornos de la sangre.",
     "experience": [
       {
@@ -252,7 +252,7 @@
       "slug": "interpretacion-resultados-laboratorio",
       "name": "Análisis e integración clínica de estudios de laboratorio",
       "description": "Evaluación y análisis especializado de estudios clínicos y de laboratorio general para identificar indicios de trastornos sanguíneos o inmunológicos en niños.",
-      "longDescription": "La interpretación de resultados de laboratorio consiste en el análisis especializado e integral de estudios como biometría hemática, perfil de hierro, pruebas de coagulación, frotis de sangre periférica y otros análisis complementarios. La Dra. Lizbeth Hernández correlaciona estos resultados con la historia clínica y la exploración física del paciente para identificar alteraciones hematológicas, orientar el diagnóstico y definir los estudios o tratamientos más adecuados.",
+      "longDescription": "La interpretación de resultados de laboratorio consiste en el análisis especializado e integral de estudios como biometría hemática, perfil de hierro, pruebas de coagulación, frotis de sangre periférica y otros análisis complementarios. La Dra. Lizbeth Verdugo correlaciona estos resultados con la historia clínica y la exploración física del paciente para identificar alteraciones hematológicas, orientar el diagnóstico y definir los estudios o tratamientos más adecuados.",
       "type": "consultorio",
       "anesthesiaType": "No especificado",
       "duration": "30 a 60 minutos según la complejidad del caso y la cantidad de estudios a revisar",
@@ -375,7 +375,7 @@
       "risksTitle": "Riesgos del procedimiento",
       "risks": [],
       "ctaQuestion": "¿Tu hijo tiene algún estudio genético alterado?",
-      "ctaAnswer": "Biometría hemática alterada.\nPlaquetas altas o bajas.\nNeutropenia.\nAnemia.\nLeucocitos elevados.\nHallazgos incidentales en laboratorio.\n\nLa Dra. Lizbeth Hernández evalúa alteraciones en estudios de laboratorio, biometrías hemáticas y pruebas especializadas para identificar la causa y orientar el tratamiento más adecuado para cada paciente.",
+      "ctaAnswer": "Biometría hemática alterada.\nPlaquetas altas o bajas.\nNeutropenia.\nAnemia.\nLeucocitos elevados.\nHallazgos incidentales en laboratorio.\n\nLa Dra. Lizbeth Verdugo evalúa alteraciones en estudios de laboratorio, biometrías hemáticas y pruebas especializadas para identificar la causa y orientar el tratamiento más adecuado para cada paciente.",
       "differenceTitle": "",
       "differenceContent": "",
       "comfortTitle": "",
@@ -1636,7 +1636,7 @@
       "slug": "interpretacion-resultados-laboratorio",
       "name": "Interpretación de Resultados de Laboratorio",
       "technicalName": "",
-      "description": "La Dra. Lizbeth Hernández evalúa alteraciones en estudios de laboratorio, biometrías hemáticas y pruebas especializadas para identificar la causa y orientar el tratamiento más adecuado para cada paciente.",
+      "description": "La Dra. Lizbeth Verdugo evalúa biometrías hemáticas, estudios especializados y pruebas de laboratorio para identificar la causa de alteraciones en sangre en niños.",
       "symptoms": [
         "Puntos rojos en la piel (petequias) o moretones sin explicación",
         "Palidez extrema o cansancio inusual",
@@ -2073,7 +2073,7 @@
   ],
   "privacyPolicy": {
     "title": "Aviso de Privacidad",
-    "intro": "Con fundamento en los artículos 15 y 16 de la Ley Federal de Protección de Datos Personales en Posesión de Particulares hacemos de su conocimiento que la Dra. Lizbeth Yamilet Hernández Verdugo, con domicilio en Calle San Luis Potosí #143, Interior 207, entre Calle Tonalá y Calle Jalapa, Colonia Roma Norte, C.P. 06700, Delegación Cuauhtémoc, Ciudad de México es responsable de recabar sus datos personales, del uso que se le dé a los mismos y de su protección.",
+    "intro": "Con fundamento en los artículos 15 y 16 de la Ley Federal de Protección de Datos Personales en Posesión de Particulares hacemos de su conocimiento que la Dra. Lizbeth Verdugo, con domicilio en Calle San Luis Potosí #143, Interior 207, entre Calle Tonalá y Calle Jalapa, Colonia Roma Norte, C.P. 06700, Delegación Cuauhtémoc, Ciudad de México es responsable de recabar sus datos personales, del uso que se le dé a los mismos y de su protección.",
     "sections": [
       {
         "title": "Fines del tratamiento de datos personales",

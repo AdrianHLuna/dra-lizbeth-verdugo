@@ -208,7 +208,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               </h3>
               <div className="w-10 h-1 bg-accent mb-6 rounded-full" />
               <p className="text-slate-300 text-xs mb-8 leading-relaxed whitespace-pre-line">
-                {service.ctaAnswer || "La Dra. Lizbeth realiza y supervisa personalmente los procedimientos bajo estrictos protocolos de bioseguridad y control analgésico infantil."}
+                {service.ctaAnswer || "La Dra. Lizbeth Verdugo realiza y supervisa personalmente los procedimientos bajo estrictos protocolos de bioseguridad y control analgésico infantil."}
               </p>
               <a href={`https://wa.me/${doctor.whatsapp.replace(/\D/g, "")}`} target="_blank" rel="noreferrer" className="block w-full flex items-center justify-center gap-2 bg-white text-primary font-bold py-4 rounded-full hover:bg-[#FEE5FD] hover:text-[#971F57] transition-all text-[9px] uppercase tracking-widest shadow-lg">
                 <FaCalendarCheck size={12} /> Agendar Valoración Médica

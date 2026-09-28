@@ -39,7 +39,7 @@ export const services: MedicalService[] = [
     ctaQuestion: "¿A tu hijo le han solicitado un aspirado de médula ósea?",
     ctaAnswer: "Recibe una valoración especializada y orientación completa sobre el procedimiento, su indicación y los cuidados posteriores.",
     seo: {
-      title: "Aspirado de Médula Ósea Pediátrica | Dra. Lizbeth",
+      title: "Aspirado de Médula Ósea Pediátrica | Dra. Lizbeth Verdugo",
       description: "Estudio especializado de aspirado de médula ósea para el diagnóstico preciso de enfermedades de la sangre en niños.",
       keywords: ["Aspirado de médula ósea niños CDMX", "Mielograma pediátrico", "Estudio de médula ósea"],
     }
@@ -97,7 +97,7 @@ export const services: MedicalService[] = [
     ],
     seo: {
       title: "Biopsia de Médula Ósea en Niños | Hematología CDMX",
-      description: "Procedimiento de biopsia de médula ósea en pacientes pediátricos realizado por la Dra. Lizbeth Hernández, experta certificada.",
+      description: "Procedimiento de biopsia de médula ósea en pacientes pediátricos realizado por la Dra. Lizbeth Verdugo, experta certificada.",
       keywords: ["Biopsia de médula ósea infantil", "Estudio histopatológico de médula", "Hematólogo pediatra Roma Norte"],
     }
   },
@@ -179,7 +179,7 @@ export const services: MedicalService[] = [
     ctaAnswer: "La interpretación especializada de la biometría hemática permite identificar alteraciones en los glóbulos rojos, glóbulos blancos y plaquetas, ayudando a establecer un diagnóstico oportuno y definir si son necesarios estudios adicionales o seguimiento por hematología pediátrica.",
     seo: {
       title: "Interpretación de Biometría Hemática Infantil | CDMX",
-      description: "Análisis experto de plaquetas, leucocitos y hemoglobina en niños. Agenda consulta con la Dra. Lizbeth Hernández, Hematóloga Pediatra.",
+      description: "Análisis experto de plaquetas, leucocitos y hemoglobina en niños. Agenda consulta con la Dra. Lizbeth Verdugo, Hematóloga Pediatra.",
       keywords: ["Biometría hemática completa niños", "Plaquetas bajas pediatra CDMX", "Análisis de sangre infantil interpretación"]
     }
   },
@@ -221,7 +221,7 @@ export const services: MedicalService[] = [
       }
     ],
     seo: {
-      title: "Lectura de Frotis de Sangre Periférica | Dra. Lizbeth",
+      title: "Lectura de Frotis de Sangre Periférica | Dra. Lizbeth Verdugo",
       description: "Análisis morfológico de células sanguíneas bajo microscopio para el diagnóstico rápido de anemias y leucemias.",
       keywords: ["Frotis de sangre periférica niños CDMX", "Morfología de células sanguíneas", "Análisis microscópico de sangre"],
     }
@@ -231,7 +231,7 @@ export const services: MedicalService[] = [
     slug: "interpretacion-resultados-laboratorio",
     name: "Análisis e integración clínica de estudios de laboratorio",
     description: "Evaluación y análisis especializado de estudios clínicos y de laboratorio general para identificar indicios de trastornos sanguíneos o inmunológicos en niños.",
-    longDescription: "La interpretación de resultados de laboratorio consiste en el análisis especializado e integral de estudios como biometría hemática, perfil de hierro, pruebas de coagulación, frotis de sangre periférica y otros análisis complementarios. La Dra. Lizbeth Hernández correlaciona estos resultados con la historia clínica y la exploración física del paciente para identificar alteraciones hematológicas, orientar el diagnóstico y definir los estudios o tratamientos más adecuados.",
+    longDescription: "La interpretación de resultados de laboratorio consiste en el análisis especializado e integral de estudios como biometría hemática, perfil de hierro, pruebas de coagulación, frotis de sangre periférica y otros análisis complementarios. La Dra. Lizbeth Verdugo correlaciona estos resultados con la historia clínica y la exploración física del paciente para identificar alteraciones hematológicas, orientar el diagnóstico y definir los estudios o tratamientos más adecuados.",
     type: "consultorio",
     isPainful: false,
     duration: "30 a 60 minutos según la complejidad del caso y la cantidad de estudios a revisar",
@@ -263,7 +263,7 @@ export const services: MedicalService[] = [
     ],
     seo: {
       title: "Interpretación de Análisis de Laboratorio Pediátrico | CDMX",
-      description: "Consulta especializada para la interpretación y diagnóstico a partir de resultados de análisis clínicos en niños con la Dra. Lizbeth Hernández.",
+      description: "Consulta especializada para la interpretación y diagnóstico a partir de resultados de análisis clínicos en niños con la Dra. Lizbeth Verdugo.",
       keywords: ["Interpretación de estudios de laboratorio CDMX", "Análisis clínicos niños", "Hematóloga Pediatra Roma Norte"]
     }
   },
@@ -300,10 +300,10 @@ export const services: MedicalService[] = [
     image: "/servicios/Interpretacion_Estudios_Geneticos_Moleculares.png",
     painDescription: "No aplica",
     ctaQuestion: "¿Tu hijo tiene algún estudio genético alterado?",
-    ctaAnswer: "Biometría hemática alterada.\nPlaquetas altas o bajas.\nNeutropenia.\nAnemia.\nLeucocitos elevados.\nHallazgos incidentales en laboratorio.\n\nLa Dra. Lizbeth Hernández evalúa alteraciones en estudios de laboratorio, biometrías hemáticas y pruebas especializadas para identificar la causa y orientar el tratamiento más adecuado para cada paciente.",
+    ctaAnswer: "Biometría hemática alterada.\nPlaquetas altas o bajas.\nNeutropenia.\nAnemia.\nLeucocitos elevados.\nHallazgos incidentales en laboratorio.\n\nLa Dra. Lizbeth Verdugo evalúa alteraciones en estudios de laboratorio, biometrías hemáticas y pruebas especializadas para identificar la causa y orientar el tratamiento más adecuado para cada paciente.",
     seo: {
-      title: "Interpretación de Pruebas Genéticas y Moleculares CDMX | Dra. Lizbeth",
-      description: "Análisis experto de estudios de cariotipo, FISH y PCR en hematología pediátrica. Dra. Lizbeth Hernández, Hematóloga Pediatra.",
+      title: "Interpretación de Pruebas Genéticas y Moleculares CDMX | Dra. Lizbeth Verdugo",
+      description: "Análisis experto de estudios de cariotipo, FISH y PCR en hematología pediátrica. Dra. Lizbeth Verdugo, Hematóloga Pediatra.",
       keywords: ["Estudios genéticos hematología niños", "Prueba de cariotipo CDMX pediatría", "PCR molecular leucemia infantil"]
     }
   }

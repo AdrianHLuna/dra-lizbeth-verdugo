@@ -5,8 +5,8 @@ import { doctor } from "@/data/doctor";
 import MedicinaTransfusionalClient from "./MedicinaTransfusionalClient";
 
 export const metadata = {
-  title: "Medicina Transfusional Pediátrica y Aféresis | Dra. Lizbeth Hernández",
-  description: "Información especializada sobre transfusiones en niños, aféresis terapéutica y sobrecarga de hierro. Consulta con la Dra. Lizbeth Hernández en CDMX.",
+  title: "Medicina Transfusional Pediátrica y Aféresis | Dra. Lizbeth Verdugo",
+  description: "Información especializada sobre transfusiones en niños, aféresis terapéutica y sobrecarga de hierro. Consulta con la Dra. Lizbeth Verdugo en CDMX.",
   keywords: [
     "Medicina Transfusional Pediátrica",
     "Aféresis terapéutica niños",
@@ -62,7 +62,7 @@ export default function MedicinaTransfusionalPage() {
         {/* Medical Sign-off Disclaimer */}
         <div className="mt-16 pt-8 border-t border-slate-200/80 text-center max-w-3xl mx-auto space-y-4">
           <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest leading-relaxed">
-            Contenido revisado por la Dra. Lizbeth Yamilet Hernández Verdugo, Médico Subespecialista en Hematología Pediátrica y Alta Especialidad en Medicina Transfusional.
+            Contenido revisado por la Dra. Lizbeth Verdugo, Médico Subespecialista en Hematología Pediátrica y Alta Especialidad en Medicina Transfusional.
           </p>
           <p className="text-[10px] text-slate-400 font-semibold italic">
             La información presentada tiene fines educativos y no sustituye la valoración médica individual.

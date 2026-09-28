@@ -151,7 +151,7 @@ export default async function SymptomPage({ params }: { params: Promise<{ slug: 
             <div className="sticky top-32 bg-gradient-to-br from-primary to-[#3b1c39] p-8 text-white shadow-xl rounded-[2.5rem_0.5rem_2.5rem_0.5rem] group border-t-8 border-accent relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full blur-xl pointer-events-none" />
               <h3 className="text-lg font-extrabold mb-4 tracking-tight uppercase leading-relaxed">
-                {symptom.preguntaPrincipal || "La Dra. Lizbeth Hernández evalúa este síntoma"}
+                {symptom.preguntaPrincipal || "La Dra. Lizbeth Verdugo evalúa este síntoma"}
               </h3>
               <div className="w-10 h-1 bg-accent mb-6 rounded-full" />
               <p className="text-slate-300 text-xs mb-8 leading-relaxed">

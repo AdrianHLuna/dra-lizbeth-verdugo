@@ -203,7 +203,7 @@ export default function Home() {
             <motion.div variants={softBlurIn} className="lg:col-span-5 bg-white p-10 border border-slate-150 rounded-[3rem_1rem_3rem_1rem] shadow-sm relative group overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full blur-xl pointer-events-none" />
               <span className="text-accent font-extrabold text-xs uppercase tracking-widest block mb-4">Hematóloga Pediatra</span>
-              <h2 className="text-3xl font-extrabold text-slate-900 mb-6 uppercase tracking-tight">Dra. Lizbeth Hernández</h2>
+              <h2 className="text-3xl font-extrabold text-slate-900 mb-6 uppercase tracking-tight">Dra. Lizbeth Verdugo</h2>
               <div className="w-10 h-1 bg-accent mb-6 rounded-full" />
               <p className="text-base lg:text-lg leading-relaxed text-slate-600 mb-6 font-medium italic">
                 &ldquo;{doctor.bio}&rdquo;
@@ -298,7 +298,7 @@ export default function Home() {
                 Detectar a tiempo las enfermedades de la sangre puede marcar la diferencia.
               </h2>
               <p className="text-slate-650 text-xs sm:text-sm leading-relaxed font-semibold">
-                La Dra. Lizbeth Hernández brinda atención especializada a niños y adolescentes con anemia, alteraciones de las plaquetas, trastornos de la coagulación, leucemias y otras enfermedades hematológicas. Cada paciente recibe una evaluación integral, explicaciones claras y un plan de tratamiento personalizado.
+                La Dra. Lizbeth Verdugo brinda atención especializada a niños y adolescentes con anemia, alteraciones de las plaquetas, trastornos de la coagulación, leucemias y otras enfermedades hematológicas. Cada paciente recibe una evaluación integral, explicaciones claras y un plan de tratamiento personalizado.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-bold text-slate-700">
                 <div className="flex items-center gap-2">
@@ -457,7 +457,7 @@ export default function Home() {
               </span>
               <h2 className="text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight mt-6">Procedimientos Clínicos</h2>
             </div>
-            <p className="text-xs text-slate-500 max-w-sm mt-4 lg:mt-0 leading-relaxed font-semibold">Realizados por la Dra. Lizbeth con protocolos de seguridad adaptados a la edad pediátrica.</p>
+            <p className="text-xs text-slate-500 max-w-sm mt-4 lg:mt-0 leading-relaxed font-semibold">Realizados por la Dra. Lizbeth Verdugo con protocolos de seguridad adaptados a la edad pediátrica.</p>
           </motion.div>
 
           <motion.div
@@ -525,7 +525,7 @@ export default function Home() {
                 ¿Tu hijo tiene algún estudio sanguíneo alterado?
               </h2>
               <p className="text-slate-300 text-xs sm:text-sm leading-relaxed font-semibold max-w-xl">
-                La Dra. Lizbeth Hernández analiza de forma integral la biometría hemática y otros estudios especializados para identificar la causa de las alteraciones y orientar un diagnóstico y tratamiento adecuados.
+                La Dra. Lizbeth Verdugo analiza de forma integral la biometría hemática y otros estudios especializados para identificar la causa de las alteraciones y orientar un diagnóstico y tratamiento adecuados.
               </p>
               <div className="flex justify-center lg:justify-start pt-4">
                 <a href={whatsappUrl} target="_blank" rel="noreferrer" className="px-10 py-4.5 bg-primary hover:bg-[#971F57] text-white font-bold rounded-full transition-all duration-300 text-[10px] uppercase tracking-widest shadow-lg">
@@ -718,7 +718,7 @@ export default function Home() {
             >
               <Image
                 src="/doctor_5.jpeg"
-                alt="Hematóloga Pediatra Dra. Lizbeth"
+                alt="Hematóloga Pediatra Dra. Lizbeth Verdugo"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="w-full h-full object-cover object-[center_28%] transition-transform duration-700 hover:scale-[1.02]"
