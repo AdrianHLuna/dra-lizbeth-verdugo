@@ -31,10 +31,11 @@ export default function Home() {
   const whatsappUrl = `https://wa.me/${doctor.whatsapp.replace(/\D/g, "")}`;
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // AI generated doctor images active. Original photos retained: /doctor_hero.jpeg, /doctor_1.jpeg, /doctor_3.jpeg
   const heroSlides = [
-    { src: "/doctor_hero.jpeg", align: "object-[center_35%]" },
-    { src: "/doctor_1.jpeg", align: "object-[center_35%]" },
-    { src: "/doctor_3.jpeg", align: "object-[center_90%]" }
+    { src: "/doctor_hero_ai.jpeg", align: "object-[center_35%]" },
+    { src: "/doctor_1_ai.jpeg", align: "object-[center_35%]" },
+    { src: "/doctor_3_ai.jpeg", align: "object-[center_90%]" }
   ];
 
   useEffect(() => {
@@ -218,7 +219,7 @@ export default function Home() {
               {/* Foto About Me */}
               <div className="w-full h-[450px] lg:h-[500px] bg-slate-100 rounded-[2rem_0.5rem_2rem_0.5rem] relative overflow-hidden flex items-center justify-center border border-slate-150 shadow-sm">
                 <Image
-                  src="/doctor_aboutme.jpeg"
+                  src="/doctor_aboutme_ai.jpeg"
                   alt={`Dra. ${doctor.name}`}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -278,7 +279,7 @@ export default function Home() {
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={softBlurIn}
             >
               <Image
-                src="/doctor_4.jpeg"
+                src="/doctor_4_ai.jpeg"
                 alt="Compromiso Hematología Pediátrica"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
@@ -540,7 +541,7 @@ export default function Home() {
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={softBlurIn}
             >
               <Image
-                src="/doctor_2.jpeg"
+                src="/doctor_2_ai.jpeg"
                 alt="Consulta Médica Especializada"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
@@ -717,8 +718,8 @@ export default function Home() {
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={softBlurIn}
             >
               <Image
-                src="/doctor_5.jpeg"
-                alt="Hematóloga Pediatra Dra. Lizbeth Verdugo"
+                src="/doctor_5_ai.jpeg"
+                alt="Hematóloga Pediatra Dra. Lizbeth Hernández"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="w-full h-full object-cover object-[center_28%] transition-transform duration-700 hover:scale-[1.02]"

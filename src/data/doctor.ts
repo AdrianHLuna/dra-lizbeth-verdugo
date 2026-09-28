@@ -1,7 +1,7 @@
 import { DoctorProfile } from "@/types/schema";
 
 export const doctor: DoctorProfile = {
-  name: "Lizbeth Verdugo",
+  name: "Lizbeth Hernández",
   title: "Dra.",
   specialty: "Pediatría, Hematología Pediátrica y Medicina Transfusional",
   specialistTitle: "Hematóloga Pediatra",
@@ -22,8 +22,9 @@ export const doctor: DoctorProfile = {
   paymentMethods: ["Efectivo", "Transferencia", "Tarjeta de débito", "Tarjeta de crédito"],
   insurances: [],
   schedule: "Lunes a viernes de 10:00 a 19:00. Sábados de 9:00 a 14:00",
-  photo: "/doctor.png",
-  bio: "Soy la Dra. Lizbeth Verdugo, médica especialista en Pediatría con subespecialidad en Hematología Pediátrica y formación de alta especialidad en Medicina Transfusional. Mi práctica profesional se enfoca en el diagnóstico, tratamiento y seguimiento integral de niños y adolescentes con enfermedades hematológicas, trastornos de la coagulación y alteraciones plaquetarias (altas y bajas), incluyendo anemias, leucemias, hemofilia y otros padecimientos de la sangre. Mi compromiso es brindar una atención médica cálida, ética y altamente especializada, orientada al bienestar de mis pacientes y la tranquilidad de sus familias.",
+  // AI generated image active (Original photo preserved at /doctor.png or /doctor_aboutme.jpeg)
+  photo: "/doctor_aboutme_ai.jpeg",
+  bio: "Soy la Dra. Lizbeth Hernández, médica especialista en Pediatría con subespecialidad en Hematología Pediátrica y formación de alta especialidad en Medicina Transfusional. Mi práctica profesional se enfoca en el diagnóstico, tratamiento y seguimiento integral de niños y adolescentes con enfermedades hematológicas, trastornos de la coagulación y alteraciones plaquetarias (altas y bajas), incluyendo anemias, leucemias, hemofilia y otros padecimientos de la sangre. Mi compromiso es brindar una atención médica cálida, ética y altamente especializada, orientada al bienestar de mis pacientes y la tranquilidad de sus familias.",
   philosophy: "Atención médica pediátrica especializada y humana, con enfoque científico para el diagnóstico y tratamiento integral de los trastornos de la sangre.",
   experience: [
     {
