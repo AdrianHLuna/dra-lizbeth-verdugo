@@ -38,15 +38,23 @@ export default function Header() {
       
       {/* Main Nav */}
       <div className="container mx-auto px-4 lg:px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="relative flex items-center overflow-hidden h-28 lg:h-36 w-56 lg:w-72 group">
-          <Image 
-            src="/LOGO DRA LIZBETH-01.png" 
-            alt="Dra. Lizbeth Hernández - Hematología Pediátrica" 
-            width={500}
-            height={200}
-            priority
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-none w-[220%] h-[220%] object-contain"
-          />
+        <Link href="/" className="flex flex-col items-center justify-center text-center group py-1">
+          <div className="relative h-14 lg:h-18 w-28 lg:w-36 flex items-center justify-center">
+            <Image 
+              src="/LOGO DRA LIZBETH-02.png" 
+              alt="Dra. Elizabeth Verdugo - Hematología Pediátrica" 
+              width={200}
+              height={200}
+              priority
+              className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+            />
+          </div>
+          <span className="font-signature text-2xl lg:text-3xl text-[#971F57] leading-none mt-1">
+            Dra. Elizabeth Verdugo
+          </span>
+          <span className="text-[9px] lg:text-[10px] font-extrabold text-[#705662] tracking-[0.22em] uppercase mt-0.5">
+            Hematología Pediátrica
+          </span>
         </Link>
 
         {/* Desktop Menu */}

@@ -719,7 +719,7 @@ export default function Home() {
             >
               <Image
                 src="/doctor_5_ai.jpeg"
-                alt="Hematóloga Pediatra Dra. Lizbeth Hernández"
+                alt="Hematóloga Pediatra Dra. Lizbeth Verdugo"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="w-full h-full object-cover object-[center_28%] transition-transform duration-700 hover:scale-[1.02]"
