@@ -17,7 +17,7 @@ Soy la Dra. Lizbeth Verdugo, médica especialista en Pediatría con subespeciali
 ### Información General de Consulta
 * **Dirección:** Calle San Luis Potosí #143, Interior 207, entre Calle Tonalá y Calle Jalapa, Colonia Roma Norte, C.P. 06700, Delegación Cuauhtémoc, Ciudad de México
 * **Teléfono:** 5596868266
-* **WhatsApp:** 525611232970
+* **WhatsApp:** 525664746957
 * **Email:** dra.lizbethyamilet.hp@gmail.com
 * **Precio de Consulta:** $1500 MXN
 * **Métodos de Pago:** Efectivo, Transferencia, Tarjeta de débito, Tarjeta de crédito
@@ -1869,7 +1869,7 @@ Es importante informarle que usted tiene derecho al Acceso, Rectificación y Can
 ### Página de Contacto e Información General
 * **Médico Responsable:** Dra. Lizbeth Verdugo
 * **Ubicación:** Calle San Luis Potosí #143, Interior 207, entre Calle Tonalá y Calle Jalapa, Colonia Roma Norte, C.P. 06700, Delegación Cuauhtémoc, Ciudad de México
-* **WhatsApp:** 525611232970
+* **WhatsApp:** 525664746957
 * **Teléfono Urgencias:** 5596868266
 * **Email:** dra.lizbethyamilet.hp@gmail.com
 * **Horario de Citas:** Lunes a viernes de 10:00 a 19:00. Sábados de 9:00 a 14:00

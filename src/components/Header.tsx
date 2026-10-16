@@ -37,28 +37,30 @@ export default function Header() {
       </div>
       
       {/* Main Nav */}
-      <div className="container mx-auto px-4 lg:px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="flex flex-col items-center justify-center text-center group py-1">
-          <div className="relative h-14 lg:h-18 w-28 lg:w-36 flex items-center justify-center">
+      <div className="container mx-auto px-4 lg:px-6 py-2.5 lg:py-3 flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-3 sm:gap-4 group py-1 flex-shrink-0">
+          <div className="relative h-16 w-16 sm:h-20 sm:w-20 lg:h-22 lg:w-22 xl:h-24 xl:w-24 flex-shrink-0 flex items-center justify-center">
             <Image 
               src="/LOGO DRA LIZBETH-02.png" 
-              alt="Dra. Elizabeth Verdugo - Hematología Pediátrica" 
-              width={200}
-              height={200}
+              alt="Dra. Lizbeth Verdugo - Hematología Pediátrica" 
+              width={220}
+              height={220}
               priority
               className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </div>
-          <span className="font-signature text-2xl lg:text-3xl text-[#971F57] leading-none mt-1">
-            Dra. Elizabeth Verdugo
-          </span>
-          <span className="text-[9px] lg:text-[10px] font-extrabold text-[#705662] tracking-[0.22em] uppercase mt-0.5">
-            Hematología Pediátrica
-          </span>
+          <div className="flex flex-col text-left justify-center">
+            <span className="font-signature text-2xl sm:text-3xl lg:text-3xl xl:text-4xl text-[#971F57] leading-none transition-colors duration-200 group-hover:text-[#572D55]">
+              Dra. Lizbeth Verdugo
+            </span>
+            <span className="text-[8px] sm:text-[9px] lg:text-[10px] xl:text-[11px] font-extrabold text-[#705662] tracking-[0.2em] sm:tracking-[0.22em] uppercase mt-1">
+              Hematología Pediátrica
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Menu */}
-        <nav className="hidden lg:flex items-center gap-6 xl:gap-8 font-bold text-[#705662]">
+        <nav className="hidden lg:flex items-center gap-4 xl:gap-7 font-bold text-[#705662] text-xs xl:text-sm whitespace-nowrap">
           <Link href="/" className="hover:text-primary transition">Inicio</Link>
           <Link href="/enfermedades" className="hover:text-primary transition">Enfermedades</Link>
           <Link href="/sintomas" className="hover:text-primary transition">Síntomas</Link>
@@ -67,7 +69,7 @@ export default function Header() {
           <Link href="/contacto" className="hover:text-primary transition">Contacto</Link>
         </nav>
 
-        <a href={whatsappUrl} target="_blank" rel="noreferrer" className="hidden lg:flex items-center gap-2 bg-primary text-white px-6 py-2.5 rounded-full font-bold hover:bg-accent transition shadow-lg shadow-primary/20">
+        <a href={whatsappUrl} target="_blank" rel="noreferrer" className="hidden lg:flex items-center gap-2 bg-primary text-white px-5 xl:px-6 py-2.5 rounded-full font-bold hover:bg-accent transition shadow-lg shadow-primary/20 text-xs xl:text-sm whitespace-nowrap flex-shrink-0">
           <FaWhatsapp size={18} /> Agendar Cita
         </a>
 

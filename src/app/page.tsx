@@ -703,7 +703,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start text-xs text-slate-300 font-semibold">
                 <div>📍 Roma Norte, CDMX</div>
                 <div>📞 55 9686 8266</div>
-                <div>💬 WhatsApp: 52 56 1123 2970</div>
+                <div>💬 WhatsApp: 52 56 6474 6957</div>
               </div>
               <div className="flex justify-center lg:justify-start pt-4">
                 <a href={whatsappUrl} target="_blank" rel="noreferrer" className="px-10 py-4.5 bg-white text-primary hover:bg-[#FEE5FD] hover:text-[#971F57] font-bold rounded-full transition-all duration-300 text-[10px] uppercase tracking-widest shadow-lg">
